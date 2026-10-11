@@ -23,7 +23,7 @@
   },
 
   "regions": {
-    "note": "R1 규제지역(투기과열+조정) · R2 수도권 비규제 · R3 지방. 수도권·규제지역 규제는 R1+R2에 적용. lawd는 실거래가 API 시군구 코드. 2026년 개편(화성시 4구 2026-02-01, 인천 제물포·영종·서해·검단구 2026-07-01)을 반영했고 국토부 API는 과거 거래도 새 코드로 다시 매기므로 모든 월을 새 코드로 수집한다. 광주는 전남광주통합특별시(시도코드 12) 출범으로 코드가 바뀌었을 수 있어 수집기 probe로 확정 예정.",
+    "note": "R1 규제지역(투기과열+조정) · R2 수도권 비규제 · R3 지방. 수도권·규제지역 규제는 R1+R2에 적용. lawd는 실거래가 API 시군구 코드. 2026년 개편(화성시 4구 2026-02-01, 인천 제물포·영종·서해·검단구 2026-07-01)을 반영했고 국토부 API는 과거 거래도 새 코드로 다시 매기므로 모든 월을 새 코드로 수집한다. 광주는 전남광주통합특별시 출범으로 12210~12330으로 바뀐 것을 probe로 확인(2026-10-12).",
     "metro_sido": ["서울", "경기", "인천"],
     "sido": [
       { "name": "서울", "sigungu": [
@@ -94,10 +94,10 @@
         { "name": "달서구", "lawd": "27290", "regulated": false }, { "name": "달성군", "lawd": "27710", "regulated": false },
         { "name": "군위군", "lawd": "27720", "regulated": false }
       ]},
-      { "name": "광주", "sigungu": [
-        { "name": "동구", "lawd": "29110", "regulated": false }, { "name": "서구", "lawd": "29140", "regulated": false },
-        { "name": "남구", "lawd": "29155", "regulated": false }, { "name": "북구", "lawd": "29170", "regulated": false },
-        { "name": "광산구", "lawd": "29200", "regulated": false }
+      { "name": "광주", "note": "2026-07-01 전남광주통합특별시 출범(시도코드 12). 실거래가 API 코드는 2026-10-12 probe로 확인(동 이름 대조). 구 코드 29xxx는 0건", "sigungu": [
+        { "name": "동구", "lawd": "12210", "was": "29110", "regulated": false }, { "name": "서구", "lawd": "12240", "was": "29140", "regulated": false },
+        { "name": "남구", "lawd": "12270", "was": "29155", "regulated": false }, { "name": "북구", "lawd": "12300", "was": "29170", "regulated": false },
+        { "name": "광산구", "lawd": "12330", "was": "29200", "regulated": false }
       ]},
       { "name": "대전", "sigungu": [
         { "name": "동구", "lawd": "30110", "regulated": false }, { "name": "중구", "lawd": "30140", "regulated": false },
