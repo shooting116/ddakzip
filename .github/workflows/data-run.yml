@@ -1,0 +1,47 @@
+name: 데이터 수집 (수동 실행)
+# 수집 스크립트를 골라 인자와 함께 돌리고, data/ 변경이 있으면 커밋한다. 결과 요약은 Actions 주석(annotation)으로도 남긴다.
+on:
+  workflow_dispatch:
+    inputs:
+      script:
+        description: '스크립트'
+        type: choice
+        default: fetch-complexes
+        options: [fetch-complexes, fetch-trades, geocode, fetch-rates, build-index]
+      args:
+        description: '인자 (예: --mode probe / --mode list --sido 서울)'
+        type: string
+        default: '--mode probe'
+
+concurrency:
+  group: data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 실행
+        id: run
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+          KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
+          ECOS_KEY: ${{ secrets.ECOS_KEY }}
+        run: node scripts/${{ inputs.script }}.mjs ${{ inputs.args }}
+      - name: 커밋·푸시
+        run: |
+          git config user.name "ddakzip-bot"
+          git config user.email "bot@korea-rich.com"
+          git add data
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -m "데이터: ${{ inputs.script }} ${{ inputs.args }} (호출 ${{ steps.run.outputs.calls || '?' }}${{ steps.run.outputs.stop && format(' · 중단 {0}', steps.run.outputs.stop) || '' }})"
+          git pull --rebase origin main
+          git push origin HEAD:main
