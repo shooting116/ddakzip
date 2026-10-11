@@ -93,8 +93,10 @@ async function fetchList(lawd) {
   const out = [];
   let page = 1, total = Infinity;
   while (out.length < total) {
+    if (calls >= maxCalls) { stopReason = `max-calls ${maxCalls} 도달`; break; }
     const r = await callFirst('list', LIST_CANDIDATES, `sigunguCode=${lawd}&pageNo=${page}&numOfRows=${ROWS}`);
     total = r.totalCount;
+    if (page > 50) break; // 안전장치
     if (!r.items.length) break;
     for (const it of r.items) out.push({ kaptCode: s(it.kaptCode), name: s(it.kaptName), bjd: s(it.bjdCode), as1: s(it.as1), as2: s(it.as2), as3: s(it.as3), as4: s(it.as4) });
     if (r.items.length < ROWS) break;
@@ -137,10 +139,12 @@ async function listMode() {
     const file = join(OUT, 'list', `${r.lawd}.json`);
     if (existsSync(file) && args.force !== 'true') { done++; continue; }
     try {
-      const { list } = await fetchList(r.lawd);
+      const t0 = Date.now();
+      const { list, total } = await fetchList(r.lawd);
       saveJson(file, list);
       done++;
-      console.log(`  ${r.sido} ${r.sigungu} ${r.lawd}: ${list.length}단지`);
+      const line = `${r.sido} ${r.sigungu} ${r.lawd}: ${list.length}단지(total ${total}) ${((Date.now() - t0) / 1000).toFixed(1)}s 호출누적 ${calls}`;
+      console.log('  ' + line); notices.push(line);
     } catch (e) {
       if (e instanceof DataGoError && e.quota) { stopReason = '일일 트래픽 초과(22)'; break; }
       console.warn(`  실패 ${r.sido} ${r.sigungu}: ${redact(e.message)}`);
@@ -213,7 +217,7 @@ async function main() {
   else if (mode === 'info') await infoMode();
   else throw new Error(`알 수 없는 모드 ${mode}`);
   if (process.env.GITHUB_ACTIONS) {
-    for (let i = 0; i < notices.length; i += 4) console.log(`::notice title=complexes ${i / 4 + 1}::${notices.slice(i, i + 4).join(' | ')}`);
+    for (let i = 0; i < Math.min(notices.length, 40); i += 4) console.log(`::notice title=complexes ${i / 4 + 1}::${notices.slice(i, i + 4).join(' | ')}`);
   }
   if (process.env.GITHUB_OUTPUT) writeFileSync(process.env.GITHUB_OUTPUT, `calls=${calls}\nstop=${stopReason ?? ''}\n`, { flag: 'a' });
 }
