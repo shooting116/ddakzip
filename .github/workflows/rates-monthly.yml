@@ -1,0 +1,39 @@
+name: 금리 월간 확인
+# 매월 1일·15일 09:20 KST — ECOS 주담대 금리를 받아 저장하고, 규칙표와 차이가 있으면 카카오톡으로 알린다. 규칙표는 자동으로 바꾸지 않는다.
+on:
+  schedule:
+    - cron: '20 0 1,15 * *'   # UTC 00:20 = KST 09:20
+  workflow_dispatch:
+
+concurrency:
+  group: data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  rates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: ECOS 금리 수집 + 알림
+        id: rates
+        env:
+          ECOS_KEY: ${{ secrets.ECOS_KEY }}
+          KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
+          KAKAO_REFRESH_TOKEN: ${{ secrets.KAKAO_REFRESH_TOKEN }}
+        run: node scripts/fetch-rates.mjs --notify
+      - name: 커밋·푸시
+        run: |
+          git config user.name "ddakzip-bot"
+          git config user.email "bot@korea-rich.com"
+          git add data/rates
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -m "금리: ECOS 주담대 ${{ steps.rates.outputs.latest }}% (규칙표 대비 ${{ steps.rates.outputs.diff }}%p)"
+          git pull --rebase origin main
+          git push origin HEAD:main

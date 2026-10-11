@@ -35,6 +35,7 @@ jobs:
           DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
           KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
           ECOS_KEY: ${{ secrets.ECOS_KEY }}
+          KAKAO_REFRESH_TOKEN: ${{ secrets.KAKAO_REFRESH_TOKEN }}
         run: node scripts/${{ inputs.script }}.mjs ${{ inputs.args }}
       - name: 커밋·푸시
         run: |
