@@ -19,6 +19,10 @@ const {
 const siteName = '딱집';
 const fullTitle = title === siteName ? `${siteName} — 내 예산에 딱 맞는 집` : `${title} · ${siteName}`;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://korea-rich.com').href;
+const path = Astro.url.pathname;
+const nav = [
+  { href: '/calc/', label: '예산 계산기', icon: 'calc' },
+];
 ---
 <!doctype html>
 <html lang="ko">
@@ -44,7 +48,23 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://korea-rich.
       <div class="wrap row">
         <Logo size={hero ? 'md' : 'sm'} />
         <nav aria-label="주요 메뉴">
-          <a href="/calc/">계산기</a>
+          {nav.map((n) => (
+            <a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}>
+              {n.icon === 'calc' && (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="5" y="2.5" width="14" height="19" rx="3" />
+                  <rect x="8" y="5.5" width="8" height="4" rx="1" fill="currentColor" stroke="none" />
+                  <circle cx="9" cy="13.5" r="1.1" fill="currentColor" stroke="none" />
+                  <circle cx="12" cy="13.5" r="1.1" fill="currentColor" stroke="none" />
+                  <circle cx="15" cy="13.5" r="1.1" fill="currentColor" stroke="none" />
+                  <circle cx="9" cy="17.5" r="1.1" fill="currentColor" stroke="none" />
+                  <circle cx="12" cy="17.5" r="1.1" fill="currentColor" stroke="none" />
+                  <circle cx="15" cy="17.5" r="1.1" fill="currentColor" stroke="none" />
+                </svg>
+              )}
+              <span>{n.label}</span>
+            </a>
+          ))}
         </nav>
       </div>
     </header>
@@ -68,8 +88,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://korea-rich.
 <style>
   .top { background: var(--bg); position: sticky; top: 0; z-index: 10; }
   .top .wrap { display: flex; justify-content: space-between; align-items: center; padding-block: 10px; }
-  .top nav a { font-size: 14px; font-weight: 600; color: var(--fg2); padding: 6px 10px; border-radius: 10px; }
+  .top nav { display: flex; gap: 4px; }
+  .top nav a { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--fg2); padding: 6px 10px; border-radius: 10px; }
   .top nav a:hover { background: var(--card); }
+  .top nav a[aria-current="page"] { color: var(--blue); }
+  .top nav svg { flex: none; }
   main.wrap { padding-top: 8px; }
   .foot { padding-top: 0; }
   .foot .links a { color: var(--fg2); font-weight: 600; }
