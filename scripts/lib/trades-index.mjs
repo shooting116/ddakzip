@@ -75,3 +75,20 @@ export function dice(a, b) {
   for (const [g, n] of ga) inter += Math.min(n, gb.get(g) ?? 0);
   return (2 * inter) / ((A.length - 1) + (B.length - 1));
 }
+
+/** 이름 속 숫자(차·단지·동 번호 등) */
+export function numsOf(s) {
+  const t = String(s ?? '').replace(/\(.*?\)/g, '');
+  return [...new Set((t.match(/\d+/g) ?? []).map(Number))].sort((a, b) => a - b);
+}
+
+/** 매칭용 점수: Dice 유사도에 숫자 불일치 감점 (타워팰리스3 ↔ 타워팰리스1차 같은 오매칭 방지) */
+export function nameScore(a, b) {
+  let s = dice(a, b);
+  const na = numsOf(a), nb = numsOf(b);
+  if (na.length && nb.length) {
+    const same = na.length === nb.length && na.every((x, i) => x === nb[i]);
+    if (!same) s *= 0.5;
+  } else if (na.length !== nb.length) s *= 0.85;
+  return s;
+}

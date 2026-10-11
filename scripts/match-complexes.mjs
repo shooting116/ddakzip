@@ -13,7 +13,7 @@
 import { readFileSync, writeFileSync, existsSync, readdirSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadRegions, ROOT } from './lib/regions.mjs';
-import { groupComplexes, dice } from './lib/trades-index.mjs';
+import { groupComplexes, nameScore } from './lib/trades-index.mjs';
 
 const DIR = join(ROOT, 'data', 'complexes');
 const args = Object.fromEntries(process.argv.slice(2).map((a, i, arr) => {
@@ -62,7 +62,7 @@ function main() {
         const pool = byBjd.get(t.bjd) ?? [];
         if (!pool.length) { stats.noKaptInBjd++; continue; }
         const scored = pool.map((k) => {
-          const score = Math.max(dice(t.apt, k.name), ...t.aliases.map((a) => dice(a, k.name)));
+          const score = Math.max(nameScore(t.apt, k.name), ...t.aliases.map((a) => nameScore(a, k.name)));
           const kj = jibunOf(info[k.kaptCode]?.addr, t.umdNm);
           return { k, score, jibunEq: !!(kj && t.jibun && kj === t.jibun) };
         }).sort((a, b) => (b.jibunEq - a.jibunEq) || (b.score - a.score));

@@ -13,7 +13,7 @@ import { mkdirSync, readFileSync, writeFileSync, existsSync, readdirSync } from 
 import { join } from 'node:path';
 import { serviceKey, getXml, redact, DataGoError } from './lib/datago.mjs';
 import { loadRegions, ROOT } from './lib/regions.mjs';
-import { groupComplexes, dice, normName } from './lib/trades-index.mjs';
+import { groupComplexes, nameScore } from './lib/trades-index.mjs';
 
 const BASE = 'https://apis.data.go.kr/1613000';
 // 목록 서비스는 버전이 바뀌어 왔으므로 후보를 순서대로 시도한다
@@ -173,7 +173,7 @@ function candidateKaptCodes(lawd) {
   for (const t of traded) {
     const pool = byBjd.get(t.bjd) ?? [];
     for (const k of pool) {
-      const score = Math.max(dice(t.apt, k.name), ...t.aliases.map((a) => dice(a, k.name)));
+      const score = Math.max(nameScore(t.apt, k.name), ...t.aliases.map((a) => nameScore(a, k.name)));
       if (score >= 0.45) picked.add(k.kaptCode);
     }
   }
