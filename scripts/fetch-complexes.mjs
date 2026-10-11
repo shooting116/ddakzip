@@ -37,6 +37,7 @@ const all = args.all === 'true';
 
 let calls = 0;
 let stopReason = null;
+let errNotes = 0;
 const notices = [];
 const note = (s) => { console.log(s); notices.push(s); };
 
@@ -58,7 +59,7 @@ async function callFirst(kind, candidates, query) {
     } catch (e) {
       calls++;
       lastErr = e;
-      if (mode === 'probe') note(`  시도 ${path}: ${redact(e.message)}`);
+      if (mode === 'probe' || errNotes++ < 12) note(`  시도 ${path}: ${redact(e.message)}`);
       if (e instanceof DataGoError && e.quota) throw e;
       // 미등록(30)·경로 없음(12) 등은 다음 후보로
     }
