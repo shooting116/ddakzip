@@ -86,7 +86,8 @@ async function probe(key) {
   const codes = (args.codes ?? '').split(',').map((s) => s.trim()).filter(Boolean);
   const yms = (args.ym ?? recentMonths(2, kstNow()).join(',')).split(',').map((s) => s.trim());
   if (!codes.length) throw new Error('--codes 가 필요합니다');
-  for (const code of codes) {
+  const lines = [];
+  outer: for (const code of codes) {
     const parts = [];
     for (const ym of yms) {
       try {
@@ -95,10 +96,15 @@ async function probe(key) {
         parts.push(`${ym}=${r.totalCount}${first ? `(${first.umdNm ?? ''} ${first.aptNm ?? ''})` : ''}`);
       } catch (e) {
         parts.push(`${ym}=ERR ${e.message}`);
-        if (e instanceof DataGoError && (e.quota || e.fatal)) { console.log(`probe ${code}: ${parts.join(' · ')}`); return; }
+        if (e instanceof DataGoError && (e.quota || e.fatal)) { lines.push(`${code}: ${parts.join(' · ')}`); break outer; }
       }
     }
-    console.log(`probe ${code}: ${parts.join(' · ')}`);
+    lines.push(`${code}: ${parts.join(' · ')}`);
+  }
+  for (const l of lines) console.log('probe ' + l);
+  // Actions에서는 로그 대신 주석(annotation)으로도 남긴다 — API로 읽을 수 있다 (스텝당 10개 제한 → 6줄씩 묶음)
+  if (process.env.GITHUB_ACTIONS) {
+    for (let i = 0; i < lines.length; i += 6) console.log(`::notice title=probe ${i / 6 + 1}::${lines.slice(i, i + 6).join(' | ')}`);
   }
 }
 
