@@ -1,4 +1,5 @@
 {
  "bass": "AptBasisInfoServiceV5/getAphusBassInfoV5",
- "dtl": "AptBasisInfoServiceV5/getAphusDtlInfoV5"
+ "dtl": "AptBasisInfoServiceV5/getAphusDtlInfoV5",
+ "list": "AptListService4/getSigunguAptList4"
 }
