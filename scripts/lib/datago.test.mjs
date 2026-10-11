@@ -42,3 +42,13 @@ test('최근 n개월 · 지역 목록', () => {
   assert.equal(regs[0].sido, '서울');
   assert.ok(regs.every((r) => /^\d{5}$/.test(r.lawd)));
 });
+
+test('JSON 응답(K-apt) 파싱: 단일 item · 배열 item', () => {
+  const one = JSON.stringify({ response: { header: { resultCode: '00', resultMsg: 'OK' }, body: { item: { kaptCode: 'A1', kaptName: '괴정 경성스마트W아파트', kaptdaCnt: 120 } } } });
+  const r = parseResponse(one);
+  assert.equal(r.items.length, 1); assert.equal(r.items[0].kaptdaCnt, '120');
+  const many = JSON.stringify({ response: { header: { resultCode: '00' }, body: { items: { item: [{ kaptCode: 'A1' }, { kaptCode: 'A2' }] }, totalCount: 2, pageNo: 1, numOfRows: 100 } } });
+  assert.equal(parseResponse(many).items.length, 2);
+  const err = JSON.stringify({ response: { header: { resultCode: '03', resultMsg: 'NODATA_ERROR' }, body: {} } });
+  assert.throws(() => parseResponse(err), (e) => e instanceof DataGoError && e.code === '03');
+});

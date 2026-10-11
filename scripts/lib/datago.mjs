@@ -47,8 +47,24 @@ function tag(xml, name) {
   return m ? unescapeXml(m[1]) : null;
 }
 
+/** JSON 응답(K-apt 등): {response:{header:{resultCode}, body:{items:{item:[]}|{item:{}}, totalCount}}} */
+function parseJsonResponse(text) {
+  let j;
+  try { j = JSON.parse(text); } catch { throw new DataGoError('99', `JSON 해석 실패: ${text.slice(0, 120)}`); }
+  const res = j.response ?? j;
+  const rc = String(res.header?.resultCode ?? '');
+  if (rc && rc !== '00' && rc !== '000') throw new DataGoError(rc, res.header?.resultMsg ?? 'ERROR');
+  const body = res.body ?? {};
+  let raw = body.items?.item ?? body.item ?? body.items ?? [];
+  if (raw && !Array.isArray(raw)) raw = typeof raw === 'object' && Object.keys(raw).length ? [raw] : [];
+  const items = raw.map((o) => Object.fromEntries(Object.entries(o).map(([k, v]) => [k, v == null ? '' : String(v).trim()])));
+  return { items, totalCount: Number(body.totalCount ?? items.length), numOfRows: Number(body.numOfRows ?? items.length), pageNo: Number(body.pageNo ?? 1) };
+}
+
 /** 응답 전체를 해석. 정상이면 {items, totalCount, numOfRows, pageNo}, 오류면 DataGoError */
 export function parseResponse(xml) {
+  const head = xml.trimStart();
+  if (head.startsWith('{')) return parseJsonResponse(head);
   if (xml.includes('<OpenAPI_ServiceResponse>')) {
     const code = tag(xml, 'returnReasonCode') ?? '99';
     const msg = tag(xml, 'returnAuthMsg') ?? tag(xml, 'errMsg') ?? 'UNKNOWN';
