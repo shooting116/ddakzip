@@ -44,32 +44,39 @@ const note = (s) => { console.log(s); notices.push(s); };
 function loadJson(p, dflt) { try { return existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : dflt; } catch { return dflt; } }
 function saveJson(p, v) { mkdirSync(join(p, '..'), { recursive: true }); writeFileSync(p, JSON.stringify(v, null, 1) + '\n'); }
 
-/** 후보 경로 중 처음 성공하는 것을 기억해 쓴다 */
+/** 후보 경로 중 처음 성공하는 것을 기억해 쓴다. 일시 오류(04 HTTP 에러 등)는 점점 길게 쉬며 재시도한다 */
 const resolved = loadJson(join(OUT, '_endpoints.json'), {});
-async function callFirst(kind, candidates, query) {
+const BACKOFF = [3000, 15000, 45000];
+const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+const isFinal = (e) => e instanceof DataGoError && ['12', '30', '22', '31', '32', '33', '03'].includes(e.code);
+async function callPath(path, query) {
   const key = serviceKey();
-  const order = resolved[kind] ? [resolved[kind], ...candidates.filter((c) => c !== resolved[kind])] : candidates;
   let lastErr;
-  for (const path of order) {
+  for (let i = 0; i <= BACKOFF.length; i++) {
     try {
-      await new Promise((res) => setTimeout(res, 250)); // 서버 보호: 초당 4회 이하
-      let r;
-      try { r = await getXml(`${BASE}/${path}?serviceKey=${key}&${query}`); }
-      catch (e) {
-        // 일시 오류(경로 없음·미등록·쿼터 제외)는 2초 쉬고 한 번 더
-        if (e instanceof DataGoError && ['12', '30', '22', '31', '32', '33'].includes(e.code)) throw e;
-        calls++; await new Promise((res) => setTimeout(res, 2000));
-        r = await getXml(`${BASE}/${path}?serviceKey=${key}&${query}`);
-      }
+      await sleep(250);
       calls++;
-      if (resolved[kind] !== path) { resolved[kind] = path; saveJson(join(OUT, '_endpoints.json'), resolved); }
+      return await getXml(`${BASE}/${path}?serviceKey=${key}&${query}`);
+    } catch (e) {
+      lastErr = e;
+      if (isFinal(e)) throw e;
+      if (i < BACKOFF.length) { if (mode === 'probe' || errNotes++ < 12) note(`  재시도 ${path} (${redact(e.message)}) ${BACKOFF[i] / 1000}s 뒤`); await sleep(BACKOFF[i]); }
+    }
+  }
+  throw lastErr;
+}
+async function callFirst(kind, candidates, query) {
+  if (resolved[kind]) return callPath(resolved[kind], query);
+  let lastErr;
+  for (const path of candidates) {
+    try {
+      const r = await callPath(path, query);
+      resolved[kind] = path; saveJson(join(OUT, '_endpoints.json'), resolved);
       return r;
     } catch (e) {
-      calls++;
       lastErr = e;
       if (mode === 'probe' || errNotes++ < 12) note(`  시도 ${path}: ${redact(e.message)}`);
       if (e instanceof DataGoError && e.quota) throw e;
-      // 미등록(30)·경로 없음(12) 등은 다음 후보로
     }
   }
   throw lastErr;
