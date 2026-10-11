@@ -17,9 +17,9 @@ import { groupComplexes, dice, normName } from './lib/trades-index.mjs';
 
 const BASE = 'https://apis.data.go.kr/1613000';
 // 목록 서비스는 버전이 바뀌어 왔으므로 후보를 순서대로 시도한다
-const LIST_CANDIDATES = ['AptListService4/getSigunguAptList4', 'AptListService3/getSigunguAptList3'];
-const BASS_CANDIDATES = ['AptBasisInfoServiceV5/getAphusBassInfoV5', 'AptBasisInfoServiceV4/getAphusBassInfoV4', 'AptBasisInfoServiceV3/getAphusBassInfoV3'];
-const DTL_CANDIDATES = ['AptBasisInfoServiceV5/getAphusDtlInfoV5', 'AptBasisInfoServiceV4/getAphusDtlInfoV4', 'AptBasisInfoServiceV3/getAphusDtlInfoV3'];
+const LIST_CANDIDATES = ['AptListService4/getSigunguAptList4', 'AptListService3/getSigunguAptList3', 'AptListService4/getSigunguAptList', 'AptListService3/getSigunguAptList', 'AptListService2/getSigunguAptList', 'AptListService5/getSigunguAptList5'];
+const BASS_CANDIDATES = ['AptBasisInfoServiceV5/getAphusBassInfoV5', 'AptBasisInfoServiceV4/getAphusBassInfoV4', 'AptBasisInfoServiceV3/getAphusBassInfoV3', 'AptBasisInfoServiceV5/getAphusBassInfo', 'AptBasisInfoService/getAphusBassInfo'];
+const DTL_CANDIDATES = ['AptBasisInfoServiceV5/getAphusDtlInfoV5', 'AptBasisInfoServiceV4/getAphusDtlInfoV4', 'AptBasisInfoServiceV3/getAphusDtlInfoV3', 'AptBasisInfoServiceV5/getAphusDtlInfo', 'AptBasisInfoService/getAphusDtlInfo'];
 const OUT = join(ROOT, 'data', 'complexes');
 const MANIFEST = join(OUT, '_manifest.json');
 const ROWS = 100;
@@ -58,8 +58,9 @@ async function callFirst(kind, candidates, query) {
     } catch (e) {
       calls++;
       lastErr = e;
+      if (mode === 'probe') note(`  시도 ${path}: ${redact(e.message)}`);
       if (e instanceof DataGoError && e.quota) throw e;
-      // 미등록(30)·경로 없음 등은 다음 후보로
+      // 미등록(30)·경로 없음(12) 등은 다음 후보로
     }
   }
   throw lastErr;
@@ -104,10 +105,15 @@ async function fetchList(lawd) {
 
 async function probe() {
   const lawd = args.lawd ?? '11680';
+  let code = args.kapt ?? null;
   try {
     const { list, total } = await fetchList(lawd);
     note(`list ${lawd}: ${resolved.list} → ${total}건, 예: ${list.slice(0, 3).map((x) => `${x.kaptCode} ${x.name} (${x.bjd})`).join(' / ')}`);
-    const code = args.kapt ?? list[0]?.kaptCode;
+    code = code ?? list[0]?.kaptCode;
+  } catch (e) {
+    note(`list 실패: ${redact(e.message)}`);
+  }
+  try {
     if (code) {
       const b = await callFirst('bass', BASS_CANDIDATES, `kaptCode=${code}`);
       const bb = normBass(b.items[0] ?? {});
