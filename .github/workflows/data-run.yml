@@ -7,7 +7,7 @@ on:
         description: '스크립트'
         type: choice
         default: fetch-complexes
-        options: [fetch-complexes, fetch-trades, geocode, fetch-rates, build-index]
+        options: [fetch-complexes, fetch-trades, geocode, fetch-rates, match-complexes]
       args:
         description: '인자 (예: --mode probe / --mode list --sido 서울)'
         type: string
