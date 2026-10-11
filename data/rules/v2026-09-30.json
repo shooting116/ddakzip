@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "version": "v0.1",
+    "effective_from": "2026-09-30",
+    "verified_at": "2026-09-30",
+    "note": "규칙표 v0.1 검토 문서를 옮긴 것. 금액 단위는 원, 비율은 %. 상충 항목은 보수적(대출이 적게 나오는) 값을 채택.",
+    "sources": {
+      "didimdol": "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030101.jsp",
+      "newlywed_first": "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030601.jsp",
+      "newborn": "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030801.jsp",
+      "bogeumjari": "https://www.hf.go.kr/ko/sub01/sub01_01_01.do",
+      "bogeumjari_rate": "https://www.hf.go.kr/ko/sub01/sub01_01_04.do",
+      "fsc_627": "https://www.fsc.go.kr/no010101/84824",
+      "fsc_1015": "https://www.fsc.go.kr/no010101/85432",
+      "fsc_813": "https://www.fsc.go.kr/no010101/87517",
+      "regulated_2510": "https://www.korea.kr/news/policyNewsView.do?newsId=148950973",
+      "regulated_2607": "https://www.korea.kr/news/policyNewsView.do?newsId=148967354",
+      "ecos_mortgage_rate": "ECOS 121Y006 / BECBLA0302 (2026-07)"
+    }
+  },
+
+  "regions": {
+    "note": "R1 규제지역(투기과열+조정) · R2 수도권 비규제 · R3 지방. 수도권·규제지역 규제는 R1+R2에 적용. lawd는 실거래가 API 시군구 코드(2단계에서 호출로 검증). 화성시 신설 구 코드는 미확인.",
+    "metro_sido": ["서울", "경기", "인천"],
+    "sido": [
+      { "name": "서울", "sigungu": [
+        { "name": "종로구", "lawd": "11110", "regulated": true }, { "name": "중구", "lawd": "11140", "regulated": true },
+        { "name": "용산구", "lawd": "11170", "regulated": true }, { "name": "성동구", "lawd": "11200", "regulated": true },
+        { "name": "광진구", "lawd": "11215", "regulated": true }, { "name": "동대문구", "lawd": "11230", "regulated": true },
+        { "name": "중랑구", "lawd": "11260", "regulated": true }, { "name": "성북구", "lawd": "11290", "regulated": true },
+        { "name": "강북구", "lawd": "11305", "regulated": true }, { "name": "도봉구", "lawd": "11320", "regulated": true },
+        { "name": "노원구", "lawd": "11350", "regulated": true }, { "name": "은평구", "lawd": "11380", "regulated": true },
+        { "name": "서대문구", "lawd": "11410", "regulated": true }, { "name": "마포구", "lawd": "11440", "regulated": true },
+        { "name": "양천구", "lawd": "11470", "regulated": true }, { "name": "강서구", "lawd": "11500", "regulated": true },
+        { "name": "구로구", "lawd": "11530", "regulated": true }, { "name": "금천구", "lawd": "11545", "regulated": true },
+        { "name": "영등포구", "lawd": "11560", "regulated": true }, { "name": "동작구", "lawd": "11590", "regulated": true },
+        { "name": "관악구", "lawd": "11620", "regulated": true }, { "name": "서초구", "lawd": "11650", "regulated": true },
+        { "name": "강남구", "lawd": "11680", "regulated": true }, { "name": "송파구", "lawd": "11710", "regulated": true },
+        { "name": "강동구", "lawd": "11740", "regulated": true }
+      ]},
+      { "name": "경기", "sigungu": [
+        { "name": "수원시 장안구", "lawd": "41111", "regulated": true }, { "name": "수원시 권선구", "lawd": "41113", "regulated": false },
+        { "name": "수원시 팔달구", "lawd": "41115", "regulated": true }, { "name": "수원시 영통구", "lawd": "41117", "regulated": true },
+        { "name": "성남시 수정구", "lawd": "41131", "regulated": true }, { "name": "성남시 중원구", "lawd": "41133", "regulated": true },
+        { "name": "성남시 분당구", "lawd": "41135", "regulated": true }, { "name": "의정부시", "lawd": "41150", "regulated": false },
+        { "name": "안양시 만안구", "lawd": "41171", "regulated": false }, { "name": "안양시 동안구", "lawd": "41173", "regulated": true },
+        { "name": "부천시 원미구", "lawd": "41192", "regulated": false }, { "name": "부천시 소사구", "lawd": "41194", "regulated": false },
+        { "name": "부천시 오정구", "lawd": "41196", "regulated": false }, { "name": "광명시", "lawd": "41210", "regulated": true },
+        { "name": "평택시", "lawd": "41220", "regulated": false }, { "name": "동두천시", "lawd": "41250", "regulated": false },
+        { "name": "안산시 상록구", "lawd": "41271", "regulated": false }, { "name": "안산시 단원구", "lawd": "41273", "regulated": false },
+        { "name": "고양시 덕양구", "lawd": "41281", "regulated": false }, { "name": "고양시 일산동구", "lawd": "41285", "regulated": false },
+        { "name": "고양시 일산서구", "lawd": "41287", "regulated": false }, { "name": "과천시", "lawd": "41290", "regulated": true },
+        { "name": "구리시", "lawd": "41310", "regulated": true }, { "name": "남양주시", "lawd": "41360", "regulated": false },
+        { "name": "오산시", "lawd": "41370", "regulated": false }, { "name": "시흥시", "lawd": "41390", "regulated": false },
+        { "name": "군포시", "lawd": "41410", "regulated": false }, { "name": "의왕시", "lawd": "41430", "regulated": true },
+        { "name": "하남시", "lawd": "41450", "regulated": true }, { "name": "용인시 처인구", "lawd": "41461", "regulated": false },
+        { "name": "용인시 기흥구", "lawd": "41463", "regulated": true }, { "name": "용인시 수지구", "lawd": "41465", "regulated": true },
+        { "name": "파주시", "lawd": "41480", "regulated": false }, { "name": "이천시", "lawd": "41500", "regulated": false },
+        { "name": "안성시", "lawd": "41550", "regulated": false }, { "name": "김포시", "lawd": "41570", "regulated": false },
+        { "name": "화성시 동탄구", "lawd": null, "parent_lawd": "41590", "regulated": true },
+        { "name": "화성시 병점구", "lawd": null, "parent_lawd": "41590", "regulated": false },
+        { "name": "화성시 효행구", "lawd": null, "parent_lawd": "41590", "regulated": false },
+        { "name": "화성시 만세구", "lawd": null, "parent_lawd": "41590", "regulated": false },
+        { "name": "광주시", "lawd": "41610", "regulated": false }, { "name": "양주시", "lawd": "41630", "regulated": false },
+        { "name": "포천시", "lawd": "41650", "regulated": false }, { "name": "여주시", "lawd": "41670", "regulated": false },
+        { "name": "연천군", "lawd": "41800", "regulated": false }, { "name": "가평군", "lawd": "41820", "regulated": false },
+        { "name": "양평군", "lawd": "41830", "regulated": false }
+      ]},
+      { "name": "인천", "sigungu": [
+        { "name": "중구", "lawd": "28110", "regulated": false }, { "name": "동구", "lawd": "28140", "regulated": false },
+        { "name": "미추홀구", "lawd": "28177", "regulated": false }, { "name": "연수구", "lawd": "28185", "regulated": false },
+        { "name": "남동구", "lawd": "28200", "regulated": false }, { "name": "부평구", "lawd": "28237", "regulated": false },
+        { "name": "계양구", "lawd": "28245", "regulated": false }, { "name": "서구", "lawd": "28260", "regulated": false },
+        { "name": "강화군", "lawd": "28710", "regulated": false }, { "name": "옹진군", "lawd": "28720", "regulated": false }
+      ]},
+      { "name": "부산", "sigungu": [
+        { "name": "중구", "lawd": "26110", "regulated": false }, { "name": "서구", "lawd": "26140", "regulated": false },
+        { "name": "동구", "lawd": "26170", "regulated": false }, { "name": "영도구", "lawd": "26200", "regulated": false },
+        { "name": "부산진구", "lawd": "26230", "regulated": false }, { "name": "동래구", "lawd": "26260", "regulated": false },
+        { "name": "남구", "lawd": "26290", "regulated": false }, { "name": "북구", "lawd": "26320", "regulated": false },
+        { "name": "해운대구", "lawd": "26350", "regulated": false }, { "name": "사하구", "lawd": "26380", "regulated": false },
+        { "name": "금정구", "lawd": "26410", "regulated": false }, { "name": "강서구", "lawd": "26440", "regulated": false },
+        { "name": "연제구", "lawd": "26470", "regulated": false }, { "name": "수영구", "lawd": "26500", "regulated": false },
+        { "name": "사상구", "lawd": "26530", "regulated": false }, { "name": "기장군", "lawd": "26710", "regulated": false }
+      ]},
+      { "name": "대구", "sigungu": [
+        { "name": "중구", "lawd": "27110", "regulated": false }, { "name": "동구", "lawd": "27140", "regulated": false },
+        { "name": "서구", "lawd": "27170", "regulated": false }, { "name": "남구", "lawd": "27200", "regulated": false },
+        { "name": "북구", "lawd": "27230", "regulated": false }, { "name": "수성구", "lawd": "27260", "regulated": false },
+        { "name": "달서구", "lawd": "27290", "regulated": false }, { "name": "달성군", "lawd": "27710", "regulated": false },
+        { "name": "군위군", "lawd": "27720", "regulated": false }
+      ]},
+      { "name": "광주", "sigungu": [
+        { "name": "동구", "lawd": "29110", "regulated": false }, { "name": "서구", "lawd": "29140", "regulated": false },
+        { "name": "남구", "lawd": "29155", "regulated": false }, { "name": "북구", "lawd": "29170", "regulated": false },
+        { "name": "광산구", "lawd": "29200", "regulated": false }
+      ]},
+      { "name": "대전", "sigungu": [
+        { "name": "동구", "lawd": "30110", "regulated": false }, { "name": "중구", "lawd": "30140", "regulated": false },
+        { "name": "서구", "lawd": "30170", "regulated": false }, { "name": "유성구", "lawd": "30200", "regulated": false },
+        { "name": "대덕구", "lawd": "30230", "regulated": false }
+      ]},
+      { "name": "울산", "sigungu": [
+        { "name": "중구", "lawd": "31110", "regulated": false }, { "name": "남구", "lawd": "31140", "regulated": false },
+        { "name": "동구", "lawd": "31170", "regulated": false }, { "name": "북구", "lawd": "31200", "regulated": false },
+        { "name": "울주군", "lawd": "31710", "regulated": false }
+      ]},
+      { "name": "세종", "sigungu": [ { "name": "세종시", "lawd": "36110", "regulated": false } ] },
+      { "name": "그 외 지방", "sigungu": [ { "name": "(시군구 무관)", "lawd": null, "regulated": false } ] }
+    ]
+  },
+
+  "bank": {
+    "note": "은행·2금융 주택구입목적 주담대. 규제지역 LTV 40%는 행정지도 적용치. 6.27·10.15 대책, 8.13 대책에서 유지 확인.",
+    "ltv": {
+      "general":      { "R1": 40, "R2": 70, "R3": 70 },
+      "first":        { "R1": 70, "R2": 70, "R3": 80, "R3_loan_cap": 600000000 },
+      "serviceman":   { "R1": 60, "R2": 70, "R3": 70, "income_cap": 90000000, "price_cap": 800000000 },
+      "move_sell6m":  { "R1": 40, "R2": 70, "R3": 70, "R3_without_proof": 60 },
+      "owner_keep":   { "R1": 0,  "R2": 0,  "R3": 60 }
+    },
+    "loan_cap_metro": [
+      { "price_max": 1500000000, "cap": 600000000 },
+      { "price_max": 2500000000, "cap": 400000000 },
+      { "price_max": null,       "cap": 200000000 }
+    ],
+    "dti": {
+      "general": { "R1": 40, "R2": 60, "R3": null },
+      "first":   { "R1": 60, "R2": 60, "R3": 60 },
+      "note": "R1은 투기과열(40)·조정(50) 중 보수적으로 40 채택. R3 일반은 미적용."
+    },
+    "dsr": {
+      "ratio": 40,
+      "applies_when_total_loans_over": 100000000,
+      "stress": { "R1": 3.0, "R2": 3.0, "R3": 0.75, "note": "2026.7.1~12.31. 변동형 100% 적용 기준. R3는 1.5%×50%." },
+      "max_term_years": { "R1": 30, "R2": 30, "R3": 40 },
+      "existing_debt": {
+        "credit_loan":   { "principal_years": 5, "default_rate": 6.0 },
+        "overdraft":     { "principal_years": 5, "default_rate": 6.5, "basis": "limit" },
+        "installment":   { "basis": "annual_actual" },
+        "student":       { "basis": "annual_actual" },
+        "card_loan":     { "principal_years": 3, "default_rate": 12.0 },
+        "mortgage":      { "basis": "annual_actual" },
+        "jeonse":        { "owner_metro_interest_only": true, "else": "excluded", "default_rate": 4.0 }
+      }
+    },
+    "rate_default": { "variable": 4.48, "fixed": 4.76, "as_of": "2026-07", "source": "ECOS 예금은행 주담대 신규취급 가중평균" }
+  },
+
+  "policy": {
+    "asset_cap": 511000000,
+    "area_cap_m2": 85,
+    "products": {
+      "didimdol": {
+        "name": "디딤돌대출",
+        "provider": "주택도시기금",
+        "requires": { "homeless": true },
+        "variants": {
+          "general": { "label": "일반",       "income_cap": 60000000, "price_cap": 500000000, "limit": 200000000 },
+          "first":   { "label": "생애최초",   "income_cap": 70000000, "price_cap": 500000000, "limit": 240000000 },
+          "newly":   { "label": "신혼",       "income_cap": 85000000, "price_cap": 600000000, "limit": 320000000 },
+          "kids2":   { "label": "2자녀 이상", "income_cap": 70000000, "price_cap": 600000000, "limit": 320000000 }
+        },
+        "ltv": { "default": 70, "first": 80, "first_metro": 70 },
+        "dti": 60,
+        "terms": [10, 15, 20, 30],
+        "rate_type": "variable",
+        "rate_table": {
+          "bands": [20000000, 40000000, 70000000, 85000000],
+          "rows": [[2.85, 2.95, 3.05, 3.10], [3.20, 3.30, 3.40, 3.45], [3.55, 3.65, 3.75, 3.80], [3.90, 4.00, 4.10, 4.15]],
+          "local_discount": 0.2,
+          "floor": 1.5
+        },
+        "room_deduction_metro_apt": true
+      },
+      "newlywed_first": {
+        "name": "신혼부부전용 구입자금",
+        "provider": "주택도시기금",
+        "requires": { "homeless": true, "first": true, "newly": true },
+        "income_cap": 85000000, "price_cap": 600000000, "limit": 320000000,
+        "ltv": { "default": 80, "metro": 70 },
+        "dti": 60,
+        "terms": [10, 15, 20, 30],
+        "rate_type": "variable",
+        "rate_table": {
+          "bands": [20000000, 40000000, 70000000, 85000000],
+          "rows": [[2.55, 2.65, 2.75, 2.80], [2.90, 3.00, 3.10, 3.15], [3.25, 3.35, 3.45, 3.50], [3.60, 3.70, 3.80, 3.85]],
+          "local_discount": 0.2,
+          "floor": 1.2
+        }
+      },
+      "newborn": {
+        "name": "신생아 특례 디딤돌",
+        "provider": "주택도시기금",
+        "requires": { "homeless": true, "birth_within_years": 2 },
+        "income_cap": 130000000, "income_cap_dual": 200000000, "income_cap_each": 130000000,
+        "price_cap": 900000000, "limit": 400000000,
+        "ltv": { "default": 70, "first": 80, "first_metro": 70 },
+        "dti": 60,
+        "terms": [10, 15, 20, 30],
+        "rate_type": "unknown",
+        "special_years": 5,
+        "rate_table": {
+          "bands": [20000000, 40000000, 60000000, 85000000, 100000000, 130000000, 150000000, 170000000, 200000000],
+          "rows": [
+            [1.80, 1.90, 2.00, 2.05], [2.15, 2.25, 2.35, 2.40], [2.40, 2.50, 2.60, 2.65], [2.65, 2.75, 2.85, 2.90],
+            [2.90, 3.00, 3.10, 3.20], [3.20, 3.30, 3.40, 3.50], [3.50, 3.60, 3.70, 3.80], [3.85, 3.95, 4.05, 4.15], [4.20, 4.30, 4.40, 4.50]
+          ],
+          "local_discount": 0.2,
+          "floor": 1.2
+        },
+        "after_special_add_low_income": 0.75
+      },
+      "bogeumjari": {
+        "name": "보금자리론",
+        "provider": "한국주택금융공사",
+        "requires": { "homeless_or_one_house_sell": true },
+        "sell_within_years": 3,
+        "price_cap": 600000000,
+        "income_cap": { "default": 70000000, "newly": 85000000, "kids1": 90000000, "kids2": 100000000 },
+        "limit": { "default": 360000000, "kids2": 400000000, "first": 420000000 },
+        "ltv": { "apt": 70, "apt_R1": 60, "first": 80, "first_metro": 70, "no_cut_for": ["serviceman", "first"] },
+        "dti": { "default": 60, "R1": 50, "no_cut_for": ["serviceman", "first"] },
+        "serviceman": { "homeless": true, "price_cap": 600000000, "income_cap": 70000000 },
+        "terms": [10, 15, 20, 30, 40, 50],
+        "term_age_limit": { "40": { "age_under": 40, "newly_age_under": 50 }, "50": { "age_under": 35, "newly_age_under": 40 } },
+        "rate_type": "fixed",
+        "rate_table": {
+          "as_of": "2026-10-01",
+          "terms": [10, 15, 20, 30, 40, 50],
+          "akkime": [4.90, 5.00, 5.05, 5.10, 5.15, 5.20],
+          "u_t":    [5.00, 5.10, 5.15, 5.20, 5.25, 5.30],
+          "regulated_add": 0.2
+        }
+      },
+      "youth_dream": {
+        "name": "청년 주택드림 디딤돌",
+        "provider": "주택도시기금",
+        "requires": { "homeless": true, "subscription_win": true, "age_max": 39 },
+        "enabled_in_calculator": false,
+        "note": "청약 당첨자 전용(분양주택). v1 계산기에서는 제외."
+      }
+    }
+  },
+
+  "tax": {
+    "acquisition": {
+      "note": "1주택(무주택자 취득)·일시적 2주택. 6~9억 구간 세율 = (가액×2/3억 − 3)/100, 소수 넷째 자리 반올림.",
+      "tiers": { "low_max": 600000000, "low_rate": 1.0, "high_min": 900000000, "high_rate": 3.0 },
+      "education_tax_ratio_of_rate": 0.1,
+      "rural_tax_rate_over_85m2": 0.2,
+      "first_home_exemption": { "price_cap": 1200000000, "cap": 2000000, "until": "2028-12-31" },
+      "newborn_exemption":    { "price_cap": 1200000000, "cap": 5000000, "until": "2028-12-31" },
+      "exemption_covers_education_tax": false
+    },
+    "capital_gains": {
+      "note": "갈아타기 판정용. 1세대1주택 비과세 12억. 일시적 2주택 처분기한 3년, 조정→조정은 2026-10-01 이후 양도분 2년(2026-08-03 이전 계약은 3년).",
+      "exempt_price": 1200000000,
+      "temp_two_house_years": 3,
+      "temp_two_house_years_regulated_to_regulated_from_2026_10_01": 2
+    }
+  },
+
+  "fees": {
+    "brokerage": {
+      "tiers": [
+        { "price_min": 0,          "rate": 0.6, "cap": 250000 },
+        { "price_min": 50000000,   "rate": 0.5, "cap": 800000 },
+        { "price_min": 200000000,  "rate": 0.4, "cap": null },
+        { "price_min": 900000000,  "rate": 0.5, "cap": null },
+        { "price_min": 1200000000, "rate": 0.6, "cap": null },
+        { "price_min": 1500000000, "rate": 0.7, "cap": null }
+      ],
+      "vat": 10
+    },
+    "stamp_contract": [
+      { "price_max": 100000000,  "amount": 0 },
+      { "price_max": 1000000000, "amount": 150000 },
+      { "price_max": null,       "amount": 350000 }
+    ],
+    "bond": {
+      "note": "국민주택채권 매입률(‰). 기준은 시가표준액(공시가). 공시가는 매매가의 70%로 가정(입력 가능). 즉시매도 할인율은 2026-09 실측 16.1%.",
+      "assessed_ratio_default": 0.7,
+      "tiers_metro_city": [ [20000000, 13], [50000000, 19], [100000000, 21], [160000000, 23], [260000000, 26], [600000000, 31] ],
+      "tiers_other":      [ [20000000, 13], [50000000, 14], [100000000, 16], [160000000, 18], [260000000, 21], [600000000, 26] ],
+      "metro_city_sido": ["서울", "부산", "대구", "인천", "광주", "대전", "울산"],
+      "discount_rate_default": 16.1
+    },
+    "registration_fee": 15000,
+    "legal_fee_default": 600000,
+    "loan_stamp": [
+      { "loan_max": 50000000,   "amount": 0 },
+      { "loan_max": 100000000,  "amount": 70000 },
+      { "loan_max": 1000000000, "amount": 150000 },
+      { "loan_max": null,       "amount": 350000 }
+    ],
+    "loan_stamp_borrower_share": 0.5
+  },
+
+  "whatif": { "cash_delta": 30000000, "income_delta": 10000000, "rate_delta": 0.5 }
+}
