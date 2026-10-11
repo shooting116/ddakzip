@@ -25,14 +25,21 @@ jobs:
         id: fetch
         env:
           DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
-        run: node scripts/fetch-trades.mjs --mode refresh --months 3 --max-calls 900
+        run: node scripts/fetch-trades.mjs --mode refresh --months 3 --max-calls 450
+      # 백필이 덜 끝났으면 남은 쿼터로 이어서 받는다 (다 끝나면 "할 일이 없습니다"로 바로 끝남)
+      - name: 백필 이어받기
+        id: backfill
+        if: steps.fetch.outputs.stop == ''
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: node scripts/fetch-trades.mjs --mode backfill --months 36 --max-calls $(( 930 - ${{ steps.fetch.outputs.calls || 0 }} ))
       - name: 커밋·푸시
         run: |
           git config user.name "ddakzip-bot"
           git config user.email "bot@korea-rich.com"
           git add data/trades
           if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
-          git commit -m "실거래 갱신 $(TZ=Asia/Seoul date +%Y-%m-%d): 파일 ${{ steps.fetch.outputs.changed }}개 변경 (호출 ${{ steps.fetch.outputs.calls }})"
+          git commit -m "실거래 갱신 $(TZ=Asia/Seoul date +%Y-%m-%d): 최근 3개월 ${{ steps.fetch.outputs.changed }}개 변경 · 백필 ${{ steps.backfill.outputs.done || 0 }}건 (호출 $(( ${{ steps.fetch.outputs.calls || 0 }} + ${{ steps.backfill.outputs.calls || 0 }} )))"
           git pull --rebase origin main
           git push origin HEAD:main
       - name: 요약
@@ -40,6 +47,7 @@ jobs:
         run: |
           {
             echo "### 실거래 매일 갱신"
-            echo "- 완료 ${{ steps.fetch.outputs.done }}/${{ steps.fetch.outputs.jobs }} · 호출 ${{ steps.fetch.outputs.calls }} · 파일 변경 ${{ steps.fetch.outputs.changed }}"
-            if [ -n "${{ steps.fetch.outputs.stop }}" ]; then echo "- 중단: ${{ steps.fetch.outputs.stop }}"; fi
+            echo "- 최근 3개월: ${{ steps.fetch.outputs.done }}/${{ steps.fetch.outputs.jobs }} · 호출 ${{ steps.fetch.outputs.calls }} · 파일 변경 ${{ steps.fetch.outputs.changed }}"
+            echo "- 백필 이어받기: ${{ steps.backfill.outputs.done || 0 }}/${{ steps.backfill.outputs.jobs || 0 }} · 호출 ${{ steps.backfill.outputs.calls || 0 }}"
+            if [ -n "${{ steps.fetch.outputs.stop }}${{ steps.backfill.outputs.stop }}" ]; then echo "- 중단: ${{ steps.fetch.outputs.stop }} ${{ steps.backfill.outputs.stop }}"; fi
           } >> "$GITHUB_STEP_SUMMARY"
