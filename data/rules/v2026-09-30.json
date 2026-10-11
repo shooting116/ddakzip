@@ -15,12 +15,15 @@
       "fsc_813": "https://www.fsc.go.kr/no010101/87517",
       "regulated_2510": "https://www.korea.kr/news/policyNewsView.do?newsId=148950973",
       "regulated_2607": "https://www.korea.kr/news/policyNewsView.do?newsId=148967354",
-      "ecos_mortgage_rate": "ECOS 121Y006 / BECBLA0302 (2026-07)"
+      "ecos_mortgage_rate": "ECOS 121Y006 / BECBLA0302 (2026-07)",
+      "reorg_kakao_2602": "https://devtalk.kakao.com/t/api/148160",
+      "reorg_kakao_2607": "https://devtalk.kakao.com/t/2026-7-api/150364",
+      "reorg_stanregin_2609": "https://github.com/sokldjs554/procurement-forecast/pull/34"
     }
   },
 
   "regions": {
-    "note": "R1 규제지역(투기과열+조정) · R2 수도권 비규제 · R3 지방. 수도권·규제지역 규제는 R1+R2에 적용. lawd는 실거래가 API 시군구 코드(2단계에서 호출로 검증). 화성시 신설 구 코드는 미확인.",
+    "note": "R1 규제지역(투기과열+조정) · R2 수도권 비규제 · R3 지방. 수도권·규제지역 규제는 R1+R2에 적용. lawd는 실거래가 API 시군구 코드. 2026년 개편(화성시 4구 2026-02-01, 인천 제물포·영종·서해·검단구 2026-07-01)을 반영했고 국토부 API는 과거 거래도 새 코드로 다시 매기므로 모든 월을 새 코드로 수집한다. 광주는 전남광주통합특별시(시도코드 12) 출범으로 코드가 바뀌었을 수 있어 수집기 probe로 확정 예정.",
     "metro_sido": ["서울", "경기", "인천"],
     "sido": [
       { "name": "서울", "sigungu": [
@@ -57,20 +60,21 @@
         { "name": "용인시 기흥구", "lawd": "41463", "regulated": true }, { "name": "용인시 수지구", "lawd": "41465", "regulated": true },
         { "name": "파주시", "lawd": "41480", "regulated": false }, { "name": "이천시", "lawd": "41500", "regulated": false },
         { "name": "안성시", "lawd": "41550", "regulated": false }, { "name": "김포시", "lawd": "41570", "regulated": false },
-        { "name": "화성시 동탄구", "lawd": null, "parent_lawd": "41590", "regulated": true },
-        { "name": "화성시 병점구", "lawd": null, "parent_lawd": "41590", "regulated": false },
-        { "name": "화성시 효행구", "lawd": null, "parent_lawd": "41590", "regulated": false },
-        { "name": "화성시 만세구", "lawd": null, "parent_lawd": "41590", "regulated": false },
+        { "name": "화성시 동탄구", "lawd": "41597", "parent_lawd": "41590", "regulated": true },
+        { "name": "화성시 병점구", "lawd": "41595", "parent_lawd": "41590", "regulated": false },
+        { "name": "화성시 효행구", "lawd": "41593", "parent_lawd": "41590", "regulated": false },
+        { "name": "화성시 만세구", "lawd": "41591", "parent_lawd": "41590", "regulated": false },
         { "name": "광주시", "lawd": "41610", "regulated": false }, { "name": "양주시", "lawd": "41630", "regulated": false },
         { "name": "포천시", "lawd": "41650", "regulated": false }, { "name": "여주시", "lawd": "41670", "regulated": false },
         { "name": "연천군", "lawd": "41800", "regulated": false }, { "name": "가평군", "lawd": "41820", "regulated": false },
         { "name": "양평군", "lawd": "41830", "regulated": false }
       ]},
       { "name": "인천", "sigungu": [
-        { "name": "중구", "lawd": "28110", "regulated": false }, { "name": "동구", "lawd": "28140", "regulated": false },
+        { "name": "제물포구", "lawd": "28125", "regulated": false, "was": "중구 28110 + 동구 28140" }, { "name": "영종구", "lawd": "28155", "regulated": false, "was": "중구 28110" },
         { "name": "미추홀구", "lawd": "28177", "regulated": false }, { "name": "연수구", "lawd": "28185", "regulated": false },
         { "name": "남동구", "lawd": "28200", "regulated": false }, { "name": "부평구", "lawd": "28237", "regulated": false },
-        { "name": "계양구", "lawd": "28245", "regulated": false }, { "name": "서구", "lawd": "28260", "regulated": false },
+        { "name": "계양구", "lawd": "28245", "regulated": false }, { "name": "서해구", "lawd": "28275", "regulated": false, "was": "서구 28260" },
+        { "name": "검단구", "lawd": "28290", "regulated": false, "was": "서구 28260" },
         { "name": "강화군", "lawd": "28710", "regulated": false }, { "name": "옹진군", "lawd": "28720", "regulated": false }
       ]},
       { "name": "부산", "sigungu": [

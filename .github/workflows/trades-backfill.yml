@@ -1,0 +1,76 @@
+name: 실거래 백필 (수동)
+# 처음 36개월을 채울 때 쓴다. 일일 트래픽(개발계정 1,000회)을 넘기면 알아서 멈추고, 다음 실행이 이어서 한다.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'backfill(이어받기) · refresh(최근 n개월 다시) · probe(코드 확인)'
+        type: choice
+        default: backfill
+        options: [backfill, refresh, probe]
+      sido:
+        description: '시도(쉼표 구분, 비우면 전체) 예: 서울,인천'
+        type: string
+        default: '서울'
+      months:
+        description: '개월 수'
+        type: string
+        default: '36'
+      max_calls:
+        description: '이번 실행 최대 호출 수'
+        type: string
+        default: '950'
+      codes:
+        description: 'probe 전용: 시군구 코드(쉼표)'
+        type: string
+        default: ''
+      ym:
+        description: 'probe 전용: YYYYMM(쉼표)'
+        type: string
+        default: ''
+
+concurrency:
+  group: trades
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 수집
+        id: fetch
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: |
+          if [ "${{ inputs.mode }}" = "probe" ]; then
+            node scripts/fetch-trades.mjs --mode probe --codes "${{ inputs.codes }}" ${{ inputs.ym && format('--ym "{0}"', inputs.ym) || '' }}
+          else
+            node scripts/fetch-trades.mjs --mode "${{ inputs.mode }}" --months "${{ inputs.months }}" --max-calls "${{ inputs.max_calls }}" ${{ inputs.sido && format('--sido "{0}"', inputs.sido) || '' }}
+          fi
+      - name: 커밋·푸시
+        if: inputs.mode != 'probe'
+        run: |
+          git config user.name "ddakzip-bot"
+          git config user.email "bot@korea-rich.com"
+          git add data/trades
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -m "실거래 백필: ${{ inputs.sido || '전체' }} ${{ steps.fetch.outputs.done }}/${{ steps.fetch.outputs.jobs }} (호출 ${{ steps.fetch.outputs.calls }}${{ steps.fetch.outputs.stop && format(' · 중단 {0}', steps.fetch.outputs.stop) || '' }})"
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: 요약
+        if: always()
+        run: |
+          {
+            echo "### 실거래 수집 결과"
+            echo "- 모드: ${{ inputs.mode }} · 시도: ${{ inputs.sido || '전체' }} · 개월: ${{ inputs.months }}"
+            echo "- 완료 ${{ steps.fetch.outputs.done }}/${{ steps.fetch.outputs.jobs }} · 호출 ${{ steps.fetch.outputs.calls }} · 파일 변경 ${{ steps.fetch.outputs.changed }}"
+            if [ -n "${{ steps.fetch.outputs.stop }}" ]; then echo "- 중단: ${{ steps.fetch.outputs.stop }} → 내일 다시 실행하면 이어서 받습니다"; fi
+          } >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,45 @@
+name: 실거래 매일 갱신
+# 매일 06:10 KST — 최근 3개월을 다시 받아 늦게 신고된 건·해제 건을 반영한다. 변경이 있으면 커밋 → Cloudflare가 자동 빌드.
+on:
+  schedule:
+    - cron: '10 21 * * *'   # UTC 21:10 = KST 06:10
+  workflow_dispatch:
+
+concurrency:
+  group: trades
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 최근 3개월 다시 받기
+        id: fetch
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: node scripts/fetch-trades.mjs --mode refresh --months 3 --max-calls 900
+      - name: 커밋·푸시
+        run: |
+          git config user.name "ddakzip-bot"
+          git config user.email "bot@korea-rich.com"
+          git add data/trades
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -m "실거래 갱신 $(TZ=Asia/Seoul date +%Y-%m-%d): 파일 ${{ steps.fetch.outputs.changed }}개 변경 (호출 ${{ steps.fetch.outputs.calls }})"
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: 요약
+        if: always()
+        run: |
+          {
+            echo "### 실거래 매일 갱신"
+            echo "- 완료 ${{ steps.fetch.outputs.done }}/${{ steps.fetch.outputs.jobs }} · 호출 ${{ steps.fetch.outputs.calls }} · 파일 변경 ${{ steps.fetch.outputs.changed }}"
+            if [ -n "${{ steps.fetch.outputs.stop }}" ]; then echo "- 중단: ${{ steps.fetch.outputs.stop }}"; fi
+          } >> "$GITHUB_STEP_SUMMARY"
