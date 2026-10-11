@@ -76,7 +76,7 @@ function normBass(it) {
     units: n(it.kaptdaCnt), dongs: n(it.kaptDongCnt), topFloor: n(it.kaptTopFloor), baseFloor: n(it.kaptBaseFloor), ho: n(it.hoCnt),
     used: s(it.kaptUsedate), builder: s(it.kaptBcompany), developer: s(it.kaptAcompany),
     areaTotal: n(it.kaptTarea), areaMgmt: n(it.kaptMarea), areaPriv: n(it.privArea),
-    units60: n(it.kaptMparea_60), units85: n(it.kaptMparea_85), units135: n(it.kaptMparea_135), units136: n(it.kaptMparea_136),
+    units60: n(it.kaptMparea60), units85: n(it.kaptMparea85), units135: n(it.kaptMparea135), units136: n(it.kaptMparea136),
     zip: s(it.zipcode), url: s(it.kaptUrl),
   };
 }
@@ -85,7 +85,7 @@ function normDtl(it) {
     parkGround: n(it.kaptdPcnt), parkUnder: n(it.kaptdPcntu), elevators: n(it.kaptdEcnt), cctv: n(it.kaptdCccnt),
     subwayLine: s(it.subwayLine), subwayStation: s(it.subwayStation), subwayWalk: s(it.kaptdWtimesub), busWalk: s(it.kaptdWtimebus),
     edu: s(it.educationFacility), conv: s(it.convenientFacility), welfare: s(it.welfareFacility),
-    security: s(it.codeSec), guardCnt: n(it.kaptdScnt), cleanCnt: n(it.kaptdClcnt), disposal: s(it.codeDisinf), fire: s(it.codeFalarm), water: s(it.codeWsupply),
+    security: s(it.codeSec), guardCnt: n(it.kaptdScnt), cleanCnt: n(it.kaptdClcnt), fire: s(it.codeFalarm), water: s(it.codeWsupply), evGround: n(it.groundElChargerCnt), evUnder: n(it.undergroundElChargerCnt),
   };
 }
 
