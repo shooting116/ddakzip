@@ -1,0 +1,4 @@
+# 공개 전: 전체 차단. 6단계 공개 시 아래 두 줄을 Allow로 바꾸고 Sitemap 줄을 켠다.
+User-agent: *
+Disallow: /
+# Sitemap: https://korea-rich.com/sitemap-index.xml

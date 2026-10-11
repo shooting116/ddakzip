@@ -1,0 +1,10 @@
+{
+  // Cloudflare Workers (정적 에셋) 배포 설정.
+  // 대시보드에서 Git 연결 시: Build command = npm run build, Deploy command = npx wrangler deploy
+  "name": "ddakzip",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}

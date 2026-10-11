@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+
+// 내 상황 5개 → 계산기 진입. 계산기는 1단계에서 채워진다.
+const situations = [
+  { key: 'first',   name: '생애최초',   desc: '첫 집 · LTV 우대 · 취득세 200만 감면', tone: 'b',
+    icon: 'M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z' },
+  { key: 'newly',   name: '신혼부부',   desc: '혼인 7년 이내 · 소득 기준 완화', tone: 'r',
+    icon: 'M8.5 11.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zM16 11.7a2.7 2.7 0 1 0 0-5.4 2.7 2.7 0 0 0 0 5.4zM2.5 20c0-3.6 2.7-6.2 6-6.2s6 2.6 6 6.2M15 14.3c2.9 0 5.5 2.3 5.5 5.7' },
+  { key: 'youth',   name: '청년',       desc: '만 34세 이하 · 장래소득 인정', tone: 'g',
+    icon: 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21c0-4 3.6-7 8-7s8 3 8 7' },
+  { key: 'general', name: '무주택 일반', desc: '디딤돌 · 보금자리론 · 주담대', tone: 's',
+    icon: 'M5 3h14v18H5zM9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M10 21v-3.5h4V21' },
+  { key: 'move',    name: '갈아타기',   desc: '1주택 처분 · 일시적 2주택 세금 판정', tone: 'o',
+    icon: 'M4 8h13l-3-3M20 16H7l3 3' },
+];
+---
+<Base title="딱집" hero>
+  <section class="hero">
+    <h1 class="big">내 예산에 <span class="blue">딱</span> 맞는 집,<br />딱 집어드려요</h1>
+    <p class="sub2">대출 자격 → 최대 예산 → 갈 수 있는 아파트 → 비교, 한 번에</p>
+  </section>
+
+  <section class="card" aria-labelledby="sit">
+    <h2 id="sit" class="h">어떤 상황인가요?</h2>
+    <ul class="list">
+      {situations.map((s) => (
+        <li>
+          <a class="tr" href={`/calc/?s=${s.key}`}>
+            <span class={`ic ${s.tone}`} aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d={s.icon} /></svg>
+            </span>
+            <span class="tx"><span class="t">{s.name}</span><span class="d">{s.desc}</span></span>
+            <span class="ch" aria-hidden="true">›</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="card status">
+    <span class="pill p-blue">만드는 중</span>
+    <p class="sub2">
+      지금은 뼈대만 올라와 있습니다. 계산기 → 예산 맞춤 지도 → 단지 상세 → 비교 → 공부 레퍼런스 순서로 채워집니다.
+    </p>
+  </section>
+</Base>
+
+<style>
+  .hero { padding: 10px 4px 18px; }
+  .hero h1 { margin: 0; }
+  .hero p { margin: 8px 0 0; }
+  .list { list-style: none; margin: 6px 0 0; padding: 0; }
+  .list a.tr { color: inherit; }
+  .ic.b { color: var(--blue); } .ic.r { color: var(--red); } .ic.g { color: var(--green); } .ic.s { color: var(--fg2); } .ic.o { color: var(--orange); }
+  .status { margin-top: var(--gap); }
+  .status p { margin: 8px 0 0; }
+</style>
