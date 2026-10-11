@@ -52,7 +52,15 @@ async function callFirst(kind, candidates, query) {
   let lastErr;
   for (const path of order) {
     try {
-      const r = await getXml(`${BASE}/${path}?serviceKey=${key}&${query}`);
+      await new Promise((res) => setTimeout(res, 250)); // 서버 보호: 초당 4회 이하
+      let r;
+      try { r = await getXml(`${BASE}/${path}?serviceKey=${key}&${query}`); }
+      catch (e) {
+        // 일시 오류(경로 없음·미등록·쿼터 제외)는 2초 쉬고 한 번 더
+        if (e instanceof DataGoError && ['12', '30', '22', '31', '32', '33'].includes(e.code)) throw e;
+        calls++; await new Promise((res) => setTimeout(res, 2000));
+        r = await getXml(`${BASE}/${path}?serviceKey=${key}&${query}`);
+      }
       calls++;
       if (resolved[kind] !== path) { resolved[kind] = path; saveJson(join(OUT, '_endpoints.json'), resolved); }
       return r;
