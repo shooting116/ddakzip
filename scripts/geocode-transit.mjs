@@ -25,20 +25,28 @@ async function keyword(q) {
   return st ? { lat: +Number(st.y).toFixed(6), lng: +Number(st.x).toFixed(6), place: st.place_name, addr: st.address_name } : null;
 }
 
+async function address(q) {
+  const res = await fetch(`https://dapi.kakao.com/v2/local/search/address.json?${new URLSearchParams({ query: q, size: 1 })}`, { headers: { Authorization: `KakaoAK ${KEY}` } });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const d = (await res.json()).documents?.[0];
+  return d ? { lat: +Number(d.y).toFixed(6), lng: +Number(d.x).toFixed(6), place: d.address_name, addr: d.address_name } : null;
+}
+
 const out = [];
 let calls = 0, miss = [];
 for (const line of LINES.lines) {
   for (const s of line.stations) {
     const k = `${line.line}|${s.name}`;
-    const base = { line: line.line, type: line.type, lineStatus: line.status, name: s.name, status: s.status, open: s.open ?? line.open_target ?? null };
-    if (!force && prevMap.get(k)?.lat) { out.push({ ...base, ...pick(prevMap.get(k)) }); continue; }
-    if (!s.near) { out.push({ ...base, lat: null, lng: null, place: null }); miss.push(`${k} (near 없음)`); continue; }
+    const base = { line: line.line, type: line.type, lineStatus: line.status, name: s.name, status: s.status, open: s.open ?? line.open_target ?? null, approx: !!s.approx };
+    const q = s.near ?? s.addr;
+    if (!force && prevMap.get(k)?.lat && prevMap.get(k)?.query === q) { out.push({ ...base, ...pick(prevMap.get(k)) }); continue; }
+    if (!q) { out.push({ ...base, lat: null, lng: null, place: null }); miss.push(`${k} (위치 미확정)`); continue; }
     try {
       calls++;
-      const hit = await keyword(s.near);
-      if (hit) out.push({ ...base, ...hit, query: s.near });
-      else { out.push({ ...base, lat: null, lng: null, place: null, query: s.near }); miss.push(k); }
-    } catch (e) { out.push({ ...base, lat: null, lng: null, place: null, query: s.near }); miss.push(`${k} (${e.message})`); }
+      const hit = s.near ? await keyword(s.near) : await address(s.addr);
+      if (hit) out.push({ ...base, ...hit, query: q });
+      else { out.push({ ...base, lat: null, lng: null, place: null, query: q }); miss.push(k); }
+    } catch (e) { out.push({ ...base, lat: null, lng: null, place: null, query: q }); miss.push(`${k} (${e.message})`); }
     await new Promise((r) => setTimeout(r, 120));
   }
 }

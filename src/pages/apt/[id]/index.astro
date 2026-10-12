@@ -89,7 +89,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
         <div class="badges">
           {c.transit.map((t) => (
             <span class={`tb ${t.status === '운행중' ? 'on' : ''}`}>
-              <b>{t.line}</b> {t.station}역 · {t.dist >= 1000 ? `${(t.dist / 1000).toFixed(1)}km` : `${t.dist}m`}
+              <b>{t.line}</b> {t.station}역 · {t.dist >= 1000 ? `${(t.dist / 1000).toFixed(1)}km` : `${t.dist}m`}{t.approx ? ' (위치 추정)' : ''}
               <em>{t.status === '운행중' ? '개통' : t.open ? `${t.open} 개통 예정` : '예정 · 시기 미정'}</em>
             </span>
           ))}

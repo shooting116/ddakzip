@@ -1,163 +1,842 @@
 {
- "note": "수도권 광역·간선 철도 호재 규칙표 v0.1 (2026-10-12 조사). 단지에서 1.5km 안에 역이 있으면 '예정'·발표연도와 함께 배지. 출처·날짜는 노선별 source. 역 좌표는 geocode-transit.mjs 가 near 검색어로 카카오에서 채운다(stations.json). 개통 일정은 바뀌므로 분기마다 재확인.",
+ "note": "수도권 광역·간선 철도 호재 규칙표 v0.1 (2026-10-12 조사). 단지에서 1.5km 안에 역이 있으면 '예정'·발표연도와 함께 배지. 출처·날짜는 노선별 source. 역 좌표는 geocode-transit.mjs 가 near 검색어로 카카오에서 채운다(stations.json). 개통 일정은 바뀌므로 분기마다 재확인. addr가 있는 역은 가칭역으로 동 중심 좌표를 쓴다(approx, 화면에 \"위치 추정\" 표시).",
  "radius_m": 1500,
  "updated": "2026-10-12",
  "lines": [
-  {"line":"GTX-A","type":"GTX","status":"일부 운행","open_target":null,
-   "stations":[
-    {"name":"운정중앙","status":"운행중","open":2024,"near":"운정중앙역"},
-    {"name":"킨텍스","status":"운행중","open":2024,"near":"킨텍스역"},
-    {"name":"대곡","status":"운행중","open":2024,"near":"대곡역"},
-    {"name":"창릉(가칭)","status":"예정","open":null,"near":"고양 창릉동 창릉신도시"},
-    {"name":"연신내","status":"운행중","open":2024,"near":"연신내역"},
-    {"name":"서울역","status":"운행중","open":2024,"near":"서울역"},
-    {"name":"삼성","status":"공사중","open":null,"near":"삼성역"},
-    {"name":"수서","status":"운행중","open":2024,"near":"수서역"},
-    {"name":"성남","status":"운행중","open":2024,"near":"성남역"},
-    {"name":"구성","status":"운행중","open":2024,"near":"구성역"},
-    {"name":"동탄","status":"운행중","open":2024,"near":"동탄역"}],
-   "source":["https://www.seoul.co.kr/news/economy/2026/05/15/20260515500242","https://www.fntimes.com/html/view.php?ud=202607211853493103048b718333_18"],"source_date":"2026-07-21",
-   "note":"수서~동탄 2024-03, 운정중앙~서울역 2024-12 개통. 서울역~수서 직결은 삼성역 승강장 철근 누락(2026-05 공개)으로 무기한 연기, 정부합동점검 2026-11-20까지. 삼성역 개통 시점 미정."},
-  {"line":"GTX-B","type":"GTX","status":"공사중","open_target":2031,
-   "stations":[
-    {"name":"인천대입구","status":"공사중","open":2031,"near":"인천대입구역"},
-    {"name":"인천시청","status":"공사중","open":2031,"near":"인천시청역"},
-    {"name":"부평","status":"공사중","open":2031,"near":"부평역"},
-    {"name":"부천종합운동장","status":"공사중","open":2031,"near":"부천종합운동장역"},
-    {"name":"신도림","status":"공사중","open":2031,"near":"신도림역"},
-    {"name":"여의도","status":"공사중","open":2031,"near":"여의도역"},
-    {"name":"용산","status":"공사중","open":2031,"near":"용산역"},
-    {"name":"서울역","status":"공사중","open":2031,"near":"서울역"},
-    {"name":"청량리","status":"공사중","open":2031,"near":"청량리역"},
-    {"name":"상봉","status":"공사중","open":2031,"near":"상봉역"},
-    {"name":"별내","status":"공사중","open":2031,"near":"별내역"},
-    {"name":"왕숙(가칭)","status":"예정","open":null,"near":null},
-    {"name":"평내호평","status":"공사중","open":2031,"near":"평내호평역"},
-    {"name":"마석","status":"공사중","open":2031,"near":"마석역"}],
-   "source":["https://www.segye.com/newsView/20260430521128","https://kbthink.com/realestate/basics/blog/251110.html"],"source_date":"2026-05-01",
-   "note":"2024-03 착공, 2026-03 공정률 재정구간 5.7%·민자 2.7%. 개통 목표 2030→2031 보도. 왕숙역 위치 미확정."},
-  {"line":"GTX-C","type":"GTX","status":"공사중","open_target":2031,
-   "stations":[
-    {"name":"덕정","status":"공사중","open":2031,"near":"덕정역"},
-    {"name":"의정부","status":"공사중","open":2031,"near":"의정부역"},
-    {"name":"창동","status":"공사중","open":2031,"near":"창동역"},
-    {"name":"광운대","status":"공사중","open":2031,"near":"광운대역"},
-    {"name":"청량리","status":"공사중","open":2031,"near":"청량리역"},
-    {"name":"왕십리","status":"공사중","open":2031,"near":"왕십리역"},
-    {"name":"삼성","status":"공사중","open":2031,"near":"삼성역"},
-    {"name":"양재","status":"공사중","open":2031,"near":"양재역"},
-    {"name":"정부과천청사","status":"공사중","open":2031,"near":"정부과천청사역"},
-    {"name":"인덕원","status":"공사중","open":2031,"near":"인덕원역"},
-    {"name":"금정","status":"공사중","open":2031,"near":"금정역"},
-    {"name":"의왕","status":"공사중","open":2031,"near":"의왕역"},
-    {"name":"수원","status":"공사중","open":2031,"near":"수원역"},
-    {"name":"상록수","status":"공사중","open":2031,"near":"상록수역"}],
-   "source":["https://news.bizwatch.co.kr/article/real_estate/2026/09/14/0015","https://eiec.kdi.re.kr/policy/materialView.do?num=286783"],"source_date":"2026-09-14",
-   "note":"2026-09-15 민자구간 착공(국토부). 정거장 14개소, 착공 후 60개월 → 2031 보도. 역 구성은 2022 발표 기준이라 재확인 필요."},
-  {"line":"신안산선","type":"광역철도","status":"공사중","open_target":2028,
-   "stations":[
-    {"name":"여의도","status":"공사중","open":2028,"near":"여의도역"},
-    {"name":"영등포","status":"공사중","open":2028,"near":"영등포역"},
-    {"name":"도림사거리(가칭)","status":"공사중","open":2028,"near":"도림사거리"},
-    {"name":"신풍","status":"공사중","open":2028,"near":"신풍역"},
-    {"name":"대림삼거리(가칭)","status":"공사중","open":2028,"near":"대림삼거리"},
-    {"name":"구로디지털단지","status":"공사중","open":2028,"near":"구로디지털단지역"},
-    {"name":"시흥사거리(가칭)","status":"공사중","open":2028,"near":"시흥사거리"},
-    {"name":"석수","status":"공사중","open":2028,"near":"석수역"},
-    {"name":"광명","status":"공사중","open":2028,"near":"광명역"},
-    {"name":"목감(가칭)","status":"공사중","open":2028,"near":"시흥 목감동"},
-    {"name":"성포(가칭)","status":"공사중","open":2028,"near":"안산 성포동"},
-    {"name":"중앙","status":"공사중","open":2028,"near":"중앙역"},
-    {"name":"호수(가칭)","status":"공사중","open":2028,"near":"안산호수공원"},
-    {"name":"한양대(가칭)","status":"공사중","open":2028,"near":"한양대학교 ERICA캠퍼스"},
-    {"name":"학온(가칭)","status":"공사중","open":2028,"near":"광명 가학동"},
-    {"name":"시흥시청","status":"공사중","open":2028,"near":"시흥시청역"}],
-   "source":["https://www.sisajournal-e.com/news/articleView.html?idxno=423206","https://v.daum.net/v/28JJtKOcTI"],"source_date":"2026-08-21",
-   "note":"2025-04 광명 붕괴사고 후 2028-12 공기연장 요청(미확정). 공정률 2026-09 약 75%. 매화·서해선 공용구간·송산 분기는 1단계 포함 여부 미확인이라 제외."},
-  {"line":"월곶판교선","type":"광역철도","status":"공사중","open_target":2029,
-   "stations":[
-    {"name":"월곶","status":"공사중","open":2029,"near":"월곶역"},
-    {"name":"장곡(가칭)","status":"공사중","open":2029,"near":"시흥 장곡동"},
-    {"name":"시흥시청","status":"공사중","open":2029,"near":"시흥시청역"},
-    {"name":"광명","status":"공사중","open":2029,"near":"광명역"},
-    {"name":"만안(가칭)","status":"공사중","open":2029,"near":"석수우체국"},
-    {"name":"안양","status":"공사중","open":2029,"near":"안양역"},
-    {"name":"안양운동장(가칭)","status":"공사중","open":2029,"near":"안양종합운동장"},
-    {"name":"인덕원","status":"공사중","open":2029,"near":"인덕원역"},
-    {"name":"서판교(가칭)","status":"공사중","open":2029,"near":"서판교"},
-    {"name":"판교","status":"공사중","open":2029,"near":"판교역"}],
-   "source":["https://kbthink.com/realestate/basics/blog/260805.html","https://www.segye.com/newsView/20260420518553"],"source_date":"2026-08-05",
-   "note":"2026-07 실시계획 변경으로 사업기간 2029-12-31. 2026-03 공정률 22%. 청계(가칭)·매화는 위치 미확인이라 제외."},
-  {"line":"동북선","type":"경전철","status":"공사중","open_target":2027,
-   "stations":[
-    {"name":"왕십리","status":"공사중","open":2027,"near":"왕십리역"},
-    {"name":"동명초교(가칭)","status":"공사중","open":2027,"near":"서울 동명초등학교"},
-    {"name":"제기동","status":"공사중","open":2027,"near":"제기동역"},
-    {"name":"고려대","status":"공사중","open":2027,"near":"고려대역"},
-    {"name":"종암우체국(가칭)","status":"공사중","open":2027,"near":"종암우체국"},
-    {"name":"종암경찰서(가칭)","status":"공사중","open":2027,"near":"종암경찰서"},
-    {"name":"미아사거리","status":"공사중","open":2027,"near":"미아사거리역"},
-    {"name":"장위(가칭)","status":"공사중","open":2027,"near":"성북구 장위동"},
-    {"name":"북서울꿈의숲(가칭)","status":"공사중","open":2027,"near":"북서울꿈의숲"},
-    {"name":"우이천(가칭)","status":"공사중","open":2027,"near":"우이천"},
-    {"name":"월계","status":"공사중","open":2027,"near":"월계역"},
-    {"name":"하계","status":"공사중","open":2027,"near":"하계역"},
-    {"name":"서울과학관(가칭)","status":"공사중","open":2027,"near":"서울시립과학관"},
-    {"name":"은행사거리(가칭)","status":"공사중","open":2027,"near":"노원 은행사거리"},
-    {"name":"불암산(가칭)","status":"공사중","open":2027,"near":"불암산"},
-    {"name":"상계","status":"공사중","open":2027,"near":"상계역"}],
-   "source":["https://biz.heraldcorp.com/article/10866894","https://www.newspim.com/news/view/20260313000224"],"source_date":"2026-09-08",
-   "note":"13.4km 16개 정거장. 2027-11 개통 목표(공정률 76%, 2026-09)."},
-  {"line":"위례신사선","type":"경전철","status":"계획(예타 통과)","open_target":null,
-   "stations":[
-    {"name":"위례중앙광장(가칭)","status":"예정","open":null,"near":"위례중앙광장"},
-    {"name":"가락시장","status":"예정","open":null,"near":"가락시장역"},
-    {"name":"학여울","status":"예정","open":null,"near":"학여울역"},
-    {"name":"삼성","status":"예정","open":null,"near":"삼성역"},
-    {"name":"봉은사","status":"예정","open":null,"near":"봉은사역"},
-    {"name":"청담","status":"예정","open":null,"near":"청담역"},
-    {"name":"신사","status":"예정","open":null,"near":"신사역"}],
-   "source":["https://www.redaily.co.kr/news/articleView.html?idxno=15879","https://www.seoul.co.kr/news/society/2026/02/13/20260213500112"],"source_date":"2026-03-12",
-   "note":"민자 무산 후 재정사업 전환, 2026-03-10 신속예타 통과. 착공·개통 미정. 가칭 102·104·109·110 정거장은 위치 미확인이라 제외."},
-  {"line":"인천 1호선 검단연장","type":"도시철도 연장","status":"운행중","open_target":2025,
-   "stations":[
-    {"name":"아라","status":"운행중","open":2025,"near":"아라역"},
-    {"name":"신검단중앙","status":"운행중","open":2025,"near":"신검단중앙역"},
-    {"name":"검단호수공원","status":"운행중","open":2025,"near":"검단호수공원역"}],
-   "source":["https://www.kyeongin.com/article/1744624"],"source_date":"2025-06-29",
-   "note":"2025-06-28 개통. 운행중 노선은 배지에 '개통'으로 표시."},
-  {"line":"7호선 청라연장","type":"도시철도 연장","status":"공사중","open_target":null,
-   "stations":[
-    {"name":"루원시티(가칭 001)","status":"공사중","open":null,"near":"루원시티"},
-    {"name":"청라국제업무단지(가칭 005)","status":"공사중","open":null,"near":"청라국제업무단지"},
-    {"name":"스타필드청라(가칭 005-1)","status":"공사중","open":null,"near":"스타필드 청라"},
-    {"name":"청라국제도시","status":"공사중","open":null,"near":"청라국제도시역"}],
-   "source":["https://www.kyeongin.com/article/1767328","https://www.kyeongin.com/article/1770952"],"source_date":"2026-09-16",
-   "note":"2022-02 착공. 1단계 2030·2단계 2033 보도 후 인천시가 목표 재설정 중(미정). 전동차 제작사 회생신청. 위치 미확인 정거장(002~004)은 제외."},
-  {"line":"9호선 4단계","type":"도시철도 연장","status":"공사중","open_target":2028,
-   "stations":[
-    {"name":"길동생태공원(가칭)","status":"공사중","open":2028,"near":"길동생태공원"},
-    {"name":"한영외고(가칭)","status":"공사중","open":2028,"near":"한영외국어고등학교"},
-    {"name":"고덕","status":"공사중","open":2028,"near":"고덕역"},
-    {"name":"고덕강일1지구(가칭)","status":"공사중","open":2028,"near":"강동 샘터근린공원"}],
-   "source":["https://www.redaily.co.kr/news/articleView.html?idxno=11579","https://mediahub.seoul.go.kr/archives/2006605"],"source_date":"2025-03-07",
-   "note":"2023-01 착공, 2028 목표(2026 갱신 보도 없음)."},
-  {"line":"대장홍대선","type":"광역철도","status":"공사중","open_target":2031,
-   "stations":[
-    {"name":"대장(가칭)","status":"공사중","open":2031,"near":"부천 대장신도시"},
-    {"name":"원종","status":"공사중","open":2031,"near":"원종역"},
-    {"name":"화곡","status":"공사중","open":2031,"near":"화곡역"},
-    {"name":"강서구청(가칭)","status":"공사중","open":2031,"near":"강서구청"},
-    {"name":"가양","status":"공사중","open":2031,"near":"가양역"},
-    {"name":"덕은(가칭)","status":"공사중","open":2031,"near":"고양 덕은지구"},
-    {"name":"상암(가칭)","status":"공사중","open":2031,"near":"상암동"},
-    {"name":"성산(가칭)","status":"공사중","open":2031,"near":"성산동"},
-    {"name":"홍대입구","status":"공사중","open":2031,"near":"홍대입구역"}],
-   "source":["https://go.seoul.co.kr/news/newsView.php?id=20260821500017"],"source_date":"2026-08-21",
-   "note":"2025-12 착공식, 2026-04 착공계. 개통 2031 하반기 보도(2032 표기도 있음). 위치 미확인 가칭역 제외."}
+  {
+   "line": "GTX-A",
+   "type": "GTX",
+   "status": "일부 운행",
+   "open_target": null,
+   "stations": [
+    {
+     "name": "운정중앙",
+     "status": "운행중",
+     "open": 2024,
+     "near": "운정중앙역"
+    },
+    {
+     "name": "킨텍스",
+     "status": "운행중",
+     "open": 2024,
+     "near": "킨텍스역"
+    },
+    {
+     "name": "대곡",
+     "status": "운행중",
+     "open": 2024,
+     "near": "대곡역"
+    },
+    {
+     "name": "창릉(가칭)",
+     "status": "예정",
+     "open": null,
+     "near": null,
+     "note": "위치 미확정"
+    },
+    {
+     "name": "연신내",
+     "status": "운행중",
+     "open": 2024,
+     "near": "연신내역"
+    },
+    {
+     "name": "서울역",
+     "status": "운행중",
+     "open": 2024,
+     "near": "서울역"
+    },
+    {
+     "name": "삼성",
+     "status": "공사중",
+     "open": null,
+     "near": "삼성역"
+    },
+    {
+     "name": "수서",
+     "status": "운행중",
+     "open": 2024,
+     "near": "수서역"
+    },
+    {
+     "name": "성남",
+     "status": "운행중",
+     "open": 2024,
+     "near": "성남역"
+    },
+    {
+     "name": "구성",
+     "status": "운행중",
+     "open": 2024,
+     "near": "구성역"
+    },
+    {
+     "name": "동탄",
+     "status": "운행중",
+     "open": 2024,
+     "near": "동탄역"
+    }
+   ],
+   "source": [
+    "https://www.seoul.co.kr/news/economy/2026/05/15/20260515500242",
+    "https://www.fntimes.com/html/view.php?ud=202607211853493103048b718333_18"
+   ],
+   "source_date": "2026-07-21",
+   "note": "수서~동탄 2024-03, 운정중앙~서울역 2024-12 개통. 서울역~수서 직결은 삼성역 승강장 철근 누락(2026-05 공개)으로 무기한 연기, 정부합동점검 2026-11-20까지. 삼성역 개통 시점 미정."
+  },
+  {
+   "line": "GTX-B",
+   "type": "GTX",
+   "status": "공사중",
+   "open_target": 2031,
+   "stations": [
+    {
+     "name": "인천대입구",
+     "status": "공사중",
+     "open": 2031,
+     "near": "인천대입구역"
+    },
+    {
+     "name": "인천시청",
+     "status": "공사중",
+     "open": 2031,
+     "near": "인천시청역"
+    },
+    {
+     "name": "부평",
+     "status": "공사중",
+     "open": 2031,
+     "near": "부평역"
+    },
+    {
+     "name": "부천종합운동장",
+     "status": "공사중",
+     "open": 2031,
+     "near": "부천종합운동장역"
+    },
+    {
+     "name": "신도림",
+     "status": "공사중",
+     "open": 2031,
+     "near": "신도림역"
+    },
+    {
+     "name": "여의도",
+     "status": "공사중",
+     "open": 2031,
+     "near": "여의도역"
+    },
+    {
+     "name": "용산",
+     "status": "공사중",
+     "open": 2031,
+     "near": "용산역"
+    },
+    {
+     "name": "서울역",
+     "status": "공사중",
+     "open": 2031,
+     "near": "서울역"
+    },
+    {
+     "name": "청량리",
+     "status": "공사중",
+     "open": 2031,
+     "near": "청량리역"
+    },
+    {
+     "name": "상봉",
+     "status": "공사중",
+     "open": 2031,
+     "near": "상봉역"
+    },
+    {
+     "name": "별내",
+     "status": "공사중",
+     "open": 2031,
+     "near": "별내역"
+    },
+    {
+     "name": "왕숙(가칭)",
+     "status": "예정",
+     "open": null,
+     "near": null
+    },
+    {
+     "name": "평내호평",
+     "status": "공사중",
+     "open": 2031,
+     "near": "평내호평역"
+    },
+    {
+     "name": "마석",
+     "status": "공사중",
+     "open": 2031,
+     "near": "마석역"
+    }
+   ],
+   "source": [
+    "https://www.segye.com/newsView/20260430521128",
+    "https://kbthink.com/realestate/basics/blog/251110.html"
+   ],
+   "source_date": "2026-05-01",
+   "note": "2024-03 착공, 2026-03 공정률 재정구간 5.7%·민자 2.7%. 개통 목표 2030→2031 보도. 왕숙역 위치 미확정."
+  },
+  {
+   "line": "GTX-C",
+   "type": "GTX",
+   "status": "공사중",
+   "open_target": 2031,
+   "stations": [
+    {
+     "name": "덕정",
+     "status": "공사중",
+     "open": 2031,
+     "near": "덕정역"
+    },
+    {
+     "name": "의정부",
+     "status": "공사중",
+     "open": 2031,
+     "near": "의정부역"
+    },
+    {
+     "name": "창동",
+     "status": "공사중",
+     "open": 2031,
+     "near": "창동역"
+    },
+    {
+     "name": "광운대",
+     "status": "공사중",
+     "open": 2031,
+     "near": "광운대역"
+    },
+    {
+     "name": "청량리",
+     "status": "공사중",
+     "open": 2031,
+     "near": "청량리역"
+    },
+    {
+     "name": "왕십리",
+     "status": "공사중",
+     "open": 2031,
+     "near": "왕십리역"
+    },
+    {
+     "name": "삼성",
+     "status": "공사중",
+     "open": 2031,
+     "near": "삼성역"
+    },
+    {
+     "name": "양재",
+     "status": "공사중",
+     "open": 2031,
+     "near": "양재역"
+    },
+    {
+     "name": "정부과천청사",
+     "status": "공사중",
+     "open": 2031,
+     "near": "정부과천청사역"
+    },
+    {
+     "name": "인덕원",
+     "status": "공사중",
+     "open": 2031,
+     "near": "인덕원역"
+    },
+    {
+     "name": "금정",
+     "status": "공사중",
+     "open": 2031,
+     "near": "금정역"
+    },
+    {
+     "name": "의왕",
+     "status": "공사중",
+     "open": 2031,
+     "near": "의왕역"
+    },
+    {
+     "name": "수원",
+     "status": "공사중",
+     "open": 2031,
+     "near": "수원역"
+    },
+    {
+     "name": "상록수",
+     "status": "공사중",
+     "open": 2031,
+     "near": "상록수역"
+    }
+   ],
+   "source": [
+    "https://news.bizwatch.co.kr/article/real_estate/2026/09/14/0015",
+    "https://eiec.kdi.re.kr/policy/materialView.do?num=286783"
+   ],
+   "source_date": "2026-09-14",
+   "note": "2026-09-15 민자구간 착공(국토부). 정거장 14개소, 착공 후 60개월 → 2031 보도. 역 구성은 2022 발표 기준이라 재확인 필요."
+  },
+  {
+   "line": "신안산선",
+   "type": "광역철도",
+   "status": "공사중",
+   "open_target": 2028,
+   "stations": [
+    {
+     "name": "여의도",
+     "status": "공사중",
+     "open": 2028,
+     "near": "여의도역"
+    },
+    {
+     "name": "영등포",
+     "status": "공사중",
+     "open": 2028,
+     "near": "영등포역"
+    },
+    {
+     "name": "도림사거리(가칭)",
+     "status": "공사중",
+     "open": 2028,
+     "near": "도림사거리"
+    },
+    {
+     "name": "신풍",
+     "status": "공사중",
+     "open": 2028,
+     "near": "신풍역"
+    },
+    {
+     "name": "대림삼거리(가칭)",
+     "status": "공사중",
+     "open": 2028,
+     "near": "대림삼거리"
+    },
+    {
+     "name": "구로디지털단지",
+     "status": "공사중",
+     "open": 2028,
+     "near": "구로디지털단지역"
+    },
+    {
+     "name": "시흥사거리(가칭)",
+     "status": "공사중",
+     "open": 2028,
+     "near": "시흥사거리"
+    },
+    {
+     "name": "석수",
+     "status": "공사중",
+     "open": 2028,
+     "near": "석수역"
+    },
+    {
+     "name": "광명",
+     "status": "공사중",
+     "open": 2028,
+     "near": "광명역"
+    },
+    {
+     "name": "목감(가칭)",
+     "status": "공사중",
+     "open": 2028,
+     "near": null,
+     "addr": "경기 시흥시 목감동",
+     "approx": true
+    },
+    {
+     "name": "성포(가칭)",
+     "status": "공사중",
+     "open": 2028,
+     "near": null,
+     "addr": "경기 안산시 상록구 성포동",
+     "approx": true
+    },
+    {
+     "name": "중앙",
+     "status": "공사중",
+     "open": 2028,
+     "near": "중앙역"
+    },
+    {
+     "name": "호수(가칭)",
+     "status": "공사중",
+     "open": 2028,
+     "near": "안산호수공원"
+    },
+    {
+     "name": "한양대(가칭)",
+     "status": "공사중",
+     "open": 2028,
+     "near": "한양대학교 ERICA캠퍼스"
+    },
+    {
+     "name": "학온(가칭)",
+     "status": "공사중",
+     "open": 2028,
+     "near": null,
+     "addr": "경기 광명시 가학동",
+     "approx": true
+    },
+    {
+     "name": "시흥시청",
+     "status": "공사중",
+     "open": 2028,
+     "near": "시흥시청역"
+    }
+   ],
+   "source": [
+    "https://www.sisajournal-e.com/news/articleView.html?idxno=423206",
+    "https://v.daum.net/v/28JJtKOcTI"
+   ],
+   "source_date": "2026-08-21",
+   "note": "2025-04 광명 붕괴사고 후 2028-12 공기연장 요청(미확정). 공정률 2026-09 약 75%. 매화·서해선 공용구간·송산 분기는 1단계 포함 여부 미확인이라 제외."
+  },
+  {
+   "line": "월곶판교선",
+   "type": "광역철도",
+   "status": "공사중",
+   "open_target": 2029,
+   "stations": [
+    {
+     "name": "월곶",
+     "status": "공사중",
+     "open": 2029,
+     "near": "월곶역"
+    },
+    {
+     "name": "장곡(가칭)",
+     "status": "공사중",
+     "open": 2029,
+     "near": null,
+     "addr": "경기 시흥시 장곡동",
+     "approx": true
+    },
+    {
+     "name": "시흥시청",
+     "status": "공사중",
+     "open": 2029,
+     "near": "시흥시청역"
+    },
+    {
+     "name": "광명",
+     "status": "공사중",
+     "open": 2029,
+     "near": "광명역"
+    },
+    {
+     "name": "만안(가칭)",
+     "status": "공사중",
+     "open": 2029,
+     "near": "석수우체국"
+    },
+    {
+     "name": "안양",
+     "status": "공사중",
+     "open": 2029,
+     "near": "안양역"
+    },
+    {
+     "name": "안양운동장(가칭)",
+     "status": "공사중",
+     "open": 2029,
+     "near": "안양종합운동장"
+    },
+    {
+     "name": "인덕원",
+     "status": "공사중",
+     "open": 2029,
+     "near": "인덕원역"
+    },
+    {
+     "name": "서판교(가칭)",
+     "status": "공사중",
+     "open": 2029,
+     "near": null,
+     "addr": "경기 성남시 분당구 운중동",
+     "approx": true
+    },
+    {
+     "name": "판교",
+     "status": "공사중",
+     "open": 2029,
+     "near": "판교역"
+    }
+   ],
+   "source": [
+    "https://kbthink.com/realestate/basics/blog/260805.html",
+    "https://www.segye.com/newsView/20260420518553"
+   ],
+   "source_date": "2026-08-05",
+   "note": "2026-07 실시계획 변경으로 사업기간 2029-12-31. 2026-03 공정률 22%. 청계(가칭)·매화는 위치 미확인이라 제외."
+  },
+  {
+   "line": "동북선",
+   "type": "경전철",
+   "status": "공사중",
+   "open_target": 2027,
+   "stations": [
+    {
+     "name": "왕십리",
+     "status": "공사중",
+     "open": 2027,
+     "near": "왕십리역"
+    },
+    {
+     "name": "동명초교(가칭)",
+     "status": "공사중",
+     "open": 2027,
+     "near": "서울 동명초등학교"
+    },
+    {
+     "name": "제기동",
+     "status": "공사중",
+     "open": 2027,
+     "near": "제기동역"
+    },
+    {
+     "name": "고려대",
+     "status": "공사중",
+     "open": 2027,
+     "near": "고려대역"
+    },
+    {
+     "name": "종암우체국(가칭)",
+     "status": "공사중",
+     "open": 2027,
+     "near": "종암우체국"
+    },
+    {
+     "name": "종암경찰서(가칭)",
+     "status": "공사중",
+     "open": 2027,
+     "near": "종암경찰서"
+    },
+    {
+     "name": "미아사거리",
+     "status": "공사중",
+     "open": 2027,
+     "near": "미아사거리역"
+    },
+    {
+     "name": "장위(가칭)",
+     "status": "공사중",
+     "open": 2027,
+     "near": null,
+     "addr": "서울 성북구 장위동",
+     "approx": true
+    },
+    {
+     "name": "북서울꿈의숲(가칭)",
+     "status": "공사중",
+     "open": 2027,
+     "near": "북서울꿈의숲"
+    },
+    {
+     "name": "우이천(가칭)",
+     "status": "공사중",
+     "open": 2027,
+     "near": null,
+     "addr": "서울 성북구 석관동",
+     "approx": true
+    },
+    {
+     "name": "월계",
+     "status": "공사중",
+     "open": 2027,
+     "near": "월계역"
+    },
+    {
+     "name": "하계",
+     "status": "공사중",
+     "open": 2027,
+     "near": "하계역"
+    },
+    {
+     "name": "서울과학관(가칭)",
+     "status": "공사중",
+     "open": 2027,
+     "near": "서울시립과학관"
+    },
+    {
+     "name": "은행사거리(가칭)",
+     "status": "공사중",
+     "open": 2027,
+     "near": "노원 은행사거리"
+    },
+    {
+     "name": "불암산(가칭)",
+     "status": "공사중",
+     "open": 2027,
+     "near": "불암산"
+    },
+    {
+     "name": "상계",
+     "status": "공사중",
+     "open": 2027,
+     "near": "상계역"
+    }
+   ],
+   "source": [
+    "https://biz.heraldcorp.com/article/10866894",
+    "https://www.newspim.com/news/view/20260313000224"
+   ],
+   "source_date": "2026-09-08",
+   "note": "13.4km 16개 정거장. 2027-11 개통 목표(공정률 76%, 2026-09)."
+  },
+  {
+   "line": "위례신사선",
+   "type": "경전철",
+   "status": "계획(예타 통과)",
+   "open_target": null,
+   "stations": [
+    {
+     "name": "위례중앙광장(가칭)",
+     "status": "예정",
+     "open": null,
+     "near": "위례중앙광장"
+    },
+    {
+     "name": "가락시장",
+     "status": "예정",
+     "open": null,
+     "near": "가락시장역"
+    },
+    {
+     "name": "학여울",
+     "status": "예정",
+     "open": null,
+     "near": "학여울역"
+    },
+    {
+     "name": "삼성",
+     "status": "예정",
+     "open": null,
+     "near": "삼성역"
+    },
+    {
+     "name": "봉은사",
+     "status": "예정",
+     "open": null,
+     "near": "봉은사역"
+    },
+    {
+     "name": "청담",
+     "status": "예정",
+     "open": null,
+     "near": "청담역"
+    },
+    {
+     "name": "신사",
+     "status": "예정",
+     "open": null,
+     "near": "신사역"
+    }
+   ],
+   "source": [
+    "https://www.redaily.co.kr/news/articleView.html?idxno=15879",
+    "https://www.seoul.co.kr/news/society/2026/02/13/20260213500112"
+   ],
+   "source_date": "2026-03-12",
+   "note": "민자 무산 후 재정사업 전환, 2026-03-10 신속예타 통과. 착공·개통 미정. 가칭 102·104·109·110 정거장은 위치 미확인이라 제외."
+  },
+  {
+   "line": "인천 1호선 검단연장",
+   "type": "도시철도 연장",
+   "status": "운행중",
+   "open_target": 2025,
+   "stations": [
+    {
+     "name": "아라",
+     "status": "운행중",
+     "open": 2025,
+     "near": "아라역"
+    },
+    {
+     "name": "신검단중앙",
+     "status": "운행중",
+     "open": 2025,
+     "near": "신검단중앙역"
+    },
+    {
+     "name": "검단호수공원",
+     "status": "운행중",
+     "open": 2025,
+     "near": "검단호수공원역"
+    }
+   ],
+   "source": [
+    "https://www.kyeongin.com/article/1744624"
+   ],
+   "source_date": "2025-06-29",
+   "note": "2025-06-28 개통. 운행중 노선은 배지에 '개통'으로 표시."
+  },
+  {
+   "line": "7호선 청라연장",
+   "type": "도시철도 연장",
+   "status": "공사중",
+   "open_target": null,
+   "stations": [
+    {
+     "name": "루원시티(가칭 001)",
+     "status": "공사중",
+     "open": null,
+     "near": null,
+     "addr": "인천 서해구 가정동",
+     "approx": true
+    },
+    {
+     "name": "청라국제업무단지(가칭 005)",
+     "status": "공사중",
+     "open": null,
+     "near": "청라국제업무단지"
+    },
+    {
+     "name": "스타필드청라(가칭 005-1)",
+     "status": "공사중",
+     "open": null,
+     "near": "스타필드 청라"
+    },
+    {
+     "name": "청라국제도시",
+     "status": "공사중",
+     "open": null,
+     "near": "청라국제도시역"
+    }
+   ],
+   "source": [
+    "https://www.kyeongin.com/article/1767328",
+    "https://www.kyeongin.com/article/1770952"
+   ],
+   "source_date": "2026-09-16",
+   "note": "2022-02 착공. 1단계 2030·2단계 2033 보도 후 인천시가 목표 재설정 중(미정). 전동차 제작사 회생신청. 위치 미확인 정거장(002~004)은 제외."
+  },
+  {
+   "line": "9호선 4단계",
+   "type": "도시철도 연장",
+   "status": "공사중",
+   "open_target": 2028,
+   "stations": [
+    {
+     "name": "길동생태공원(가칭)",
+     "status": "공사중",
+     "open": 2028,
+     "near": "길동생태공원"
+    },
+    {
+     "name": "한영외고(가칭)",
+     "status": "공사중",
+     "open": 2028,
+     "near": "한영외국어고등학교"
+    },
+    {
+     "name": "고덕",
+     "status": "공사중",
+     "open": 2028,
+     "near": "고덕역"
+    },
+    {
+     "name": "고덕강일1지구(가칭)",
+     "status": "공사중",
+     "open": 2028,
+     "near": "강동 샘터근린공원"
+    }
+   ],
+   "source": [
+    "https://www.redaily.co.kr/news/articleView.html?idxno=11579",
+    "https://mediahub.seoul.go.kr/archives/2006605"
+   ],
+   "source_date": "2025-03-07",
+   "note": "2023-01 착공, 2028 목표(2026 갱신 보도 없음)."
+  },
+  {
+   "line": "대장홍대선",
+   "type": "광역철도",
+   "status": "공사중",
+   "open_target": 2031,
+   "stations": [
+    {
+     "name": "대장(가칭)",
+     "status": "공사중",
+     "open": 2031,
+     "near": null,
+     "addr": "경기 부천시 오정구 대장동",
+     "approx": true
+    },
+    {
+     "name": "원종",
+     "status": "공사중",
+     "open": 2031,
+     "near": "원종역"
+    },
+    {
+     "name": "화곡",
+     "status": "공사중",
+     "open": 2031,
+     "near": "화곡역"
+    },
+    {
+     "name": "강서구청(가칭)",
+     "status": "공사중",
+     "open": 2031,
+     "near": "강서구청"
+    },
+    {
+     "name": "가양",
+     "status": "공사중",
+     "open": 2031,
+     "near": "가양역"
+    },
+    {
+     "name": "덕은(가칭)",
+     "status": "공사중",
+     "open": 2031,
+     "near": null,
+     "addr": "경기 고양시 덕양구 덕은동",
+     "approx": true
+    },
+    {
+     "name": "상암(가칭)",
+     "status": "공사중",
+     "open": 2031,
+     "near": null,
+     "addr": "서울 마포구 상암동",
+     "approx": true
+    },
+    {
+     "name": "성산(가칭)",
+     "status": "공사중",
+     "open": 2031,
+     "near": null,
+     "addr": "서울 마포구 성산동",
+     "approx": true
+    },
+    {
+     "name": "홍대입구",
+     "status": "공사중",
+     "open": 2031,
+     "near": "홍대입구역"
+    }
+   ],
+   "source": [
+    "https://go.seoul.co.kr/news/newsView.php?id=20260821500017"
+   ],
+   "source_date": "2026-08-21",
+   "note": "2025-12 착공식, 2026-04 착공계. 개통 2031 하반기 보도(2032 표기도 있음). 위치 미확인 가칭역 제외."
+  }
  ],
- "excluded":[
-  {"line":"인천 2호선 고양연장","reason":"예타 진행 중(2023-08~), 역 위치 전부 미확정"},
-  {"line":"신분당선 서북부 연장","reason":"2023-08 예타 탈락, 대안노선 미확정"}
+ "excluded": [
+  {
+   "line": "인천 2호선 고양연장",
+   "reason": "예타 진행 중(2023-08~), 역 위치 전부 미확정"
+  },
+  {
+   "line": "신분당선 서북부 연장",
+   "reason": "2023-08 예타 탈락, 대안노선 미확정"
+  }
  ]
 }
