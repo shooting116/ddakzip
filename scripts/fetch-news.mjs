@@ -72,8 +72,9 @@ async function main() {
       if (calls >= maxCalls) { stop = `max-calls ${maxCalls}`; break outer; }
       const prevAt = news[c.id]?.at;
       if (prevAt && (Date.now() - new Date(prevAt).getTime()) < 6 * 86400e3) continue;   // 일주일에 한 번만
-      targets++;
       const core = c.name.replace(/\(.*?\)/g, '').trim();
+      if (normName(core).length < 3) continue;   // '현대'처럼 짧은 이름은 잡음이 커서 제외
+      targets++;
       const q = why === 'redev' ? `"${core}" 재건축` : `"${core}" 아파트 ${g.sigungu}`;
       try {
         const items = await search(q);

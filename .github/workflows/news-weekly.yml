@@ -1,0 +1,55 @@
+name: 보도·정비사업 주간 갱신
+# 매주 월요일 04:20 KST — 뉴스(하락 TOP·정비사업 단지) 갱신, 정비사업 매칭, 역 좌표. 매월 첫째 주에는 서울 정비사업 통계 갱신 + 카카오톡 검수 알림.
+on:
+  schedule:
+    - cron: '20 19 * * 0'   # UTC 일 19:20 = KST 월 04:20
+  workflow_dispatch:
+
+concurrency:
+  group: data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 첫째 주 여부
+        id: wk
+        run: echo "first=$([ "$(TZ=Asia/Seoul date +%d)" -le 7 ] && echo yes || echo no)" >> "$GITHUB_OUTPUT"
+      - name: 서울 정비사업 통계 (월 1회)
+        if: steps.wk.outputs.first == 'yes'
+        env: { SEOUL_OPENAPI_KEY: "${{ secrets.SEOUL_OPENAPI_KEY }}" }
+        run: node scripts/fetch-redev-seoul.mjs
+      - name: 정비사업 매칭
+        if: always()
+        run: node scripts/match-redev.mjs
+      - name: 역 좌표
+        if: always()
+        env: { KAKAO_REST_KEY: "${{ secrets.KAKAO_REST_KEY }}" }
+        run: node scripts/geocode-transit.mjs
+      - name: 뉴스
+        if: always()
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+          KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
+          KAKAO_REFRESH_TOKEN: ${{ secrets.KAKAO_REFRESH_TOKEN }}
+        run: node scripts/fetch-news.mjs --max-calls 4000 ${{ steps.wk.outputs.first == 'yes' && '--notify' || '' }}
+      - name: 커밋·푸시
+        if: always()
+        run: |
+          git config user.name "ddakzip-bot"
+          git config user.email "bot@korea-rich.com"
+          git add data/news data/redev data/transit data/complexes
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -m "보도·정비사업 주간 갱신 $(TZ=Asia/Seoul date +%Y-%m-%d)"
+          git pull --rebase origin main
+          git push origin HEAD:main
