@@ -43,6 +43,8 @@ const situations = [
     <div class="qgrid">
       <a class="qcell" href="/find/"><b>집 찾기</b><span class="d">예산·지역·평형으로 지도에서</span></a>
       <a class="qcell" href="/area/"><b>지역별 실거래</b><span class="d">대장 단지 · 거래 활발 · 1년 변동</span></a>
+      <a class="qcell" href="/ref/"><b>공부 레퍼런스</b><span class="d">시도별 TOP · 정비사업 · 철도 호재 · 보도</span></a>
+      <a class="qcell" href="/compare/"><b>단지 비교</b><span class="d">담아둔 단지 2~4개 나란히</span></a>
     </div>
     <div class="chips">
       {[30000, 50000, 70000, 100000, 150000].map((a) => <a class="chip" href={`/budget/${a}/서울/`}>{a / 10000}억 서울</a>)}
@@ -52,7 +54,7 @@ const situations = [
   <section class="card status">
     <span class="pill p-blue">만드는 중</span>
     <p class="sub2">
-      실거래 데이터를 지역별로 채우는 중입니다(서울 먼저, 인천·경기·광역시 순). 비교 화면과 공부 레퍼런스는 다음 단계에서 열립니다.
+      실거래 데이터를 지역별로 채우는 중입니다(서울 먼저, 인천·경기·광역시 순). 가이드 글과 정책 페이지가 마지막으로 더해집니다.
     </p>
   </section>
 </Base>

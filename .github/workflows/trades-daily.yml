@@ -39,9 +39,9 @@ jobs:
         env:
           DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
         run: node scripts/fetch-complexes.mjs --mode info --all --detail false --max-calls 900 --max-minutes 40
-      - name: 실거래 ↔ K-apt 매칭
+      - name: 실거래 ↔ K-apt 매칭 · 정비사업 매칭
         if: always()
-        run: node scripts/match-complexes.mjs
+        run: node scripts/match-complexes.mjs && node scripts/match-redev.mjs
       - name: 커밋·푸시
         if: always()
         run: |

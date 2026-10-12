@@ -7,7 +7,7 @@
 
 ```
 src/            Astro 사이트 (페이지·레이아웃·컴포넌트·스타일)
-  pages/        / 홈 · /calc/ 계산기 · /find/ 집 찾기 · /apt/{id}/ 단지 · /area/{lawd}/ 지역 · /budget/{만원}/{시도}/ 예산별 · /data/*.json · 404(비정적 단지 폴백)
+  pages/        / 홈 · /calc/ 계산기 · /find/ 집 찾기 · /apt/{id}/ 단지 · /area/{lawd}/ 지역 · /budget/{만원}/{시도}/ 예산별 · /ref/{시도}/ 레퍼런스 · /compare/ 비교 · /data/*.json · 404(비정적 단지 폴백)
   layouts/      Base.astro — 공통 head·헤더·푸터
   styles/       global.css — 디자인 토큰 (토스 문법)
   lib/engine/   계산 엔진 (순수 TS, 브라우저·Node 공용) — 지역 분류·기존대출 환산·부대비용·상품별 자격·이분탐색
@@ -19,7 +19,10 @@ data/
   trades/       국토부 실거래가 {시군구코드}/{YYYYMM}.ndjson + _manifest.json (매일 갱신, 커밋함)
   complexes/    K-apt 단지 목록(list/)·기본+상세정보(info/)·실거래↔K-apt 매칭(match.json)·좌표(geo.json)
   rates/        ECOS 주담대 가중평균 금리 (월 2회)
-  overrides/    수동 보정표 (matches.json: aptSeq → kaptCode)
+  transit/      교통 호재 규칙표 lines.json(11개 노선, 출처·날짜) + 역 좌표 stations.json
+  redev/        정비사업: seoul.json(서울시 통계, 분기) · newtown1.json(1기 신도시 선도지구) · gyeonggi.json(경기 현황표, 반기 수동) · incheon.json(인천 공공데이터, 월간 수동)
+  news/         단지별 언론 보도(제목·언론사·날짜·링크), 화이트리스트 17개사, 하락 TOP·정비사업 단지만
+  overrides/    수동 보정표 (matches.json: aptSeq → kaptCode · redev.json · news.json: 제외할 단지)
 scripts/        수집기 (Node 22, 의존성 없음). fetch-trades · fetch-complexes · geocode · match-complexes · fetch-rates
 public/         favicon · robots.txt · ads.txt
 .github/        CI · 실거래 매일 갱신 · 백필(수동) · 데이터 수집(수동) · 금리 월간
@@ -53,7 +56,7 @@ Cloudflare Workers Builds(Git 연결). `main`에 푸시하면 자동 빌드·배
 | 1 | 계산 엔진(규칙표 v0.1) + 계산기 화면 | 완료 (v1) |
 | 2 | 실거래 백필 · 단지 마스터 · 매일 갱신 · 금리 자동수집 | 완료 (백필·K-apt 정보는 매일 자동 이어받기) |
 | 3 | 예산 맞춤 지도+리스트 · 단지 상세 · 예산별 페이지 | 완료 (v1) |
-| 4 | 비교 · 레퍼런스 4종 · 교통 호재 · 정비사업 · 뉴스 | |
+| 4 | 비교 · 레퍼런스 4종 · 교통 호재 · 정비사업 · 뉴스 | 완료 (v1) |
 | 5 | 가이드 글 · 정책 페이지 · 사이트맵 · 광고 슬롯 → 공개 | |
 
 ## 계산기가 하는 일 (1단계)
@@ -73,6 +76,7 @@ Cloudflare Workers Builds(Git 연결). `main`에 푸시하면 자동 빌드·배
 | 실거래 단지 ↔ K-apt 매칭 (지번 일치 > 이름 유사도 > 수동 보정표) | 수집 뒤 | `match-complexes.mjs` | — |
 | 단지 좌표 (지번 주소 → 키워드 → 본번) | 수동/주 1회 | `geocode.mjs` | 카카오 로컬 API |
 | 주담대 가중평균 금리 → 규칙표와 비교 → 차이 나면 카카오톡 알림 (자동 변경 없음) | 매월 1·15일 | `fetch-rates.mjs` | 한국은행 ECOS 121Y006 |
+| 정비사업 매칭(재건축·리모델링만, 지번 > 이름) · 역 좌표 · 뉴스 · 월 1회 서울 통계 갱신 + 카카오톡 검수 알림 | 매주 월 04:20 | `match-redev.mjs` `geocode-transit.mjs` `fetch-news.mjs` `fetch-redev-seoul.mjs` | 서울 열린데이터광장 TbSeoulRedevStatus · 카카오 로컬 · 네이버 뉴스 검색 |
 
 - 2026년 행정구역 개편(화성시 4구, 인천 제물포·영종·서해·검단구, 전남광주통합특별시) 코드는 규칙표 `regions`에 반영. 국토부 API는 과거 거래도 새 코드로 다시 매긴다.
 - 모든 수집기는 일일 트래픽 초과(코드 22)에서 멈추고 저장하며, 다음 실행이 매니페스트를 보고 이어서 한다.
@@ -85,6 +89,10 @@ Cloudflare Workers Builds(Git 연결). `main`에 푸시하면 자동 빌드·배
 - 예산 맞춤 = 예산 이하 전부, 예산의 85~100%는 "딱 맞는 구간". 정렬 기본은 예산에 가까운 순
 - 단지 상세 정적 페이지 = 36개월 거래 5건 이상. 나머지는 404 페이지가 같은 주소에서 요약을 그린다 (Cloudflare 정적 파일 2만 개 한도)
 - 1년 변동 = 현재 6개월 중앙값 vs 1년 전 같은 기간 중앙값, 양쪽 3건 이상일 때만
+- 교통 호재 = 규칙표 11개 노선의 역에서 1.5km 안. 가칭역은 동 중심 좌표(위치 추정 표시). 운행중 역은 "개통"으로 구분
+- 정비사업 = 재건축·리모델링만 단지에 붙인다(재개발 구역은 기존 아파트가 없음). 단계는 출처 자료 기준일의 상태
+- 보도 = 하락 TOP 10(시군구별)·정비사업 단지만, 주요 언론사 제목·날짜·링크. 매월 첫째 주 카카오톡 검수, 잘못된 건 overrides/news.json
+- 비교 = 브라우저 저장(최대 4개) + `/compare/?ids=` 공유 링크. 점수 없음
 
 ## 원칙
 
