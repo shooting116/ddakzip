@@ -1,0 +1,41 @@
+name: 단지 마스터 주간 갱신
+# 매주 일요일 03:20 KST — K-apt 단지 목록(새 시군구) → 실거래↔K-apt 매칭 → 좌표(새 단지). 기본정보는 매일 갱신 워크플로우가 하루 900건씩 이어받는다.
+on:
+  schedule:
+    - cron: '20 18 * * 6'   # UTC 토 18:20 = KST 일 03:20
+  workflow_dispatch:
+
+concurrency:
+  group: data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: K-apt 단지 목록 (새 시군구만)
+        env: { DATA_GO_KR_KEY: "${{ secrets.DATA_GO_KR_KEY }}" }
+        run: node scripts/fetch-complexes.mjs --mode list --max-calls 300 --max-minutes 30
+      - name: 실거래 ↔ K-apt 매칭
+        run: node scripts/match-complexes.mjs
+      - name: 좌표 (새 단지만)
+        env: { KAKAO_REST_KEY: "${{ secrets.KAKAO_REST_KEY }}" }
+        run: node scripts/geocode.mjs --max-calls 30000
+      - name: 커밋·푸시
+        if: always()
+        run: |
+          git config user.name "ddakzip-bot"
+          git config user.email "bot@korea-rich.com"
+          git add data/complexes
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -m "단지 마스터 주간 갱신 $(TZ=Asia/Seoul date +%Y-%m-%d)"
+          git pull --rebase origin main
+          git push origin HEAD:main
