@@ -3,7 +3,7 @@ title: "아파트 실거래가 제대로 보는 법 — 해제·직거래·신�
 description: "국토교통부 실거래가에는 취소된 계약, 가족 간 직거래, 아직 신고 안 된 거래가 섞여 있습니다. 딱집이 어떤 거래를 빼고 어떤 거래를 남기는지, 숫자를 볼 때 무엇을 확인해야 하는지 정리했습니다."
 category: price
 publishAt: "2026-10-12T15:00:00+09:00"
-published: false
+published: true
 asOf: "2026-10-12"
 facts: []
 cta: find
