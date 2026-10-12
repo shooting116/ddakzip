@@ -4,10 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       script:
-        description: '스크립트'
-        type: choice
+        description: '스크립트 이름 (scripts/*.mjs): fetch-trades · fetch-complexes · match-complexes · geocode · geocode-transit · match-redev · fetch-news · fetch-rates'
+        type: string
         default: fetch-complexes
-        options: [fetch-complexes, fetch-trades, geocode, fetch-rates, match-complexes]
       args:
         description: '인자 (예: --mode probe / --mode list --sido 서울)'
         type: string
@@ -36,6 +35,9 @@ jobs:
           KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
           ECOS_KEY: ${{ secrets.ECOS_KEY }}
           KAKAO_REFRESH_TOKEN: ${{ secrets.KAKAO_REFRESH_TOKEN }}
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+          SEOUL_OPENAPI_KEY: ${{ secrets.SEOUL_OPENAPI_KEY }}
         run: node scripts/${{ inputs.script }}.mjs ${{ inputs.args }}
       - name: 커밋·푸시
         if: always()

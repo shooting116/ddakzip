@@ -25,12 +25,15 @@ export interface Complex {
   types: TypeStat[]; rep: number | null; price: number | null; priceBasis: TypeStat['basis'];
   n36: number; n12: number; n6: number; cancel36: number;
   last: { date: string; amt: number; area: number; floor: number | null } | null;
+  transit: { line: string; type: string; station: string; status: string; open: number | null; dist: number }[];
+  redev: { program: string; zone: string; type: string; stage: string; stageDate: string | null; planned: number | null; existing: number | null; source: string; sourceDate: string | null; by: string }[] | null;
+  news: { t: string; o: string; d: string; u: string }[];
 }
 export interface SigunguIndex { lawd: string; sido: string; sigungu: string; regulated: boolean; asOf: string; months: string[]; complexes: Complex[] }
 export interface Summary {
   asOf: string; months: number; staticMin: number;
   sido: Record<string, { complexes: number; static: number; trades36: number }>;
-  sigungu: { lawd: string; sido: string; sigungu: string; regulated: boolean; complexes: number; static: number; trades36: number; geo: number; kapt: number }[];
+  sigungu: { lawd: string; sido: string; sigungu: string; regulated: boolean; complexes: number; static: number; trades36: number; geo: number; kapt: number; transit: number; redev: number; news: number }[];
   total: { complexes: number; static: number; trades36: number };
 }
 
@@ -77,6 +80,9 @@ export function slim(c: Complex) {
     u: c.kapt?.units ?? null, r: c.rep, p: c.price, pb: c.priceBasis, n6: c.n6, n36: c.n36, st: c.static ? 1 : 0,
     t: c.types.map((t) => [t.key, t.price, t.basis, t.n6, t.yoy]),
     l: c.last ? [c.last.date, c.last.amt, c.last.area] : null,
+    k: c.kapt ? { park: c.kapt.park, elev: c.kapt.elev, sub: c.kapt.subway, subw: c.kapt.subwayWalk, dongs: c.kapt.dongs, top: c.kapt.topFloor, heat: c.kapt.heat, used: c.kapt.used } : null,
+    tr: c.transit.slice(0, 2).map((x) => `${x.line} ${x.station}${x.status === '운행중' ? '' : x.open ? ` ${x.open}예정` : ' 예정'}`),
+    rd: c.redev ? `${c.redev[0].type.replace(/\(.*\)/, '')} · ${c.redev[0].stage.split(/\s*→\s*/).pop()!.slice(0, 20)}` : null,
   };
 }
 export type SlimComplex = ReturnType<typeof slim>;

@@ -84,6 +84,26 @@ function summarizeComplex(c, asOfYm, months) {
   return { types, rep: rep?.key ?? null, price: rep?.price ?? null, priceBasis: rep?.basis ?? null, n36: c.rows.length, n12, n6, cancel36: c.rows.filter((r) => r.cancel).length, last: lastAll ? { date: lastAll.date, amt: lastAll.amt, area: lastAll.area, floor: lastAll.floor } : null };
 }
 
+const toRad = (d) => (d * Math.PI) / 180;
+function distM(lat1, lng1, lat2, lng2) {
+  const R = 6371000, dLat = toRad(lat2 - lat1), dLng = toRad(lng2 - lng1);
+  const a = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(a));
+}
+/** 단지 1.5km 안의 호재 역 (노선별 가장 가까운 역 하나) */
+function nearbyStations(lat, lng, stations, radius) {
+  if (lat == null || lng == null) return [];
+  const best = new Map();
+  for (const s of stations) {
+    if (Math.abs(s.lat - lat) > 0.02 || Math.abs(s.lng - lng) > 0.025) continue; // 대략 2km 밖은 건너뜀
+    const d = distM(lat, lng, s.lat, s.lng);
+    if (d > radius) continue;
+    const cur = best.get(s.line);
+    if (!cur || d < cur.dist) best.set(s.line, { line: s.line, type: s.type, station: s.name, status: s.status, open: s.open, dist: Math.round(d) });
+  }
+  return [...best.values()].sort((a, b) => a.dist - b.dist);
+}
+
 function kaptOf(info) {
   if (!info) return null;
   const park = (info.parkGround ?? 0) + (info.parkUnder ?? 0);
@@ -104,12 +124,18 @@ function main() {
   const months = Array.from({ length: MONTHS }, (_, i) => ymAdd(asOfYm, -(MONTHS - 1 - i)));
   const match = loadJson(join(CX, 'match.json'), {});
   const geo = loadJson(join(CX, 'geo.json'), {});
+  const redev = loadJson(join(CX, 'redev.json'), {});
+  const newsSkip = loadJson(join(ROOT, 'data', 'overrides', 'news.json'), {});
+  const transit = loadJson(join(ROOT, 'data', 'transit', 'stations.json'), { radius_m: 1500, stations: [] });
+  const stations = transit.stations.filter((s) => s.lat != null);
+  const RADIUS = transit.radius_m ?? 1500;
   mkdirSync(join(OUT, 'complexes'), { recursive: true });
   const summary = { asOf, months: MONTHS, staticMin: STATIC_MIN, sido: {}, sigungu: [] };
   let total = 0, totalStatic = 0, totalTrades = 0;
 
   for (const r of regions) {
     const info = loadJson(join(CX, 'info', `${r.lawd}.json`), {});
+    const news = loadJson(join(ROOT, 'data', 'news', `${r.lawd}.json`), {});
     const map = new Map();
     for (const row of iterTrades({ lawds: [r.lawd] })) {
       if (row.date.slice(0, 7) < months[0]) continue;
@@ -127,16 +153,20 @@ function main() {
       const s = summarizeComplex(c, asOfYm, months);
       const g = geo[c.id];
       const kapt = kaptOf(match[c.id] ? info[match[c.id].kaptCode] : null);
+      const tr = nearbyStations(g?.lat ?? null, g?.lng ?? null, stations, RADIUS);
+      const rd = redev[c.id] ?? null;
+      const nw = newsSkip[c.id] ? [] : (news[c.id]?.items ?? []);
       complexes.push({
         id: c.id, name, aliases: [...c.names.keys()].filter((n) => n !== name), sido: r.sido, sigungu: r.sigungu, lawd: r.lawd, umd: c.umdNm, bjd: `${c.lawd}${c.umd}`, jibun: c.jibun || null, road: c.road || null,
         built: c.built || null, lat: g?.lat ?? null, lng: g?.lng ?? null, kapt, static: c.rows.length >= STATIC_MIN, ...s,
+        transit: tr, redev: rd, news: nw,
       });
     }
     complexes.sort((a, b) => b.n36 - a.n36 || a.name.localeCompare(b.name, 'ko'));
     const nStatic = complexes.filter((c) => c.static).length;
     const trades = complexes.reduce((s, c) => s + c.n36, 0);
     writeFileSync(join(OUT, 'complexes', `${r.lawd}.json`), JSON.stringify({ lawd: r.lawd, sido: r.sido, sigungu: r.sigungu, regulated: r.regulated, asOf, months, complexes }));
-    summary.sigungu.push({ lawd: r.lawd, sido: r.sido, sigungu: r.sigungu, regulated: r.regulated, complexes: complexes.length, static: nStatic, trades36: trades, geo: complexes.filter((c) => c.lat).length, kapt: complexes.filter((c) => c.kapt).length });
+    summary.sigungu.push({ lawd: r.lawd, sido: r.sido, sigungu: r.sigungu, regulated: r.regulated, complexes: complexes.length, static: nStatic, trades36: trades, geo: complexes.filter((c) => c.lat).length, kapt: complexes.filter((c) => c.kapt).length, transit: complexes.filter((c) => c.transit.length).length, redev: complexes.filter((c) => c.redev).length, news: complexes.filter((c) => c.news.length).length });
     const sd = summary.sido[r.sido] ?? (summary.sido[r.sido] = { complexes: 0, static: 0, trades36: 0 });
     sd.complexes += complexes.length; sd.static += nStatic; sd.trades36 += trades;
     total += complexes.length; totalStatic += nStatic; totalTrades += trades;

@@ -1,0 +1,2070 @@
+{
+ "11170-131": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "신동아아파트",
+   "type": "아파트지구재건축",
+   "stage": "사업시행",
+   "stageDate": "2021-01",
+   "planned": 1903,
+   "existing": 1326,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11170-14": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "산호아파트",
+   "type": "아파트지구재건축",
+   "stage": "사업시행",
+   "stageDate": "2024-03",
+   "planned": 647,
+   "existing": 554,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11170-228": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "이촌1",
+   "type": "단독주택재건축",
+   "stage": "추진위",
+   "stageDate": "2007-02",
+   "planned": null,
+   "existing": 520,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11170-33": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "강변강서아파트",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "1993-04",
+   "planned": 209,
+   "existing": 213,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11170-49": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "한강삼익아파트",
+   "type": "아파트지구재건축",
+   "stage": "사업시행",
+   "stageDate": "2020-06",
+   "planned": 329,
+   "existing": 252,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11170-53": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "왕궁아파트",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2023-09",
+   "planned": 318,
+   "existing": 250,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11170-60": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "중산시범아파트",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2005-07",
+   "planned": null,
+   "existing": 266,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11170-68": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "한강맨션아파트",
+   "type": "아파트지구재건축",
+   "stage": "관리처분",
+   "stageDate": "2022-12",
+   "planned": 1441,
+   "existing": 660,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11170-77": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "청화아파트",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-06",
+   "planned": null,
+   "existing": 578,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11200-13": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "마장세림아파트",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2023-12",
+   "planned": 996,
+   "existing": 841,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11200-45": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "한남하이츠",
+   "type": "공동주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2020-05",
+   "planned": 790,
+   "existing": 535,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11200-58": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "장미아파트",
+   "type": "공동주택재건축",
+   "stage": "착공",
+   "stageDate": "2024-10",
+   "planned": 287,
+   "existing": 173,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11200-69": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "성수1",
+   "type": "단독주택재건축",
+   "stage": "건축심의",
+   "stageDate": "2021-03",
+   "planned": 322,
+   "existing": 143,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11215-3": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "극동아파트",
+   "type": "공동주택재건축",
+   "stage": "구역지정",
+   "stageDate": "2026-04",
+   "planned": 2049,
+   "existing": 1344,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11215-4838": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "중곡아파트",
+   "type": "공동주택재건축",
+   "stage": "건축심의",
+   "stageDate": "2026-02",
+   "planned": 348,
+   "existing": 276,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11215-72": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "자양한양아파트",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2025-04",
+   "planned": 859,
+   "existing": 444,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11215-74": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "자양7",
+   "type": "단독주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2021-10",
+   "planned": 917,
+   "existing": 432,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11230-36": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "장안현대",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2026-06",
+   "planned": 746,
+   "existing": 456,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11230-43": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "청량리미주아파트",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2026-02",
+   "planned": 1370,
+   "existing": 1089,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11230-6": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "제기1(경동미주아파트)",
+   "type": "공동주택재건축",
+   "stage": "착공",
+   "stageDate": "2025-03",
+   "planned": 351,
+   "existing": 228,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11260-152": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "망우1(염광아파트)",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2012-05",
+   "planned": 581,
+   "existing": 367,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11260-61": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "중화동우성타운",
+   "type": "공동주택재건축",
+   "stage": "건축심의",
+   "stageDate": "2025-12",
+   "planned": 219,
+   "existing": 96,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11290-34": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "안암1",
+   "type": "단독주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2024-03",
+   "planned": 427,
+   "existing": 434,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11305-52": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "미아4-1",
+   "type": "단독주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2020-04",
+   "planned": 1015,
+   "existing": 576,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11320-20": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "쌍문한양1차아파트",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2025-12",
+   "planned": 1158,
+   "existing": 873,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11320-59": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "창동상아1차아파트",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2025-10",
+   "planned": 962,
+   "existing": 720,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11320-80": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "삼환도봉아파트",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2026-02",
+   "planned": 993,
+   "existing": 680,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11350-137": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "월계동신아파트",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2023-09",
+   "planned": 1029,
+   "existing": 864,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11350-178": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "태릉우성아파트",
+   "type": "공동주택재건축",
+   "stage": "구역지정",
+   "stageDate": "2026-05",
+   "planned": 704,
+   "existing": 432,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11350-39": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "상계주공5단지",
+   "type": "공동주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2024-08",
+   "planned": 996,
+   "existing": 840,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11410-177": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "홍은5",
+   "type": "단독주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2026-05",
+   "planned": 604,
+   "existing": 350,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11410-54": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "홍제3",
+   "type": "단독주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2024-09",
+   "planned": 620,
+   "existing": 442,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11440-169": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "성산시영아파트",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2025-12",
+   "planned": 4823,
+   "existing": 3710,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11440-4": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "공덕1",
+   "type": "단독주택재건축",
+   "stage": "착공",
+   "stageDate": "2023-10",
+   "planned": 1101,
+   "existing": 701,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11470-135": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "수정아파트",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2024-12",
+   "planned": 276,
+   "existing": 220,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11470-83": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "신월시영",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2025-11",
+   "planned": 3149,
+   "existing": 2256,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11500-158": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "신안빌라",
+   "type": "공동주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2026-04",
+   "planned": 365,
+   "existing": 234,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11500-197": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "방화5",
+   "type": "단독주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2024-12",
+   "planned": 1657,
+   "existing": 1822,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11500-218": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "방화3",
+   "type": "단독주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2026-05",
+   "planned": 1476,
+   "existing": 1413,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11500-495": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "염창동우성1·2차·삼천리아파트",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-02",
+   "planned": 996,
+   "existing": 602,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11530-13": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "보광아파트",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2026-06",
+   "planned": 675,
+   "existing": 340,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11530-24": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "구로우성아파트",
+   "type": "공동주택재건축",
+   "stage": "구역지정",
+   "stageDate": "2025-03",
+   "planned": 522,
+   "existing": 344,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11530-53": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "고척동산업인아파트",
+   "type": "공동주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2024-06",
+   "planned": 367,
+   "existing": 342,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11530-56": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "서울가든빌라",
+   "type": "공동주택재건축",
+   "stage": "구역지정",
+   "stageDate": "2024-03",
+   "planned": 653,
+   "existing": 339,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11530-57": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "대흥,성원,동진빌라",
+   "type": "공동주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2018-11",
+   "planned": 1455,
+   "existing": 741,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11530-67": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "한효아파트",
+   "type": "공동주택재건축",
+   "stage": "구역지정",
+   "stageDate": "2023-01",
+   "planned": 440,
+   "existing": 290,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11530-91": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "오류동현대연립",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2024-07",
+   "planned": 447,
+   "existing": 240,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11530-99": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "길훈아파트",
+   "type": "공동주택재건축",
+   "stage": "착공",
+   "stageDate": "2022-12",
+   "planned": 295,
+   "existing": 205,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11545-38": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "시흥무지개아파트",
+   "type": "공동주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2021-06",
+   "planned": 993,
+   "existing": 662,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11545-45": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "시흥동현대아파트",
+   "type": "공동주택재건축",
+   "stage": "착공",
+   "stageDate": "2024-09",
+   "planned": 219,
+   "existing": 140,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11560-10": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "여의도대교아파트",
+   "type": "아파트지구재건축",
+   "stage": "관리처분",
+   "stageDate": "2026-05",
+   "planned": 1012,
+   "existing": 576,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11560-106": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "신길동삼성아파트",
+   "type": "공동주택재건축",
+   "stage": "건축심의",
+   "stageDate": "2020-09",
+   "planned": 562,
+   "existing": 384,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11560-110": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "신길13",
+   "type": "공동주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2025-11",
+   "planned": 586,
+   "existing": 167,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11560-116": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "신길동우성2차·우창아파트",
+   "type": "공동주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2024-11",
+   "planned": 1212,
+   "existing": 939,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11560-12": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "여의도목화아파트",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2022-09",
+   "planned": 401,
+   "existing": 312,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11560-125": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "양평동신동아아파트",
+   "type": "공동주택재건축",
+   "stage": "건축심의",
+   "stageDate": "2026-03",
+   "planned": 563,
+   "existing": 495,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11560-13": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "여의도미성아파트",
+   "type": "아파트지구재건축",
+   "stage": "추진위",
+   "stageDate": "2009-09",
+   "planned": null,
+   "existing": 577,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11560-15": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "여의도삼부아파트",
+   "type": "아파트지구재건축",
+   "stage": "추진위",
+   "stageDate": "2020-08",
+   "planned": null,
+   "existing": 866,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11560-16": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "여의도삼익아파트",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2023-11",
+   "planned": 648,
+   "existing": 360,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11560-18": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "여의도수정아파트",
+   "type": "공동주택재건축",
+   "stage": "구역지정",
+   "stageDate": "2025-05",
+   "planned": 498,
+   "existing": 329,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11560-20": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "여의도시범아파트",
+   "type": "아파트지구재건축",
+   "stage": "건축심의",
+   "stageDate": "2025-11",
+   "planned": 2491,
+   "existing": 1584,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11560-21": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "여의도은하아파트",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2023-11",
+   "planned": 699,
+   "existing": 360,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11560-2107": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "여의도광장아파트38-1번지",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2024-08",
+   "planned": 414,
+   "existing": 168,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11560-22": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "여의도장미아파트",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2026-05",
+   "planned": null,
+   "existing": 196,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11560-23": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "문래동진주아파트",
+   "type": "공동주택재건축",
+   "stage": "착공",
+   "stageDate": "2026-03",
+   "planned": 324,
+   "existing": 160,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  },
+  {
+   "program": "서울시 정비사업",
+   "zone": "여의도진주아파트",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2025-06",
+   "planned": 578,
+   "existing": 376,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11560-26": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "여의도한양아파트",
+   "type": "아파트지구재건축",
+   "stage": "사업시행",
+   "stageDate": "2025-10",
+   "planned": 992,
+   "existing": 588,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11560-36": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "유원제일1차아파트",
+   "type": "공동주택재건축",
+   "stage": "착공",
+   "stageDate": "2024-08",
+   "planned": 550,
+   "existing": 360,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11560-45": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "유원제일2차아파트",
+   "type": "공동주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2025-03",
+   "planned": 703,
+   "existing": 410,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11560-56": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "문래동남성아파트",
+   "type": "공동주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2021-07",
+   "planned": 488,
+   "existing": 390,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11560-8": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "여의도공작아파트",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2023-02",
+   "planned": 585,
+   "existing": 373,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11560-9": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "여의도광장아파트28번지",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2019-06",
+   "planned": 1314,
+   "existing": 576,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11620-46": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "뉴서울개나리열망연립",
+   "type": "공동주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2023-07",
+   "planned": 306,
+   "existing": 211,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11650-110": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "신반포12차",
+   "type": "아파트지구재건축",
+   "stage": "관리처분",
+   "stageDate": "2026-03",
+   "planned": 432,
+   "existing": 324,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11650-113": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "신반포16차",
+   "type": "아파트지구재건축",
+   "stage": "관리처분",
+   "stageDate": "2026-02",
+   "planned": 468,
+   "existing": 396,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11650-116": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "신반포19차,25차",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2022-03",
+   "planned": 639,
+   "existing": 447,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11650-117": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "신반포2차",
+   "type": "공동주택재건축",
+   "stage": "건축심의",
+   "stageDate": "2026-04",
+   "planned": 2057,
+   "existing": 1572,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11650-124": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "신반포27차",
+   "type": "아파트지구재건축",
+   "stage": "관리처분",
+   "stageDate": "2025-11",
+   "planned": 210,
+   "existing": 156,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11650-125": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "신반포4차",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2023-09",
+   "planned": 1828,
+   "existing": 1212,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11650-128": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "신반포22차",
+   "type": "아파트지구재건축",
+   "stage": "착공",
+   "stageDate": "2024-04",
+   "planned": 160,
+   "existing": 132,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  },
+  {
+   "program": "서울시 정비사업",
+   "zone": "신반포7차",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2002-12",
+   "planned": 857,
+   "existing": 320,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11650-160": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "신반포궁전",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2025-11",
+   "planned": 249,
+   "existing": 108,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11650-172": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "반포미도1차",
+   "type": "공동주택재건축",
+   "stage": "건축심의",
+   "stageDate": "2026-06",
+   "planned": 1739,
+   "existing": 1260,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11650-173": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "반포미도2차",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-02",
+   "planned": null,
+   "existing": 435,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11650-196": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "삼호가든5차",
+   "type": "아파트지구재건축",
+   "stage": "건축심의",
+   "stageDate": "2024-02",
+   "planned": 317,
+   "existing": 168,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11650-272": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "대우효령",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-04",
+   "planned": null,
+   "existing": 364,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11650-322": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "방배신동아",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2025-07",
+   "planned": 843,
+   "existing": 493,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11650-323": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "방배신삼호",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2019-03",
+   "planned": 920,
+   "existing": 481,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11650-342": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "방배임광3차",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-01",
+   "planned": 379,
+   "existing": 316,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11650-53": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "서초신동아",
+   "type": "아파트지구재건축",
+   "stage": "착공",
+   "stageDate": "2024-12",
+   "planned": 1161,
+   "existing": 997,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11650-642": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "방배5",
+   "type": "단독주택재건축",
+   "stage": "착공",
+   "stageDate": "2022-07",
+   "planned": 3064,
+   "existing": 2551,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11650-66": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "서초진흥아파트",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2025-01",
+   "planned": 857,
+   "existing": 615,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-160": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "논현동현",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-04",
+   "planned": 905,
+   "existing": 548,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11680-214": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "대치쌍용2차(통합재건축)",
+   "type": "공동주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2017-09",
+   "planned": 1324,
+   "existing": 364,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-217": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "대치우성1차(통합재건축)",
+   "type": "공동주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2022-09",
+   "planned": 1332,
+   "existing": 476,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-218": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "은마아파트",
+   "type": "공동주택재건축",
+   "stage": "건축심의",
+   "stageDate": "2025-02",
+   "planned": 5850,
+   "existing": 4424,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-265": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "역삼동(758,은하수,760)",
+   "type": "아파트지구재건축",
+   "stage": "착공",
+   "stageDate": "2025-04",
+   "planned": 237,
+   "existing": 161,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11680-278": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "경우현(개포경남,우성3차,현대1차)",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-04",
+   "planned": 2343,
+   "existing": 1499,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11680-284": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "개포우성6차",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2024-04",
+   "planned": 417,
+   "existing": 270,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-293": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "개포현대2차",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-03",
+   "planned": 1095,
+   "existing": 558,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-299": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "일원가람",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-04",
+   "planned": 818,
+   "existing": 496,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-303": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "일원상록수",
+   "type": "공동주택재건축",
+   "stage": "구역지정",
+   "stageDate": "2026-06",
+   "planned": null,
+   "existing": 740,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-306": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "개포우성7차",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2024-02",
+   "planned": 1234,
+   "existing": 802,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11680-310": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "일원개포한신",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2025-10",
+   "planned": 483,
+   "existing": 364,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11680-332": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "도곡삼익",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2012-06",
+   "planned": 369,
+   "existing": 273,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-337": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "개포우성4차",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2023-09",
+   "planned": 1080,
+   "existing": 459,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-339": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "도곡우성",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2025-03",
+   "planned": 548,
+   "existing": 390,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-349": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "도곡개포한신",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2026-07",
+   "planned": 792,
+   "existing": 620,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-373": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "대치쌍용1차",
+   "type": "공동주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2018-10",
+   "planned": 999,
+   "existing": 630,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-378": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "압구정아파트지구특별계획구역5",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2021-02",
+   "planned": 1401,
+   "existing": 1232,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-382": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "압구정아파트지구특별계획구역6",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2002-09",
+   "planned": null,
+   "existing": 672,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-385": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "압구정아파트지구특별계획구역1",
+   "type": "아파트지구재건축",
+   "stage": "추진위",
+   "stageDate": "2020-11",
+   "planned": null,
+   "existing": 1233,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-391": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "개포주공5단지",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2026-01",
+   "planned": 1279,
+   "existing": 940,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-416": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "압구정아파트지구특별계획구역3",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2021-04",
+   "planned": 5175,
+   "existing": 3934,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11680-422": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "압구정아파트지구특별계획구역4",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2025-04",
+   "planned": 1664,
+   "existing": 1341,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-426": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "압구정아파트지구특별계획구역2",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2025-03",
+   "planned": 2381,
+   "existing": 1924,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11680-481": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "대치미도",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-03",
+   "planned": 3914,
+   "existing": 2436,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11680-578": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "개포주공6,7단지",
+   "type": "공동주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2024-11",
+   "planned": 2698,
+   "existing": 1960,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11680-62": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "청담삼성진흥",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-04",
+   "planned": null,
+   "existing": 630,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-113": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "한양3차",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2026-06",
+   "planned": 507,
+   "existing": 252,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-129": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "가락우창",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2026-03",
+   "planned": 471,
+   "existing": 264,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-130": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "오금현대",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2026-01",
+   "planned": 2436,
+   "existing": 1316,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-159": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "잠실우성1,2,3차",
+   "type": "공동주택재건축",
+   "stage": "건축심의",
+   "stageDate": "2026-05",
+   "planned": 2646,
+   "existing": 1842,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-160": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "잠실우성4차",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2025-12",
+   "planned": 825,
+   "existing": 555,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-164": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "잠실주공5단지",
+   "type": "아파트지구재건축",
+   "stage": "건축심의",
+   "stageDate": "2025-06",
+   "planned": 6411,
+   "existing": 3930,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-170": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "장미1,2,3차",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2020-03",
+   "planned": 5105,
+   "existing": 3522,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun+name"
+  }
+ ],
+ "11710-24": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "송파미성",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2023-05",
+   "planned": 773,
+   "existing": 378,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-27": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "가락삼익맨숀",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2026-04",
+   "planned": 1531,
+   "existing": 936,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-31": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "한양2차",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2020-11",
+   "planned": 1346,
+   "existing": 744,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-47": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "가락극동",
+   "type": "공동주택재건축",
+   "stage": "건축심의",
+   "stageDate": "2025-12",
+   "planned": 999,
+   "existing": 555,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-53": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "가락미륭",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2025-12",
+   "planned": 614,
+   "existing": 435,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-55": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "삼환가락",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2026-02",
+   "planned": 1098,
+   "existing": 648,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-61": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "가락우성1차",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2026-03",
+   "planned": 967,
+   "existing": 838,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-67": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "가락프라자",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2026-03",
+   "planned": 1068,
+   "existing": 672,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-7": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "풍납미성",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-04",
+   "planned": 444,
+   "existing": 275,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-87": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "가락1차현대",
+   "type": "공동주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2025-01",
+   "planned": 942,
+   "existing": 514,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-9042": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "가락상아1차",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2025-07",
+   "planned": 405,
+   "existing": 226,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11710-94": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "대림가락",
+   "type": "공동주택재건축",
+   "stage": "건축심의",
+   "stageDate": "2026-04",
+   "planned": 890,
+   "existing": 480,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11740-10": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "명일신동아",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-04",
+   "planned": null,
+   "existing": 570,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11740-11": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "명일우성",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-06",
+   "planned": null,
+   "existing": 572,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11740-14": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "명일한양아파트",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-06",
+   "planned": null,
+   "existing": 540,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11740-147": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "상일동현대빌라",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-03",
+   "planned": null,
+   "existing": 84,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11740-15": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "명일동고덕현대",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-04",
+   "planned": null,
+   "existing": 524,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11740-173": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "천호우성아파트",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2026-03",
+   "planned": 629,
+   "existing": 479,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11740-4": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "삼익맨션",
+   "type": "공동주택재건축",
+   "stage": "조합설립",
+   "stageDate": "2021-07",
+   "planned": 1169,
+   "existing": 768,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ],
+ "11740-48": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "삼익파크",
+   "type": "공동주택재건축",
+   "stage": "관리처분",
+   "stageDate": "2026-03",
+   "planned": 1384,
+   "existing": 1092,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11740-54": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "상일동우성타운",
+   "type": "공동주택재건축",
+   "stage": "추진위",
+   "stageDate": "2026-03",
+   "planned": null,
+   "existing": 105,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "name"
+  }
+ ],
+ "11740-7": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "삼익그린2차",
+   "type": "아파트지구재건축",
+   "stage": "조합설립",
+   "stageDate": "2021-07",
+   "planned": null,
+   "existing": 2400,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026년 6월 기준 (갱신 2026-09-10)",
+   "by": "jibun"
+  }
+ ]
+}
