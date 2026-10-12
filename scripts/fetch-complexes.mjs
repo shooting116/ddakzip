@@ -46,7 +46,10 @@ function saveJson(p, v) { mkdirSync(join(p, '..'), { recursive: true }); writeFi
 
 /** 후보 경로 중 처음 성공하는 것을 기억해 쓴다. 일시 오류(04 HTTP 에러 등)는 점점 길게 쉬며 재시도한다 */
 const resolved = loadJson(join(OUT, '_endpoints.json'), {});
-const BACKOFF = [3000, 15000, 45000];
+const BACKOFF = [10000, 30000, 60000];
+const GAP = Number(args.gap ?? 1500);          // 호출 간격(ms). K-apt는 분당 40회 넘기면 04 오류를 낸다
+const DEADLINE = Date.now() + Number(args['max-minutes'] ?? 150) * 60_000;
+const outOfTime = () => Date.now() > DEADLINE;
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 const isFinal = (e) => e instanceof DataGoError && ['12', '30', '22', '31', '32', '33', '03'].includes(e.code);
 async function callPath(path, query) {
@@ -54,7 +57,7 @@ async function callPath(path, query) {
   let lastErr;
   for (let i = 0; i <= BACKOFF.length; i++) {
     try {
-      await sleep(250);
+      await sleep(GAP);
       calls++;
       return await getXml(`${BASE}/${path}?serviceKey=${key}&${query}`);
     } catch (e) {
@@ -152,6 +155,7 @@ async function listMode() {
   let done = 0;
   for (const r of regions) {
     if (calls >= maxCalls) { stopReason = `max-calls ${maxCalls} 도달`; break; }
+    if (outOfTime()) { stopReason = '시간 예산 소진'; break; }
     const file = join(OUT, 'list', `${r.lawd}.json`);
     if (existsSync(file) && args.force !== 'true') { done++; continue; }
     try {
@@ -196,10 +200,12 @@ async function infoMode() {
     const info = loadJson(file, {});
     const codes = candidateKaptCodes(r.lawd);
     let changed = false;
+    const flush = () => { if (changed) { saveJson(file, Object.fromEntries(Object.keys(info).sort().map((k) => [k, info[k]]))); saveJson(MANIFEST, manifest); changed = false; } };
     for (const code of codes) {
       const m = manifest[code] ?? {};
       if (m.bass && (!withDetail || m.dtl)) { skipped++; continue; }
-      if (calls >= maxCalls) { stopReason = `max-calls ${maxCalls} 도달`; break outer; }
+      if (calls >= maxCalls) { stopReason = `max-calls ${maxCalls} 도달`; flush(); break outer; }
+      if (outOfTime()) { stopReason = '시간 예산 소진'; flush(); break outer; }
       try {
         if (!m.bass) {
           const b = await callFirst('bass', BASS_CANDIDATES, `kaptCode=${code}`);
@@ -214,14 +220,15 @@ async function infoMode() {
         manifest[code] = m;
         done++;
       } catch (e) {
-        if (e instanceof DataGoError && e.quota) { stopReason = '일일 트래픽 초과(22)'; break outer; }
+        if (e instanceof DataGoError && e.quota) { stopReason = '일일 트래픽 초과(22)'; flush(); break outer; }
         console.warn(`  실패 ${code}: ${redact(e.message)}`);
       }
+      if (done % 50 === 0) flush();
     }
-    if (changed) saveJson(file, Object.fromEntries(Object.keys(info).sort().map((k) => [k, info[k]])));
-    console.log(`  ${r.sido} ${r.sigungu}: 후보 ${codes.length} · 누적 완료 ${done} · 건너뜀 ${skipped} · 호출 ${calls}`);
+    const hadChange = changed; flush();
+    const line = `${r.sido} ${r.sigungu}: 후보 ${codes.length} · 누적 완료 ${done} · 건너뜀 ${skipped} · 호출 ${calls}`;
+    console.log('  ' + line); if (hadChange) notices.push(line);
   }
-  // 중단돼도 지금까지 받은 시군구 파일은 위에서 저장됐고, 매니페스트는 여기서
   saveJson(MANIFEST, manifest);
   console.log(`[complexes info] 완료 ${done} · 건너뜀 ${skipped} · 호출 ${calls}${stopReason ? ` · 중단 ${stopReason}` : ''}`);
 }
