@@ -3,7 +3,7 @@ title: "아파트 취득세 계산과 감면 — 6억·9억 구간, 생애최초
 description: "취득세는 집값 구간에 따라 1~3%이고, 지방교육세와 농어촌특별세가 따라붙습니다. 구간별 계산식, 생애최초·출산 감면 조건, 신고 기한을 예시와 함께 정리했습니다."
 category: tax
 publishAt: "2026-10-12T19:00:00+09:00"
-published: false
+published: true
 asOf: "2026-09-30"
 facts: [acquisition]
 cta: calc
