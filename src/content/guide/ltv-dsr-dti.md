@@ -3,7 +3,7 @@ title: "LTV·DSR·DTI 직접 계산해보기 — 내 대출 한도를 가르는 
 description: "LTV는 집값 대비, DSR·DTI는 소득 대비 한도입니다. 연소득 7천만 원·6억 아파트 예시로 세 가지를 순서대로 계산하고, 스트레스 DSR이 한도를 얼마나 줄이는지 숫자로 보여드립니다."
 category: loan
 publishAt: "2026-10-12T17:00:00+09:00"
-published: false
+published: true
 asOf: "2026-09-30"
 facts: [bank]
 cta: calc
