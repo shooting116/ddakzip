@@ -9,7 +9,9 @@
     "preview": "astro preview",
     "check": "astro check",
     "test": "node --test src/lib/engine/*.test.ts scripts/lib/*.test.mjs",
-    "fetch:trades": "node scripts/fetch-trades.mjs"
+    "fetch:trades": "node scripts/fetch-trades.mjs",
+    "prebuild": "node scripts/build-index.mjs",
+    "index": "node scripts/build-index.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",

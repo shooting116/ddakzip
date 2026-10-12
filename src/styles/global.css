@@ -57,10 +57,10 @@ img { max-width: 100%; display: block; }
 .sub2 { color: var(--fg2); font-size: 13.5px; }
 .blue { color: var(--blue); }
 
-.btn {
+.btn, a.btn {
   display: block; width: 100%; text-align: center; border: 0; cursor: pointer;
   background: var(--blue); color: #fff; font-weight: 700; font-size: 16px;
-  border-radius: var(--radius-btn); padding: 16px;
+  border-radius: var(--radius-btn); padding: 16px; box-sizing: border-box; text-decoration: none;
 }
 .btn.ghost { background: var(--soft); color: var(--blue); }
 

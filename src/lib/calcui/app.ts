@@ -1,7 +1,7 @@
 // 계산기 화면: 6단계 입력 → 결과. 바닐라 DOM, 상태는 state.ts.
 import { calculate, bottleneckLabel } from '../engine/calc.ts';
 import { getRules } from '../engine/rules.ts';
-import { listSido, listSigungu } from '../engine/region.ts';
+import { listSido, listSigungu, classifyRegion } from '../engine/region.ts';
 import { fmtEok, fmtMonthly, fmtPct } from '../engine/money.ts';
 import type { CalcResult, ProductResult, Situation, DebtType } from '../engine/types.ts';
 import { defaultState, load, save, toInput, SITUATION_LABEL, DEBT_LABEL, type UiState, type Marital } from './state.ts';
@@ -224,6 +224,14 @@ function viewResult(): string {
   const ratio = income > 0 ? (b.monthly * 12 / income) * 100 : 0;
   const none = !b.eligible;
 
+  // 찾기 화면으로 넘길 예산·지역 (만 원 단위). 찾기 화면이 localStorage에서도 읽는다.
+  const reg = classifyRegion(rules, input.region);
+  const budgetMan = Math.floor(b.budget / 10_000);
+  const findQs = new URLSearchParams({ budget: String(budgetMan) });
+  if (reg.lawd) findQs.set('lawd', reg.lawd);
+  if (reg.sido) findQs.set('sido', reg.sido);
+  try { localStorage.setItem('ddakzip-budget-v1', JSON.stringify({ budgetMan, sido: reg.sido, lawd: reg.lawd, at: new Date().toISOString().slice(0, 10) })); } catch { /* */ }
+
   const limitRows: { k: keyof typeof b.limits; label: string; v: number | null }[] = [
     { k: 'ltv', label: `LTV ${b.ltvPct}%`, v: b.limits.ltv },
     { k: 'dsr', label: `DSR ${rules.bank.dsr.ratio}% (스트레스 +${(rules.bank.dsr.stress as Record<string, number>)[r.region]}%p)`, v: b.limits.dsr },
@@ -321,7 +329,8 @@ function viewResult(): string {
       <div class="sub hint">채권은 공시가를 매매가의 70%로 가정, 할인율 ${rules.fees.bond.discount_rate_default}% (2026-09). 법무사 보수는 참고치.</div>
     </details>`}
 
-    <button type="button" class="btn" disabled title="3단계에서 열립니다">이 예산으로 딱 집어보기 · 준비 중</button>
+    ${none ? `<button type="button" class="btn" disabled>받을 수 있는 대출이 없어 예산을 잡을 수 없어요</button>`
+      : `<a class="btn" href="/find/?${findQs.toString()}">이 예산으로 딱 집어보기</a>`}
     <div class="row" style="margin-top:10px;gap:8px">
       <button type="button" class="btn ghost" data-action="edit">조건 수정</button>
       <button type="button" class="btn ghost" data-action="restart">처음부터</button>

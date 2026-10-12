@@ -8,3 +8,4 @@ dist/
 .DS_Store
 # 수집 원본 데이터는 커밋하지 않음 (파이프라인이 매일 재생성)
 data/raw/
+data/index/

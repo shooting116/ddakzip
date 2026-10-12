@@ -1,0 +1,76 @@
+---
+import Base from '../../layouts/Base.astro';
+import { loadSummary } from '../../lib/data/index.ts';
+const sm = loadSummary();
+---
+<Base title="예산 맞춤 아파트 찾기" description={`내 예산 안에서 살 수 있는 아파트를 지도와 목록으로. 수도권·광역시 ${sm.total.complexes.toLocaleString()}개 단지, 국토교통부 실거래가 ${sm.asOf} 기준.`}>
+  <div class="q" style="padding:4px 4px 10px">
+    <h1 class="big" style="margin:0;font-size:22px">내 예산에 딱 맞는 집</h1>
+    <p class="sub2" style="margin:4px 0 0">예산 안에 드는 단지를 실거래가 기준으로 찾아요. 평형·준공·세대수로 좁히고 지도에서 위치를 확인하세요.</p>
+  </div>
+  <div id="app" class="find">
+    <div class="card"><p class="sub2" style="margin:0">불러오는 중…</p></div>
+    <noscript><div class="card" style="margin-top:12px"><p class="sub2" style="margin:0">이 화면은 자바스크립트가 필요합니다. <a href="/area/">지역별 목록</a>에서도 볼 수 있어요.</p></div></noscript>
+  </div>
+</Base>
+
+<script>
+  import { mount } from '../../lib/findui/app.ts';
+  mount(document.getElementById('app')!);
+</script>
+
+<style is:global>
+  .find { display: flex; flex-direction: column; gap: 10px; }
+  .find .card { margin: 0; }
+  .find .card.tight { padding: 14px 16px; }
+  .find .row { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .find .budget { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 200px; }
+  .find .bval { display: flex; align-items: baseline; gap: 6px; border-bottom: 2px solid var(--line); padding-bottom: 4px; }
+  .find .bval:focus-within { border-bottom-color: var(--blue); }
+  .find .bval input { border: 0; outline: 0; background: transparent; font: inherit; font-size: 24px; font-weight: 800; letter-spacing: -0.03em; width: 100%; min-width: 0; font-variant-numeric: tabular-nums; padding: 0; color: var(--fg); }
+  .find .bval span { font-size: 13px; color: var(--muted); white-space: nowrap; }
+  .find .beok { font-size: 13px; color: var(--blue); }
+  .find .link { color: var(--blue); font-weight: 600; white-space: nowrap; }
+  .find .selects { margin-top: 12px; flex-wrap: nowrap; }
+  .find select { font: inherit; font-size: 14px; padding: 10px 12px; border-radius: 12px; border: 1.5px solid var(--line); background: var(--card); color: var(--fg); min-width: 0; }
+  .find .selects select:first-child { flex: 0 0 110px; }
+  .find .selects select:last-child { flex: 1; }
+  .find .filters { display: flex; flex-direction: column; gap: 6px; padding: 0 2px; }
+  .find .chips { display: flex; gap: 6px; overflow-x: auto; padding: 2px 0; scrollbar-width: none; align-items: center; }
+  .find .chips::-webkit-scrollbar { display: none; }
+  .find .chip { flex: none; font-size: 12.5px; font-weight: 600; padding: 7px 11px; border-radius: 999px; background: var(--card); color: var(--fg2); border: 0; cursor: pointer; white-space: nowrap; }
+  .find .chip.on { background: var(--fg); color: #fff; }
+  .find .sortsel { margin-left: auto; padding: 6px 10px; font-size: 12.5px; border-radius: 999px; }
+  .find .mapwrap { position: relative; border-radius: 20px; overflow: hidden; background: var(--card); }
+  .find .mapwrap.hide { display: none; }
+  .find #map { width: 100%; height: 46vh; min-height: 260px; max-height: 480px; }
+  .find .maptip { position: absolute; left: 10px; bottom: 8px; background: rgba(255,255,255,.92); padding: 4px 8px; border-radius: 8px; z-index: 2; }
+  .find .count { padding: 2px 4px; }
+  .find .list { padding: 4px 16px; }
+  .find .item { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--soft); color: inherit; }
+  .find .item:last-of-type { border-bottom: 0; }
+  .find .item.sel { background: var(--blue-soft); margin: 0 -16px; padding-left: 16px; padding-right: 16px; border-radius: 12px; }
+  .find .it-main { min-width: 0; flex: 1; }
+  .find .it-name { font-weight: 700; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .find .it-name .sub { font-weight: 500; margin-left: 4px; }
+  .find .it-sub { margin-top: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .find .it-sub .up { color: var(--red); } .find .it-sub .down { color: var(--blue); }
+  .find .bar { height: 5px; border-radius: 999px; background: var(--soft); overflow: hidden; margin-top: 7px; max-width: 220px; }
+  .find .bar i { display: block; height: 100%; background: var(--blue); border-radius: 999px; }
+  .find .it-price { text-align: right; flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+  .find .it-price b { font-size: 17px; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+  .find .more { width: 100%; margin: 8px 0 6px; }
+  .find .btn.ghost { background: var(--soft); color: var(--fg); }
+  .mk-card { display: flex; flex-direction: column; background: var(--fg); color: #fff; padding: 8px 10px; border-radius: 10px; font-size: 12px; white-space: nowrap; box-shadow: 0 4px 14px rgba(0,0,0,.18); }
+  .mk-card b { font-size: 13px; } .mk-card span { opacity: .85; }
+  .mk-card::after { content: ''; position: absolute; left: 50%; bottom: -6px; margin-left: -6px; border: 6px solid transparent; border-top-color: var(--fg); border-bottom: 0; }
+  @media (min-width: 900px) {
+    .find { display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: 'top top' 'map list' 'status list' 'src src'; align-items: start; column-gap: 14px; }
+    .find #top { grid-area: top; }
+    .find .mapwrap { grid-area: map; position: sticky; top: 64px; }
+    .find #map { height: calc(100vh - 120px); max-height: none; }
+    .find #status { grid-area: status; }
+    .find #listwrap { grid-area: list; }
+    .find > .src { grid-area: src; }
+  }
+</style>
