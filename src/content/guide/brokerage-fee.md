@@ -3,7 +3,7 @@ title: "아파트 중개보수 상한 — 구간별 요율, 부가세, 깎을 �
 description: "중개보수는 법이 정한 상한 요율 안에서 협의하는 돈입니다. 2억~9억 구간 0.4%, 9억 이상 0.5~0.7%, 여기에 부가세. 6억 아파트면 얼마인지, 언제 주는지, 계약서에 뭘 적어야 하는지 정리했습니다."
 category: tax
 publishAt: "2026-10-13T08:00:00+09:00"
-published: false
+published: true
 asOf: "2026-09-30"
 facts: []
 cta: calc
