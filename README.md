@@ -7,11 +7,13 @@
 
 ```
 src/            Astro 사이트 (페이지·레이아웃·컴포넌트·스타일)
-  pages/        / 홈 · /calc/ 계산기 · /about/ /privacy/ /contact/ · 404
+  pages/        / 홈 · /calc/ 계산기 · /find/ 집 찾기 · /apt/{id}/ 단지 · /area/{lawd}/ 지역 · /budget/{만원}/{시도}/ 예산별 · /data/*.json · 404(비정적 단지 폴백)
   layouts/      Base.astro — 공통 head·헤더·푸터
   styles/       global.css — 디자인 토큰 (토스 문법)
   lib/engine/   계산 엔진 (순수 TS, 브라우저·Node 공용) — 지역 분류·기존대출 환산·부대비용·상품별 자격·이분탐색
   lib/calcui/   계산기 화면 (6단계 질문 + 결과, localStorage 저장)
+  lib/findui/   집 찾기 화면 (예산·필터·정렬·카카오맵)
+  lib/data/     빌드 시 data/index·data/trades 로더
 data/
   rules/        대출·세금 규칙표 JSON (시행일별 버전) — v2026-09-30 = 규칙표 v0.1
   trades/       국토부 실거래가 {시군구코드}/{YYYYMM}.ndjson + _manifest.json (매일 갱신, 커밋함)
@@ -29,9 +31,11 @@ wrangler.jsonc  Cloudflare Workers 정적 배포 설정
 ```
 npm install
 npm run dev      # http://localhost:4321
-npm run build    # dist/
-npm test         # 계산 엔진 테스트 (node --test)
+npm run build    # prebuild(build-index: data/trades → data/index) → astro build → dist/
+npm test         # 계산 엔진·수집기 테스트 (node --test)
 ```
+
+카카오맵은 빌드 환경변수 `PUBLIC_KAKAO_JS_KEY`(JavaScript 키, 도메인 제한 공개키)가 있을 때만 켜진다. Cloudflare 빌드 변수에 넣는다.
 
 Node 22 이상.
 
@@ -47,8 +51,8 @@ Cloudflare Workers Builds(Git 연결). `main`에 푸시하면 자동 빌드·배
 |---|---|---|
 | 0 | 저장소 뼈대 · 배포 연결 | 완료 |
 | 1 | 계산 엔진(규칙표 v0.1) + 계산기 화면 | 완료 (v1) |
-| 2 | 실거래 백필 · 단지 마스터 · 매일 갱신 · 금리 자동수집 | 진행 중 (수집기 완료, 백필 진행) |
-| 3 | 예산 맞춤 지도+리스트 · 단지 상세 · 예산별 페이지 | |
+| 2 | 실거래 백필 · 단지 마스터 · 매일 갱신 · 금리 자동수집 | 완료 (백필·K-apt 정보는 매일 자동 이어받기) |
+| 3 | 예산 맞춤 지도+리스트 · 단지 상세 · 예산별 페이지 | 완료 (v1) |
 | 4 | 비교 · 레퍼런스 4종 · 교통 호재 · 정비사업 · 뉴스 | |
 | 5 | 가이드 글 · 정책 페이지 · 사이트맵 · 광고 슬롯 → 공개 | |
 
@@ -73,6 +77,14 @@ Cloudflare Workers Builds(Git 연결). `main`에 푸시하면 자동 빌드·배
 - 2026년 행정구역 개편(화성시 4구, 인천 제물포·영종·서해·검단구, 전남광주통합특별시) 코드는 규칙표 `regions`에 반영. 국토부 API는 과거 거래도 새 코드로 다시 매긴다.
 - 모든 수집기는 일일 트래픽 초과(코드 22)에서 멈추고 저장하며, 다음 실행이 매니페스트를 보고 이어서 한다.
 - 키는 GitHub Secrets → 워크플로우 환경변수로만 전달한다. 컨테이너에서는 공공데이터포털에 접속할 수 없어 수집기 검증은 Actions의 `데이터 수집 (수동 실행)`으로 한다.
+
+## 화면이 쓰는 기준 (3단계 결정)
+
+- 시세 = 최근 6개월 실거래 중앙값(해제·직거래 제외). 6개월 3건 미만이면 "참고용", 0건이면 마지막 거래가
+- 평형 = 전용면적을 대표 타입(59·74·84·101·114…)에 ±3㎡로 묶음. 대표 평형 = 36개월 거래 최다 타입. 지도 마커는 대표 평형 시세
+- 예산 맞춤 = 예산 이하 전부, 예산의 85~100%는 "딱 맞는 구간". 정렬 기본은 예산에 가까운 순
+- 단지 상세 정적 페이지 = 36개월 거래 5건 이상. 나머지는 404 페이지가 같은 주소에서 요약을 그린다 (Cloudflare 정적 파일 2만 개 한도)
+- 1년 변동 = 현재 6개월 중앙값 vs 1년 전 같은 기간 중앙값, 양쪽 3건 이상일 때만
 
 ## 원칙
 
