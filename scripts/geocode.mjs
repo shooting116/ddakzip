@@ -64,8 +64,9 @@ async function main() {
     const c = complexes[0];
     const r = byLawd[c.lawd];
     const q = `${SIDO_FULL[r.sido]} ${r.sigungu} ${c.umdNm} ${c.jibun}`;
-    console.log('probe', q, '→', JSON.stringify(await byAddress(q)));
-    console.log('probe keyword', c.apt, '→', JSON.stringify(await byKeyword(`${r.sigungu} ${c.umdNm} ${c.apt}`)));
+    const a = await byAddress(q), k2 = await byKeyword(`${r.sigungu} ${c.umdNm} ${c.apt}`);
+    console.log('probe', q, '→', JSON.stringify(a)); console.log('probe keyword', c.apt, '→', JSON.stringify(k2));
+    if (process.env.GITHUB_ACTIONS) console.log(`::notice title=geocode probe::${q} → ${JSON.stringify(a)} | keyword ${c.apt} → ${JSON.stringify(k2)}`);
     return;
   }
 
@@ -96,7 +97,10 @@ async function main() {
   };
   await Promise.all(Array.from({ length: concurrency }, worker));
   writeFileSync(GEO, JSON.stringify(Object.fromEntries(Object.keys(geo).sort().map((k) => [k, geo[k]])), null, 0).replace(/},"/g, '},\n"') + '\n');
-  console.log(`[geocode] 완료 성공 ${ok} · 실패 ${fail} · 호출 ${calls}${stopReason ? ` · 중단 ${stopReason}` : ''}`);
+  const byMethod = {}; for (const g of Object.values(geo)) byMethod[g.by] = (byMethod[g.by] ?? 0) + 1;
+  const line = `완료 성공 ${ok} · 실패 ${fail} · 호출 ${calls}${stopReason ? ` · 중단 ${stopReason}` : ''} · 누적 ${JSON.stringify(byMethod)}`;
+  console.log('[geocode] ' + line);
+  if (process.env.GITHUB_ACTIONS) console.log(`::notice title=geocode::${line}`);
   if (process.env.GITHUB_OUTPUT) writeFileSync(process.env.GITHUB_OUTPUT, `calls=${calls}\nstop=${stopReason ?? ''}\n`, { flag: 'a' });
 }
 
