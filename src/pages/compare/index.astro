@@ -1,0 +1,93 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="단지 비교" description="아파트 단지 2~4개를 나란히 놓고 평형별 시세·1년 변동·세대수·준공·주차·지하철을 숫자로 비교합니다. 점수나 추천은 없습니다." noindex>
+  <div class="q" style="padding:4px 4px 10px">
+    <h1 class="big" style="margin:0;font-size:22px">단지 비교</h1>
+    <p class="sub2" style="margin:4px 0 0">단지 상세에서 "비교에 담기"로 2~4개를 담으면 여기서 나란히 봅니다. 점수는 매기지 않아요 — 숫자를 보고 직접 고르세요.</p>
+  </div>
+  <div id="app" class="cmp"><div class="card"><p class="sub2" style="margin:0">불러오는 중…</p></div></div>
+</Base>
+
+<script>
+  const KEY = 'ddakzip-compare-v1';
+  const root = document.getElementById('app')!;
+  const esc = (v: unknown) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
+  const eok = (man: number | null | undefined) => man == null ? '—' : man < 10000 ? `${Math.round(man).toLocaleString()}만` : `${(man / 10000).toFixed(2).replace(/\.?0+$/, '')}억`;
+  const read = (): string[] => { try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch { return []; } };
+  const write = (ids: string[]) => { try { localStorage.setItem(KEY, JSON.stringify(ids)); } catch { /* */ } };
+  const q = new URLSearchParams(location.search).get('ids');
+  let ids = q ? q.split(',').filter((x) => /^\d{5}-\d+$/.test(x)).slice(0, 4) : read();
+  if (q) write(ids);
+
+  type Slim = any;
+  const cache = new Map<string, Slim[]>();
+  async function get(id: string): Promise<{ c: Slim; sigungu: string; sido: string; asOf: string } | null> {
+    const lawd = id.split('-')[0];
+    if (!cache.has(lawd)) { const r = await fetch(`/data/complexes/${lawd}.json`); if (!r.ok) return null; const d = await r.json(); cache.set(lawd, d.c); (cache as any)['meta' + lawd] = d; }
+    const d = (cache as any)['meta' + lawd];
+    const c = cache.get(lawd)!.find((x: Slim) => x.id === id);
+    return c ? { c, sigungu: d.sigungu, sido: d.sido, asOf: d.asOf } : null;
+  }
+
+  function empty() {
+    root.innerHTML = `<div class="card"><p class="sub2" style="margin:0 0 10px">담긴 단지가 없어요. 집 찾기나 지역 페이지에서 단지를 열고 <b>비교에 담기</b>를 눌러 주세요.</p><a class="btn" href="/find/">집 찾기로</a></div>`;
+  }
+
+  async function render() {
+    if (!ids.length) return empty();
+    const items = (await Promise.all(ids.map(get))).filter(Boolean) as { c: Slim; sigungu: string; sido: string; asOf: string }[];
+    if (!items.length) return empty();
+    const keys = [...new Set(items.flatMap((x) => x.c.t.map((t: any) => t[0])))].sort((a, b) => a - b);
+    const cell = (v: string | number | null | undefined, cls = '') => `<td class="${cls}">${v == null || v === '' ? '<span class="sub">—</span>' : esc(String(v))}</td>`;
+    const rows: string[] = [];
+    rows.push(`<tr><th></th>${items.map((x) => `<th><a href="/apt/${esc(x.c.id)}/">${esc(x.c.n)}</a><span class="sub">${esc(x.sigungu)} ${esc(x.c.d)}</span><button type="button" class="rm" data-rm="${esc(x.c.id)}" aria-label="빼기">×</button></th>`).join('')}</tr>`);
+    rows.push(`<tr><th>대표 평형 시세</th>${items.map((x) => `<td><b>${eok(x.c.p)}</b><span class="sub">${x.c.r}㎡${x.c.pb === 'median6' ? '' : x.c.pb === 'ref' ? ' · 참고용' : x.c.pb === 'last' ? ' · 마지막 거래' : ''}</span></td>`).join('')}</tr>`);
+    for (const k of keys) {
+      rows.push(`<tr><th>${k}㎡</th>${items.map((x) => { const t = x.c.t.find((t: any) => t[0] === k); return t ? `<td>${eok(t[1])}${t[4] != null ? `<span class="sub ${t[4] >= 0 ? 'up' : 'down'}">1년 ${t[4] > 0 ? '+' : ''}${t[4]}%</span>` : ''}${t[3] ? `<span class="sub">6개월 ${t[3]}건</span>` : ''}</td>` : '<td><span class="sub">—</span></td>'; }).join('')}</tr>`);
+    }
+    rows.push(`<tr><th>최근 6개월 거래</th>${items.map((x) => cell(`${x.c.n6}건`)).join('')}</tr>`);
+    rows.push(`<tr><th>36개월 거래</th>${items.map((x) => cell(`${x.c.n36}건`)).join('')}</tr>`);
+    rows.push(`<tr><th>준공</th>${items.map((x) => cell(x.c.b ? `${x.c.b}년 (${new Date().getFullYear() - x.c.b}년차)` : null)).join('')}</tr>`);
+    rows.push(`<tr><th>세대수</th>${items.map((x) => cell(x.c.u ? `${x.c.u.toLocaleString()}세대${x.c.k?.dongs ? ` · ${x.c.k.dongs}동` : ''}` : null)).join('')}</tr>`);
+    rows.push(`<tr><th>최고층</th>${items.map((x) => cell(x.c.k?.top ? `${x.c.k.top}층` : null)).join('')}</tr>`);
+    rows.push(`<tr><th>주차</th>${items.map((x) => cell(x.c.k?.park ? `${x.c.k.park.toLocaleString()}대${x.c.u ? ` · 세대당 ${(x.c.k.park / x.c.u).toFixed(2)}` : ''}` : null)).join('')}</tr>`);
+    rows.push(`<tr><th>승강기</th>${items.map((x) => cell(x.c.k?.elev ? `${x.c.k.elev}대` : null)).join('')}</tr>`);
+    rows.push(`<tr><th>난방</th>${items.map((x) => cell(x.c.k?.heat)).join('')}</tr>`);
+    rows.push(`<tr><th>지하철</th>${items.map((x) => cell(x.c.k?.sub ? `${x.c.k.sub}${x.c.k.subw ? ` · 도보 ${x.c.k.subw}` : ''}` : null)).join('')}</tr>`);
+    rows.push(`<tr><th>철도 호재(1.5km)</th>${items.map((x) => cell(x.c.tr?.length ? x.c.tr.join(' / ') : null)).join('')}</tr>`);
+    rows.push(`<tr><th>정비사업</th>${items.map((x) => cell(x.c.rd)).join('')}</tr>`);
+    rows.push(`<tr><th>마지막 거래</th>${items.map((x) => cell(x.c.l ? `${x.c.l[0]} · ${x.c.l[2]}㎡ · ${eok(x.c.l[1])}` : null)).join('')}</tr>`);
+    const share = `${location.origin}/compare/?ids=${items.map((x) => x.c.id).join(',')}`;
+    root.innerHTML = `
+      <div class="card tablewrap"><table class="ct">${rows.join('')}</table></div>
+      <div class="row" style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+        <button type="button" class="btn ghost" data-share="${esc(share)}" style="flex:1">링크 복사</button>
+        <button type="button" class="btn ghost" data-clear style="flex:1">모두 빼기</button>
+      </div>
+      <p class="src">시세 = 최근 6개월 실거래 중앙값(해제·직거래 제외), 1년 = 1년 전 같은 기간 중앙값 대비. 출처: 국토교통부 실거래가(${esc(items[0].asOf)} 기준)·K-apt. 단지 정보는 등록 자료 기준이며 실제와 다를 수 있습니다. 딱집은 특정 단지를 추천하지 않습니다.</p>`;
+  }
+  root.addEventListener('click', (e) => {
+    const t = (e.target as HTMLElement).closest<HTMLElement>('[data-rm],[data-share],[data-clear]');
+    if (!t) return;
+    if (t.dataset.rm) { ids = ids.filter((x) => x !== t.dataset.rm); write(ids); history.replaceState(null, '', ids.length ? `?ids=${ids.join(',')}` : location.pathname); render(); }
+    else if (t.dataset.clear !== undefined) { ids = []; write(ids); history.replaceState(null, '', location.pathname); render(); }
+    else if (t.dataset.share) { navigator.clipboard?.writeText(t.dataset.share).then(() => { t.textContent = '복사됨'; setTimeout(() => (t.textContent = '링크 복사'), 1500); }); }
+  });
+  render();
+</script>
+
+<style is:global>
+  .cmp .tablewrap { padding: 8px 12px; overflow-x: auto; margin: 0; }
+  .cmp .ct { border-collapse: collapse; font-size: 13px; min-width: 100%; }
+  .cmp .ct th, .cmp .ct td { padding: 9px 8px; border-bottom: 1px solid var(--soft); vertical-align: top; text-align: left; min-width: 120px; }
+  .cmp .ct tr:first-child th { position: relative; padding-right: 22px; }
+  .cmp .ct tr:first-child th a { font-weight: 800; color: var(--fg); display: block; }
+  .cmp .ct tr:first-child th .sub { display: block; font-weight: 500; }
+  .cmp .ct tr:not(:first-child) th { color: var(--fg2); font-weight: 600; white-space: nowrap; min-width: 90px; position: sticky; left: 0; background: var(--card); }
+  .cmp .ct td .sub { display: block; }
+  .cmp .ct td b { font-size: 15px; }
+  .cmp .up { color: var(--red); } .cmp .down { color: var(--blue); }
+  .cmp .rm { position: absolute; top: 6px; right: 0; border: 0; background: var(--soft); color: var(--fg2); width: 20px; height: 20px; border-radius: 10px; cursor: pointer; font-size: 13px; line-height: 20px; }
+  .cmp .btn.ghost { background: var(--card); color: var(--blue); }
+</style>

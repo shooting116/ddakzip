@@ -52,6 +52,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
       <div class="sub2">{rep.basis ? basisLabel[rep.basis] : '거래 없음'}{rep.priceN ? ` · ${rep.priceN}건` : ''}{rep.yoy != null ? ` · 1년 전 대비 ` : ''}{rep.yoy != null && <b class={rep.yoy >= 0 ? 'up' : 'down'}>{pct(rep.yoy)}</b>}</div>
       <div class="actions">
         <a class="btn" href={`/find/?budget=${rep.price ?? ''}&lawd=${lawd}`}>이 가격대 다른 단지 보기</a>
+        <button type="button" class="btn ghost cmp" data-cmp={c.id} data-name={c.name}>비교에 담기</button>
       </div>
     </section>
   )}
@@ -80,6 +81,40 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
   </section>
 
   <div class="ad-slot" aria-hidden="true"></div>
+
+  {(c.transit.length > 0 || c.redev) && (
+    <section class="card">
+      <h2>호재·정비사업 <span class="sub">사실만, 판단은 없이</span></h2>
+      {c.transit.length > 0 && (
+        <div class="badges">
+          {c.transit.map((t) => (
+            <span class={`tb ${t.status === '운행중' ? 'on' : ''}`}>
+              <b>{t.line}</b> {t.station}역 · {t.dist >= 1000 ? `${(t.dist / 1000).toFixed(1)}km` : `${t.dist}m`}
+              <em>{t.status === '운행중' ? '개통' : t.open ? `${t.open} 개통 예정` : '예정 · 시기 미정'}</em>
+            </span>
+          ))}
+        </div>
+      )}
+      {c.redev && c.redev.map((r) => (
+        <div class="rd">
+          <div class="row"><b>{r.zone}</b><span class="pill p-warn">{r.type.replace(/\(.*\)/, '')}</span></div>
+          <div class="sub2">{r.stage}{r.stageDate ? ` (${r.stageDate})` : ''}{r.planned ? ` · 계획 ${r.planned.toLocaleString()}세대` : ''}{r.existing ? ` · 기존 ${r.existing.toLocaleString()}세대` : ''}</div>
+          <div class="sub">{r.program} · <a href={r.source} rel="noopener nofollow" target="_blank">출처</a>{r.sourceDate ? ` · ${r.sourceDate} 기준` : ''}</div>
+        </div>
+      ))}
+      <p class="src">철도는 정부·지자체 발표와 언론 보도를 모은 규칙표(2026-10 기준) 기준이며 개통 시기는 바뀔 수 있습니다. 정비사업 단계는 출처 자료 기준일의 상태입니다. 어느 쪽도 가격 전망이 아닙니다.</p>
+    </section>
+  )}
+
+  {c.news.length > 0 && (
+    <section class="card">
+      <h2>관련 보도 <span class="sub">주요 언론사 제목만</span></h2>
+      <ul class="news">
+        {c.news.map((n) => <li><a href={n.u} rel="noopener nofollow" target="_blank">{n.t}</a><span class="sub">{n.o} · {n.d}</span></li>)}
+      </ul>
+      <p class="src">네이버 뉴스 검색에서 주요 언론사 기사만 제목·언론사·날짜로 보여드립니다. 기사 내용은 각 언론사의 것이며 딱집의 의견이 아닙니다.</p>
+    </section>
+  )}
 
   {k && (
     <section class="card">
@@ -167,4 +202,34 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
   .list .tr:last-child { border-bottom: 0; }
   .list .tr .v { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .ad-slot { min-height: 0; margin-bottom: 12px; }
+  .hero .actions { display: flex; flex-direction: column; gap: 8px; }
+  .btn.ghost { background: var(--soft); color: var(--blue); }
+  .btn.ghost.on { background: var(--blue-soft); }
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 4px; }
+  .tb { display: inline-flex; flex-direction: column; gap: 1px; padding: 8px 10px; border-radius: 12px; background: var(--soft); font-size: 12.5px; color: var(--fg2); }
+  .tb b { color: var(--fg); } .tb em { font-style: normal; color: var(--orange); font-weight: 600; } .tb.on em { color: var(--green); }
+  .rd { padding: 10px 0; border-top: 1px solid var(--soft); } .rd .row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .rd .sub a { color: var(--blue); }
+  .news { list-style: none; margin: 6px 0 0; padding: 0; }
+  .news li { padding: 9px 0; border-bottom: 1px solid var(--soft); display: flex; flex-direction: column; gap: 2px; }
+  .news li:last-child { border-bottom: 0; } .news a { color: var(--fg); font-weight: 600; }
 </style>
+
+<script>
+  // 비교 담기 (브라우저 저장, 최대 4개)
+  const KEY = 'ddakzip-compare-v1';
+  const btn = document.querySelector<HTMLButtonElement>('.cmp');
+  if (btn) {
+    const read = (): string[] => { try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch { return []; } };
+    const paint = () => { const ids = read(); const on = ids.includes(btn.dataset.cmp!); btn.classList.toggle('on', on); btn.textContent = on ? `비교에 담김 · ${ids.length}개 비교하기 ›` : `비교에 담기${ids.length ? ` (${ids.length}개 담김)` : ''}`; };
+    btn.addEventListener('click', () => {
+      let ids = read(); const id = btn.dataset.cmp!;
+      if (ids.includes(id)) { location.href = `/compare/?ids=${ids.join(',')}`; return; }
+      if (ids.length >= 4) ids = ids.slice(1);
+      ids.push(id);
+      try { localStorage.setItem(KEY, JSON.stringify(ids)); } catch { /* */ }
+      paint();
+    });
+    paint();
+  }
+</script>

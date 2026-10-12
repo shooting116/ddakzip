@@ -1,9 +1,9 @@
 {
  "source": "서울특별시 도시정비사업 통계 (서울 열린데이터광장 OA-22856, TbSeoulRedevStatus)",
  "source_url": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
- "basis": "2026년 6월 기준 (갱신 2026-09-10)",
+ "basis": "2026-06",
  "fetched": "2026-10-12",
- "note": "진행 중 사업만 포함(준공 제외). 분기 갱신. 열린데이터광장 인증키(SEOUL_OPENAPI_KEY)가 등록되면 fetch-redev-seoul.mjs 가 분기마다 갱신한다.",
+ "note": "2026년 6월 기준 자료(열린데이터광장 갱신 2026-09-10). 진행 중 사업만 포함(준공 제외). 분기 갱신. 열린데이터광장 인증키(SEOUL_OPENAPI_KEY)가 등록되면 fetch-redev-seoul.mjs 가 분기마다 갱신한다.",
  "rows": [
   {
    "gu": "종로구",

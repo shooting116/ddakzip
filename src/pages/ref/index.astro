@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import { loadSummary } from '../../lib/data/index.ts';
+const sm = loadSummary();
+const sidos = Object.entries(sm.sido).filter(([, v]) => v.complexes > 0);
+const waiting = Object.entries(sm.sido).filter(([, v]) => v.complexes === 0).map(([k]) => k);
+---
+<Base title="공부 레퍼런스" description="시도별 84㎡ 시세 상위(대장)·거래 활발·1년 상승/하락 단지와 주요 언론 보도. 국토교통부 실거래가 기준, 판단은 사용자 몫.">
+  <div class="q" style="padding:4px 4px 10px">
+    <h1 class="big" style="margin:0;font-size:22px">공부 레퍼런스</h1>
+    <p class="sub2" style="margin:4px 0 0">사실만 모았습니다 — 어디가 비싼지, 어디가 많이 거래됐는지, 1년 새 무엇이 오르고 내렸는지. 하락 단지엔 주요 언론 보도 제목을 붙였습니다.</p>
+  </div>
+  <section class="card">
+    <h2 style="font-size:16px;margin:0 0 8px">시도 고르기</h2>
+    <div class="grid">
+      {sidos.map(([s, v]) => <a class="cell" href={`/ref/${s}/`}><b>{s}</b><span class="sub">{v.complexes.toLocaleString()}단지</span></a>)}
+      {waiting.map((s) => <span class="cell off"><b>{s}</b><span class="sub">수집 중</span></span>)}
+    </div>
+  </section>
+  <section class="card" style="margin-top:12px">
+    <h2 style="font-size:16px;margin:0 0 6px">읽는 법</h2>
+    <ul class="sub2 how">
+      <li><b>대장</b> — 84㎡ 타입(±5㎡)의 최근 6개월 실거래 중앙값이 높은 순. 비싼 순서이지 좋은 순서가 아닙니다.</li>
+      <li><b>거래 활발</b> — 최근 6개월 실거래 건수. 세대수가 많은 단지가 유리하니 세대수를 같이 보세요.</li>
+      <li><b>1년 상승·하락</b> — 대표 평형의 최근 6개월 중앙값을 1년 전 같은 기간과 비교. 양쪽 모두 3건 이상일 때만 집계. 층·동·급매 사정이 섞여 있어 체감과 다를 수 있습니다.</li>
+      <li><b>보도</b> — 하락 상위·정비사업 단지만, 주요 언론사 기사 제목·날짜·링크. 해석은 각 언론사의 것입니다.</li>
+    </ul>
+  </section>
+</Base>
+<style>
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 6px; }
+  .cell { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border-radius: 12px; background: var(--soft); color: inherit; font-size: 14px; }
+  .cell.off { opacity: .5; }
+  .how { margin: 0; padding-left: 18px; } .how li { margin: 4px 0; }
+</style>

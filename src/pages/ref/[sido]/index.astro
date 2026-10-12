@@ -1,0 +1,90 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { loadSummary, loadSigungu, type Complex } from '../../../lib/data/index.ts';
+import { eok, pct } from '../../../lib/ui/format.ts';
+
+export function getStaticPaths() {
+  const sm = loadSummary();
+  return Object.entries(sm.sido).filter(([, v]) => v.complexes > 0).map(([sido]) => ({ params: { sido } }));
+}
+const sido = Astro.params.sido!;
+const sm = loadSummary();
+const all: Complex[] = [];
+for (const g of sm.sigungu.filter((x) => x.sido === sido && x.complexes > 0)) { const d = loadSigungu(g.lawd); if (d) all.push(...d.complexes); }
+const repOf = (c: Complex) => c.types.find((t) => t.key === c.rep);
+const N = 20;
+const top84 = all.map((c) => ({ c, t: c.types.find((t) => Math.abs(t.key - 84) <= 5 && t.basis === 'median6') })).filter((x) => x.t).sort((a, b) => b.t!.price! - a.t!.price!).slice(0, N);
+const active = [...all].sort((a, b) => b.n6 - a.n6 || b.n12 - a.n12).slice(0, N);
+const yoy = all.map((c) => ({ c, t: repOf(c) })).filter((x) => x.t && x.t.yoy != null && x.t.basis === 'median6');
+const up = [...yoy].sort((a, b) => b.t!.yoy! - a.t!.yoy!).slice(0, N);
+const down = [...yoy].filter((x) => x.t!.yoy! < 0).sort((a, b) => a.t!.yoy! - b.t!.yoy!).slice(0, N);
+const redev = all.filter((c) => c.redev).sort((a, b) => b.n6 - a.n6).slice(0, 30);
+const transit = all.filter((c) => c.transit.some((t) => t.status !== '운행중')).sort((a, b) => b.n6 - a.n6).slice(0, 30);
+const title = `${sido} 아파트 레퍼런스 — 대장·거래 활발·1년 상승/하락`;
+const desc = `${sido} ${all.length.toLocaleString()}개 단지의 84㎡ 시세 상위, 최근 6개월 거래 상위, 1년 상승·하락 상위 단지와 주요 언론 보도. 국토교통부 실거래가 ${sm.asOf} 기준.`;
+---
+<Base title={title} description={desc}>
+  <nav class="sub" style="padding:2px 4px 6px"><a href="/">홈</a> › <a href="/ref/">레퍼런스</a> › {sido}</nav>
+  <header class="q" style="padding:4px 4px 10px">
+    <h1 class="big" style="margin:0;font-size:24px">{sido} 레퍼런스</h1>
+    <p class="sub2" style="margin:6px 0 0">단지 {all.length.toLocaleString()}개 · 실거래 {sm.asOf} 기준 · 시군구별 상세는 <a href="/area/">지역 페이지</a></p>
+  </header>
+  <nav class="jump">
+    <a href="#top84">대장</a><a href="#active">거래 활발</a><a href="#up">상승</a><a href="#down">하락</a>{redev.length > 0 && <a href="#redev">정비사업</a>}{transit.length > 0 && <a href="#transit">철도</a>}
+  </nav>
+
+  <section class="card sec" id="top84">
+    <h2>84㎡ 시세 상위 {N} <span class="sub">최근 6개월 중앙값</span></h2>
+    <ol class="rank">{top84.map(({ c, t }) => <li><a href={`/apt/${c.id}/`}><span class="nm">{c.name} <span class="sub">{c.sigungu} {c.umd}{c.built ? ` · ${c.built}년` : ''}</span></span><b>{eok(t!.price)}</b></a></li>)}</ol>
+  </section>
+  <section class="card sec" id="active">
+    <h2>최근 6개월 거래 상위 {N}</h2>
+    <ol class="rank">{active.map((c) => <li><a href={`/apt/${c.id}/`}><span class="nm">{c.name} <span class="sub">{c.sigungu} {c.umd}{c.kapt?.units ? ` · ${c.kapt.units.toLocaleString()}세대` : ''} · {c.rep}㎡ {eok(c.price)}</span></span><b>{c.n6}건</b></a></li>)}</ol>
+  </section>
+  <div class="ad-slot" aria-hidden="true"></div>
+  <section class="card sec" id="up">
+    <h2>1년 상승 상위 {N} <span class="sub">대표 평형</span></h2>
+    <ol class="rank">{up.map(({ c, t }) => <li><a href={`/apt/${c.id}/`}><span class="nm">{c.name} <span class="sub">{c.sigungu} {c.umd} · {t!.label} {eok(t!.price)}</span></span><b class="up">{pct(t!.yoy)}</b></a></li>)}</ol>
+  </section>
+  <section class="card sec" id="down">
+    <h2>1년 하락 상위 {N} <span class="sub">대표 평형 · 보도 함께</span></h2>
+    <ol class="rank">{down.map(({ c, t }) => (
+      <li>
+        <a href={`/apt/${c.id}/`}><span class="nm">{c.name} <span class="sub">{c.sigungu} {c.umd} · {t!.label} {eok(t!.price)} · 6개월 {t!.n6}건</span></span><b class="down">{pct(t!.yoy)}</b></a>
+        {c.news.length > 0 && <ul class="nl">{c.news.slice(0, 2).map((n) => <li><a href={n.u} rel="noopener nofollow" target="_blank">{n.t}</a> <span class="sub">{n.o} · {n.d}</span></li>)}</ul>}
+      </li>
+    ))}</ol>
+    <p class="src">하락률은 현재 6개월 중앙값 vs 1년 전 같은 기간 중앙값. 양쪽 3건 이상만. 보도는 주요 언론사 기사 제목이며 하락 "이유"를 딱집이 단정하는 것이 아닙니다. 급매·저층·특수 거래가 섞일 수 있습니다.</p>
+  </section>
+  {redev.length > 0 && (
+    <section class="card sec" id="redev">
+      <h2>정비사업 진행 단지 <span class="sub">거래 많은 순 {redev.length}</span></h2>
+      <ol class="rank">{redev.map((c) => <li><a href={`/apt/${c.id}/`}><span class="nm">{c.name} <span class="sub">{c.sigungu} · {c.redev![0].zone} · {c.redev![0].stage.split(/\s*→\s*/).pop()}</span></span><b>{eok(c.price)}</b></a></li>)}</ol>
+      <p class="src">출처: 서울시 도시정비사업 통계(2026-06 기준) · 1기 신도시 선도지구 보도 · 경기 현황표 · 인천 공공데이터. 단계는 자료 기준일의 상태입니다.</p>
+    </section>
+  )}
+  {transit.length > 0 && (
+    <section class="card sec" id="transit">
+      <h2>철도 호재 1.5km 안 단지 <span class="sub">거래 많은 순 {transit.length}</span></h2>
+      <ol class="rank">{transit.map((c) => { const t = c.transit.find((x) => x.status !== '운행중')!; return <li><a href={`/apt/${c.id}/`}><span class="nm">{c.name} <span class="sub">{c.sigungu} · {t.line} {t.station}역 {t.dist}m · {t.open ? `${t.open} 예정` : '예정'}</span></span><b>{eok(c.price)}</b></a></li>; })}</ol>
+      <p class="src">규칙표(GTX·광역철도·경전철·연장선 11개 노선, 2026-10 조사) 기준. 개통 시기는 정부 발표에 따라 바뀝니다.</p>
+    </section>
+  )}
+</Base>
+<style>
+  .jump { display: flex; gap: 6px; overflow-x: auto; padding: 0 2px 10px; scrollbar-width: none; }
+  .jump a { flex: none; font-size: 12.5px; font-weight: 600; padding: 7px 11px; border-radius: 999px; background: var(--card); color: var(--fg2); }
+  .sec { margin-bottom: 12px; }
+  .sec h2 { font-size: 16px; margin: 0 0 6px; } .sec h2 .sub { font-weight: 500; margin-left: 6px; }
+  .rank { list-style: none; margin: 0; padding: 0; counter-reset: r; }
+  .rank > li { counter-increment: r; border-bottom: 1px solid var(--soft); }
+  .rank > li:last-child { border-bottom: 0; }
+  .rank > li > a { display: flex; align-items: center; gap: 10px; padding: 11px 0; color: inherit; }
+  .rank > li > a::before { content: counter(r); width: 22px; flex: none; color: var(--muted); font-weight: 700; font-variant-numeric: tabular-nums; }
+  .rank .nm { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; }
+  .rank b { flex: none; font-variant-numeric: tabular-nums; }
+  .up { color: var(--red); } .down { color: var(--blue); }
+  .nl { list-style: none; margin: 0 0 8px 32px; padding: 0; font-size: 12.5px; }
+  .nl li { margin: 2px 0; } .nl a { color: var(--fg2); }
+  .ad-slot { min-height: 0; margin-bottom: 12px; }
+</style>

@@ -58,7 +58,12 @@ const desc = `${sg.sigungu} 아파트 ${cs.length.toLocaleString()}개 단지의
   {down.length > 0 && (
     <section class="card sec">
       <h2>1년 하락 상위</h2>
-      <ol class="rank">{down.map(({ c, t }) => <li><a href={`/apt/${c.id}/`}><span class="nm">{c.name} <span class="sub">{c.umd} · {t!.label} {eok(t!.price)}</span></span><b class="down">{pct(t!.yoy)}</b></a></li>)}</ol>
+      <ol class="rank">{down.map(({ c, t }) => (
+        <li>
+          <a href={`/apt/${c.id}/`}><span class="nm">{c.name} <span class="sub">{c.umd} · {t!.label} {eok(t!.price)}</span></span><b class="down">{pct(t!.yoy)}</b></a>
+          {c.news.length > 0 && <ul class="nl">{c.news.slice(0, 2).map((n) => <li><a href={n.u} rel="noopener nofollow" target="_blank">{n.t}</a> <span class="sub">{n.o} · {n.d}</span></li>)}</ul>}
+        </li>
+      ))}</ol>
       <p class="src">상승·하락은 현재 6개월 중앙값과 1년 전 같은 기간 중앙값의 차이입니다. 양쪽 모두 3건 이상인 단지만 집계했고, 층·동·거래 사정에 따라 실제 체감과 다를 수 있습니다.</p>
     </section>
   )}
@@ -72,10 +77,12 @@ const desc = `${sg.sigungu} 아파트 ${cs.length.toLocaleString()}개 단지의
   .sec { margin-bottom: 12px; }
   .sec h2 { font-size: 16px; margin: 0 0 6px; } .sec h2 .sub { font-weight: 500; margin-left: 6px; }
   .rank { list-style: none; margin: 0; padding: 0; counter-reset: r; }
-  .rank li { counter-increment: r; }
-  .rank a { display: flex; align-items: center; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--soft); color: inherit; }
-  .rank li:last-child a { border-bottom: 0; }
-  .rank a::before { content: counter(r); width: 22px; flex: none; color: var(--muted); font-weight: 700; font-variant-numeric: tabular-nums; }
+  .rank > li { counter-increment: r; border-bottom: 1px solid var(--soft); }
+  .rank > li:last-child { border-bottom: 0; }
+  .rank > li > a { display: flex; align-items: center; gap: 10px; padding: 11px 0; color: inherit; }
+  .rank > li > a::before { content: counter(r); width: 22px; flex: none; color: var(--muted); font-weight: 700; font-variant-numeric: tabular-nums; }
+  .nl { list-style: none; margin: 0 0 8px 32px; padding: 0; font-size: 12.5px; }
+  .nl li { margin: 2px 0; } .nl a { color: var(--fg2); }
   .rank .nm { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; }
   .rank b { flex: none; font-variant-numeric: tabular-nums; }
   .up { color: var(--red); } .down { color: var(--blue); }
