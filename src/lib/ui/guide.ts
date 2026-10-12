@@ -10,6 +10,7 @@ export const CATEGORY: Record<string, { name: string; desc: string }> = {
 
 /** 빌드 시점에 공개된 글만. published 플래그는 publish-guides.mjs 가 예약 시각에 켠다 */
 export function isLive(e: CollectionEntry<'guide'>): boolean {
+  if (import.meta.env.PREVIEW_GUIDES === '1') return true;   // 로컬 확인용: PREVIEW_GUIDES=1 npm run build
   return e.data.published === true;
 }
 

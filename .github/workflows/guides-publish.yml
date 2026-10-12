@@ -4,7 +4,10 @@ on:
   schedule:
     - cron: '0 23 * * *'   # KST 08:00
     - cron: '0 4 * * *'    # KST 13:00
+    - cron: '0 6 * * *'    # KST 15:00 (예약된 글이 있을 때만)
+    - cron: '0 8 * * *'    # KST 17:00 (예약된 글이 있을 때만)
     - cron: '0 10 * * *'   # KST 19:00
+    - cron: '0 12 * * *'   # KST 21:00 (예약된 글이 있을 때만)
   workflow_dispatch:
 
 concurrency:
