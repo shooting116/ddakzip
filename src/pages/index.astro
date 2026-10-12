@@ -38,10 +38,21 @@ const situations = [
     </ul>
   </section>
 
+  <section class="card quick" aria-labelledby="qk">
+    <h2 id="qk" class="h">예산을 이미 알고 있다면</h2>
+    <div class="qgrid">
+      <a class="qcell" href="/find/"><b>집 찾기</b><span class="d">예산·지역·평형으로 지도에서</span></a>
+      <a class="qcell" href="/area/"><b>지역별 실거래</b><span class="d">대장 단지 · 거래 활발 · 1년 변동</span></a>
+    </div>
+    <div class="chips">
+      {[30000, 50000, 70000, 100000, 150000].map((a) => <a class="chip" href={`/budget/${a}/서울/`}>{a / 10000}억 서울</a>)}
+    </div>
+  </section>
+
   <section class="card status">
     <span class="pill p-blue">만드는 중</span>
     <p class="sub2">
-      지금은 뼈대만 올라와 있습니다. 계산기 → 예산 맞춤 지도 → 단지 상세 → 비교 → 공부 레퍼런스 순서로 채워집니다.
+      실거래 데이터를 지역별로 채우는 중입니다(서울 먼저, 인천·경기·광역시 순). 비교 화면과 공부 레퍼런스는 다음 단계에서 열립니다.
     </p>
   </section>
 </Base>
@@ -53,6 +64,12 @@ const situations = [
   .list { list-style: none; margin: 6px 0 0; padding: 0; }
   .list a.tr { color: inherit; }
   .ic.b { color: var(--blue); } .ic.r { color: var(--red); } .ic.g { color: var(--green); } .ic.s { color: var(--fg2); } .ic.o { color: var(--orange); }
+  .quick { margin-top: var(--gap); }
+  .qgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+  .qcell { display: flex; flex-direction: column; gap: 3px; padding: 12px 14px; border-radius: 14px; background: var(--soft); color: inherit; }
+  .qcell b { font-size: 15px; } .qcell .d { font-size: 12px; color: var(--fg2); }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  .chip { font-size: 12.5px; font-weight: 600; padding: 7px 11px; border-radius: 999px; background: var(--blue-soft); color: var(--blue); }
   .status { margin-top: var(--gap); }
   .status p { margin: 8px 0 0; }
 </style>

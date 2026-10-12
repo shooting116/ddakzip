@@ -1,0 +1,71 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import { loadSummary, loadSigungu, type Complex } from '../../../../lib/data/index.ts';
+import { eok } from '../../../../lib/ui/format.ts';
+
+// 예산 2억~20억(5천만 단위) × 데이터가 있는 시도. URL의 amount는 만 원 (예: 50000 = 5억)
+export function getStaticPaths() {
+  const sm = loadSummary();
+  const sidos = Object.entries(sm.sido).filter(([, v]) => v.complexes > 0).map(([k]) => k);
+  const amounts: number[] = [];
+  for (let a = 20000; a <= 200000; a += 5000) amounts.push(a);
+  return sidos.flatMap((sido) => amounts.map((amount) => ({ params: { amount: String(amount), sido } })));
+}
+const amount = Number(Astro.params.amount), sido = Astro.params.sido!;
+const sm = loadSummary();
+const FIT = 0.85;
+
+interface Fit { c: Complex; key: number; price: number; ratio: number }
+const groups: { lawd: string; sigungu: string; total: number; fit: number; items: Fit[] }[] = [];
+let totalFit = 0, totalIn = 0;
+for (const g of sm.sigungu.filter((x) => x.sido === sido && x.complexes > 0)) {
+  const d = loadSigungu(g.lawd)!;
+  const fits: Fit[] = [];
+  for (const c of d.complexes) {
+    const t = c.types.filter((t) => t.price != null && t.price <= amount).sort((a, b) => b.price! - a.price!)[0];
+    if (t) fits.push({ c, key: t.key, price: t.price!, ratio: t.price! / amount });
+  }
+  const fit = fits.filter((f) => f.ratio >= FIT).length;
+  totalIn += fits.length; totalFit += fit;
+  groups.push({ lawd: g.lawd, sigungu: g.sigungu, total: fits.length, fit, items: fits.sort((a, b) => b.ratio - a.ratio || b.c.n6 - a.c.n6).slice(0, 6) });
+}
+groups.sort((a, b) => b.fit - a.fit || b.total - a.total);
+const prev = amount - 5000 >= 20000 ? amount - 5000 : null, next = amount + 5000 <= 200000 ? amount + 5000 : null;
+const title = `${eok(amount)}으로 살 수 있는 ${sido} 아파트`;
+const desc = `${sido}에서 ${eok(amount)} 예산 안에 드는 아파트 ${totalIn.toLocaleString()}개 단지, 예산의 85~100% 구간 ${totalFit.toLocaleString()}개. 시군구별 실거래 시세 기준(국토교통부 ${sm.asOf}).`;
+---
+<Base title={title} description={desc}>
+  <nav class="sub" style="padding:2px 4px 6px"><a href="/">홈</a> › 예산별 › {sido}</nav>
+  <header class="q" style="padding:4px 4px 10px">
+    <h1 class="big" style="margin:0;font-size:24px">{eok(amount)}으로 살 수 있는<br />{sido} 아파트</h1>
+    <p class="sub2" style="margin:6px 0 0">예산 안 <b>{totalIn.toLocaleString()}</b>단지 · 딱 맞는 구간(85~100%) <b>{totalFit.toLocaleString()}</b>단지 · 실거래 {sm.asOf} 기준</p>
+  </header>
+  <div class="nav2">
+    {prev ? <a class="chip" href={`/budget/${prev}/${sido}/`}>‹ {eok(prev)}</a> : <span />}
+    <a class="chip on" href={`/find/?budget=${amount}&sido=${sido}`}>지도에서 보기</a>
+    {next ? <a class="chip" href={`/budget/${next}/${sido}/`}>{eok(next)} ›</a> : <span />}
+  </div>
+  {groups.map((g) => (
+    <section class="card sec">
+      <h2><a href={`/area/${g.lawd}/`}>{g.sigungu}</a> <span class="sub">예산 안 {g.total}단지 · 딱 맞는 구간 {g.fit}</span></h2>
+      {g.items.length ? (
+        <ul class="rank">{g.items.map((f) => <li><a href={`/apt/${f.c.id}/`}><span class="nm">{f.c.name} <span class="sub">{f.c.umd}{f.c.built ? ` · ${f.c.built}년` : ''} · {f.key}㎡</span></span><b>{eok(f.price)}</b><span class={`pill ${f.ratio >= FIT ? 'p-ok' : 'p-soft'}`}>{Math.round(f.ratio * 100)}%</span></a></li>)}</ul>
+      ) : <p class="sub2" style="margin:6px 0 0">이 예산 안에 드는 단지가 없어요.</p>}
+      {g.total > g.items.length && <a class="sub more" href={`/find/?budget=${amount}&lawd=${g.lawd}`}>{g.sigungu} {g.total}단지 모두 보기 ›</a>}
+    </section>
+  ))}
+  <p class="src">시세는 최근 6개월 실거래 중앙값(해제·직거래 제외), 6개월 3건 미만이면 참고용, 없으면 마지막 거래가. 각 단지에서 예산 안에 드는 가장 큰 타입을 기준으로 했습니다. 출처: 국토교통부 실거래가. 특정 단지를 추천하지 않습니다.</p>
+</Base>
+<style>
+  .nav2 { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin: 0 2px 12px; }
+  .chip { font-size: 13px; font-weight: 600; padding: 8px 12px; border-radius: 999px; background: var(--card); color: var(--fg2); }
+  .chip.on { background: var(--blue); color: #fff; }
+  .sec { margin-bottom: 12px; }
+  .sec h2 { font-size: 16px; margin: 0 0 4px; } .sec h2 a { color: inherit; } .sec h2 .sub { font-weight: 500; margin-left: 6px; }
+  .rank { list-style: none; margin: 0; padding: 0; }
+  .rank a { display: flex; align-items: center; gap: 8px; padding: 10px 0; border-bottom: 1px solid var(--soft); color: inherit; }
+  .rank li:last-child a { border-bottom: 0; }
+  .rank .nm { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; }
+  .rank b { font-variant-numeric: tabular-nums; }
+  .more { display: block; margin-top: 8px; color: var(--blue); font-weight: 600; }
+</style>

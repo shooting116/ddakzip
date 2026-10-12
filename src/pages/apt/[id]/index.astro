@@ -1,0 +1,170 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Sparkline from '../../../components/Sparkline.astro';
+import { allSigungu, loadSigungu, type Complex } from '../../../lib/data/index.ts';
+import { tradesOf } from '../../../lib/data/trades.ts';
+import { eok, eokMan, ymd, basisLabel, pct } from '../../../lib/ui/format.ts';
+
+export async function getStaticPaths() {
+  const paths: { params: { id: string } }[] = [];
+  for (const s of allSigungu()) for (const c of s.complexes) if (c.static) paths.push({ params: { id: c.id } });
+  return paths;
+}
+
+const { id } = Astro.params;
+const lawd = id!.split('-')[0];
+const sg = loadSigungu(lawd)!;
+const c: Complex = sg.complexes.find((x) => x.id === id)!;
+const trades = tradesOf(c.id);
+const recent = trades.slice(0, 40);
+const rep = c.types.find((t) => t.key === c.rep) ?? c.types[0];
+const k = c.kapt;
+const parkPerUnit = k?.park && k.units ? (k.park / k.units).toFixed(2) : null;
+const age = c.built ? new Date().getFullYear() - c.built : null;
+const typeKeyOf = (area: number) => c.types.find((t) => t.areas.includes(area))?.key ?? Math.round(area);
+
+// 비슷한 예산 단지 (같은 시군구, 대표 평형 시세 ±10%)
+const similar = rep?.price
+  ? sg.complexes.filter((x) => x.id !== c.id && x.price && Math.abs(x.price - rep.price!) / rep.price! <= 0.1).sort((a, b) => b.n6 - a.n6).slice(0, 6)
+  : [];
+
+const title = `${c.name} 실거래가·시세`;
+const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label}(${rep.pyeong}평형) ${eok(rep.price)}` : ''} · 36개월 실거래 ${c.n36}건${k?.units ? ` · ${k.units.toLocaleString()}세대` : ''}${c.built ? ` · ${c.built}년` : ''}. 국토교통부 실거래가 ${sg.asOf} 기준.`;
+---
+<Base title={title} description={desc}>
+  <nav class="crumb sub" aria-label="경로">
+    <a href="/">홈</a> › <a href={`/area/${lawd}/`}>{c.sido} {c.sigungu}</a> › <span>{c.umd}</span>
+  </nav>
+  <header class="q" style="padding:4px 4px 10px">
+    <h1 class="big" style="margin:0;font-size:24px">{c.name}</h1>
+    <p class="sub2" style="margin:6px 0 0">
+      {c.sido} {c.sigungu} {c.umd}{c.jibun ? ` ${c.jibun}` : ''}
+      {c.built && ` · ${c.built}년 준공${age != null ? ` (${age}년차)` : ''}`}
+      {k?.units && ` · ${k.units.toLocaleString()}세대`}{k?.dongs && ` · ${k.dongs}개동`}{k?.topFloor && ` · 최고 ${k.topFloor}층`}
+    </p>
+    {c.aliases.length > 0 && <p class="sub" style="margin:4px 0 0">실거래 신고 상 다른 이름: {c.aliases.join(', ')}</p>}
+  </header>
+
+  {rep && (
+    <section class="card hero">
+      <div class="sub">대표 평형 {rep.label} · {rep.pyeong}평형</div>
+      <div class="big price">{eok(rep.price)}</div>
+      <div class="sub2">{rep.basis ? basisLabel[rep.basis] : '거래 없음'}{rep.priceN ? ` · ${rep.priceN}건` : ''}{rep.yoy != null ? ` · 1년 전 대비 ` : ''}{rep.yoy != null && <b class={rep.yoy >= 0 ? 'up' : 'down'}>{pct(rep.yoy)}</b>}</div>
+      <div class="actions">
+        <a class="btn" href={`/find/?budget=${rep.price ?? ''}&lawd=${lawd}`}>이 가격대 다른 단지 보기</a>
+      </div>
+    </section>
+  )}
+
+  <section class="card">
+    <h2>평형별 시세</h2>
+    <p class="sub">전용면적 기준. 같은 타입(±3㎡)은 한 줄로 묶었어요. 해제·직거래는 시세 계산에서 뺍니다.</p>
+    <div class="types">
+      {c.types.map((t) => (
+        <div class="type">
+          <div class="row">
+            <div>
+              <b>{t.label}</b> <span class="sub">{t.pyeong}평형 · {t.areas.map((a) => a.toFixed(2).replace(/\.?0+$/, '')).join('/')}㎡</span>
+              <div class="sub">{t.basis ? basisLabel[t.basis] : '거래 없음'}{t.priceN ? ` · ${t.priceN}건` : ''}{t.min6 != null && t.max6 != null && t.n6 >= 2 ? ` · ${eok(t.min6)}~${eok(t.max6)}` : ''}</div>
+            </div>
+            <div class="tp">
+              <b>{eok(t.price)}</b>
+              {t.yoy != null && <span class={`pill ${t.yoy >= 0 ? 'p-bad' : 'p-blue'}`}>1년 {pct(t.yoy)}</span>}
+            </div>
+          </div>
+          <div class="sub mini">36개월 {t.n36}건 · 12개월 {t.n12}건 · 6개월 {t.n6}건{t.last ? ` · 마지막 ${ymd(t.last.date)} ${eokMan(t.last.amt)} ${t.last.floor ?? '-'}층` : ''}</div>
+          <Sparkline series={t.series} label={`${t.label} 월별 중앙값`} />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <div class="ad-slot" aria-hidden="true"></div>
+
+  {k && (
+    <section class="card">
+      <h2>단지 정보</h2>
+      <dl class="kv">
+        {k.units && <><dt>세대수</dt><dd>{k.units.toLocaleString()}세대{k.dongs ? ` · ${k.dongs}개동` : ''}</dd></>}
+        {k.used && <><dt>사용승인</dt><dd>{ymd(k.used)}</dd></>}
+        {k.topFloor && <><dt>층수</dt><dd>최고 {k.topFloor}층</dd></>}
+        {k.park && <><dt>주차</dt><dd>{k.park.toLocaleString()}대{parkPerUnit ? ` · 세대당 ${parkPerUnit}대` : ''}{k.parkUnder ? ` (지하 ${k.parkUnder.toLocaleString()})` : ''}</dd></>}
+        {k.elev && <><dt>승강기</dt><dd>{k.elev}대</dd></>}
+        {k.ev && <><dt>전기차 충전</dt><dd>{k.ev}기</dd></>}
+        {k.heat && <><dt>난방</dt><dd>{k.heat}</dd></>}
+        {k.hall && <><dt>복도 유형</dt><dd>{k.hall}</dd></>}
+        {k.sale && <><dt>분양 형태</dt><dd>{k.sale}</dd></>}
+        {k.builder && <><dt>시공사</dt><dd>{k.builder}</dd></>}
+        {k.subway && <><dt>지하철</dt><dd>{k.subway}{k.subwayWalk ? ` · 도보 ${k.subwayWalk}` : ''}</dd></>}
+        {k.busWalk && <><dt>버스</dt><dd>도보 {k.busWalk}</dd></>}
+        {k.road && <><dt>도로명</dt><dd>{k.road}</dd></>}
+      </dl>
+      <p class="src">출처: 공동주택관리정보시스템(K-apt). 단지 등록 정보 기준이며 실제와 다를 수 있습니다.</p>
+    </section>
+  )}
+
+  <section class="card">
+    <h2>실거래 내역 <span class="sub">최근 {recent.length}건 / 36개월 {c.n36}건</span></h2>
+    <table class="trades">
+      <thead><tr><th>계약일</th><th>타입</th><th>층</th><th class="r">금액</th></tr></thead>
+      <tbody>
+        {recent.map((t) => (
+          <tr class={t.cancel ? 'cancel' : ''}>
+            <td>{ymd(t.date)}{t.rgst ? <span class="sub"> 등기</span> : null}</td>
+            <td>{typeKeyOf(t.area)}㎡ <span class="sub">{t.area}</span>{t.dong ? <span class="sub"> {t.dong}동</span> : null}</td>
+            <td>{t.floor ?? '-'}</td>
+            <td class="r"><b>{eokMan(t.amt)}</b>{t.cancel && <span class="pill p-bad">해제</span>}{t.direct && <span class="pill p-soft">직거래</span>}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    {c.n36 > recent.length && <p class="sub" style="margin:10px 0 0">최근 {recent.length}건만 표시합니다.</p>}
+    <p class="src">출처: 국토교통부 아파트 매매 실거래가 ({sg.asOf} 기준). 계약 후 30일 안에 신고되므로 최근 한 달은 빠진 거래가 있을 수 있습니다. "해제"는 신고 후 계약이 해제된 건이며 시세 계산에서 제외했습니다. "등기"는 등기일자가 확인된 거래입니다.</p>
+  </section>
+
+  {similar.length > 0 && (
+    <section class="card">
+      <h2>비슷한 가격대 · {c.sigungu}</h2>
+      <p class="sub">대표 평형 시세가 ±10% 안에 드는 단지. 추천이 아니라 비교용입니다.</p>
+      <div class="list">
+        {similar.map((x) => (
+          <a class="tr" href={`/apt/${x.id}/`}>
+            <span class="tx"><span class="t">{x.name}</span><span class="d">{x.umd}{x.built ? ` · ${x.built}년` : ''}{x.kapt?.units ? ` · ${x.kapt.units.toLocaleString()}세대` : ''} · {x.rep}㎡</span></span>
+            <span class="v">{eok(x.price)}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+  <div class="ad-slot" aria-hidden="true"></div>
+</Base>
+
+<style>
+  .crumb { padding: 2px 4px 6px; } .crumb a { color: var(--fg2); }
+  .card { margin: 0 0 12px; }
+  .card h2 { font-size: 16px; margin: 0 0 4px; }
+  .card h2 .sub { font-weight: 500; margin-left: 6px; }
+  .hero .price { font-size: 34px; margin: 2px 0; letter-spacing: -0.03em; }
+  .hero .actions { margin-top: 14px; }
+  .up { color: var(--red); } .down { color: var(--blue); }
+  .types { display: flex; flex-direction: column; }
+  .type { padding: 14px 0; border-bottom: 1px solid var(--soft); }
+  .type:last-child { border-bottom: 0; padding-bottom: 4px; }
+  .type .row { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+  .type .tp { text-align: right; flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+  .type .tp b { font-size: 18px; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+  .type .mini { margin-top: 4px; }
+  .kv { display: grid; grid-template-columns: auto 1fr; gap: 8px 14px; margin: 10px 0 0; font-size: 14px; }
+  .kv dt { color: var(--fg2); } .kv dd { margin: 0; font-weight: 600; }
+  .trades { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 8px; font-variant-numeric: tabular-nums; }
+  .trades th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 6px 0; border-bottom: 1px solid var(--line); }
+  .trades td { padding: 8px 0; border-bottom: 1px solid var(--soft); vertical-align: top; }
+  .trades .r { text-align: right; }
+  .trades .r .pill { margin-left: 6px; }
+  .trades tr.cancel td { color: var(--muted); text-decoration: line-through; }
+  .trades tr.cancel td .pill { text-decoration: none; }
+  .list .tr { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--soft); color: inherit; }
+  .list .tr:last-child { border-bottom: 0; }
+  .list .tr .v { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ad-slot { min-height: 0; margin-bottom: 12px; }
+</style>

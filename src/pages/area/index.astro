@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+import { loadSummary } from '../../lib/data/index.ts';
+const sm = loadSummary();
+const bySido: Record<string, typeof sm.sigungu> = {};
+for (const g of sm.sigungu) (bySido[g.sido] ??= []).push(g);
+---
+<Base title="지역별 아파트 실거래" description={`수도권·광역시 시군구별 아파트 단지 ${sm.total.complexes.toLocaleString()}개의 실거래 시세. 국토교통부 ${sm.asOf} 기준.`}>
+  <div class="q" style="padding:4px 4px 10px">
+    <h1 class="big" style="margin:0;font-size:22px">지역별 실거래</h1>
+    <p class="sub2" style="margin:4px 0 0">시군구를 고르면 대장 단지·거래 활발 단지·1년 변동과 전체 단지 목록을 볼 수 있어요.</p>
+  </div>
+  {Object.entries(bySido).map(([sido, list]) => (
+    <section class="card" style="margin-bottom:12px">
+      <h2 style="font-size:16px;margin:0 0 4px">{sido} <span class="sub">{list.reduce((a, g) => a + g.complexes, 0).toLocaleString()}단지</span></h2>
+      {list.every((g) => g.complexes === 0) ? <p class="sub2" style="margin:6px 0 0">실거래 수집 중입니다. 곧 열려요.</p> : (
+        <div class="grid">
+          {list.map((g) => g.complexes > 0
+            ? <a class="cell" href={`/area/${g.lawd}/`}><b>{g.sigungu}</b><span class="sub">{g.complexes.toLocaleString()}단지</span></a>
+            : <span class="cell off"><b>{g.sigungu}</b><span class="sub">수집 중</span></span>)}
+        </div>
+      )}
+    </section>
+  ))}
+</Base>
+<style>
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 6px; margin-top: 8px; }
+  .cell { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border-radius: 12px; background: var(--soft); color: inherit; font-size: 14px; }
+  .cell.off { opacity: .5; }
+</style>

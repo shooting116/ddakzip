@@ -1,10 +1,47 @@
 ---
 import Base from '../layouts/Base.astro';
+// 거래가 적어 정적 페이지를 만들지 않은 단지(/apt/{id}/)는 여기서 클라이언트가 요약을 그려준다.
 ---
 <Base title="페이지를 찾을 수 없어요" noindex>
-  <section class="card">
-    <h1 class="h" style="font-size:20px;margin:0 0 6px">페이지를 찾을 수 없어요</h1>
-    <p class="sub2" style="margin:0">주소가 바뀌었거나 아직 만들어지지 않은 페이지입니다.</p>
-  </section>
-  <a class="btn" href="/" style="margin-top:12px">홈으로</a>
+  <div id="nf">
+    <section class="card">
+      <h1 class="h" style="font-size:20px;margin:0 0 6px">페이지를 찾을 수 없어요</h1>
+      <p class="sub2" style="margin:0">주소가 바뀌었거나 아직 만들어지지 않은 페이지입니다.</p>
+    </section>
+    <a class="btn" href="/" style="margin-top:12px">홈으로</a>
+  </div>
 </Base>
+
+<script>
+  const m = location.pathname.match(/^\/apt\/(\d{5})-(\d+)\/?$/);
+  const root = document.getElementById('nf')!;
+  if (m) {
+    const id = `${m[1]}-${m[2]}`;
+    root.innerHTML = '<div class="card"><p class="sub2" style="margin:0">단지 정보를 불러오는 중…</p></div>';
+    const eok = (man: number | null) => man == null ? '—' : man < 10000 ? `${Math.round(man).toLocaleString()}만` : `${(man / 10000).toFixed(2).replace(/\.?0+$/, '')}억`;
+    const esc = (v: unknown) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
+    const basis: Record<string, string> = { median6: '최근 6개월 중앙값', ref: '참고용 · 6개월 3건 미만', last: '마지막 거래가' };
+    fetch(`/data/complexes/${m[1]}.json`).then((r) => r.json()).then((d) => {
+      const c = d.c.find((x: any) => x.id === id);
+      if (!c) { root.querySelector('p')!.textContent = '이 단지 정보를 찾지 못했어요.'; return; }
+      document.title = `${c.n} 실거래가·시세 · 딱집`;
+      root.innerHTML = `
+        <nav class="sub" style="padding:2px 4px 6px"><a href="/">홈</a> › <a href="/area/${esc(d.lawd)}/">${esc(d.sido)} ${esc(d.sigungu)}</a> › ${esc(c.d)}</nav>
+        <header class="q" style="padding:4px 4px 10px">
+          <h1 class="big" style="margin:0;font-size:24px">${esc(c.n)}</h1>
+          <p class="sub2" style="margin:6px 0 0">${esc(d.sido)} ${esc(d.sigungu)} ${esc(c.d)}${c.b ? ` · ${c.b}년 준공` : ''}${c.u ? ` · ${c.u.toLocaleString()}세대` : ''}</p>
+        </header>
+        <section class="card">
+          <span class="pill p-soft">거래가 적은 단지</span>
+          <p class="sub2" style="margin:8px 0 0">최근 36개월 실거래가 ${c.n36}건이라 요약만 보여드려요. 거래가 5건 이상 쌓이면 상세 페이지가 만들어집니다.</p>
+        </section>
+        <section class="card" style="margin-top:12px">
+          <h2 style="font-size:16px;margin:0 0 8px">평형별 시세</h2>
+          ${c.t.map((t: any) => `<div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--soft)"><span><b>${t[0]}㎡</b> <span class="sub">${t[2] ? basis[t[2]] ?? '' : '거래 없음'}${t[3] ? ` · 6개월 ${t[3]}건` : ''}</span></span><b>${eok(t[1])}</b></div>`).join('')}
+          ${c.l ? `<p class="sub" style="margin:10px 0 0">마지막 거래 ${esc(c.l[0])} · ${c.l[2]}㎡ · ${eok(c.l[1])}</p>` : ''}
+          <p class="src">출처: 국토교통부 실거래가 (${esc(d.asOf)} 기준). 해제·직거래는 시세 계산에서 제외.</p>
+        </section>
+        <a class="btn" href="/find/?lawd=${esc(d.lawd)}" style="margin-top:12px">${esc(d.sigungu)} 다른 단지 보기</a>`;
+    }).catch(() => { root.querySelector('p')!.textContent = '단지 정보를 불러오지 못했어요.'; });
+  }
+</script>

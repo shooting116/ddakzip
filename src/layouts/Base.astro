@@ -21,7 +21,9 @@ const fullTitle = title === siteName ? `${siteName} — 내 예산에 딱 맞는
 const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://korea-rich.com').href;
 const path = Astro.url.pathname;
 const nav = [
-  { href: '/calc/', label: '예산 계산기', icon: 'calc' },
+  { href: '/calc/', label: '예산 계산기', short: '계산기', icon: 'calc' },
+  { href: '/find/', label: '집 찾기', icon: 'map' },
+  { href: '/area/', label: '지역', icon: 'grid' },
 ];
 ---
 <!doctype html>
@@ -64,7 +66,17 @@ const nav = [
                   <circle cx="15" cy="17.5" r="1.1" fill="currentColor" stroke="none" />
                 </svg>
               )}
-              <span>{n.label}</span>
+              {n.icon === 'map' && (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 21s-6-5.3-6-11a6 6 0 0 1 12 0c0 5.7-6 11-6 11z" /><circle cx="12" cy="10" r="2.3" fill="currentColor" stroke="none" />
+                </svg>
+              )}
+              {n.icon === 'grid' && (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" /><rect x="13.5" y="3.5" width="7" height="7" rx="1.5" /><rect x="3.5" y="13.5" width="7" height="7" rx="1.5" /><rect x="13.5" y="13.5" width="7" height="7" rx="1.5" />
+                </svg>
+              )}
+              <span class="full">{n.label}</span>{n.short && <span class="short">{n.short}</span>}
             </a>
           ))}
         </nav>
@@ -81,7 +93,7 @@ const nav = [
         실거래가 출처: 국토교통부 · 대출 규칙은 공개 자료 기준이며 실제 한도는 금융기관 심사에 따라 다릅니다.
       </p>
       <p class="src links">
-        <a href="/about/">소개</a> · <a href="/privacy/">개인정보처리방침</a> · <a href="/contact/">문의</a>
+        <a href="/calc/">예산 계산기</a> · <a href="/find/">집 찾기</a> · <a href="/area/">지역별</a> · <a href="/about/">소개</a> · <a href="/privacy/">개인정보처리방침</a> · <a href="/contact/">문의</a>
       </p>
     </footer>
   </body>
@@ -91,7 +103,9 @@ const nav = [
   .top { background: var(--bg); position: sticky; top: 0; z-index: 10; }
   .top .wrap { display: flex; justify-content: space-between; align-items: center; padding-block: 10px; }
   .top nav { display: flex; gap: 4px; }
-  .top nav a { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--fg2); padding: 6px 10px; border-radius: 10px; }
+  .top nav a { display: inline-flex; align-items: center; gap: 5px; font-size: 14px; font-weight: 600; color: var(--fg2); padding: 6px 8px; border-radius: 10px; white-space: nowrap; }
+  .top nav .short { display: none; }
+  @media (max-width: 420px) { .top nav a { font-size: 13px; padding: 6px 6px; gap: 4px; } .top nav a .short { display: inline; } .top nav a .short + .full, .top nav a:has(.short) .full { display: none; } }
   .top nav a:hover { background: var(--card); }
   .top nav a[aria-current="page"] { color: var(--blue); }
   .top nav svg { flex: none; }
