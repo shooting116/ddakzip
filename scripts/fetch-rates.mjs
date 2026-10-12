@@ -86,4 +86,9 @@ async function main() {
   }
 }
 
-main().catch((e) => { console.error('[rates] 오류:', String(e?.stack ?? e).replace(ECOS, '***')); process.exit(1); });
+main().catch((e) => {
+  const msg = String(e?.stack ?? e).replaceAll(ECOS, '***');
+  console.error('[rates] 오류:', msg);
+  if (process.env.GITHUB_ACTIONS) console.log(`::error title=rates::${msg.split('\n').slice(0, 3).join(' | ')}`);
+  process.exit(1);
+});
