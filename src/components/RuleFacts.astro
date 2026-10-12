@@ -1,0 +1,86 @@
+---
+// 규칙표(data/rules)에서 수치를 끌어와 표로. 글 본문과 계산기가 같은 숫자를 쓰게 한다.
+import { getRules } from '../lib/engine/rules.ts';
+interface Props { keys: string[] }
+const { keys } = Astro.props;
+const r = getRules();
+const eok = (won: number) => won >= 1e8 ? `${(won / 1e8).toFixed(2).replace(/\.?0+$/, '')}억` : `${Math.round(won / 1e4).toLocaleString()}만`;
+const man = (won: number) => `${Math.round(won / 1e4).toLocaleString()}만 원`;
+type Row = [string, string];
+const blocks: { title: string; rows: Row[]; src?: string }[] = [];
+const P: any = r.policy.products;
+for (const k of keys) {
+  if (k === 'didimdol') {
+    const d = P.didimdol;
+    blocks.push({ title: '디딤돌대출 (주택도시기금)', src: r.meta.sources.didimdol, rows: [
+      ['대상', '무주택 세대주 · 부부합산 연소득 기준 이하 · 순자산 ' + eok(r.policy.asset_cap) + ' 이하'],
+      ['소득 상한', `일반 ${man(d.variants.general.income_cap)} · 생애최초 ${man(d.variants.first.income_cap)} · 신혼 ${man(d.variants.newly.income_cap)} · 2자녀 ${man(d.variants.kids2.income_cap)}`],
+      ['주택가격 상한', `일반·생애최초 ${eok(d.variants.general.price_cap)} · 신혼·2자녀 ${eok(d.variants.newly.price_cap)}`],
+      ['최대 대출', `일반 ${eok(d.variants.general.limit)} · 생애최초 ${eok(d.variants.first.limit)} · 신혼·2자녀 ${eok(d.variants.newly.limit)}`],
+      ['LTV', `${d.ltv.default}% (생애최초 ${d.ltv.first}%, 수도권 생애최초 ${d.ltv.first_metro}%) · DTI ${d.dti}%`],
+      ['금리', `연 ${d.rate_table.rows[0][0]}~${d.rate_table.rows.at(-1).at(-1)}% (소득·만기별 변동) · 지방 −${d.rate_table.local_discount}%p`],
+    ] });
+  }
+  if (k === 'newborn') {
+    const d = P.newborn;
+    blocks.push({ title: '신생아 특례 디딤돌', src: r.meta.sources.newborn, rows: [
+      ['대상', `대출 신청일 기준 ${d.requires.birth_within_years}년 내 출산·입양 무주택 가구`],
+      ['소득 상한', `부부합산 ${eok(d.income_cap)} (맞벌이 ${eok(d.income_cap_dual)}, 1인 ${eok(d.income_cap_each)} 이하)`],
+      ['주택가격 상한 · 최대 대출', `${eok(d.price_cap)} · ${eok(d.limit)}`],
+      ['금리', `연 ${d.rate_table.rows[0][0]}~${d.rate_table.rows.at(-1).at(-1)}% (${d.special_years}년 특례)`],
+    ] });
+  }
+  if (k === 'bogeumjari') {
+    const d = P.bogeumjari;
+    blocks.push({ title: '보금자리론 (한국주택금융공사)', src: r.meta.sources.bogeumjari, rows: [
+      ['대상', `무주택 또는 1주택(${d.sell_within_years}년 내 처분) · 주택가격 ${eok(d.price_cap)} 이하`],
+      ['소득 상한', `${man(d.income_cap.default)} · 신혼 ${man(d.income_cap.newly)} · 1자녀 ${man(d.income_cap.kids1)} · 2자녀 ${man(d.income_cap.kids2)}`],
+      ['최대 대출', `${eok(d.limit.default)} · 2자녀 ${eok(d.limit.kids2)} · 생애최초 ${eok(d.limit.first)}`],
+      ['LTV', `아파트 ${d.ltv.apt}% (규제지역 ${d.ltv.apt_R1}%) · 생애최초 ${d.ltv.first}% (수도권 ${d.ltv.first_metro}%)`],
+      ['금리(고정)', `아낌e ${d.rate_table.akkime[0]}~${d.rate_table.akkime.at(-1)}% (${d.rate_table.as_of} 기준) · 규제지역 +${d.rate_table.regulated_add}%p`],
+    ] });
+  }
+  if (k === 'newlywed_first') {
+    const d = P.newlywed_first;
+    blocks.push({ title: '신혼부부전용 구입자금', src: r.meta.sources.newlywed_first, rows: [
+      ['대상', '혼인 7년 이내 또는 3개월 내 결혼 예정 · 무주택 · 생애최초'],
+      ['소득 상한 · 주택가격 상한', `${man(d.income_cap)} · ${eok(d.price_cap)}`],
+      ['최대 대출', eok(d.limit)],
+      ['금리', `연 ${d.rate_table.rows[0][0]}~${d.rate_table.rows.at(-1).at(-1)}%`],
+    ] });
+  }
+  if (k === 'bank') {
+    const b = r.bank;
+    blocks.push({ title: '시중은행 주택담보대출 규제', src: r.meta.sources.fsc_1015, rows: [
+      ['LTV', `규제지역 ${b.ltv.general.R1}% · 수도권 비규제 ${b.ltv.general.R2}% · 지방 ${b.ltv.general.R3}% (생애최초 ${b.ltv.first.R1}/${b.ltv.first.R2}/${b.ltv.first.R3}%)`],
+      ['수도권·규제지역 대출 상한', b.loan_cap_metro.map((c: any) => `${c.price_max ? eok(c.price_max) + ' 이하' : '그 초과'} ${eok(c.cap)}`).join(' · ')],
+      ['DSR', `${b.dsr.ratio}% · 스트레스 금리 수도권 +${b.dsr.stress.R1}%p, 지방 +${b.dsr.stress.R3}%p`],
+      ['만기 상한', `수도권 ${b.dsr.max_term_years.R1}년 · 지방 ${b.dsr.max_term_years.R3}년`],
+      ['참고 금리', `변동 ${b.rate_default.variable}% · 고정 ${b.rate_default.fixed}% (${b.rate_default.as_of}, ${b.rate_default.source})`],
+    ] });
+  }
+  if (k === 'acquisition') {
+    const t = r.tax.acquisition;
+    blocks.push({ title: '취득세 (1주택)', rows: [
+      ['세율', `${eok(t.tiers.low_max)} 이하 ${t.tiers.low_rate}% · ${eok(t.tiers.low_max)}~${eok(t.tiers.high_min)} 구간 1~3% 비례 · ${eok(t.tiers.high_min)} 초과 ${t.tiers.high_rate}%`],
+      ['함께 내는 세금', `지방교육세 취득세율의 ${t.education_tax_ratio_of_rate * 100}% · 전용 85㎡ 초과 농어촌특별세 ${t.rural_tax_rate_over_85m2}%`],
+      ['생애최초 감면', `${eok(t.first_home_exemption.price_cap)} 이하 최대 ${man(t.first_home_exemption.cap)} (${t.first_home_exemption.until}까지)`],
+      ['출산·양육 감면', `${eok(t.newborn_exemption.price_cap)} 이하 최대 ${man(t.newborn_exemption.cap)}`],
+    ] });
+  }
+}
+---
+{blocks.map((b) => (
+  <div class="facts">
+    <div class="ft">{b.title} <span class="sub">규칙표 {r.meta.version} · {r.meta.effective_from} 기준</span></div>
+    <dl>{b.rows.map(([k, v]) => <><dt>{k}</dt><dd>{v}</dd></>)}</dl>
+    {b.src && <p class="src" style="margin:6px 0 0"><a href={b.src} rel="noopener nofollow" target="_blank">출처 보기</a></p>}
+  </div>
+))}
+<style>
+  .facts { background: var(--soft); border-radius: 14px; padding: 12px 14px; margin: 14px 0; font-size: 13.5px; }
+  .ft { font-weight: 700; margin-bottom: 6px; } .ft .sub { font-weight: 500; margin-left: 6px; }
+  dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; margin: 0; }
+  dt { color: var(--fg2); white-space: nowrap; } dd { margin: 0; }
+  .src a { color: var(--blue); }
+</style>

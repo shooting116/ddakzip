@@ -7,6 +7,7 @@
 
 ```
 src/            Astro 사이트 (페이지·레이아웃·컴포넌트·스타일)
+  content/guide/ 공부 가이드 글(md). publishAt 예약 시각, published 플래그는 publish-guides 가 켠다
   pages/        / 홈 · /calc/ 계산기 · /find/ 집 찾기 · /apt/{id}/ 단지 · /area/{lawd}/ 지역 · /budget/{만원}/{시도}/ 예산별 · /ref/{시도}/ 레퍼런스 · /compare/ 비교 · /data/*.json · 404(비정적 단지 폴백)
   layouts/      Base.astro — 공통 head·헤더·푸터
   styles/       global.css — 디자인 토큰 (토스 문법)
@@ -57,7 +58,7 @@ Cloudflare Workers Builds(Git 연결). `main`에 푸시하면 자동 빌드·배
 | 2 | 실거래 백필 · 단지 마스터 · 매일 갱신 · 금리 자동수집 | 완료 (백필·K-apt 정보는 매일 자동 이어받기) |
 | 3 | 예산 맞춤 지도+리스트 · 단지 상세 · 예산별 페이지 | 완료 (v1) |
 | 4 | 비교 · 레퍼런스 4종 · 교통 호재 · 정비사업 · 뉴스 | 완료 (v1) |
-| 5 | 가이드 글 · 정책 페이지 · 사이트맵 · 광고 슬롯 → 공개 | |
+| 5 | 가이드 글 30편(하루 3편 예약 발행) · 소개/개인정보/문의 · 사이트맵·robots 공개 · 애드센스 검토 | 진행 중 |
 
 ## 계산기가 하는 일 (1단계)
 

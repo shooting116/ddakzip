@@ -1,0 +1,73 @@
+---
+import Base from '../../../layouts/Base.astro';
+import RuleFacts from '../../../components/RuleFacts.astro';
+import { getCollection, render } from 'astro:content';
+import { CATEGORY, isLive, fmtDate } from '../../../lib/ui/guide.ts';
+
+export async function getStaticPaths() {
+  return (await getCollection('guide')).filter(isLive).map((e) => ({ params: { slug: e.id }, props: { entry: e } }));
+}
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+const d = entry.data;
+const all = (await getCollection('guide')).filter(isLive);
+const related = d.related.map((s) => all.find((e) => e.id === s)).filter(Boolean) as typeof all;
+const toc = headings.filter((h) => h.depth === 2);
+const ctaHref = d.cta === 'calc' ? `/calc/${d.situation ? `?s=${d.situation}` : ''}` : d.cta === 'find' ? '/find/' : d.cta === 'ref' ? '/ref/' : null;
+const ctaLabel = d.cta === 'calc' ? '내 조건으로 계산하기' : d.cta === 'find' ? '이 예산으로 집 찾기' : '레퍼런스 보기';
+const jsonLd = { '@context': 'https://schema.org', '@type': 'Article', headline: d.title, description: d.description, datePublished: d.publishAt, dateModified: d.updatedAt ?? d.publishAt, author: { '@type': 'Organization', name: '딱집' }, publisher: { '@type': 'Organization', name: '딱집' } };
+---
+<Base title={d.title} description={d.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <nav class="sub" style="padding:2px 4px 6px"><a href="/">홈</a> › <a href="/guide/">가이드</a> › {CATEGORY[d.category].name}</nav>
+  <article class="g">
+    <header class="q" style="padding:4px 4px 12px">
+      <span class="pill p-blue">{CATEGORY[d.category].name}</span>
+      <h1 class="big" style="margin:8px 0 0;font-size:24px;line-height:1.3">{d.title}</h1>
+      <p class="sub2" style="margin:8px 0 0">{d.description}</p>
+      <p class="sub" style="margin:8px 0 0">{fmtDate(d.publishAt)} 발행{d.updatedAt ? ` · ${fmtDate(d.updatedAt)} 수정` : ''} · 숫자 기준일 {d.asOf}</p>
+    </header>
+    <div class="card basis">
+      <b>이 글의 기준</b>
+      <p class="sub2" style="margin:4px 0 0">아래 숫자는 {d.asOf} 기준 공개 자료(규칙표)에서 가져왔고, 계산기와 같은 값입니다. 제도가 바뀌면 글과 계산기가 함께 바뀝니다. 실제 한도·금리는 금융기관 심사에 따라 다릅니다. 딱집은 대출 상담·중개를 하지 않습니다.</p>
+    </div>
+    {toc.length > 2 && <nav class="card toc"><b>차례</b><ol>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol></nav>}
+    <div class="card body">
+      <Content />
+      {d.facts.length > 0 && <RuleFacts keys={d.facts} />}
+    </div>
+    {ctaHref && <a class="btn" href={ctaHref} style="margin-top:12px">{ctaLabel}</a>}
+    <div class="ad-slot" aria-hidden="true"></div>
+    {d.sources.length > 0 && (
+      <section class="card" style="margin-top:12px">
+        <b>출처</b>
+        <ul class="srcs">{d.sources.map((s) => <li><a href={s.url} rel="noopener nofollow" target="_blank">{s.title}</a>{s.date ? <span class="sub"> · {s.date}</span> : null}</li>)}</ul>
+      </section>
+    )}
+    {related.length > 0 && (
+      <section class="card" style="margin-top:12px">
+        <b>이어서 읽기</b>
+        <ul class="srcs">{related.map((e) => <li><a href={`/guide/${e.id}/`}>{e.data.title}</a></li>)}</ul>
+      </section>
+    )}
+  </article>
+</Base>
+<style is:global>
+  .g .basis { margin: 0 0 12px; padding: 14px 16px; }
+  .g .toc { margin: 0 0 12px; padding: 14px 16px; }
+  .g .toc ol { margin: 6px 0 0; padding-left: 20px; } .g .toc li { margin: 3px 0; } .g .toc a { color: var(--fg2); }
+  .g .body { font-size: 15.5px; line-height: 1.75; }
+  .g .body h2 { font-size: 18px; margin: 26px 0 8px; letter-spacing: -0.02em; }
+  .g .body h2:first-child { margin-top: 0; }
+  .g .body h3 { font-size: 16px; margin: 18px 0 6px; }
+  .g .body p { margin: 0 0 12px; }
+  .g .body ul, .g .body ol { margin: 0 0 12px; padding-left: 22px; } .g .body li { margin: 4px 0; }
+  .g .body table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 8px 0 14px; font-variant-numeric: tabular-nums; }
+  .g .body th { text-align: left; color: var(--muted); font-weight: 600; font-size: 12.5px; padding: 6px 6px 6px 0; border-bottom: 1px solid var(--line); }
+  .g .body td { padding: 8px 6px 8px 0; border-bottom: 1px solid var(--soft); vertical-align: top; }
+  .g .body blockquote { margin: 0 0 12px; padding: 10px 14px; background: var(--soft); border-radius: 12px; color: var(--fg2); font-size: 14px; }
+  .g .body strong { font-weight: 700; }
+  .g .body a { color: var(--blue); }
+  .g .srcs { list-style: none; margin: 6px 0 0; padding: 0; font-size: 13.5px; } .g .srcs li { padding: 5px 0; } .g .srcs a { color: var(--fg); font-weight: 600; }
+  .g .ad-slot { min-height: 0; }
+</style>

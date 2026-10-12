@@ -1,0 +1,38 @@
+name: 가이드 예약 발행
+# 매일 08:00·13:00·19:00 KST — 예약 시각이 지난 글을 공개(published: true)하고 커밋 → Cloudflare 빌드. 하루 최대 3편.
+on:
+  schedule:
+    - cron: '0 23 * * *'   # KST 08:00
+    - cron: '0 4 * * *'    # KST 13:00
+    - cron: '0 10 * * *'   # KST 19:00
+  workflow_dispatch:
+
+concurrency:
+  group: data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 예약 글 공개
+        id: pub
+        run: node scripts/publish-guides.mjs
+      - name: 커밋·푸시
+        if: steps.pub.outputs.count != '0'
+        run: |
+          git config user.name "ddakzip-bot"
+          git config user.email "bot@korea-rich.com"
+          git add src/content/guide
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -m "글 발행: ${{ steps.pub.outputs.titles }}"
+          git pull --rebase origin main
+          git push origin HEAD:main
