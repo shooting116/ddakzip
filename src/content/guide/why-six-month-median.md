@@ -3,7 +3,7 @@ title: "딱집이 '최근 6개월 중앙값'을 시세로 쓰는 이유"
 description: "최고가도, 마지막 거래가도 아닌 6개월 중앙값. 왜 이 숫자를 고르고, 거래가 적을 때는 어떻게 표시하며, 1년 변동은 무엇과 무엇을 비교하는지 — 딱집 숫자의 정의를 전부 공개합니다."
 category: price
 publishAt: "2026-10-12T21:00:00+09:00"
-published: false
+published: true
 asOf: "2026-10-12"
 facts: []
 cta: find
