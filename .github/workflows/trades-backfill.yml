@@ -30,7 +30,7 @@ on:
         default: ''
 
 concurrency:
-  group: trades
+  group: data
   cancel-in-progress: false
 
 permissions:

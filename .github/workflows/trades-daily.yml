@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: trades
+  group: data
   cancel-in-progress: false
 
 permissions:
