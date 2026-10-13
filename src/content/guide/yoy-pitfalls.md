@@ -3,7 +3,7 @@ title: "'1년 새 20% 올랐다'는 숫자의 함정 — 상승·하락률을 �
 description: "같은 단지의 1년 변동률이 보는 사람마다 다른 이유는 비교 대상이 다르기 때문입니다. 거래 한 건끼리 비교하면 층·동 차이가 상승률로 둔갑합니다. 딱집의 계산 방식과 걸러 읽는 요령을 정리했습니다."
 category: price
 publishAt: "2026-10-14T08:00:00+09:00"
-published: false
+published: true
 asOf: "2026-10-12"
 facts: []
 cta: ref
