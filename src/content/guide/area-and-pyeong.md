@@ -3,7 +3,7 @@ title: "전용면적·공급면적·평형 — 84㎡가 왜 34평형인지"
 description: "실거래가에 적힌 면적은 전용면적입니다. 분양 광고의 평수는 공급면적 기준이라 숫자가 다릅니다. 세 가지 면적의 뜻, 평 환산, 딱집이 타입을 묶는 기준을 정리했습니다."
 category: price
 publishAt: "2026-10-13T19:00:00+09:00"
-published: false
+published: true
 asOf: "2026-10-12"
 facts: []
 cta: find
