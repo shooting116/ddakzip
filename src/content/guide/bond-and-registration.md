@@ -3,7 +3,7 @@ title: "국민주택채권·인지세·등기비용 — 취득세 말고 더 드
 description: "집을 사면 취득세·중개보수 외에 국민주택채권 매입(할인 매도), 인지세, 등기 수수료, 법무사 비용이 듭니다. 6억 아파트 기준 약 250만 원. 각각 어떻게 계산되는지와 줄일 수 있는 부분을 정리했습니다."
 category: tax
 publishAt: "2026-10-13T13:00:00+09:00"
-published: false
+published: true
 asOf: "2026-09-30"
 facts: []
 cta: calc
