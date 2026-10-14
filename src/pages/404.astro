@@ -21,9 +21,20 @@ import Base from '../layouts/Base.astro';
     const eok = (man: number | null) => man == null ? '—' : man < 10000 ? `${Math.round(man).toLocaleString()}만` : `${(man / 10000).toFixed(2).replace(/\.?0+$/, '')}억`;
     const esc = (v: unknown) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
     const basis: Record<string, string> = { median6: '최근 6개월 중앙값', ref: '참고용 · 6개월 3건 미만', last: '마지막 거래가' };
-    fetch(`/data/complexes/${m[1]}.json`).then((r) => r.json()).then((d) => {
-      const c = d.c.find((x: any) => x.id === id);
-      if (!c) { root.querySelector('p')!.textContent = '이 단지 정보를 찾지 못했어요.'; return; }
+    // id 앞자리가 개편 전 시군구 코드면 regions.json의 idPrefix로 실제 코드를 찾는다
+    const load = async (): Promise<{ d: any; c: any } | null> => {
+      let cands = [m[1]];
+      try { const rg = await fetch('/data/regions.json').then((r) => r.json()); cands = [m[1], ...(rg.idPrefix?.[m[1]] ?? [])]; } catch {}
+      for (const l of cands) {
+        const r = await fetch(`/data/complexes/${l}.json`); if (!r.ok) continue;
+        const d = await r.json(); const c = d.c.find((x: any) => x.id === id);
+        if (c) return { d, c };
+      }
+      return null;
+    };
+    load().then((hit) => {
+      if (!hit) { root.querySelector('p')!.textContent = '이 단지 정보를 찾지 못했어요.'; return; }
+      const { d, c } = hit;
       document.title = `${c.n} 실거래가·시세 · 딱집`;
       root.innerHTML = `
         <nav class="sub" style="padding:2px 4px 6px"><a href="/">홈</a> › <a href="/area/${esc(d.lawd)}/">${esc(d.sido)} ${esc(d.sigungu)}</a> › ${esc(c.d)}</nav>

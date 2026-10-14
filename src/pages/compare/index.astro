@@ -22,12 +22,18 @@ import Base from '../../layouts/Base.astro';
 
   type Slim = any;
   const cache = new Map<string, Slim[]>();
+  let idPrefix: Record<string, string[]> | null = null;
   async function get(id: string): Promise<{ c: Slim; sigungu: string; sido: string; asOf: string } | null> {
-    const lawd = id.split('-')[0];
-    if (!cache.has(lawd)) { const r = await fetch(`/data/complexes/${lawd}.json`); if (!r.ok) return null; const d = await r.json(); cache.set(lawd, d.c); (cache as any)['meta' + lawd] = d; }
-    const d = (cache as any)['meta' + lawd];
-    const c = cache.get(lawd)!.find((x: Slim) => x.id === id);
-    return c ? { c, sigungu: d.sigungu, sido: d.sido, asOf: d.asOf } : null;
+    const prefix = id.split('-')[0];
+    if (!idPrefix) { try { idPrefix = (await fetch('/data/regions.json').then((r) => r.json())).idPrefix ?? {}; } catch { idPrefix = {}; } }
+    // id 앞자리가 개편 전 시군구 코드면 실제 코드들을 차례로 찾는다
+    for (const lawd of [prefix, ...(idPrefix![prefix] ?? [])]) {
+      if (!cache.has(lawd)) { const r = await fetch(`/data/complexes/${lawd}.json`); if (!r.ok) { cache.set(lawd, []); continue; } const d = await r.json(); cache.set(lawd, d.c); (cache as any)['meta' + lawd] = d; }
+      const d = (cache as any)['meta' + lawd];
+      const c = cache.get(lawd)!.find((x: Slim) => x.id === id);
+      if (c && d) return { c, sigungu: d.sigungu, sido: d.sido, asOf: d.asOf };
+    }
+    return null;
   }
 
   function empty() {

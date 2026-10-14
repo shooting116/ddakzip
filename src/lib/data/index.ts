@@ -35,6 +35,8 @@ export interface Summary {
   sido: Record<string, { complexes: number; static: number; trades36: number }>;
   sigungu: { lawd: string; sido: string; sigungu: string; regulated: boolean; complexes: number; static: number; trades36: number; geo: number; kapt: number; transit: number; redev: number; news: number }[];
   total: { complexes: number; static: number; trades36: number };
+  /** aptSeq 앞 5자리 → 실제 시군구 코드 목록 (앞자리와 다른 경우만. 2026 행정구역 개편 지역) */
+  idPrefix: Record<string, string[]>;
 }
 
 const cache = new Map<string, SigunguIndex>();
@@ -66,11 +68,19 @@ export function* allSigungu(): Generator<SigunguIndex> {
   }
 }
 
+/** 단지 id가 들어 있을 수 있는 시군구 코드들 (앞 5자리 우선, 그다음 개편 전 코드 매핑) */
+export function lawdsOf(id: string): string[] {
+  const prefix = id.split('-')[0];
+  return [prefix, ...(loadSummary().idPrefix?.[prefix] ?? [])];
+}
+
 export function findComplex(id: string): { c: Complex; s: SigunguIndex } | null {
-  const lawd = id.split('-')[0];
-  const s = loadSigungu(lawd);
-  const c = s?.complexes.find((x) => x.id === id);
-  return c && s ? { c, s } : null;
+  for (const lawd of lawdsOf(id)) {
+    const s = loadSigungu(lawd);
+    const c = s?.complexes.find((x) => x.id === id);
+    if (c && s) return { c, s };
+  }
+  return null;
 }
 
 /** 클라이언트용 슬림 버전 */

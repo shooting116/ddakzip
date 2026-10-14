@@ -6,5 +6,5 @@ export const GET: APIRoute = () => {
   const s = loadSummary();
   const sido: Record<string, { lawd: string; name: string; n: number; st: number }[]> = {};
   for (const g of s.sigungu) (sido[g.sido] ??= []).push({ lawd: g.lawd, name: g.sigungu, n: g.complexes, st: g.static });
-  return new Response(JSON.stringify({ asOf: s.asOf, sido }), { headers: { 'content-type': 'application/json; charset=utf-8' } });
+  return new Response(JSON.stringify({ asOf: s.asOf, sido, idPrefix: s.idPrefix ?? {} }), { headers: { 'content-type': 'application/json; charset=utf-8' } });
 };

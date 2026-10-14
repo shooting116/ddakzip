@@ -6,16 +6,18 @@ import { tradesOf } from '../../../lib/data/trades.ts';
 import { eok, eokMan, ymd, basisLabel, pct } from '../../../lib/ui/format.ts';
 
 export async function getStaticPaths() {
-  const paths: { params: { id: string } }[] = [];
-  for (const s of allSigungu()) for (const c of s.complexes) if (c.static) paths.push({ params: { id: c.id } });
+  // id(aptSeq) 앞자리는 개편 전 시군구 코드일 수 있어 실제 코드를 props로 넘긴다
+  const paths: { params: { id: string }; props: { lawd: string } }[] = [];
+  const seen = new Set<string>();
+  for (const s of allSigungu()) for (const c of s.complexes) if (c.static && !seen.has(c.id)) { seen.add(c.id); paths.push({ params: { id: c.id }, props: { lawd: s.lawd } }); }
   return paths;
 }
 
 const { id } = Astro.params;
-const lawd = id!.split('-')[0];
+const { lawd } = Astro.props as { lawd: string };
 const sg = loadSigungu(lawd)!;
 const c: Complex = sg.complexes.find((x) => x.id === id)!;
-const trades = tradesOf(c.id);
+const trades = tradesOf(c.id, lawd);
 const recent = trades.slice(0, 40);
 const rep = c.types.find((t) => t.key === c.rep) ?? c.types[0];
 const k = c.kapt;

@@ -130,8 +130,11 @@ function main() {
   const stations = transit.stations.filter((s) => s.lat != null);
   const RADIUS = transit.radius_m ?? 1500;
   mkdirSync(join(OUT, 'complexes'), { recursive: true });
-  const summary = { asOf, months: MONTHS, staticMin: STATIC_MIN, sido: {}, sigungu: [] };
+  const summary = { asOf, months: MONTHS, staticMin: STATIC_MIN, sido: {}, sigungu: [], idPrefix: {} };
   let total = 0, totalStatic = 0, totalTrades = 0;
+  // aptSeq 앞 5자리는 "그 단지가 처음 등록된 시군구"라 지금 코드와 다를 수 있다(2026 행정구역 개편: 광주 29xxx→12xxx, 인천 28140→28125 등).
+  // 같은 aptSeq가 두 시군구 파일에 들어가면 /apt/{id} 경로가 겹치므로 한 곳에만 둔다. 앞자리와 같은 시군구가 있으면 거기, 없으면 거래가 많은 쪽.
+  const seen = new Map(); // id → [{lawd, n36}]
 
   for (const r of regions) {
     const info = loadJson(join(CX, 'info', `${r.lawd}.json`), {});
@@ -163,17 +166,48 @@ function main() {
       });
     }
     complexes.sort((a, b) => b.n36 - a.n36 || a.name.localeCompare(b.name, 'ko'));
+    for (const c of complexes) { let a = seen.get(c.id); if (!a) seen.set(c.id, (a = [])); a.push({ lawd: r.lawd, n36: c.n36 }); }
+    writeFileSync(join(OUT, 'complexes', `${r.lawd}.json`), JSON.stringify({ lawd: r.lawd, sido: r.sido, sigungu: r.sigungu, regulated: r.regulated, asOf, months, complexes }));
+    summary.sigungu.push({ lawd: r.lawd, sido: r.sido, sigungu: r.sigungu, regulated: r.regulated });
+  }
+
+  // 중복 aptSeq 정리: 진 쪽 파일에서 빼고 다시 쓴다 (몇 건 안 됨)
+  const drop = new Map(); // lawd → Set(id)
+  let nDup = 0;
+  for (const [id, arr] of seen) {
+    if (arr.length < 2) continue;
+    nDup++;
+    const prefix = id.split('-')[0];
+    const win = arr.find((a) => a.lawd === prefix) ?? [...arr].sort((a, b) => b.n36 - a.n36)[0];
+    for (const a of arr) if (a !== win) { let s = drop.get(a.lawd); if (!s) drop.set(a.lawd, (s = new Set())); s.add(id); }
+  }
+  for (const [lawd, ids] of drop) {
+    const p = join(OUT, 'complexes', `${lawd}.json`);
+    const d = JSON.parse(readFileSync(p, 'utf8'));
+    d.complexes = d.complexes.filter((c) => !ids.has(c.id));
+    writeFileSync(p, JSON.stringify(d));
+  }
+
+  // 요약 집계 + id 앞자리 → 실제 시군구 코드 맵 (앞자리와 다른 경우만)
+  for (const g of summary.sigungu) {
+    const d = JSON.parse(readFileSync(join(OUT, 'complexes', `${g.lawd}.json`), 'utf8'));
+    const complexes = d.complexes;
     const nStatic = complexes.filter((c) => c.static).length;
     const trades = complexes.reduce((s, c) => s + c.n36, 0);
-    writeFileSync(join(OUT, 'complexes', `${r.lawd}.json`), JSON.stringify({ lawd: r.lawd, sido: r.sido, sigungu: r.sigungu, regulated: r.regulated, asOf, months, complexes }));
-    summary.sigungu.push({ lawd: r.lawd, sido: r.sido, sigungu: r.sigungu, regulated: r.regulated, complexes: complexes.length, static: nStatic, trades36: trades, geo: complexes.filter((c) => c.lat).length, kapt: complexes.filter((c) => c.kapt).length, transit: complexes.filter((c) => c.transit.length).length, redev: complexes.filter((c) => c.redev).length, news: complexes.filter((c) => c.news.length).length });
-    const sd = summary.sido[r.sido] ?? (summary.sido[r.sido] = { complexes: 0, static: 0, trades36: 0 });
+    Object.assign(g, { complexes: complexes.length, static: nStatic, trades36: trades, geo: complexes.filter((c) => c.lat).length, kapt: complexes.filter((c) => c.kapt).length, transit: complexes.filter((c) => c.transit.length).length, redev: complexes.filter((c) => c.redev).length, news: complexes.filter((c) => c.news.length).length });
+    for (const c of complexes) {
+      const prefix = c.id.split('-')[0];
+      if (prefix === g.lawd) continue;
+      const list = summary.idPrefix[prefix] ?? (summary.idPrefix[prefix] = []);
+      if (!list.includes(g.lawd)) list.push(g.lawd);
+    }
+    const sd = summary.sido[g.sido] ?? (summary.sido[g.sido] = { complexes: 0, static: 0, trades36: 0 });
     sd.complexes += complexes.length; sd.static += nStatic; sd.trades36 += trades;
     total += complexes.length; totalStatic += nStatic; totalTrades += trades;
   }
   summary.total = { complexes: total, static: totalStatic, trades36: totalTrades };
   writeFileSync(join(OUT, 'summary.json'), JSON.stringify(summary, null, 1) + '\n');
-  console.log(`[build-index] 시군구 ${regions.length} · 단지 ${total} (정적 ${totalStatic}) · 거래 ${totalTrades} · ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+  console.log(`[build-index] 시군구 ${regions.length} · 단지 ${total} (정적 ${totalStatic}) · 거래 ${totalTrades} · 중복 aptSeq ${nDup} · 앞자리≠코드 ${Object.keys(summary.idPrefix).length} · ${((Date.now() - t0) / 1000).toFixed(1)}s`);
 }
 
 if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) main();
