@@ -38,7 +38,7 @@ const desc = `${sido}에서 ${eok(amount)} 예산 안에 드는 아파트 ${tota
   <nav class="sub" style="padding:2px 4px 6px"><a href="/">홈</a> › 예산별 › {sido}</nav>
   <header class="q" style="padding:4px 4px 10px">
     <h1 class="big" style="margin:0;font-size:24px">{eok(amount)}으로 살 수 있는<br />{sido} 아파트</h1>
-    <p class="sub2" style="margin:6px 0 0">예산 안 <b>{totalIn.toLocaleString()}</b>단지 · 딱 맞는 구간(85~100%) <b>{totalFit.toLocaleString()}</b>단지 · 실거래 {sm.asOf} 기준</p>
+    <p class="sub2" style="margin:6px 0 0">예산 안 <b>{totalIn.toLocaleString()}</b>단지 · 쏙 들어오는 구간(85~100%) <b>{totalFit.toLocaleString()}</b>단지 · 실거래 {sm.asOf} 기준</p>
   </header>
   <div class="nav2">
     {prev ? <a class="chip" href={`/budget/${prev}/${sido}/`}>‹ {eok(prev)}</a> : <span />}
@@ -47,7 +47,7 @@ const desc = `${sido}에서 ${eok(amount)} 예산 안에 드는 아파트 ${tota
   </div>
   {groups.map((g) => (
     <section class="card sec">
-      <h2><a href={`/area/${g.lawd}/`}>{g.sigungu}</a> <span class="sub">예산 안 {g.total}단지 · 딱 맞는 구간 {g.fit}</span></h2>
+      <h2><a href={`/area/${g.lawd}/`}>{g.sigungu}</a> <span class="sub">예산 안 {g.total}단지 · 쏙 들어오는 구간 {g.fit}</span></h2>
       {g.items.length ? (
         <ul class="rank">{g.items.map((f) => <li><a href={`/apt/${f.c.id}/`}><span class="nm">{f.c.name} <span class="sub">{f.c.umd}{f.c.built ? ` · ${f.c.built}년` : ''} · {f.key}㎡</span></span><b>{eok(f.price)}</b><span class={`pill ${f.ratio >= FIT ? 'p-ok' : 'p-soft'}`}>{Math.round(f.ratio * 100)}%</span></a></li>)}</ul>
       ) : <p class="sub2" style="margin:6px 0 0">이 예산 안에 드는 단지가 없어요.</p>}

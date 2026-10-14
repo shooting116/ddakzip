@@ -56,7 +56,7 @@ async function main() {
   const diff = +(latest.rate - ruleRate).toFixed(2);
   const newMonth = !prevLatest || prevLatest.ym !== latest.ym;
   const msg = [
-    `[딱집 금리 확인] ECOS 주담대 가중평균(신규) ${latest.ym.slice(0, 4)}.${latest.ym.slice(4)} = ${latest.rate}%`,
+    `[쏙집 금리 확인] ECOS 주담대 가중평균(신규) ${latest.ym.slice(0, 4)}.${latest.ym.slice(4)} = ${latest.rate}%`,
     `규칙표 기본금리 ${ruleRate}% (${rd.as_of ?? '-'}) 와 차이 ${diff > 0 ? '+' : ''}${diff}%p`,
     Math.abs(diff) >= 0.05 ? '→ 규칙표 금리 갱신 검토 필요' : '→ 차이 작음, 유지',
     '정책대출(디딤돌·신생아·보금자리론) 금리는 기금·HF 공지에서 직접 확인하세요.',

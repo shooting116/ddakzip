@@ -11,13 +11,13 @@ interface Props {
 }
 const {
   title,
-  description = '내 소득과 현금으로 어디까지 갈 수 있는지 계산하고, 예산에 딱 맞는 아파트를 찾아 비교합니다.',
+  description = '내 소득과 현금으로 어디까지 갈 수 있는지 계산하고, 예산에 쏙 들어오는 아파트를 찾아 비교합니다.',
   noindex = false,
   hero = false,
 } = Astro.props;
 
-const siteName = '딱집';
-const fullTitle = title === siteName ? `${siteName} — 내 예산에 딱 맞는 집` : `${title} · ${siteName}`;
+const siteName = '쏙집';
+const fullTitle = title === siteName ? `${siteName} — 내 예산에 쏙 들어오는 집` : `${title} · ${siteName}`;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://korea-rich.com').href;
 const path = Astro.url.pathname;
 const nav = [
@@ -97,7 +97,7 @@ const nav = [
 
     <footer class="wrap foot">
       <p class="src">
-        딱집은 참고용 정보 서비스이며 대출 상담·부동산 중개를 하지 않습니다.
+        쏙집은 참고용 정보 서비스이며 대출 상담·부동산 중개를 하지 않습니다.
         실거래가 출처: 국토교통부 · 대출 규칙은 공개 자료 기준이며 실제 한도는 금융기관 심사에 따라 다릅니다.
       </p>
       <p class="src links">

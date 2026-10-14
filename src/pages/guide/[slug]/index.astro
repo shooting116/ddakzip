@@ -15,7 +15,7 @@ const related = d.related.map((s) => all.find((e) => e.id === s)).filter(Boolean
 const toc = headings.filter((h) => h.depth === 2);
 const ctaHref = d.cta === 'calc' ? `/calc/${d.situation ? `?s=${d.situation}` : ''}` : d.cta === 'find' ? '/find/' : d.cta === 'ref' ? '/ref/' : null;
 const ctaLabel = d.cta === 'calc' ? '내 조건으로 계산하기' : d.cta === 'find' ? '이 예산으로 집 찾기' : '레퍼런스 보기';
-const jsonLd = { '@context': 'https://schema.org', '@type': 'Article', headline: d.title, description: d.description, datePublished: d.publishAt, dateModified: d.updatedAt ?? d.publishAt, author: { '@type': 'Organization', name: '딱집' }, publisher: { '@type': 'Organization', name: '딱집' } };
+const jsonLd = { '@context': 'https://schema.org', '@type': 'Article', headline: d.title, description: d.description, datePublished: d.publishAt, dateModified: d.updatedAt ?? d.publishAt, author: { '@type': 'Organization', name: '쏙집' }, publisher: { '@type': 'Organization', name: '쏙집' } };
 ---
 <Base title={d.title} description={d.description}>
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
@@ -29,7 +29,7 @@ const jsonLd = { '@context': 'https://schema.org', '@type': 'Article', headline:
     </header>
     <div class="card basis">
       <b>이 글의 기준</b>
-      <p class="sub2" style="margin:4px 0 0">아래 숫자는 {d.asOf} 기준 공개 자료(규칙표)에서 가져왔고, 계산기와 같은 값입니다. 제도가 바뀌면 글과 계산기가 함께 바뀝니다. 실제 한도·금리는 금융기관 심사에 따라 다릅니다. 딱집은 대출 상담·중개를 하지 않습니다.</p>
+      <p class="sub2" style="margin:4px 0 0">아래 숫자는 {d.asOf} 기준 공개 자료(규칙표)에서 가져왔고, 계산기와 같은 값입니다. 제도가 바뀌면 글과 계산기가 함께 바뀝니다. 실제 한도·금리는 금융기관 심사에 따라 다릅니다. 쏙집은 대출 상담·중개를 하지 않습니다.</p>
     </div>
     {toc.length > 2 && <nav class="card toc"><b>차례</b><ol>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol></nav>}
     <div class="card body">

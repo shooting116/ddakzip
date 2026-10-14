@@ -1,6 +1,6 @@
 // /find/ 예산 맞춤 찾기 — 지도 + 리스트 (브라우저에서 동작)
 // 데이터: /data/regions.json, /data/complexes/{lawd}.json (빌드 때 생성)
-// 기준: 예산 이하 단지 전부, 예산의 85~100%가 "딱 맞는 구간". 마커는 대표 평형 시세.
+// 기준: 예산 이하 단지 전부, 예산의 85~100%가 "쏙 들어오는 구간". 마커는 대표 평형 시세.
 
 declare const kakao: any;
 
@@ -24,8 +24,8 @@ interface State {
   sort: 'fit' | 'priceAsc' | 'priceDesc' | 'trades' | 'new' | 'units';
   view: 'both' | 'list';
 }
-const KEY = 'ddakzip-find-v1';
-const BUDGET_KEY = 'ddakzip-budget-v1';
+const KEY = 'ssokjip-find-v1';
+const BUDGET_KEY = 'ssokjip-budget-v1';
 const FIT_LOW = 0.85;
 const PAGE = 40;
 
@@ -169,7 +169,7 @@ function renderFilters() {
       <div class="chips">${chip('type', 'all', '평형 전체')}${chip('type', 59, '59㎡')}${chip('type', 74, '74㎡')}${chip('type', 84, '84㎡')}${chip('type', 101, '101㎡')}${chip('type', 114, '114㎡')}${chip('type', 'big', '125㎡+')}</div>
       <div class="chips">${chip('built', 'all', '준공 전체')}${chip('built', 10, '10년 이내')}${chip('built', 20, '20년 이내')}${chip('built', 'old', '20년 초과')}${chip('units', 'all', '세대 전체')}${chip('units', 300, '300+')}${chip('units', 500, '500+')}${chip('units', 1000, '1,000+')}</div>
       <div class="chips">
-        ${s.budgetMan ? `<button type="button" class="chip ${s.fitOnly ? 'on' : ''}" data-toggle="fitOnly">딱 맞는 구간만 (예산의 85~100%)</button>` : ''}
+        ${s.budgetMan ? `<button type="button" class="chip ${s.fitOnly ? 'on' : ''}" data-toggle="fitOnly">쏙 들어오는 구간만 (예산의 85~100%)</button>` : ''}
         ${KAKAO_KEY ? `<button type="button" class="chip ${s.mapOnly ? 'on' : ''}" data-toggle="mapOnly">지도 영역 안만</button>` : ''}
         <select class="sortsel" data-select="sort" aria-label="정렬">
           <option value="fit" ${s.sort === 'fit' ? 'selected' : ''}>예산에 가까운 순</option>
@@ -202,7 +202,7 @@ function renderItem(f: typeof fitted[0]) {
 function renderList() {
   const n = fitted.length, fit = fitted.filter((f) => (f.ratio ?? 0) >= FIT_LOW).length;
   const head = s.budgetMan
-    ? `<b>${n.toLocaleString()}단지</b>가 예산 안에 있어요${fit ? ` · 딱 맞는 구간 <b>${fit.toLocaleString()}</b>` : ''}`
+    ? `<b>${n.toLocaleString()}단지</b>가 예산 안에 있어요${fit ? ` · 쏙 들어오는 구간 <b>${fit.toLocaleString()}</b>` : ''}`
     : `<b>${n.toLocaleString()}단지</b>`;
   return `
     <div class="count sub2" id="count">${head}<span class="src"> · 실거래 기준 ${esc(regions.asOf)}</span></div>

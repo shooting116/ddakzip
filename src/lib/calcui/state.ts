@@ -29,7 +29,7 @@ export interface UiState {
   bankRate: number | null;
 }
 
-export const STORAGE_KEY = 'ddakzip-calc-v1';
+export const STORAGE_KEY = 'ssokjip-calc-v1';
 
 export function defaultState(situation: Situation): UiState {
   return {

@@ -231,7 +231,7 @@ function viewResult(): string {
   const findQs = new URLSearchParams({ budget: String(budgetMan) });
   if (reg.lawd) findQs.set('lawd', reg.lawd);
   if (reg.sido) findQs.set('sido', reg.sido);
-  try { localStorage.setItem('ddakzip-budget-v1', JSON.stringify({ budgetMan, sido: reg.sido, lawd: reg.lawd, at: new Date().toISOString().slice(0, 10) })); } catch { /* */ }
+  try { localStorage.setItem('ssokjip-budget-v1', JSON.stringify({ budgetMan, sido: reg.sido, lawd: reg.lawd, at: new Date().toISOString().slice(0, 10) })); } catch { /* */ }
 
   const limitRows: { k: keyof typeof b.limits; label: string; v: number | null }[] = [
     { k: 'ltv', label: `LTV ${b.ltvPct}%`, v: b.limits.ltv },
@@ -263,7 +263,7 @@ function viewResult(): string {
     <div class="q">
       ${none
         ? `<h1 class="big">지금 조건으로는<br>대출이 어렵습니다</h1><p class="sub2">${esc(b.reasons.join(' · '))}</p>`
-        : `<h1 class="big"><span class="blue">${fmtEok(b.budget)}</span><span class="until">까지, 딱.</span></h1>
+        : `<h1 class="big"><span class="blue">${fmtEok(b.budget)}</span><span class="until">까지, 쏙.</span></h1>
            <p class="sub2">${esc(b.name)} 기준 최대 매수가 · 부부합산 ${fmtEok(r.incomePolicy)}</p>`}
     </div>
 
@@ -331,7 +331,7 @@ function viewResult(): string {
     </details>`}
 
     ${none ? `<button type="button" class="btn" disabled>받을 수 있는 대출이 없어 예산을 잡을 수 없어요</button>`
-      : `<a class="btn" href="/find/?${findQs.toString()}">이 예산으로 딱 집어보기</a>`}
+      : `<a class="btn" href="/find/?${findQs.toString()}">이 예산으로 쏙 찾아보기</a>`}
     <div class="row" style="margin-top:10px;gap:8px">
       <button type="button" class="btn ghost" data-action="edit">조건 수정</button>
       <button type="button" class="btn ghost" data-action="restart">처음부터</button>

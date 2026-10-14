@@ -1,4 +1,4 @@
-// 딱집 계산 엔진 — 타입. 금액은 원(정수), 비율은 %.
+// 쏙집 계산 엔진 — 타입. 금액은 원(정수), 비율은 %.
 
 export type Situation = 'first' | 'newly' | 'youth' | 'general' | 'move';
 export type RegionClass = 'R1' | 'R2' | 'R3';

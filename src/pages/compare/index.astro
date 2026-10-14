@@ -10,7 +10,7 @@ import Base from '../../layouts/Base.astro';
 </Base>
 
 <script>
-  const KEY = 'ddakzip-compare-v1';
+  const KEY = 'ssokjip-compare-v1';
   const root = document.getElementById('app')!;
   const esc = (v: unknown) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
   const eok = (man: number | null | undefined) => man == null ? '—' : man < 10000 ? `${Math.round(man).toLocaleString()}만` : `${(man / 10000).toFixed(2).replace(/\.?0+$/, '')}억`;
@@ -71,7 +71,7 @@ import Base from '../../layouts/Base.astro';
         <button type="button" class="btn ghost" data-share="${esc(share)}" style="flex:1">링크 복사</button>
         <button type="button" class="btn ghost" data-clear style="flex:1">모두 빼기</button>
       </div>
-      <p class="src">시세 = 최근 6개월 실거래 중앙값(해제·직거래 제외), 1년 = 1년 전 같은 기간 중앙값 대비. 출처: 국토교통부 실거래가(${esc(items[0].asOf)} 기준)·K-apt. 단지 정보는 등록 자료 기준이며 실제와 다를 수 있습니다. 딱집은 특정 단지를 추천하지 않습니다.</p>`;
+      <p class="src">시세 = 최근 6개월 실거래 중앙값(해제·직거래 제외), 1년 = 1년 전 같은 기간 중앙값 대비. 출처: 국토교통부 실거래가(${esc(items[0].asOf)} 기준)·K-apt. 단지 정보는 등록 자료 기준이며 실제와 다를 수 있습니다. 쏙집은 특정 단지를 추천하지 않습니다.</p>`;
   }
   root.addEventListener('click', (e) => {
     const t = (e.target as HTMLElement).closest<HTMLElement>('[data-rm],[data-share],[data-clear]');

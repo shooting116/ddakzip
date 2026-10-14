@@ -114,7 +114,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
       <ul class="news">
         {c.news.map((n) => <li><a href={n.u} rel="noopener nofollow" target="_blank">{n.t}</a><span class="sub">{n.o} · {n.d}</span></li>)}
       </ul>
-      <p class="src">네이버 뉴스 검색에서 주요 언론사 기사만 제목·언론사·날짜로 보여드립니다. 기사 내용은 각 언론사의 것이며 딱집의 의견이 아닙니다.</p>
+      <p class="src">네이버 뉴스 검색에서 주요 언론사 기사만 제목·언론사·날짜로 보여드립니다. 기사 내용은 각 언론사의 것이며 쏙집의 의견이 아닙니다.</p>
     </section>
   )}
 
@@ -219,7 +219,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
 
 <script>
   // 비교 담기 (브라우저 저장, 최대 4개)
-  const KEY = 'ddakzip-compare-v1';
+  const KEY = 'ssokjip-compare-v1';
   const btn = document.querySelector<HTMLButtonElement>('.cmp');
   if (btn) {
     const read = (): string[] => { try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch { return []; } };

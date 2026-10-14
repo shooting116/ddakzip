@@ -110,7 +110,7 @@ async function main() {
 
   if (notify) {
     const total = readdirSync(join(ROOT, 'data', 'news')).filter((f) => f.endsWith('.json')).reduce((s, f) => s + Object.values(loadJson(join(ROOT, 'data', 'news', f), {})).filter((v) => v.items?.length).length, 0);
-    const text = `[딱집 뉴스 검수] 이번 달 단지 보도 링크 ${total}개가 사이트에 걸려 있어요.\n하락 TOP·정비사업 단지 페이지에서 제목이 단지와 맞는지 한 번 훑어봐 주세요. 잘못된 건 data/overrides/news.json 에 단지ID를 적으면 빠집니다.\n${perSigungu.slice(0, 8).join(' · ')}`;
+    const text = `[쏙집 뉴스 검수] 이번 달 단지 보도 링크 ${total}개가 사이트에 걸려 있어요.\n하락 TOP·정비사업 단지 페이지에서 제목이 단지와 맞는지 한 번 훑어봐 주세요. 잘못된 건 data/overrides/news.json 에 단지ID를 적으면 빠집니다.\n${perSigungu.slice(0, 8).join(' · ')}`;
     if (!(await kakaoMemo(text, { url: 'https://korea-rich.com/ref/', button: '레퍼런스 열기' }))) return;
     console.log('카카오톡 검수 알림 전송');
   }

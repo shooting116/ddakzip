@@ -32,7 +32,7 @@ jobs:
       - name: 커밋·푸시
         if: steps.pub.outputs.count != '0'
         run: |
-          git config user.name "ddakzip-bot"
+          git config user.name "ssokjip-bot"
           git config user.email "bot@korea-rich.com"
           git add src/content/guide
           if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi

@@ -22,7 +22,7 @@ async function refreshAccessToken() {
 }
 
 /** 텍스트 메모 전송. 성공 true. 실패해도 예외를 던지지 않고 false (알림은 부가 기능이라 본 작업을 막지 않는다) */
-export async function kakaoMemo(text, { url = 'https://korea-rich.com', button = '딱집 열기' } = {}) {
+export async function kakaoMemo(text, { url = 'https://korea-rich.com', button = '쏙집 열기' } = {}) {
   const t = await refreshAccessToken();
   if (!t.access) { note(`토큰 갱신 실패: ${t.error}`); return false; }
   const res = await fetch('https://kapi.kakao.com/v2/api/talk/memo/default/send', {

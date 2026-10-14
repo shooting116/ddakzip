@@ -1,4 +1,4 @@
-# 딱집 korea-rich.com — 2026-10-14 공개
+# 쏙집 korea-rich.com — 2026-10-14 공개
 User-agent: *
 Allow: /
 

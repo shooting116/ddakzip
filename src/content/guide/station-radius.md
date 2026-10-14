@@ -1,6 +1,6 @@
 ---
-title: "'역세권 1.5km'는 무슨 뜻인가 — 딱집 철도 호재 배지의 기준"
-description: "딱집은 단지에서 1.5km 안에 공사 중이거나 예정인 역이 있으면 노선·역·거리·개통 목표를 배지로 붙입니다. 왜 1.5km인지, 도보로 몇 분인지, 어떤 노선이 들어 있고 무엇이 빠졌는지 정리했습니다."
+title: "'역세권 1.5km'는 무슨 뜻인가 — 쏙집 철도 호재 배지의 기준"
+description: "쏙집은 단지에서 1.5km 안에 공사 중이거나 예정인 역이 있으면 노선·역·거리·개통 목표를 배지로 붙입니다. 왜 1.5km인지, 도보로 몇 분인지, 어떤 노선이 들어 있고 무엇이 빠졌는지 정리했습니다."
 category: future
 publishAt: "2026-10-17T19:00:00+09:00"
 published: false
@@ -9,14 +9,14 @@ facts: []
 cta: find
 related: [gtx-timeline-2026, metro-rail-2026-2031]
 sources:
-  - { title: "딱집 교통 호재 규칙표 (GitHub, 출처·날짜 포함)", url: "https://github.com/shooting116/ddakzip/blob/main/data/transit/lines.json" }
+  - { title: "쏙집 교통 호재 규칙표 (GitHub, 출처·날짜 포함)", url: "https://github.com/shooting116/ddakzip/blob/main/data/transit/lines.json" }
 ---
 
 ## 배지가 생기는 조건
 
 단지 상세와 비교 화면에 보이는 "GTX-C 왕십리역 · 1.2km · 2031 개통 예정" 같은 배지는 다음 조건으로 자동 생성됩니다.
 
-1. 딱집 규칙표에 있는 **11개 노선 106개 역** 중 하나가
+1. 쏙집 규칙표에 있는 **11개 노선 106개 역** 중 하나가
 2. 단지 좌표에서 **직선거리 1.5km 안**에 있을 때
 3. 노선별로 가장 가까운 역 하나만 표시
 

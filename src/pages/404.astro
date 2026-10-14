@@ -35,7 +35,7 @@ import Base from '../layouts/Base.astro';
     load().then((hit) => {
       if (!hit) { root.querySelector('p')!.textContent = '이 단지 정보를 찾지 못했어요.'; return; }
       const { d, c } = hit;
-      document.title = `${c.n} 실거래가·시세 · 딱집`;
+      document.title = `${c.n} 실거래가·시세 · 쏙집`;
       root.innerHTML = `
         <nav class="sub" style="padding:2px 4px 6px"><a href="/">홈</a> › <a href="/area/${esc(d.lawd)}/">${esc(d.sido)} ${esc(d.sigungu)}</a> › ${esc(c.d)}</nav>
         <header class="q" style="padding:4px 4px 10px">
