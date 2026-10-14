@@ -1,4 +1,5 @@
 name: build check
+# 푸시마다 테스트+빌드를 한 번 더 돌려 Cloudflare 빌드가 깨질 커밋을 바로 잡는다. 실패하면 카카오톡으로 알린다.
 on:
   push:
     branches: [main]
@@ -15,3 +16,11 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+      - name: 빌드 실패 알림 (카카오톡)
+        if: failure() && github.event_name == 'push'
+        env:
+          KAKAO_REFRESH_TOKEN: ${{ secrets.KAKAO_REFRESH_TOKEN }}
+          KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
+          KAKAO_JS_KEY: ${{ secrets.KAKAO_JS_KEY }}
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+        run: node scripts/kakao-notify.mjs build-failed

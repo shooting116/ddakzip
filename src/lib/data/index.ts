@@ -31,7 +31,7 @@ export interface Complex {
 }
 export interface SigunguIndex { lawd: string; sido: string; sigungu: string; regulated: boolean; asOf: string; months: string[]; complexes: Complex[] }
 export interface Summary {
-  asOf: string; months: number; staticMin: number;
+  asOf: string; months: number; staticMin: number; staticMax: number; staticCut: number;
   sido: Record<string, { complexes: number; static: number; trades36: number }>;
   sigungu: { lawd: string; sido: string; sigungu: string; regulated: boolean; complexes: number; static: number; trades36: number; geo: number; kapt: number; transit: number; redev: number; news: number }[];
   total: { complexes: number; static: number; trades36: number };

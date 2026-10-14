@@ -28,6 +28,9 @@ const args = Object.fromEntries(process.argv.slice(2).map((a, i, arr) => {
 const sidoFilter = args.sido ? args.sido.split(',').map((s) => s.trim()) : null;
 const MONTHS = 36;
 const STATIC_MIN = 5;
+// 정적 상세 페이지 상한. Cloudflare Workers 정적 자산 한도(파일 2만 개) 안에 들도록 거래 많은 순 상위만 정적으로 만들고,
+// 나머지는 404 폴백이 브라우저에서 같은 내용을 그린다(검색엔진 노출만 차이).
+const STATIC_MAX = 18000;
 
 // ---------- 평형 ----------
 const ANCHORS = [33, 39, 46, 49, 51, 59, 66, 74, 84, 95, 101, 114, 125, 135, 150, 165, 180, 200, 240];
@@ -188,10 +191,22 @@ function main() {
     writeFileSync(p, JSON.stringify(d));
   }
 
+  // 정적 페이지 대상: 중복 정리 후 남은 단지 중 36개월 거래 STATIC_MIN건 이상을 거래 많은 순으로 STATIC_MAX개까지
+  const dropped = (id, lawd) => drop.get(lawd)?.has(id);
+  const ranked = [];
+  for (const [id, arr] of seen) for (const a of arr) if (!dropped(id, a.lawd) && a.n36 >= STATIC_MIN) ranked.push([a.n36, id]);
+  ranked.sort((a, b) => b[0] - a[0] || a[1].localeCompare(b[1]));
+  const staticIds = new Set(ranked.slice(0, STATIC_MAX).map((r) => r[1]));
+  const staticCut = ranked.length > STATIC_MAX ? ranked[STATIC_MAX - 1][0] : STATIC_MIN;
+  Object.assign(summary, { staticMax: STATIC_MAX, staticCut });
+
   // 요약 집계 + id 앞자리 → 실제 시군구 코드 맵 (앞자리와 다른 경우만)
   for (const g of summary.sigungu) {
-    const d = JSON.parse(readFileSync(join(OUT, 'complexes', `${g.lawd}.json`), 'utf8'));
+    const p = join(OUT, 'complexes', `${g.lawd}.json`);
+    const d = JSON.parse(readFileSync(p, 'utf8'));
     const complexes = d.complexes;
+    for (const c of complexes) c.static = staticIds.has(c.id);
+    writeFileSync(p, JSON.stringify(d));
     const nStatic = complexes.filter((c) => c.static).length;
     const trades = complexes.reduce((s, c) => s + c.n36, 0);
     Object.assign(g, { complexes: complexes.length, static: nStatic, trades36: trades, geo: complexes.filter((c) => c.lat).length, kapt: complexes.filter((c) => c.kapt).length, transit: complexes.filter((c) => c.transit.length).length, redev: complexes.filter((c) => c.redev).length, news: complexes.filter((c) => c.news.length).length });
@@ -207,7 +222,7 @@ function main() {
   }
   summary.total = { complexes: total, static: totalStatic, trades36: totalTrades };
   writeFileSync(join(OUT, 'summary.json'), JSON.stringify(summary, null, 1) + '\n');
-  console.log(`[build-index] 시군구 ${regions.length} · 단지 ${total} (정적 ${totalStatic}) · 거래 ${totalTrades} · 중복 aptSeq ${nDup} · 앞자리≠코드 ${Object.keys(summary.idPrefix).length} · ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+  console.log(`[build-index] 시군구 ${regions.length} · 단지 ${total} (정적 ${totalStatic}, 상한 ${STATIC_MAX}, 커트 36개월 ${staticCut}건) · 거래 ${totalTrades} · 중복 aptSeq ${nDup} · 앞자리≠코드 ${Object.keys(summary.idPrefix).length} · ${((Date.now() - t0) / 1000).toFixed(1)}s`);
 }
 
 if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) main();

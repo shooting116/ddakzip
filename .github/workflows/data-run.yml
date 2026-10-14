@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       script:
-        description: '스크립트 이름 (scripts/*.mjs): fetch-trades · fetch-complexes · match-complexes · geocode · geocode-transit · match-redev · fetch-news · fetch-rates · fetch-redev-seoul · kakao-test'
+        description: '스크립트 이름 (scripts/*.mjs): fetch-trades · fetch-complexes · match-complexes · geocode · geocode-transit · match-redev · fetch-news · fetch-rates · fetch-redev-seoul · kakao-notify'
         type: string
         default: fetch-complexes
       args:
