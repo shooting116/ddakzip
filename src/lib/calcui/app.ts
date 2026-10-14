@@ -43,6 +43,7 @@ function numInput(field: keyof UiState, label: string, unit: string, opts: { chi
         <input type="text" inputmode="numeric" autocomplete="off" data-num="${field}" value="${comma(v)}" aria-label="${esc(label)}" ${opts.focus ? 'autofocus' : ''} />
         <span>${esc(unit)}</span>
       </label>
+      <div class="eokread" data-eok-for="${field}" aria-live="polite">${v > 0 ? `${manToEok(v)} 원` : ''}</div>
       ${opts.chips ? `<div class="chips">${opts.chips.map((c) => `<button type="button" class="chip" data-set="${field}" data-value="${c}">${manToEok(c)}</button>`).join('')}</div>` : ''}
       ${opts.hint ? `<div class="sub hint">${esc(opts.hint)}</div>` : ''}
     </div>`;
@@ -395,6 +396,8 @@ function bind() {
       const n = Number(el.value.replace(/[^\d]/g, '')) || 0;
       (s as any)[el.dataset.num] = n;
       el.value = comma(n);
+      const read = root.querySelector<HTMLElement>(`[data-eok-for="${el.dataset.num}"]`);
+      if (read) read.textContent = n > 0 ? `${manToEok(n)} 원` : '';
       const next = root.querySelector<HTMLButtonElement>('[data-action="next"]');
       if (next && (el.dataset.num === 'cashMan' || el.dataset.num === 'incomeSelfMan')) next.disabled = n <= 0;
       save(s);

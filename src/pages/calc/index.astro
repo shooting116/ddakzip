@@ -30,6 +30,8 @@ import Base from '../../layouts/Base.astro';
   .calc .input:focus-within, .calc .input.focus { border-bottom-color: var(--blue); }
   .calc .input input { border: 0; outline: 0; background: transparent; width: 100%; min-width: 0; font: inherit; font-size: 28px; font-weight: 800; letter-spacing: -0.03em; color: var(--fg); font-variant-numeric: tabular-nums; padding: 0; }
   .calc .input span { font-size: 14px; color: var(--muted); font-weight: 500; white-space: nowrap; }
+  /* 만 원 입력을 억 단위로 다시 읽어주는 줄 (500,000 → 50억 원) */
+  .calc .eokread { min-height: 20px; margin-top: 6px; font-size: 14px; font-weight: 700; color: var(--blue); letter-spacing: -0.01em; }
   .calc .chips { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 10px; }
   .calc .chip { font-size: 12.5px; font-weight: 600; padding: 7px 12px; border-radius: 999px; background: var(--soft); color: var(--fg2); border: 0; cursor: pointer; }
   .calc .chip.on { background: var(--fg); color: #fff; }
