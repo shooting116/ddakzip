@@ -291,7 +291,13 @@ function select(id: string, fromMap = false) {
     const pos = new kakao.maps.LatLng(f.c.la, f.c.lo);
     overlay = new kakao.maps.CustomOverlay({ position: pos, yAnchor: 1.6, content: `<a class="mk-card" href="/apt/${esc(f.c.id)}/"><b>${esc(f.c.n)}</b><span>${f.fitKey}㎡ ${eok(f.fitPrice, 2)}${f.ratio != null ? ` · 예산의 ${Math.round(f.ratio * 100)}%` : ''}</span></a>` });
     overlay.setMap(map);
-    if (!fromMap) map.panTo(pos);
+    if (!fromMap) {
+      map.panTo(pos);
+      // 목록이 지도 아래에 있으므로, 지도가 화면 밖이면 지도까지 올려준다
+      const wrap = root.querySelector<HTMLElement>('.mapwrap');
+      const r = wrap?.getBoundingClientRect();
+      if (wrap && r && (r.top < 60 || r.bottom > window.innerHeight)) wrap.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    }
   }
   root.querySelectorAll('.item.sel').forEach((e) => e.classList.remove('sel'));
   const item = root.querySelector(`.item[data-id="${CSS.escape(id)}"]`);
