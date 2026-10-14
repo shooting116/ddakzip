@@ -3,7 +3,7 @@ title: "규제지역·수도권 주담대 규제 한눈에 — 2025년 6·27부�
 description: "서울 전역과 경기 15곳이 규제지역, 수도권 전체에 대출 상한 6억. LTV·대출 상한·스트레스 DSR·만기·처분 조건이 어디에 어떻게 적용되는지 한 표로 정리했습니다. 2026년 9월 30일 기준."
 category: loan
 publishAt: "2026-10-15T08:00:00+09:00"
-published: false
+published: true
 asOf: "2026-09-30"
 facts: [bank]
 cta: calc
