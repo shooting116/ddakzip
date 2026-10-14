@@ -23,19 +23,18 @@ const situations = [
 
   <section class="card" aria-labelledby="sit">
     <h2 id="sit" class="h">어떤 상황인가요?</h2>
-    <ul class="list">
+    <div class="sgrid">
       {situations.map((s) => (
-        <li>
-          <a class="tr" href={`/calc/?s=${s.key}`}>
-            <span class={`ic ${s.tone}`} aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d={s.icon} /></svg>
-            </span>
-            <span class="tx"><span class="t">{s.name}</span><span class="d">{s.desc}</span></span>
-            <span class="ch" aria-hidden="true">›</span>
-          </a>
-        </li>
+        <a class={`scell ${s.tone}`} href={`/calc/?s=${s.key}`}>
+          <span class="ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d={s.icon} /></svg>
+          </span>
+          <b>{s.name}</b>
+          <span class="d">{s.desc}</span>
+          <span class="ch" aria-hidden="true">›</span>
+        </a>
       ))}
-    </ul>
+    </div>
   </section>
 
   <section class="card quick" aria-labelledby="qk">
@@ -64,9 +63,23 @@ const situations = [
   .hero { padding: 10px 4px 18px; }
   .hero h1 { margin: 0; }
   .hero p { margin: 8px 0 0; }
-  .list { list-style: none; margin: 6px 0 0; padding: 0; }
-  .list a.tr { color: inherit; }
-  .ic.b { color: var(--blue); } .ic.r { color: var(--red); } .ic.g { color: var(--green); } .ic.s { color: var(--fg2); } .ic.o { color: var(--orange); }
+  /* 상황 타일: 아래 "예산을 이미 알고 있다면"과 같은 격자. 폰에서는 한 줄에 하나, 480px부터 두 칸 */
+  .sgrid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 10px; }
+  .scell { position: relative; display: grid; grid-template-columns: 48px 1fr; grid-template-rows: auto auto; column-gap: 14px; row-gap: 2px; align-items: center; padding: 16px 40px 16px 16px; border-radius: 16px; color: inherit; background: var(--soft); }
+  .scell .ic { grid-row: 1 / span 2; width: 48px; height: 48px; border-radius: 16px; background: var(--card); display: flex; align-items: center; justify-content: center; }
+  .scell .ic svg { width: 24px; height: 24px; }
+  .scell b { font-size: 17px; letter-spacing: -0.02em; line-height: 1.25; }
+  .scell .d { font-size: 12.5px; color: var(--fg2); line-height: 1.4; }
+  .scell .ch { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: #b0b8c1; font-size: 22px; line-height: 1; }
+  .scell.b { background: var(--blue-soft); } .scell.b .ic { color: var(--blue); }
+  .scell.r { background: var(--red-soft); } .scell.r .ic { color: var(--red); }
+  .scell.g { background: var(--green-soft); } .scell.g .ic { color: var(--green); }
+  .scell.o { background: var(--orange-soft); } .scell.o .ic { color: var(--orange); }
+  .scell.s { background: var(--soft); } .scell.s .ic { color: var(--fg2); }
+  @media (min-width: 480px) {
+    .sgrid { grid-template-columns: 1fr 1fr; }
+    .scell:last-child { grid-column: 1 / -1; }
+  }
   .quick { margin-top: var(--gap); }
   .qgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
   .qcell { display: flex; flex-direction: column; gap: 3px; padding: 12px 14px; border-radius: 14px; background: var(--soft); color: inherit; }
