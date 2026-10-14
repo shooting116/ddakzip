@@ -3,7 +3,7 @@ title: "거래량과 가격 — '거래 활발 단지'를 어떻게 읽을까"
 description: "거래가 많은 단지는 가격 신호가 분명하고, 거래가 끊긴 단지는 시세가 불투명합니다. 거래 건수를 세대수로 나눈 회전율, 신고 지연으로 생기는 착시, 거래량과 가격의 관계를 정리했습니다."
 category: price
 publishAt: "2026-10-14T19:00:00+09:00"
-published: false
+published: true
 asOf: "2026-10-12"
 facts: []
 cta: ref
