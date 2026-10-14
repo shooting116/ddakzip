@@ -1,0 +1,14 @@
+/* 긴 글(소개·방침·문의) 본문 — 가이드 본문과 같은 리듬 */
+.prose { font-size: 15.5px; line-height: 1.75; }
+.prose h1 { font-size: 22px; letter-spacing: -0.02em; margin: 0 0 4px; }
+.prose h2 { font-size: 17px; letter-spacing: -0.02em; margin: 26px 0 8px; }
+.prose h2:first-child { margin-top: 0; }
+.prose p { margin: 0 0 12px; }
+.prose ul, .prose ol { margin: 0 0 12px; padding-left: 22px; }
+.prose li { margin: 4px 0; }
+.prose table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 8px 0 14px; }
+.prose th { text-align: left; color: var(--muted); font-weight: 600; font-size: 12.5px; padding: 6px 6px 6px 0; border-bottom: 1px solid var(--line); }
+.prose td { padding: 8px 6px 8px 0; border-bottom: 1px solid var(--soft); vertical-align: top; }
+.prose a { color: var(--blue); }
+.prose code { font-size: 13px; background: var(--soft); padding: 1px 6px; border-radius: 6px; }
+.prose .meta { color: var(--muted); font-size: 12.5px; margin: 0 0 16px; }

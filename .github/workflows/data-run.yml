@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       script:
-        description: '스크립트 이름 (scripts/*.mjs): fetch-trades · fetch-complexes · match-complexes · geocode · geocode-transit · match-redev · fetch-news · fetch-rates'
+        description: '스크립트 이름 (scripts/*.mjs): fetch-trades · fetch-complexes · match-complexes · geocode · geocode-transit · match-redev · fetch-news · fetch-rates · fetch-redev-seoul · kakao-test'
         type: string
         default: fetch-complexes
       args:
@@ -35,6 +35,7 @@ jobs:
           KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
           ECOS_KEY: ${{ secrets.ECOS_KEY }}
           KAKAO_REFRESH_TOKEN: ${{ secrets.KAKAO_REFRESH_TOKEN }}
+          KAKAO_JS_KEY: ${{ secrets.KAKAO_JS_KEY }}
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
           SEOUL_OPENAPI_KEY: ${{ secrets.SEOUL_OPENAPI_KEY }}

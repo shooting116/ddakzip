@@ -5,11 +5,12 @@
 //   node scripts/fetch-rates.mjs --notify   규칙표 rate_default와 0.05%p 이상 차이 나거나 새 달이 들어오면 카카오톡 "나에게 보내기"
 //
 // - 규칙표는 자동으로 바꾸지 않는다. 바뀌어야 하면 알림만 보내고 사람이 확인해 새 버전을 넣는다.
-// - 키: ECOS_KEY, (알림 시) KAKAO_REST_KEY + KAKAO_REFRESH_TOKEN. 로그에 찍지 않는다.
+// - 키: ECOS_KEY, (알림 시) KAKAO_REFRESH_TOKEN + KAKAO_REST_KEY/KAKAO_JS_KEY. 로그에 찍지 않는다.
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { ROOT } from './lib/regions.mjs';
+import { kakaoMemo } from './lib/kakao.mjs';
 
 const OUT = join(ROOT, 'data', 'rates');
 const FILE = join(OUT, 'ecos-mortgage.json');
@@ -35,24 +36,6 @@ async function fetchEcos() {
   if (j.RESULT) throw new Error(`ECOS 오류 ${j.RESULT.CODE}: ${j.RESULT.MESSAGE}`);
   const rows = j.StatisticSearch?.row ?? [];
   return rows.map((r) => ({ ym: r.TIME, rate: Number(r.DATA_VALUE), name: r.ITEM_NAME1 })).filter((r) => Number.isFinite(r.rate)).sort((a, b) => a.ym.localeCompare(b.ym));
-}
-
-async function kakaoMemo(text) {
-  const rest = process.env.KAKAO_REST_KEY, refresh = process.env.KAKAO_REFRESH_TOKEN;
-  if (!rest || !refresh) { console.log('KAKAO_REST_KEY/KAKAO_REFRESH_TOKEN 없음 → 알림 생략'); return false; }
-  const tok = await fetch('https://kauth.kakao.com/oauth/token', {
-    method: 'POST', headers: { 'content-type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({ grant_type: 'refresh_token', client_id: rest, refresh_token: refresh }),
-  }).then((r) => r.json());
-  if (!tok.access_token) { console.warn('카카오 토큰 갱신 실패:', tok.error_description ?? tok.error ?? '?'); return false; }
-  if (tok.refresh_token) console.log('::warning title=카카오 refresh token 갱신됨::새 refresh_token이 발급되었습니다. ddakzip Secrets의 KAKAO_REFRESH_TOKEN을 바꿔야 다음 달에도 알림이 갑니다.');
-  const res = await fetch('https://kapi.kakao.com/v2/api/talk/memo/default/send', {
-    method: 'POST', headers: { Authorization: `Bearer ${tok.access_token}`, 'content-type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({ template_object: JSON.stringify({ object_type: 'text', text, link: { web_url: 'https://korea-rich.com', mobile_web_url: 'https://korea-rich.com' }, button_title: '딱집 열기' }) }),
-  });
-  const j = await res.json().catch(() => ({}));
-  if (j.result_code !== 0) { console.warn('카카오 전송 실패:', JSON.stringify(j)); return false; }
-  return true;
 }
 
 async function main() {

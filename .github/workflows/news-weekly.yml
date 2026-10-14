@@ -42,6 +42,7 @@ jobs:
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
           KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
           KAKAO_REFRESH_TOKEN: ${{ secrets.KAKAO_REFRESH_TOKEN }}
+          KAKAO_JS_KEY: ${{ secrets.KAKAO_JS_KEY }}
         run: node scripts/fetch-news.mjs --max-calls 4000 ${{ steps.wk.outputs.first == 'yes' && '--notify' || '' }}
       - name: 커밋·푸시
         if: always()

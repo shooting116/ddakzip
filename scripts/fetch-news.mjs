@@ -10,6 +10,7 @@ import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { ROOT } from './lib/regions.mjs';
 import { normName } from './lib/trades-index.mjs';
+import { kakaoMemo } from './lib/kakao.mjs';
 
 const ID = process.env.NAVER_CLIENT_ID, SECRET = process.env.NAVER_CLIENT_SECRET;
 if (!ID || !SECRET) { console.error('NAVER_CLIENT_ID / NAVER_CLIENT_SECRET 환경변수가 없습니다'); process.exit(1); }
@@ -108,13 +109,9 @@ async function main() {
   if (process.env.GITHUB_ACTIONS) console.log(`::notice title=news::${line}`);
 
   if (notify) {
-    const rest = process.env.KAKAO_REST_KEY, refresh = process.env.KAKAO_REFRESH_TOKEN;
-    if (!rest || !refresh) { console.log('카카오 토큰 없음 → 검수 알림 생략'); return; }
-    const tok = await fetch('https://kauth.kakao.com/oauth/token', { method: 'POST', headers: { 'content-type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ grant_type: 'refresh_token', client_id: rest, refresh_token: refresh }) }).then((r) => r.json());
-    if (!tok.access_token) { console.warn('카카오 토큰 갱신 실패'); return; }
     const total = readdirSync(join(ROOT, 'data', 'news')).filter((f) => f.endsWith('.json')).reduce((s, f) => s + Object.values(loadJson(join(ROOT, 'data', 'news', f), {})).filter((v) => v.items?.length).length, 0);
     const text = `[딱집 뉴스 검수] 이번 달 단지 보도 링크 ${total}개가 사이트에 걸려 있어요.\n하락 TOP·정비사업 단지 페이지에서 제목이 단지와 맞는지 한 번 훑어봐 주세요. 잘못된 건 data/overrides/news.json 에 단지ID를 적으면 빠집니다.\n${perSigungu.slice(0, 8).join(' · ')}`;
-    await fetch('https://kapi.kakao.com/v2/api/talk/memo/default/send', { method: 'POST', headers: { Authorization: `Bearer ${tok.access_token}`, 'content-type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ template_object: JSON.stringify({ object_type: 'text', text, link: { web_url: 'https://korea-rich.com/ref/', mobile_web_url: 'https://korea-rich.com/ref/' }, button_title: '레퍼런스 열기' }) }) });
+    if (!(await kakaoMemo(text, { url: 'https://korea-rich.com/ref/', button: '레퍼런스 열기' }))) return;
     console.log('카카오톡 검수 알림 전송');
   }
 }
