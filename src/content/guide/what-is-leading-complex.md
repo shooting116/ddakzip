@@ -3,7 +3,7 @@ title: "'대장 아파트'란 무엇인가 — 딱집이 84㎡ 시세로 줄 세
 description: "구마다 가장 비싼 아파트를 대장이라 부릅니다. 딱집은 84㎡ 타입의 최근 6개월 중앙값으로 순위를 매깁니다. 왜 84㎡인지, 순위가 말해 주는 것과 말해 주지 않는 것을 정리했습니다."
 category: price
 publishAt: "2026-10-14T13:00:00+09:00"
-published: false
+published: true
 asOf: "2026-10-12"
 facts: []
 cta: ref
