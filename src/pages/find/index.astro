@@ -41,9 +41,11 @@ const sm = loadSummary();
   .find .chip { flex: none; font-size: 12.5px; font-weight: 600; padding: 7px 11px; border-radius: 999px; background: var(--card); color: var(--fg2); border: 0; cursor: pointer; white-space: nowrap; }
   .find .chip.on { background: var(--fg); color: #fff; }
   .find .sortsel { margin-left: auto; padding: 6px 10px; font-size: 12.5px; border-radius: 999px; }
-  .find .mapwrap { position: relative; border-radius: 20px; overflow: hidden; background: var(--card); }
+  /* 지도는 가로 전체: 폰은 정사각형, 넓은 화면은 4:3(640×480). 목록은 그 아래. 목록에서 단지를 누르면 지도까지 올라온다 */
+  .find .mapwrap { position: relative; border-radius: 20px; overflow: hidden; background: var(--card); scroll-margin-top: 70px; }
   .find .mapwrap.hide { display: none; }
-  .find #map { width: 100%; height: 46vh; min-height: 260px; max-height: 480px; }
+  .find #map { width: 100%; aspect-ratio: 1 / 1; max-height: 640px; }
+  @media (min-width: 600px) { .find #map { aspect-ratio: 4 / 3; } }
   .find .maptip { position: absolute; left: 10px; bottom: 8px; background: rgba(255,255,255,.92); padding: 4px 8px; border-radius: 8px; z-index: 2; }
   .find .count { padding: 2px 4px; }
   .find .list { padding: 4px 16px; }
@@ -64,13 +66,4 @@ const sm = loadSummary();
   .mk-card { display: flex; flex-direction: column; background: var(--fg); color: #fff; padding: 8px 10px; border-radius: 10px; font-size: 12px; white-space: nowrap; box-shadow: 0 4px 14px rgba(0,0,0,.18); }
   .mk-card b { font-size: 13px; } .mk-card span { opacity: .85; }
   .mk-card::after { content: ''; position: absolute; left: 50%; bottom: -6px; margin-left: -6px; border: 6px solid transparent; border-top-color: var(--fg); border-bottom: 0; }
-  @media (min-width: 900px) {
-    .find { display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: 'top top' 'map list' 'status list' 'src src'; align-items: start; column-gap: 14px; }
-    .find #top { grid-area: top; }
-    .find .mapwrap { grid-area: map; position: sticky; top: 64px; }
-    .find #map { height: calc(100vh - 120px); max-height: none; }
-    .find #status { grid-area: status; }
-    .find #listwrap { grid-area: list; }
-    .find > .src { grid-area: src; }
-  }
 </style>
