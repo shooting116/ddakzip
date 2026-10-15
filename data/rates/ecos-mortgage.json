@@ -5,7 +5,7 @@
  "unit": "%",
  "basis": "신규취급액 기준 월평균",
  "source": "https://ecos.bok.or.kr",
- "fetched": "2026-10-12",
+ "fetched": "2026-10-15",
  "latest": {
   "ym": "202608",
   "rate": 4.66,
