@@ -28,6 +28,8 @@ export interface LoanProfile {
 interface Ctx {
   rules: Rules;
   input: CalcInput;
+  /** 계산 기준일 (YYYY-MM-DD). 상품 안에 시행일이 따로 있는 규칙을 가를 때 쓴다 */
+  asOf?: string;
   region: RegionInfo;
   incomePolicy: number;
   incomeBank: number;
@@ -212,7 +214,20 @@ export function bogeumjariProfile(c: Ctx): LoanProfile {
     h.newlywed ? p.income_cap.newly : 0,
     h.children >= 2 ? p.income_cap.kids2 : h.children === 1 ? p.income_cap.kids1 : 0,
   );
-  if (c.incomePolicy > incomeCap) reasons.push(`부부합산 소득 ${man(incomeCap)} 초과`);
+  // 신혼 결혼페널티 완화(2026-10-19 접수분~): 합산 초과여도 부부 중 1명 소득이 7천만 이하면 그 배우자 명의로 가능. DTI는 그 소득 기준.
+  let incomeForRatio = c.incomePolicy;
+  const singleCap = p.income_cap.newly_single ?? null;
+  const singleFrom = p.income_cap.newly_single_from ?? null;
+  const singleOn = singleCap != null && (!singleFrom || !c.asOf || c.asOf >= singleFrom);
+  if (c.incomePolicy > incomeCap) {
+    const candidates = h.newlywed && h.married && singleOn ? [input.incomeSelf, input.incomeSpouse].filter((v) => v > 0 && v <= singleCap!) : [];
+    if (candidates.length) {
+      incomeForRatio = Math.max(...candidates);
+      notes.push(`부부합산 ${man(c.incomePolicy)}은 상한 ${man(incomeCap)} 초과지만, 1명 소득 ${man(incomeForRatio)}(${man(singleCap!)} 이하)으로 그 배우자 명의 신청 가능 · DTI는 그 소득 기준 (${singleFrom} 접수분~)`);
+    } else {
+      reasons.push(`부부합산 소득 ${man(incomeCap)} 초과${h.newlywed && h.married && singleOn ? ` · 1명 소득 ${man(singleCap!)} 이하도 아님` : ''}`);
+    }
+  }
 
   const limit = Math.max(p.limit.default, h.firstHome ? p.limit.first : 0, h.children >= 2 ? p.limit.kids2 : 0);
   const serviceman = h.homeless && c.incomePolicy <= p.serviceman.income_cap;
@@ -231,7 +246,7 @@ export function bogeumjariProfile(c: Ctx): LoanProfile {
   return {
     key: 'bogeumjari', name: '보금자리론', eligible: reasons.length === 0, reasons, notes,
     rate, rateType: 'fixed', term, priceCap: p.price_cap, limit,
-    ltvAt: () => ltv, capAt: () => null, dsr: null, dti, incomeForRatio: c.incomePolicy,
+    ltvAt: () => ltv, capAt: () => null, dsr: null, dti, incomeForRatio,
   };
 }
 

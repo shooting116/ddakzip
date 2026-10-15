@@ -1,16 +1,24 @@
 // 규칙표의 지역 목록에서 수집 대상 시군구(법정동코드 앞 5자리)를 뽑는다.
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const here = dirname(fileURLToPath(import.meta.url));
 export const ROOT = join(here, '..', '..');
 
+/** 기준일(기본 오늘, KST)에 적용되는 규칙표: data/rules/vYYYY-MM-DD.json 중 시행일 ≤ 기준일인 최신 */
+export function loadRules(asOf = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10)) {
+  const dir = join(ROOT, 'data', 'rules');
+  const files = readdirSync(dir).filter((f) => /^v\d{4}-\d{2}-\d{2}\.json$/.test(f)).sort();
+  const pick = files.filter((f) => f.slice(1, 11) <= asOf).pop() ?? files[0];
+  return JSON.parse(readFileSync(join(dir, pick), 'utf8'));
+}
+
 /** 백필 우선순위: 서울 → 인천 → 경기 → 부산 → 대구 → 대전 → 광주 → 울산 → 세종 */
 export const SIDO_ORDER = ['서울', '인천', '경기', '부산', '대구', '대전', '광주', '울산', '세종'];
 
 export function loadRegions() {
-  const rules = JSON.parse(readFileSync(join(ROOT, 'data', 'rules', 'v2026-09-30.json'), 'utf8'));
+  const rules = loadRules();
   const out = [];
   for (const sido of rules.regions.sido) {
     for (const g of sido.sigungu) {

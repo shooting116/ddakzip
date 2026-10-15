@@ -9,7 +9,7 @@
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { ROOT } from './lib/regions.mjs';
+import { ROOT, loadRules } from './lib/regions.mjs';
 import { kakaoMemo } from './lib/kakao.mjs';
 
 const OUT = join(ROOT, 'data', 'rates');
@@ -50,7 +50,7 @@ async function main() {
   console.log(`[rates] ECOS ${latest.name} ${latest.ym} = ${latest.rate}% (${series.length}개월)`);
 
   // 규칙표와 비교
-  const rules = JSON.parse(readFileSync(join(ROOT, 'data', 'rules', 'v2026-09-30.json'), 'utf8'));
+  const rules = loadRules();
   const rd = rules.bank.rate_default;
   const ruleRate = Number(rd.variable ?? rd.rate ?? rd);
   const diff = +(latest.rate - ruleRate).toFixed(2);

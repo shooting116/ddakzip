@@ -65,6 +65,7 @@ function solve(rules: Rules, p: LoanProfile, cash: number, existing: { annualDsr
 
 export function calculate(input: CalcInput, asOf?: Date): CalcResult {
   const rules = getRules(asOf);
+  const asOfKey = (asOf ?? new Date()).toISOString().slice(0, 10);
   const region: RegionInfo = classifyRegion(rules, input.region);
   const h = input.household;
 
@@ -81,7 +82,7 @@ export function calculate(input: CalcInput, asOf?: Date): CalcResult {
   }
 
   const existing = summarizeDebts(rules, input.debts, { homeless: h.homeless, region: region.cls });
-  const ctx = { rules, input, region, incomePolicy, incomeBank };
+  const ctx = { rules, input, region, incomePolicy, incomeBank, asOf: asOfKey };
   const feeOpt = { firstHome: h.firstHome, newbornExemption: h.birthWithin2y, areaOver85: !!input.areaOver85, metroCity: region.metroCity };
 
   const products: ProductResult[] = allProfiles(ctx).map((p) => {

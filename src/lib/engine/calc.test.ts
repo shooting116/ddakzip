@@ -154,3 +154,24 @@ test('지방(R3) 생애최초 은행 LTV 80, 스트레스 0.75', () => {
   const didim = r.products.find((p) => p.key.startsWith('didimdol'))!;
   assert.equal(didim.rate, 3.6); // 4천~7천 30년 3.80 − 지방 0.2
 });
+
+test('규칙표 v0.2: 기본금리 4.66% (2026-10-15~), 그 전은 4.48%', () => {
+  assert.equal(getRules(new Date('2026-10-14')).bank.rate_default.variable, 4.48);
+  assert.equal(getRules(new Date('2026-10-15')).bank.rate_default.variable, 4.66);
+});
+
+test('보금자리론 결혼페널티 완화: 신혼 5천+4천(합산 9천 > 8.5천)은 10/19부터 1인 소득 5천으로 가능', () => {
+  const input = base({
+    situation: 'newly', cash: 1.5 * EOK, incomeSelf: 50_000_000, incomeSpouse: 40_000_000, combineSpouse: true,
+    household: { homeless: true, firstHome: false, married: true, newlywed: true, children: 0, birthWithin2y: false, age: 32 },
+  });
+  const before = calculate(input, new Date('2026-10-16')).products.find((p) => p.key === 'bogeumjari')!;
+  assert.equal(before.eligible, false);
+  assert.ok(before.reasons.some((r) => r.includes('부부합산 소득')));
+  const after = calculate(input, new Date('2026-10-19')).products.find((p) => p.key === 'bogeumjari')!;
+  assert.equal(after.eligible, true);
+  assert.ok(after.notes.some((n) => n.includes('그 배우자 명의')), after.notes.join(' / '));
+  // 둘 다 7천만 초과면 여전히 불가
+  const both = calculate(base({ ...input, incomeSelf: 75_000_000, incomeSpouse: 72_000_000 }), new Date('2026-10-19')).products.find((p) => p.key === 'bogeumjari')!;
+  assert.equal(both.eligible, false);
+});
