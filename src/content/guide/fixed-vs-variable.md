@@ -3,7 +3,7 @@ title: "고정금리 vs 변동금리 — 2026년 숫자로 보는 차이와 스�
 description: "2026년 8월 은행 주담대 평균 4.66%, 보금자리론 고정 4.90~5.20%. 둘의 차이가 월 상환액으로 얼마인지, 스트레스 DSR이 변동금리 한도를 왜 더 깎는지, 어떤 조건에서 어느 쪽이 유리한지가 아니라 '무엇이 다른지'를 정리했습니다."
 category: loan
 publishAt: "2026-10-16T08:00:00+09:00"
-published: false
+published: true
 asOf: "2026-10-15"
 updatedAt: "2026-10-15"
 facts: [bank, bogeumjari]
