@@ -2109,7 +2109,7 @@
    "by": "name 1.00"
   }
  ],
- "28200-126": [
+ "28200-124": [
   {
    "program": "인천 정비사업",
    "zone": "만수주공A",
@@ -2121,6 +2121,20 @@
    "source": "https://www.data.go.kr/data/15055212/fileData.do",
    "sourceDate": "2026-08-31",
    "by": "name 0.67"
+  }
+ ],
+ "28237-115": [
+  {
+   "program": "인천 정비사업",
+   "zone": "청천대진A",
+   "type": "재건축",
+   "stage": "사업시행계획인가",
+   "stageDate": null,
+   "planned": null,
+   "existing": null,
+   "source": "https://www.data.go.kr/data/15055212/fileData.do",
+   "sourceDate": "2026-08-31",
+   "by": "name 0.75"
   }
  ],
  "28237-40": [
@@ -2137,7 +2151,7 @@
    "by": "name 0.75"
   }
  ],
- "28237-46": [
+ "28237-47": [
   {
    "program": "인천 정비사업",
    "zone": "한양A 2단지",
@@ -2177,12 +2191,12 @@
    "by": "name 0.59"
   }
  ],
- "28237-62": [
+ "28237-78": [
   {
    "program": "인천 정비사업",
-   "zone": "청천대진A",
+   "zone": "삼산대보A",
    "type": "재건축",
-   "stage": "사업시행계획인가",
+   "stage": "착공",
    "stageDate": null,
    "planned": null,
    "existing": null,
@@ -2261,7 +2275,7 @@
    "by": "name 0.75"
   }
  ],
- "28260-82": [
+ "28260-119": [
   {
    "program": "인천 정비사업",
    "zone": "태화A",
@@ -2272,6 +2286,20 @@
    "existing": null,
    "source": "https://www.data.go.kr/data/15055212/fileData.do",
    "sourceDate": "2026-08-31",
+   "by": "name 1.00"
+  }
+ ],
+ "41113-20": [
+  {
+   "program": "경기 정비사업",
+   "zone": "권선1구역(동남아파트)",
+   "type": "재건축",
+   "stage": "관리처분인가 → 이주",
+   "stageDate": "2025-07",
+   "planned": null,
+   "existing": null,
+   "source": "https://www.housingherald.co.kr/news/articleView.html?idxno=51282",
+   "sourceDate": "2025-11-06",
    "by": "name 1.00"
   }
  ],
@@ -2287,20 +2315,6 @@
    "source": "https://www.housingherald.co.kr/news/articleView.html?idxno=51282",
    "sourceDate": "2025-11-06",
    "by": "name 0.75"
-  }
- ],
- "41113-8": [
-  {
-   "program": "경기 정비사업",
-   "zone": "권선1구역(동남아파트)",
-   "type": "재건축",
-   "stage": "관리처분인가 → 이주",
-   "stageDate": "2025-07",
-   "planned": null,
-   "existing": null,
-   "source": "https://www.housingherald.co.kr/news/articleView.html?idxno=51282",
-   "sourceDate": "2025-11-06",
-   "by": "name 1.00"
   }
  ],
  "41115-38": [
@@ -2331,6 +2345,34 @@
    "by": "name 0.80"
   }
  ],
+ "41117-6": [
+  {
+   "program": "경기 정비사업",
+   "zone": "영통2구역(매탄주공4·5단지)",
+   "type": "재건축",
+   "stage": "관리처분 → 철거 완료, 착공 대기",
+   "stageDate": "2024-12",
+   "planned": null,
+   "existing": null,
+   "source": "https://www.housingherald.co.kr/news/articleView.html?idxno=51282",
+   "sourceDate": "2025-11-06",
+   "by": "name 0.86"
+  }
+ ],
+ "41117-7": [
+  {
+   "program": "경기 정비사업",
+   "zone": "영통2구역(매탄주공4·5단지)",
+   "type": "재건축",
+   "stage": "관리처분 → 철거 완료, 착공 대기",
+   "stageDate": "2024-12",
+   "planned": null,
+   "existing": null,
+   "source": "https://www.housingherald.co.kr/news/articleView.html?idxno=51282",
+   "sourceDate": "2025-11-06",
+   "by": "name 0.86"
+  }
+ ],
  "41133-7": [
   {
    "program": "경기 정비사업",
@@ -2345,7 +2387,7 @@
    "by": "name 1.00"
   }
  ],
- "41135-127": [
+ "41135-128": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "목련마을 빌라단지 (6구역·S3) — 별도 정비물량",
@@ -2359,7 +2401,7 @@
    "by": "name 0.75"
   }
  ],
- "41135-19": [
+ "41135-21": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "샛별마을 (31구역·S4 결합개발구역)",
@@ -2421,6 +2463,32 @@
    "by": "name 0.83"
   }
  ],
+ "41135-224": [
+  {
+   "program": "1기 신도시 선도지구",
+   "zone": "한솔마을2 (38구역) — 2026년 선정",
+   "type": "재건축(노후계획도시 특별정비)",
+   "stage": "2026년 물량 선정(2026-09-29), 12월 특별정비구역 지정 목표",
+   "stageDate": "2026-09",
+   "planned": null,
+   "existing": 1872,
+   "source": "https://www.seoul.co.kr/news/economy/2026/09/29/20260929500212",
+   "sourceDate": "2026-09-29",
+   "by": "name 0.83"
+  },
+  {
+   "program": "1기 신도시 선도지구",
+   "zone": "한솔마을2 (38구역) — 2026년 선정",
+   "type": "재건축(노후계획도시 특별정비)",
+   "stage": "2026년 물량 선정(2026-09-29), 12월 특별정비구역 지정 목표",
+   "stageDate": "2026-09",
+   "planned": null,
+   "existing": 1872,
+   "source": "https://www.seoul.co.kr/news/economy/2026/09/29/20260929500212",
+   "sourceDate": "2026-09-29",
+   "by": "name 0.83"
+  }
+ ],
  "41135-32": [
   {
    "program": "1기 신도시 선도지구",
@@ -2435,33 +2503,7 @@
    "by": "name 0.64"
   }
  ],
- "41135-67": [
-  {
-   "program": "1기 신도시 선도지구",
-   "zone": "한솔마을2 (38구역) — 2026년 선정",
-   "type": "재건축(노후계획도시 특별정비)",
-   "stage": "2026년 물량 선정(2026-09-29), 12월 특별정비구역 지정 목표",
-   "stageDate": "2026-09",
-   "planned": null,
-   "existing": 1872,
-   "source": "https://www.seoul.co.kr/news/economy/2026/09/29/20260929500212",
-   "sourceDate": "2026-09-29",
-   "by": "name 0.83"
-  },
-  {
-   "program": "1기 신도시 선도지구",
-   "zone": "한솔마을2 (38구역) — 2026년 선정",
-   "type": "재건축(노후계획도시 특별정비)",
-   "stage": "2026년 물량 선정(2026-09-29), 12월 특별정비구역 지정 목표",
-   "stageDate": "2026-09",
-   "planned": null,
-   "existing": 1872,
-   "source": "https://www.seoul.co.kr/news/economy/2026/09/29/20260929500212",
-   "sourceDate": "2026-09-29",
-   "by": "name 0.83"
-  }
- ],
- "41135-73": [
+ "41135-71": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "양지마을 (32구역)",
@@ -2535,7 +2577,7 @@
    "by": "name 0.61"
   }
  ],
- "41135-75": [
+ "41135-76": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "파크타운 (33구역) — 2026년 선정",
@@ -2561,7 +2603,7 @@
    "by": "name 0.83"
   }
  ],
- "41135-78": [
+ "41135-80": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "푸른마을 (34구역) — 2026년 선정",
@@ -2837,7 +2879,7 @@
    "by": "name 0.75"
   }
  ],
- "41192-243": [
+ "41192-246": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "은하마을",
@@ -2887,7 +2929,7 @@
    "by": "name 0.61"
   }
  ],
- "41192-289": [
+ "41192-288": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "반달마을A",
@@ -2993,20 +3035,6 @@
    "by": "name 0.71"
   }
  ],
- "41285-18": [
-  {
-   "program": "1기 신도시 선도지구",
-   "zone": "정발마을 2·3단지 — 별도 정비물량",
-   "type": "재건축(노후계획도시 특별정비)",
-   "stage": "정비구역 지정 사전자문 진행 중",
-   "stageDate": null,
-   "planned": null,
-   "existing": 262,
-   "source": "https://www.housingherald.co.kr/news/articleView.html?idxno=62142",
-   "sourceDate": "2026-07-03",
-   "by": "name 0.67"
-  }
- ],
  "41285-219": [
   {
    "program": "1기 신도시 선도지구",
@@ -3021,7 +3049,21 @@
    "by": "name 0.67"
   }
  ],
- "41285-38": [
+ "41285-223": [
+  {
+   "program": "1기 신도시 선도지구",
+   "zone": "정발마을 2·3단지 — 별도 정비물량",
+   "type": "재건축(노후계획도시 특별정비)",
+   "stage": "정비구역 지정 사전자문 진행 중",
+   "stageDate": null,
+   "planned": null,
+   "existing": 262,
+   "source": "https://www.housingherald.co.kr/news/articleView.html?idxno=62142",
+   "sourceDate": "2026-07-03",
+   "by": "name 0.67"
+  }
+ ],
+ "41285-42": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "백송마을 1·2·3·5단지 (21구역)",
@@ -3071,7 +3113,7 @@
    "by": "name 0.67"
   }
  ],
- "41285-57": [
+ "41285-56": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "16구역 (강촌1·2 + 백마1·2)",
@@ -3085,7 +3127,7 @@
    "by": "name 0.67"
   }
  ],
- "41285-67": [
+ "41285-66": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "16구역 (강촌1·2 + 백마1·2)",
@@ -3111,7 +3153,7 @@
    "by": "name 0.67"
   }
  ],
- "41287-128": [
+ "41287-126": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "후곡마을 3·4·10·15단지 (7구역)",
@@ -3287,7 +3329,7 @@
    "by": "name 0.75"
   }
  ],
- "41410-38": [
+ "41410-42": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "9-2구역 (한양백두·동성백두·극동백두)",
@@ -3299,9 +3341,7 @@
    "source": "https://www.ajunews.com/view/20260320134813965",
    "sourceDate": "2026-03-20",
    "by": "name 0.75"
-  }
- ],
- "41410-42": [
+  },
   {
    "program": "1기 신도시 선도지구",
    "zone": "9-2구역 (한양백두·동성백두·극동백두)",
