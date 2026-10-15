@@ -3,7 +3,7 @@ title: "자금조달계획서 — 누가, 언제, 무엇을 적고 어떤 증빙
 description: "규제지역은 금액에 관계없이, 비규제지역은 6억 이상 주택을 살 때 자금조달계획서를 실거래 신고와 함께 냅니다. 항목 구성, 증빙 서류, 자주 틀리는 부분을 정리했습니다."
 category: tax
 publishAt: "2026-10-15T19:00:00+09:00"
-published: false
+published: true
 asOf: "2026-09-30"
 facts: []
 cta: calc
