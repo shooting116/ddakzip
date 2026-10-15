@@ -4,7 +4,7 @@ description: "1주택자가 새 집을 사려면 대출은 6개월, 취득세는
 category: situation
 situation: move
 publishAt: "2026-10-15T13:00:00+09:00"
-published: false
+published: true
 asOf: "2026-09-30"
 facts: [bank, acquisition]
 cta: calc
