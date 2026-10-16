@@ -3,7 +3,7 @@ title: "GTX A·B·C 개통 일정, 2026년 10월 기준 — 어디까지 열렸�
 description: "GTX-A는 두 구간이 따로 운행 중이고 서울역~수서 직결은 삼성역 문제로 미뤄졌습니다. B·C는 2031년 목표로 공사 중. 노선별 정차역, 상태, 근거 자료를 날짜와 함께 정리했습니다. 가격 전망은 없습니다."
 category: future
 publishAt: "2026-10-16T19:00:00+09:00"
-published: false
+published: true
 asOf: "2026-10-12"
 facts: []
 cta: ref
