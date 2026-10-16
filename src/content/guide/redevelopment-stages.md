@@ -3,7 +3,7 @@ title: "재건축 단계 읽는 법 — 정비구역 지정부터 착공까지, 
 description: "조합설립인가·사업시행인가·관리처분인가가 각각 무엇을 뜻하는지, 단계마다 보통 몇 년이 걸리는지, 그리고 2026년 6월 기준 서울 정비사업 496곳이 어느 단계에 몰려 있는지 서울시 통계로 정리했습니다."
 category: future
 publishAt: "2026-10-17T08:00:00+09:00"
-published: false
+published: true
 asOf: "2026-06-30"
 facts: []
 cta: ref
