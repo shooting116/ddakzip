@@ -19,12 +19,33 @@ const { lawd } = Astro.props as { lawd: string };
 const sg = loadSigungu(lawd)!;
 const c: Complex = sg.complexes.find((x) => x.id === id)!;
 const trades = tradesOf(c.id, lawd);
-const recent = trades.slice(0, 40);
+// 실거래 내역: 36개월 전체를 페이지에 넣고 처음엔 SHOW건만 보인다 (평형·저층 필터는 브라우저에서)
+const SHOW = 40;
+const all = trades.filter((t) => t.date.slice(0, 7) >= sg.months[0]);
+const recent = all.slice(0, SHOW);
 const rep = c.types.find((t) => t.key === c.rep) ?? c.types[0];
 const k = c.kapt;
 const parkPerUnit = k?.park && k.units ? (k.park / k.units).toFixed(2) : null;
 const age = c.built ? new Date().getFullYear() - c.built : null;
 const typeKeyOf = (area: number) => c.types.find((t) => t.areas.includes(area))?.key ?? Math.round(area);
+// 층 표시: 저층 = 1~3층, 탑층 = K-apt 최고층과 같은 층 (최고층보다 높은 거래가 있으면 자료가 안 맞는 것이라 탑층 표시를 끈다)
+const LOW_MAX = 3;
+const topFloor = k?.topFloor && !all.some((t) => t.floor != null && t.floor > k.topFloor!) ? k.topFloor : null;
+const isLow = (f: number | null) => f != null && f >= 1 && f <= LOW_MAX;
+const floorTag = (f: number | null) => (isLow(f) ? '저층' : topFloor && f === topFloor ? '탑층' : null);
+const nLow = all.filter((t) => isLow(t.floor)).length;
+const nByType = new Map<number, number>();
+for (const t of all) { const key = typeKeyOf(t.area); nByType.set(key, (nByType.get(key) ?? 0) + 1); }
+const showChips = c.types.length > 1 || nLow > 0;
+const esc = (v: unknown) => String(v ?? '').replace(/[&<>"]/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[ch]!);
+const rowsHtml = all.map((t, i) => {
+  const tag = floorTag(t.floor);
+  return `<tr${t.cancel ? ' class="cancel"' : ''}${i >= SHOW ? ' hidden' : ''} data-k="${typeKeyOf(t.area)}"${isLow(t.floor) ? ' data-low="1"' : ''}>` +
+    `<td>${ymd(t.date)}${t.rgst ? '<span class="sub"> 등기</span>' : ''}</td>` +
+    `<td>${typeKeyOf(t.area)}㎡ <span class="sub">${t.area}</span>${t.dong ? `<span class="sub"> ${esc(t.dong)}동</span>` : ''}</td>` +
+    `<td>${t.floor ?? '-'}${tag ? `<span class="ft">${tag}</span>` : ''}</td>` +
+    `<td class="r"><b>${eokMan(t.amt)}</b>${t.cancel ? '<span class="pill p-bad">해제</span>' : ''}${t.direct ? '<span class="pill p-soft">직거래</span>' : ''}</td></tr>`;
+}).join('');
 
 // 비슷한 예산 단지 (같은 시군구, 대표 평형 시세 ±10%)
 const similar = rep?.price
@@ -91,7 +112,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
               {t.yoy != null && <span class={`pill ${t.yoy >= 0 ? 'p-bad' : 'p-blue'}`}>1년 {pct(t.yoy)}</span>}
             </div>
           </div>
-          <div class="sub mini">36개월 {t.n36}건 · 12개월 {t.n12}건 · 6개월 {t.n6}건{t.last ? ` · 마지막 ${ymd(t.last.date)} ${eokMan(t.last.amt)} ${t.last.floor ?? '-'}층` : ''}</div>
+          <div class="sub mini">36개월 {t.n36}건 · 12개월 {t.n12}건 · 6개월 {t.n6}건{t.last ? ` · 마지막 ${ymd(t.last.date)} ${eokMan(t.last.amt)} ${t.last.floor ?? '-'}층` : ''}{(nByType.get(t.key) ?? 0) > 0 && <> · <a class="goto" href="#trades" data-goto={t.key}>거래 내역 보기 ›</a></>}</div>
           <Sparkline series={t.series} label={`${t.label} 월별 중앙값`} />
         </div>
       ))}
@@ -156,23 +177,22 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
     </section>
   )}
 
-  <section class="card">
-    <h2>실거래 내역 <span class="sub">최근 {recent.length}건 / 36개월 {c.n36}건</span></h2>
+  <section class="card" id="trades" data-page={SHOW}>
+    <h2>실거래 내역 <span class="sub" data-tcount>최근 {recent.length}건 / 36개월 {all.length}건</span></h2>
+    {showChips && (
+      <div class="tchips" data-tf role="group" aria-label="실거래 필터">
+        {c.types.length > 1 && <button type="button" class="chip on" data-k="all">전체 <span>{all.length}</span></button>}
+        {c.types.length > 1 && c.types.map((t) => <button type="button" class="chip" data-k={t.key}>{t.label} <span>{nByType.get(t.key) ?? 0}</span></button>)}
+        {nLow > 0 && <button type="button" class="chip tog" data-low aria-pressed="false">저층 제외</button>}
+      </div>
+    )}
     <table class="trades">
       <thead><tr><th>계약일</th><th>타입</th><th>층</th><th class="r">금액</th></tr></thead>
-      <tbody>
-        {recent.map((t) => (
-          <tr class={t.cancel ? 'cancel' : ''}>
-            <td>{ymd(t.date)}{t.rgst ? <span class="sub"> 등기</span> : null}</td>
-            <td>{typeKeyOf(t.area)}㎡ <span class="sub">{t.area}</span>{t.dong ? <span class="sub"> {t.dong}동</span> : null}</td>
-            <td>{t.floor ?? '-'}</td>
-            <td class="r"><b>{eokMan(t.amt)}</b>{t.cancel && <span class="pill p-bad">해제</span>}{t.direct && <span class="pill p-soft">직거래</span>}</td>
-          </tr>
-        ))}
-      </tbody>
+      <tbody set:html={rowsHtml} />
     </table>
-    {c.n36 > recent.length && <p class="sub" style="margin:10px 0 0">최근 {recent.length}건만 표시합니다.</p>}
-    <p class="src">출처: 국토교통부 아파트 매매 실거래가 ({sg.asOf} 기준). 계약 후 30일 안에 신고되므로 최근 한 달은 빠진 거래가 있을 수 있습니다. "해제"는 신고 후 계약이 해제된 건이며 시세 계산에서 제외했습니다. "등기"는 등기일자가 확인된 거래입니다.</p>
+    <p class="sub" data-tempty hidden style="margin:10px 0 0">이 조건에 맞는 거래가 없어요.</p>
+    {all.length > SHOW && <button type="button" class="more" data-more>더 보기 <span>({all.length - SHOW}건 남음)</span></button>}
+    <p class="src">출처: 국토교통부 아파트 매매 실거래가 ({sg.asOf} 기준). 계약 후 30일 안에 신고되므로 최근 한 달은 빠진 거래가 있을 수 있습니다. "해제"는 신고 후 계약이 해제된 건이며 시세 계산에서 제외했습니다. "등기"는 등기일자가 확인된 거래입니다.{(nLow > 0 || topFloor) && ` "저층"은 1~${LOW_MAX}층${topFloor ? `, "탑층"은 K-apt 최고층(${topFloor}층)과 같은 층` : ''}입니다. 시세 계산에는 모든 층을 넣었습니다.`}</p>
     <p class="report"><a href={reportMailto({ name: c.name, id: c.id, asOf: sg.asOf, path: `/apt/${c.id}/` })}>이 단지 정보가 틀렸나요? 제보하기 ›</a><span class="sub"> 단지 번호·페이지 주소가 메일에 자동으로 들어갑니다</span></p>
   </section>
 
@@ -212,11 +232,24 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
   .kv dt { color: var(--fg2); } .kv dd { margin: 0; font-weight: 600; }
   .trades { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 8px; font-variant-numeric: tabular-nums; }
   .trades th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; padding: 6px 0; border-bottom: 1px solid var(--line); }
-  .trades td { padding: 8px 0; border-bottom: 1px solid var(--soft); vertical-align: top; }
-  .trades .r { text-align: right; }
-  .trades .r .pill { margin-left: 6px; }
-  .trades tr.cancel td { color: var(--muted); text-decoration: line-through; }
-  .trades tr.cancel td .pill { text-decoration: none; }
+  .trades :global(td) { padding: 8px 0; border-bottom: 1px solid var(--soft); vertical-align: top; }
+  .trades :global(td:first-child), .trades :global(td:nth-child(3)) { white-space: nowrap; padding-right: 8px; }
+  .trades th.r, .trades :global(td.r) { text-align: right; }
+  .trades :global(td.r .pill) { margin-left: 6px; }
+  .trades :global(tr.cancel td) { color: var(--muted); text-decoration: line-through; }
+  .trades :global(tr.cancel td .pill) { text-decoration: none; }
+  .trades :global(tr[hidden]) { display: none; }
+  .trades :global(.ft) { display: inline-block; font-size: 10.5px; font-weight: 600; color: var(--fg2); background: var(--soft); padding: 1px 6px; border-radius: 6px; margin-left: 5px; vertical-align: 1px; }
+  #trades { scroll-margin-top: 70px; }
+  .tchips { display: flex; gap: 6px; overflow-x: auto; padding: 6px 0 2px; scrollbar-width: none; }
+  .tchips::-webkit-scrollbar { display: none; }
+  .tchips .chip { flex: none; font-size: 12.5px; font-weight: 600; padding: 7px 11px; border-radius: 999px; background: var(--soft); color: var(--fg2); border: 0; cursor: pointer; white-space: nowrap; }
+  .tchips .chip span { font-weight: 500; opacity: .7; margin-left: 2px; }
+  .tchips .chip.on { background: var(--fg); color: #fff; }
+  .tchips .chip.tog.on { background: var(--blue); }
+  .more { display: block; width: 100%; margin: 10px 0 0; padding: 12px; border: 0; border-radius: 12px; background: var(--soft); color: var(--fg); font-weight: 700; font-size: 14px; cursor: pointer; }
+  .more span { font-weight: 500; color: var(--fg2); }
+  .goto { color: var(--blue); font-weight: 600; }
   .list .tr { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--soft); color: inherit; }
   .list .tr:last-child { border-bottom: 0; }
   .list .tr .v { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
@@ -239,6 +272,41 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
 </style>
 
 <script>
+  // 실거래 내역: 평형 칩 · 저층 제외 · 더 보기 (36개월 전체 행이 페이지에 있고 보이기만 바꾼다)
+  const sec = document.getElementById('trades');
+  if (sec) {
+    const rows = Array.from(sec.querySelectorAll<HTMLTableRowElement>('tbody tr'));
+    const chips = sec.querySelector<HTMLElement>('[data-tf]');
+    const countEl = sec.querySelector<HTMLElement>('[data-tcount]');
+    const moreBtn = sec.querySelector<HTMLButtonElement>('[data-more]');
+    const emptyEl = sec.querySelector<HTMLElement>('[data-tempty]');
+    const PAGE = Number(sec.dataset.page) || 40;
+    const total = rows.length;
+    let key = 'all', noLow = false, shown = PAGE;
+    const apply = () => {
+      let n = 0, vis = 0;
+      for (const r of rows) {
+        const ok = (key === 'all' || r.dataset.k === key) && !(noLow && r.dataset.low === '1');
+        if (!ok) { r.hidden = true; continue; }
+        n++; r.hidden = vis >= shown; if (!r.hidden) vis++;
+      }
+      if (countEl) {
+        const head = [key === 'all' ? '' : `${key}㎡`, noLow ? '저층 제외' : ''].filter(Boolean);
+        countEl.textContent = head.length ? `${head.join(' · ')} · ${n}건` : `최근 ${vis}건 / 36개월 ${total}건`;
+      }
+      if (moreBtn) { moreBtn.hidden = n <= vis; moreBtn.innerHTML = `더 보기 <span>(${n - vis}건 남음)</span>`; }
+      if (emptyEl) emptyEl.hidden = n > 0;
+    };
+    const setKey = (k: string) => { key = k; shown = PAGE; chips?.querySelectorAll<HTMLElement>('[data-k]').forEach((x) => x.classList.toggle('on', x.dataset.k === k)); apply(); };
+    chips?.addEventListener('click', (e) => {
+      const b = (e.target as HTMLElement).closest<HTMLElement>('button'); if (!b) return;
+      if (b.hasAttribute('data-low')) { noLow = !noLow; b.classList.toggle('on', noLow); b.setAttribute('aria-pressed', String(noLow)); shown = PAGE; apply(); }
+      else if (b.dataset.k) setKey(b.dataset.k);
+    });
+    moreBtn?.addEventListener('click', () => { shown += PAGE; apply(); });
+    document.querySelectorAll<HTMLElement>('[data-goto]').forEach((a) => a.addEventListener('click', () => setKey(a.dataset.goto!)));
+  }
+
   // 비교 담기 (브라우저 저장, 최대 4개)
   const KEY = 'ssokjip-compare-v1';
   const btn = document.querySelector<HTMLButtonElement>('.cmp');
