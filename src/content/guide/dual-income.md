@@ -3,7 +3,7 @@ title: "맞벌이 소득 합산 — 합치면 한도가 늘지만 배우자 대�
 description: "정책대출은 항상 부부합산 소득으로 자격을 봅니다. 은행 주담대는 합산을 선택할 수 있는데, 합산하면 배우자의 기존 대출도 DSR에 들어옵니다. 합산이 자격을 없애는 경우와 늘리는 경우를 예시로 정리했습니다."
 category: situation
 publishAt: "2026-10-16T13:00:00+09:00"
-published: false
+published: true
 asOf: "2026-10-15"
 updatedAt: "2026-10-15"
 facts: [didimdol, bogeumjari]
