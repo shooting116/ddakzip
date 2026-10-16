@@ -107,27 +107,44 @@ function unitsOk(u: number | null): boolean {
   if (s.units === 'all') return true;
   return (u ?? 0) >= s.units;
 }
+// 결과가 0일 때 "어느 조건에서 몇 개가 빠졌는지" 보여주기 위한 단계별 집계
+type Funnel = { label: string; n: number; key?: 'built' | 'units' | 'type' | 'budget' | 'fitOnly' | 'mapOnly' }[];
+let funnel: Funnel = [];
+let noGeoDropped = 0;
 function compute() {
   const B = s.budgetMan;
   fitted = [];
+  const cnt = { built: 0, units: 0, type: 0, budget: 0, fit: 0, map: 0 };
+  noGeoDropped = 0;
   for (const c of rows) {
-    if (!builtOk(c.b) || !unitsOk(c.u)) continue;
+    if (!builtOk(c.b)) continue; cnt.built++;
+    if (!unitsOk(c.u)) continue; cnt.units++;
     const types = c.t.filter((t) => t[1] != null && typeOk(t[0]));
-    if (!types.length) continue;
+    if (!types.length) continue; cnt.type++;
     let fitKey: number | null = null, fitPrice: number | null = null, ratio: number | null = null;
     if (B > 0) {
       const fits = types.filter((t) => (t[1] as number) <= B).sort((a, b) => (b[1] as number) - (a[1] as number));
-      if (!fits.length) continue;
+      if (!fits.length) continue; cnt.budget++;
       fitKey = fits[0][0]; fitPrice = fits[0][1] as number; ratio = fitPrice / B;
       if (s.fitOnly && ratio < FIT_LOW) continue;
     } else {
+      cnt.budget++;
       const t = types.find((x) => x[0] === c.r) ?? types[0];
       fitKey = t[0]; fitPrice = t[1] as number;
     }
+    cnt.fit++;
     if (s.mapOnly && bounds && c.la != null && c.lo != null && !bounds.contain(new kakao.maps.LatLng(c.la, c.lo))) continue;
-    if (s.mapOnly && bounds && c.la == null) continue;
+    if (s.mapOnly && bounds && c.la == null) { noGeoDropped++; continue; }
+    cnt.map++;
     fitted.push({ c, fitKey, fitPrice, ratio });
   }
+  funnel = [{ label: s.lawd === 'all' ? s.sido + ' 전체' : '지역', n: rows.length }];
+  if (s.built !== 'all') funnel.push({ label: '준공', n: cnt.built, key: 'built' });
+  if (s.units !== 'all') funnel.push({ label: '세대수', n: cnt.units, key: 'units' });
+  if (s.type !== 'all') funnel.push({ label: '평형', n: cnt.type, key: 'type' });
+  if (B > 0) funnel.push({ label: '예산 안', n: cnt.budget, key: 'budget' });
+  if (B > 0 && s.fitOnly) funnel.push({ label: '쏙 들어오는 구간', n: cnt.fit, key: 'fitOnly' });
+  if (s.mapOnly && bounds) funnel.push({ label: '지도 영역 안', n: cnt.map, key: 'mapOnly' });
   const by: Record<State['sort'], (a: typeof fitted[0], b: typeof fitted[0]) => number> = {
     fit: (a, b) => (b.ratio ?? 0) - (a.ratio ?? 0) || b.c.n6 - a.c.n6,
     priceAsc: (a, b) => (a.fitPrice ?? 0) - (b.fitPrice ?? 0),
@@ -199,6 +216,22 @@ function renderItem(f: typeof fitted[0]) {
       <div class="it-price"><b>${eok(f.fitPrice, 2)}</b>${pct != null ? `<span class="pill ${fitCls}">예산의 ${pct}%</span>` : ''}</div>
     </a>`;
 }
+// 0건일 때: 단계별로 몇 개가 남았는지 보여주고, 0으로 만든 조건을 짚어준다
+function renderEmpty() {
+  const path = funnel.map((f, i) => `${i ? ' → ' : ''}${esc(f.label)} <b>${f.n.toLocaleString()}</b>`).join('');
+  const zero = funnel.find((f) => f.n === 0 && f.key);
+  const prev = zero ? funnel[funnel.indexOf(zero) - 1]?.n ?? 0 : 0;
+  const hint: Record<string, string> = {
+    built: '준공 필터를 넓히면', units: '세대수 필터를 넓히면', type: '평형을 바꾸거나 "평형 전체"로 하면',
+    budget: '예산을 올리거나 지역을 바꾸면', fitOnly: '"쏙 들어오는 구간만"을 끄면', mapOnly: '지도를 옮기거나 "지도 영역 안만"을 끄면',
+  };
+  const geo = zero?.key === 'mapOnly' && noGeoDropped ? ` 좌표가 없는 단지 ${noGeoDropped}개는 지도 필터에 잡히지 않아요.` : '';
+  return `<div class="empty">
+    <p class="sub2" style="margin:8px 0 6px">조건에 맞는 단지가 없어요.</p>
+    <p class="sub" style="margin:0">${path}</p>
+    ${zero ? `<p class="sub2" style="margin:8px 0 6px">"<b>${esc(zero.label)}</b>" 조건에서 0이 됐어요. ${hint[zero.key!]} <b>${prev.toLocaleString()}</b>개가 보여요.${geo}</p>` : `<p class="sub2" style="margin:8px 0 6px">이 지역에는 아직 거래 데이터가 없어요.</p>`}
+  </div>`;
+}
 function renderList() {
   const n = fitted.length, fit = fitted.filter((f) => (f.ratio ?? 0) >= FIT_LOW).length;
   const head = s.budgetMan
@@ -207,7 +240,7 @@ function renderList() {
   return `
     <div class="count sub2" id="count">${head}<span class="src"> · 실거래 기준 ${esc(regions.asOf)}</span></div>
     <div class="card list" id="list">
-      ${fitted.length ? fitted.slice(0, shown).map(renderItem).join('') : `<p class="sub2" style="margin:8px 0">조건에 맞는 단지가 없어요. 예산이나 지역·필터를 바꿔보세요.</p>`}
+      ${fitted.length ? fitted.slice(0, shown).map(renderItem).join('') : renderEmpty()}
       ${fitted.length > shown ? `<button type="button" class="btn ghost more" data-action="more">${(fitted.length - shown).toLocaleString()}개 더 보기</button>` : ''}
     </div>`;
 }

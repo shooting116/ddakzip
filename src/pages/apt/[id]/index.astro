@@ -4,6 +4,7 @@ import Sparkline from '../../../components/Sparkline.astro';
 import { allSigungu, loadSigungu, type Complex } from '../../../lib/data/index.ts';
 import { tradesOf } from '../../../lib/data/trades.ts';
 import { eok, eokMan, ymd, basisLabel, pct } from '../../../lib/ui/format.ts';
+import { reportMailto } from '../../../lib/ui/report.ts';
 
 export async function getStaticPaths() {
   // id(aptSeq) 앞자리는 개편 전 시군구 코드일 수 있어 실제 코드를 props로 넘긴다
@@ -157,6 +158,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
     </table>
     {c.n36 > recent.length && <p class="sub" style="margin:10px 0 0">최근 {recent.length}건만 표시합니다.</p>}
     <p class="src">출처: 국토교통부 아파트 매매 실거래가 ({sg.asOf} 기준). 계약 후 30일 안에 신고되므로 최근 한 달은 빠진 거래가 있을 수 있습니다. "해제"는 신고 후 계약이 해제된 건이며 시세 계산에서 제외했습니다. "등기"는 등기일자가 확인된 거래입니다.</p>
+    <p class="report"><a href={reportMailto({ name: c.name, id: c.id, asOf: sg.asOf, path: `/apt/${c.id}/` })}>이 단지 정보가 틀렸나요? 제보하기 ›</a><span class="sub"> 단지 번호·페이지 주소가 메일에 자동으로 들어갑니다</span></p>
   </section>
 
   {similar.length > 0 && (
@@ -215,6 +217,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
   .news { list-style: none; margin: 6px 0 0; padding: 0; }
   .news li { padding: 9px 0; border-bottom: 1px solid var(--soft); display: flex; flex-direction: column; gap: 2px; }
   .news li:last-child { border-bottom: 0; } .news a { color: var(--fg); font-weight: 600; }
+  .report { margin: 12px 0 0; font-size: 13px; } .report a { color: var(--blue); font-weight: 600; } .report .sub { display: block; margin-top: 2px; }
 </style>
 
 <script>

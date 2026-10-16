@@ -21,6 +21,7 @@ import Base from '../layouts/Base.astro';
     const eok = (man: number | null) => man == null ? '—' : man < 10000 ? `${Math.round(man).toLocaleString()}만` : `${(man / 10000).toFixed(2).replace(/\.?0+$/, '')}억`;
     const esc = (v: unknown) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
     const basis: Record<string, string> = { median6: '최근 6개월 중앙값', ref: '참고용 · 6개월 3건 미만', last: '마지막 거래가' };
+    const report = (name: string, cid: string, asOf: string) => `mailto:xix1223.ad.2025@gmail.com?subject=${encodeURIComponent(`[쏙집 제보] ${name} (${cid})`)}&body=${encodeURIComponent(`페이지: https://korea-rich.com/apt/${cid}/\n데이터 기준일: ${asOf}\n\n이상한 항목 (해당하는 것만 남겨주세요): 세대수 / 준공년도 / 면적·평형 / 시세·실거래 / 위치 / 기타\n\n어떻게 이상한가요?\n`)}`;
     // id 앞자리가 개편 전 시군구 코드면 regions.json의 idPrefix로 실제 코드를 찾는다
     const load = async (): Promise<{ d: any; c: any } | null> => {
       let cands = [m[1]];
@@ -52,7 +53,8 @@ import Base from '../layouts/Base.astro';
           ${c.l ? `<p class="sub" style="margin:10px 0 0">마지막 거래 ${esc(c.l[0])} · ${c.l[2]}㎡ · ${eok(c.l[1])}</p>` : ''}
           <p class="src">출처: 국토교통부 실거래가 (${esc(d.asOf)} 기준). 해제·직거래는 시세 계산에서 제외.</p>
         </section>
-        <a class="btn" href="/find/?lawd=${esc(d.lawd)}" style="margin-top:12px">${esc(d.sigungu)} 다른 단지 보기</a>`;
+        <a class="btn" href="/find/?lawd=${esc(d.lawd)}" style="margin-top:12px">${esc(d.sigungu)} 다른 단지 보기</a>
+        <p class="sub2" style="margin:14px 4px 0;font-size:13px"><a href="${report(c.n, id, d.asOf)}" style="color:var(--blue);font-weight:600">이 단지 정보가 틀렸나요? 제보하기 ›</a></p>`;
     }).catch(() => { root.querySelector('p')!.textContent = '단지 정보를 불러오지 못했어요.'; });
   }
 </script>
