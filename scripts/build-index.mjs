@@ -119,6 +119,24 @@ function kaptOf(info) {
   };
 }
 
+/**
+ * "거래 활발" 표시: 같은 시군구 안에서 최근 6개월 거래가 HOT_MIN건 이상인 단지 중 회전율(6개월 거래 ÷ 세대수) 상위 HOT_TOP.
+ * 세대수를 모르는 단지(K-apt 미매칭)는 따로 6개월 거래 건수 상위 HOT_TOP. 판단이 아니라 집계이므로 기준값(cut·of·rank)을 같이 적는다.
+ */
+const HOT_MIN = 5, HOT_TOP = 0.1;
+function markHot(complexes) {
+  for (const c of complexes) c.hot = null;
+  const withUnits = complexes.filter((c) => c.n6 >= HOT_MIN && c.kapt?.units > 0).map((c) => ({ c, v: +(c.n6 / c.kapt.units * 100).toFixed(2) }));
+  const noUnits = complexes.filter((c) => c.n6 >= HOT_MIN && !(c.kapt?.units > 0)).map((c) => ({ c, v: c.n6 }));
+  for (const [list, byUnits] of [[withUnits, true], [noUnits, false]]) {
+    if (!list.length) continue;
+    list.sort((a, b) => b.v - a.v || b.c.n6 - a.c.n6);
+    const k = Math.max(1, Math.ceil(list.length * HOT_TOP));
+    const cut = list[k - 1].v;
+    list.forEach((x, i) => { if (i < k) x.c.hot = { byUnits, rate: byUnits ? x.v : null, n6: x.c.n6, units: byUnits ? x.c.kapt.units : null, cut, of: list.length, rank: i + 1 }; });
+  }
+}
+
 function main() {
   const t0 = Date.now();
   const regions = loadRegions().filter((r) => !sidoFilter || sidoFilter.includes(r.sido));
@@ -206,10 +224,11 @@ function main() {
     const d = JSON.parse(readFileSync(p, 'utf8'));
     const complexes = d.complexes;
     for (const c of complexes) c.static = staticIds.has(c.id);
+    markHot(complexes);
     writeFileSync(p, JSON.stringify(d));
     const nStatic = complexes.filter((c) => c.static).length;
     const trades = complexes.reduce((s, c) => s + c.n36, 0);
-    Object.assign(g, { complexes: complexes.length, static: nStatic, trades36: trades, geo: complexes.filter((c) => c.lat).length, kapt: complexes.filter((c) => c.kapt).length, transit: complexes.filter((c) => c.transit.length).length, redev: complexes.filter((c) => c.redev).length, news: complexes.filter((c) => c.news.length).length });
+    Object.assign(g, { complexes: complexes.length, static: nStatic, trades36: trades, geo: complexes.filter((c) => c.lat).length, kapt: complexes.filter((c) => c.kapt).length, transit: complexes.filter((c) => c.transit.length).length, redev: complexes.filter((c) => c.redev).length, news: complexes.filter((c) => c.news.length).length, hot: complexes.filter((c) => c.hot).length });
     for (const c of complexes) {
       const prefix = c.id.split('-')[0];
       if (prefix === g.lawd) continue;

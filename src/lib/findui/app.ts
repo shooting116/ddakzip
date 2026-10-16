@@ -6,7 +6,7 @@ declare const kakao: any;
 
 type Slim = {
   id: string; n: string; d: string; b: number | null; la: number | null; lo: number | null;
-  u: number | null; r: number | null; p: number | null; pb: string | null; n6: number; n36: number; st: number;
+  u: number | null; r: number | null; p: number | null; pb: string | null; n6: number; n36: number; st: number; h: number;
   t: [number, number | null, string | null, number, number | null][];
   l: [string, number, number] | null;
 };
@@ -21,6 +21,7 @@ interface State {
   units: 'all' | 300 | 500 | 1000;
   fitOnly: boolean;
   mapOnly: boolean;
+  hotOnly: boolean;             // 🔥 거래 활발(같은 시군구 회전율 상위 10%)만
   sort: 'fit' | 'priceAsc' | 'priceDesc' | 'trades' | 'new' | 'units';
   view: 'both' | 'list';
 }
@@ -59,7 +60,7 @@ function pyeong(key: number) {
 const basisLabel: Record<string, string> = { median6: '6개월 중앙값', ref: '참고용', last: '마지막 거래가' };
 
 function load(): State {
-  const d: State = { budgetMan: 0, sido: '서울', lawd: 'all', type: 'all', built: 'all', units: 'all', fitOnly: false, mapOnly: false, sort: 'fit', view: 'both' };
+  const d: State = { budgetMan: 0, sido: '서울', lawd: 'all', type: 'all', built: 'all', units: 'all', fitOnly: false, mapOnly: false, hotOnly: false, sort: 'fit', view: 'both' };
   try { const raw = localStorage.getItem(KEY); if (raw) Object.assign(d, JSON.parse(raw)); } catch { /* */ }
   try { const b = localStorage.getItem(BUDGET_KEY); if (b && !d.budgetMan) { const j = JSON.parse(b); d.budgetMan = j.budgetMan ?? 0; if (j.lawd) { d.lawd = j.lawd; d.sido = j.sido ?? d.sido; } } } catch { /* */ }
   const q = new URLSearchParams(location.search);
@@ -108,13 +109,13 @@ function unitsOk(u: number | null): boolean {
   return (u ?? 0) >= s.units;
 }
 // 결과가 0일 때 "어느 조건에서 몇 개가 빠졌는지" 보여주기 위한 단계별 집계
-type Funnel = { label: string; n: number; key?: 'built' | 'units' | 'type' | 'budget' | 'fitOnly' | 'mapOnly' }[];
+type Funnel = { label: string; n: number; key?: 'built' | 'units' | 'type' | 'budget' | 'fitOnly' | 'hotOnly' | 'mapOnly' }[];
 let funnel: Funnel = [];
 let noGeoDropped = 0;
 function compute() {
   const B = s.budgetMan;
   fitted = [];
-  const cnt = { built: 0, units: 0, type: 0, budget: 0, fit: 0, map: 0 };
+  const cnt = { built: 0, units: 0, type: 0, budget: 0, fit: 0, hot: 0, map: 0 };
   noGeoDropped = 0;
   for (const c of rows) {
     if (!builtOk(c.b)) continue; cnt.built++;
@@ -133,6 +134,7 @@ function compute() {
       fitKey = t[0]; fitPrice = t[1] as number;
     }
     cnt.fit++;
+    if (s.hotOnly && !c.h) continue; cnt.hot++;
     if (s.mapOnly && bounds && c.la != null && c.lo != null && !bounds.contain(new kakao.maps.LatLng(c.la, c.lo))) continue;
     if (s.mapOnly && bounds && c.la == null) { noGeoDropped++; continue; }
     cnt.map++;
@@ -144,6 +146,7 @@ function compute() {
   if (s.type !== 'all') funnel.push({ label: '평형', n: cnt.type, key: 'type' });
   if (B > 0) funnel.push({ label: '예산 안', n: cnt.budget, key: 'budget' });
   if (B > 0 && s.fitOnly) funnel.push({ label: '쏙 들어오는 구간', n: cnt.fit, key: 'fitOnly' });
+  if (s.hotOnly) funnel.push({ label: '거래 활발', n: cnt.hot, key: 'hotOnly' });
   if (s.mapOnly && bounds) funnel.push({ label: '지도 영역 안', n: cnt.map, key: 'mapOnly' });
   const by: Record<State['sort'], (a: typeof fitted[0], b: typeof fitted[0]) => number> = {
     fit: (a, b) => (b.ratio ?? 0) - (a.ratio ?? 0) || b.c.n6 - a.c.n6,
@@ -187,6 +190,7 @@ function renderFilters() {
       <div class="chips">${chip('built', 'all', '준공 전체')}${chip('built', 10, '10년 이내')}${chip('built', 20, '20년 이내')}${chip('built', 'old', '20년 초과')}${chip('units', 'all', '세대 전체')}${chip('units', 300, '300+')}${chip('units', 500, '500+')}${chip('units', 1000, '1,000+')}</div>
       <div class="chips">
         ${s.budgetMan ? `<button type="button" class="chip ${s.fitOnly ? 'on' : ''}" data-toggle="fitOnly">쏙 들어오는 구간만 (예산의 85~100%)</button>` : ''}
+        <button type="button" class="chip ${s.hotOnly ? 'on' : ''}" data-toggle="hotOnly" title="같은 시군구 안에서 최근 6개월 거래 ÷ 세대수가 상위 10%인 단지">🔥 거래 활발만</button>
         ${KAKAO_KEY ? `<button type="button" class="chip ${s.mapOnly ? 'on' : ''}" data-toggle="mapOnly">지도 영역 안만</button>` : ''}
         <select class="sortsel" data-select="sort" aria-label="정렬">
           <option value="fit" ${s.sort === 'fit' ? 'selected' : ''}>예산에 가까운 순</option>
@@ -209,7 +213,7 @@ function renderItem(f: typeof fitted[0]) {
   return `
     <a class="item ${selected === c.id ? 'sel' : ''}" href="/apt/${esc(c.id)}/" data-id="${esc(c.id)}">
       <div class="it-main">
-        <div class="it-name">${esc(c.n)} <span class="sub">${esc(c.d)}${c.b ? ` · ${c.b}년` : ''}${c.u ? ` · ${c.u.toLocaleString()}세대` : ''}</span></div>
+        <div class="it-name">${esc(c.n)}${c.h ? ' <span class="pill p-hot">🔥 거래 활발</span>' : ''} <span class="sub">${esc(c.d)}${c.b ? ` · ${c.b}년` : ''}${c.u ? ` · ${c.u.toLocaleString()}세대` : ''}</span></div>
         <div class="it-sub sub">${f.fitKey}㎡ · ${pyeong(f.fitKey!)}평형 · ${basis}${t && t[3] ? ` · 6개월 ${t[3]}건` : ''}${yoy != null ? ` · <span class="${yoy >= 0 ? 'up' : 'down'}">1년 ${yoy > 0 ? '+' : ''}${yoy}%</span>` : ''}</div>
         ${pct != null ? `<div class="bar"><i style="width:${Math.min(100, pct)}%"></i></div>` : ''}
       </div>
@@ -223,7 +227,7 @@ function renderEmpty() {
   const prev = zero ? funnel[funnel.indexOf(zero) - 1]?.n ?? 0 : 0;
   const hint: Record<string, string> = {
     built: '준공 필터를 넓히면', units: '세대수 필터를 넓히면', type: '평형을 바꾸거나 "평형 전체"로 하면',
-    budget: '예산을 올리거나 지역을 바꾸면', fitOnly: '"쏙 들어오는 구간만"을 끄면', mapOnly: '지도를 옮기거나 "지도 영역 안만"을 끄면',
+    budget: '예산을 올리거나 지역을 바꾸면', fitOnly: '"쏙 들어오는 구간만"을 끄면', hotOnly: '"거래 활발만"을 끄면', mapOnly: '지도를 옮기거나 "지도 영역 안만"을 끄면',
   };
   const geo = zero?.key === 'mapOnly' && noGeoDropped ? ` 좌표가 없는 단지 ${noGeoDropped}개는 지도 필터에 잡히지 않아요.` : '';
   return `<div class="empty">
@@ -356,7 +360,7 @@ function bind() {
       const fl = root.querySelector('.filters'); if (fl) fl.outerHTML = renderFilters();
       rerenderList(); syncMarkers();
     } else if (t.dataset.toggle) {
-      const k = t.dataset.toggle as 'fitOnly' | 'mapOnly'; s[k] = !s[k]; t.classList.toggle('on', s[k]);
+      const k = t.dataset.toggle as 'fitOnly' | 'mapOnly' | 'hotOnly'; s[k] = !s[k]; t.classList.toggle('on', s[k]);
       compute(); shown = PAGE; save(); rerenderList(); syncMarkers();
     } else if (t.dataset.action === 'more') {
       shown += PAGE; rerenderList();

@@ -31,6 +31,14 @@ const similar = rep?.price
   ? sg.complexes.filter((x) => x.id !== c.id && x.price && Math.abs(x.price - rep.price!) / rep.price! <= 0.1).sort((a, b) => b.n6 - a.n6).slice(0, 6)
   : [];
 
+// 🔥 거래 활발 기준 문구 (집계값만, 판단 없이)
+const hot = c.hot;
+const hotLine = hot
+  ? hot.byUnits
+    ? `6개월 ${hot.n6}건 ÷ ${hot.units!.toLocaleString()}세대 = 회전율 ${hot.rate}% · ${c.sigungu} 세대수 확인 단지 ${hot.of}개 중 ${hot.rank}위 (상위 10% 기준선 ${hot.cut}%)`
+    : `6개월 ${hot.n6}건 · ${c.sigungu}에서 세대수 미확인 단지 ${hot.of}개 중 ${hot.rank}위 (상위 10% 기준선 ${hot.cut}건, 세대수를 몰라 건수로만 비교)`
+  : '';
+
 const title = `${c.name} 실거래가·시세`;
 const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label}(${rep.pyeong}평형) ${eok(rep.price)}` : ''} · 36개월 실거래 ${c.n36}건${k?.units ? ` · ${k.units.toLocaleString()}세대` : ''}${c.built ? ` · ${c.built}년` : ''}. 국토교통부 실거래가 ${sg.asOf} 기준.`;
 ---
@@ -39,7 +47,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
     <a href="/">홈</a> › <a href={`/area/${lawd}/`}>{c.sido} {c.sigungu}</a> › <span>{c.umd}</span>
   </nav>
   <header class="q" style="padding:4px 4px 10px">
-    <h1 class="big" style="margin:0;font-size:24px">{c.name}</h1>
+    <h1 class="big" style="margin:0;font-size:24px">{c.name}{hot && <span class="pill p-hot hotpill">🔥 거래 활발</span>}</h1>
     <p class="sub2" style="margin:6px 0 0">
       {c.sido} {c.sigungu} {c.umd}{c.jibun ? ` ${c.jibun}` : ''}
       {c.built && ` · ${c.built}년 준공${age != null ? ` (${age}년차)` : ''}`}
@@ -47,6 +55,13 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
     </p>
     {c.aliases.length > 0 && <p class="sub" style="margin:4px 0 0">실거래 신고 상 다른 이름: {c.aliases.join(', ')}</p>}
   </header>
+
+  {hot && (
+    <section class="hotbox" aria-label="거래 활발 기준">
+      <b>🔥 거래 활발</b>은 최근 6개월에 세대수 대비 거래가 많았다는 집계 표시예요. 가격 전망이나 추천이 아닙니다.
+      <span class="sub2">{hotLine} · 국토교통부 실거래 {sg.asOf} 기준, 해제·직거래 제외 · 6개월 5건 이상인 단지만 비교</span>
+    </section>
+  )}
 
   {rep && (
     <section class="card hero">
@@ -217,6 +232,9 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
   .news { list-style: none; margin: 6px 0 0; padding: 0; }
   .news li { padding: 9px 0; border-bottom: 1px solid var(--soft); display: flex; flex-direction: column; gap: 2px; }
   .news li:last-child { border-bottom: 0; } .news a { color: var(--fg); font-weight: 600; }
+  .hotpill { font-size: 12px; vertical-align: 4px; margin-left: 8px; }
+  .hotbox { margin: 0 0 12px; padding: 12px 16px; border-radius: 16px; background: var(--orange-soft); font-size: 13.5px; line-height: 1.5; color: var(--fg); }
+  .hotbox b { color: var(--orange); } .hotbox .sub2 { display: block; margin-top: 4px; }
   .report { margin: 12px 0 0; font-size: 13px; } .report a { color: var(--blue); font-weight: 600; } .report .sub { display: block; margin-top: 2px; }
 </style>
 

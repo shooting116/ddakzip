@@ -28,12 +28,14 @@ export interface Complex {
   transit: { line: string; type: string; station: string; status: string; open: number | null; dist: number; approx?: boolean }[];
   redev: { program: string; zone: string; type: string; stage: string; stageDate: string | null; planned: number | null; existing: number | null; source: string; sourceDate: string | null; by: string }[] | null;
   news: { t: string; o: string; d: string; u: string }[];
+  /** 거래 활발: 같은 시군구 안 회전율(6개월 거래÷세대수) 상위 10% (세대수 모르면 건수 상위 10%). 기준값 포함 */
+  hot: { byUnits: boolean; rate: number | null; n6: number; units: number | null; cut: number; of: number; rank: number } | null;
 }
 export interface SigunguIndex { lawd: string; sido: string; sigungu: string; regulated: boolean; asOf: string; months: string[]; complexes: Complex[] }
 export interface Summary {
   asOf: string; months: number; staticMin: number; staticMax: number; staticCut: number;
   sido: Record<string, { complexes: number; static: number; trades36: number }>;
-  sigungu: { lawd: string; sido: string; sigungu: string; regulated: boolean; complexes: number; static: number; trades36: number; geo: number; kapt: number; transit: number; redev: number; news: number }[];
+  sigungu: { lawd: string; sido: string; sigungu: string; regulated: boolean; complexes: number; static: number; trades36: number; geo: number; kapt: number; transit: number; redev: number; news: number; hot?: number }[];
   total: { complexes: number; static: number; trades36: number };
   /** aptSeq 앞 5자리 → 실제 시군구 코드 목록 (앞자리와 다른 경우만. 2026 행정구역 개편 지역) */
   idPrefix: Record<string, string[]>;
@@ -87,7 +89,7 @@ export function findComplex(id: string): { c: Complex; s: SigunguIndex } | null 
 export function slim(c: Complex) {
   return {
     id: c.id, n: c.name, d: c.umd, b: c.built, la: c.lat, lo: c.lng,
-    u: c.kapt?.units ?? null, r: c.rep, p: c.price, pb: c.priceBasis, n6: c.n6, n36: c.n36, st: c.static ? 1 : 0,
+    u: c.kapt?.units ?? null, r: c.rep, p: c.price, pb: c.priceBasis, n6: c.n6, n36: c.n36, st: c.static ? 1 : 0, h: c.hot ? 1 : 0,
     t: c.types.map((t) => [t.key, t.price, t.basis, t.n6, t.yoy]),
     l: c.last ? [c.last.date, c.last.amt, c.last.area] : null,
     k: c.kapt ? { park: c.kapt.park, elev: c.kapt.elev, sub: c.kapt.subway, subw: c.kapt.subwayWalk, dongs: c.kapt.dongs, top: c.kapt.topFloor, heat: c.kapt.heat, used: c.kapt.used } : null,

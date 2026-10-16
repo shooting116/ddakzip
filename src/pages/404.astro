@@ -40,7 +40,7 @@ import Base from '../layouts/Base.astro';
       root.innerHTML = `
         <nav class="sub" style="padding:2px 4px 6px"><a href="/">홈</a> › <a href="/area/${esc(d.lawd)}/">${esc(d.sido)} ${esc(d.sigungu)}</a> › ${esc(c.d)}</nav>
         <header class="q" style="padding:4px 4px 10px">
-          <h1 class="big" style="margin:0;font-size:24px">${esc(c.n)}</h1>
+          <h1 class="big" style="margin:0;font-size:24px">${esc(c.n)}${c.h ? ' <span class="pill p-hot" style="font-size:12px;vertical-align:4px;margin-left:8px">🔥 거래 활발</span>' : ''}</h1>
           <p class="sub2" style="margin:6px 0 0">${esc(d.sido)} ${esc(d.sigungu)} ${esc(c.d)}${c.b ? ` · ${c.b}년 준공` : ''}${c.u ? ` · ${c.u.toLocaleString()}세대` : ''}</p>
         </header>
         <section class="card">

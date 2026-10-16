@@ -17,6 +17,7 @@ const trades6 = cs.reduce((a, c) => a + c.n6, 0);
 const by84 = cs.map((c) => ({ c, t: c.types.find((t) => Math.abs(t.key - 84) <= 5 && t.basis === 'median6') })).filter((x) => x.t).sort((a, b) => b.t!.price! - a.t!.price!).slice(0, 10);
 // 거래 활발: 최근 6개월 거래 건수
 const active = [...cs].sort((a, b) => b.n6 - a.n6 || b.n12 - a.n12).slice(0, 10);
+const nHot = cs.filter((c) => c.hot).length;
 // 1년 변동: 대표 평형, 6개월 중앙값 기준(현재·1년 전 모두 3건 이상)
 const yoyList = cs.map((c) => ({ c, t: repOf(c) })).filter((x) => x.t && x.t.yoy != null && x.t.basis === 'median6');
 const up = [...yoyList].sort((a, b) => b.t!.yoy! - a.t!.yoy!).slice(0, 10);
@@ -46,7 +47,8 @@ const desc = `${sg.sigungu} 아파트 ${cs.length.toLocaleString()}개 단지의
   )}
   <section class="card sec">
     <h2>최근 6개월 거래 많은 단지</h2>
-    <ol class="rank">{active.map((c) => <li><a href={`/apt/${c.id}/`}><span class="nm">{c.name} <span class="sub">{c.umd} · {c.rep}㎡ {eok(c.price)}</span></span><b>{c.n6}건</b></a></li>)}</ol>
+    <ol class="rank">{active.map((c) => <li><a href={`/apt/${c.id}/`}><span class="nm">{c.name}{c.hot && <span class="pill p-hot hp">🔥 거래 활발</span>} <span class="sub">{c.umd} · {c.rep}㎡ {eok(c.price)}</span></span><b>{c.n6}건</b></a></li>)}</ol>
+    {nHot > 0 && <p class="src">🔥 거래 활발 = 최근 6개월 거래 ÷ 세대수(회전율)가 {sg.sigungu} 안에서 상위 10%인 단지 {nHot}개 (6개월 5건 이상만 비교, 세대수 미확인 단지는 건수로 따로 비교). 건수 순위와 다를 수 있고, 가격 전망이 아닙니다.</p>}
   </section>
   <div class="ad-slot" aria-hidden="true"></div>
   {up.length > 0 && (
@@ -85,6 +87,7 @@ const desc = `${sg.sigungu} 아파트 ${cs.length.toLocaleString()}개 단지의
   .nl li { margin: 2px 0; } .nl a { color: var(--fg2); }
   .rank .nm { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; }
   .rank b { flex: none; font-variant-numeric: tabular-nums; }
+  .rank .hp { font-size: 10.5px; padding: 2px 7px; margin-left: 4px; vertical-align: 1px; }
   .up { color: var(--red); } .down { color: var(--blue); }
   .all { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 16px; font-size: 13.5px; }
   .all li { break-inside: avoid; padding: 5px 0; }

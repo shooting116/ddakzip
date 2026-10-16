@@ -69,6 +69,7 @@ img { max-width: 100%; display: block; }
 .p-ok { background: var(--green-soft); color: var(--green); }
 .p-warn { background: var(--orange-soft); color: var(--orange); }
 .p-bad { background: var(--red-soft); color: var(--red); }
+.p-hot { background: var(--orange-soft); color: var(--orange); }
 .p-soft { background: var(--soft); color: var(--fg2); }
 
 /* 행 목록 (아이콘 · 제목/설명 · 꺽쇠) */
