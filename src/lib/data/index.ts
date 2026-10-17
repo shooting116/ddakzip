@@ -28,7 +28,7 @@ export interface Complex {
   types: TypeStat[]; rep: number | null; price: number | null; priceBasis: TypeStat['basis'];
   n36: number; n12: number; n6: number; cancel36: number;
   last: { date: string; amt: number; area: number; floor: number | null } | null;
-  transit: { line: string; type: string; station: string; status: string; open: number | null; dist: number; approx?: boolean }[];
+  transit: { line: string; type: string; station: string; status: string; open: number | null; dist: number; approx?: boolean; lat?: number; lng?: number }[];
   redev: { program: string; zone: string; type: string; stage: string; stageDate: string | null; planned: number | null; existing: number | null; source: string; sourceDate: string | null; by: string }[] | null;
   news: { t: string; o: string; d: string; u: string }[];
   /** 거래 활발: 같은 시군구 안 회전율(6개월 거래÷세대수) 상위 10% (세대수 모르면 건수 상위 10%). 기준값 포함 */

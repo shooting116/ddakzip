@@ -72,6 +72,17 @@ const hotLine = hot
     : `6개월 ${hot.n6}건 · ${c.sigungu}에서 세대수 미확인 단지 ${hot.of}개 중 ${hot.rank}위 (상위 10% 기준선 ${hot.cut}건, 세대수를 몰라 건수로만 비교)`
   : '';
 
+// 위치 지도: 좌표 있는 단지만. 카카오 SDK는 지도 카드가 화면 가까이 올 때 불러온다(초기 로딩 영향 없음)
+const KAKAO_KEY = (import.meta.env.PUBLIC_KAKAO_JS_KEY as string | undefined) || '';
+const hasGeo = c.lat != null && c.lng != null;
+const mapData = hasGeo ? {
+  la: c.lat, lo: c.lng, n: c.name,
+  st: c.transit.filter((t) => t.lat != null && t.lng != null).map((t) => ({ n: t.station, l: t.line, s: t.status === '운행중' ? '개통' : t.open ? `${t.open} 예정` : '예정', d: t.dist, la: t.lat, lo: t.lng })),
+  sim: similar.filter((x) => x.lat != null && x.lng != null).map((x) => ({ id: x.id, n: x.name, la: x.lat, lo: x.lng, p: x.price, r: x.rep })),
+} : null;
+const kakaoMapUrl = hasGeo ? `https://map.kakao.com/link/map/${encodeURIComponent(c.name)},${c.lat},${c.lng}` : null;
+const roadviewUrl = hasGeo ? `https://map.kakao.com/link/roadview/${c.lat},${c.lng}` : null;
+
 const title = `${c.name} 실거래가·시세`;
 const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label}(${rep.pyeong}평형) ${eok(rep.price)}` : ''} · 36개월 실거래 ${c.n36}건${k?.units ? ` · ${k.units.toLocaleString()}세대` : ''}${c.built ? ` · ${c.built}년` : ''}. 국토교통부 실거래가 ${sg.asOf} 기준.`;
 ---
@@ -107,6 +118,23 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
       <div class="actions">
         <a class="btn" href={`/find/?budget=${rep.price ?? ''}&lawd=${lawd}`}>이 가격대 다른 단지 보기</a>
         <button type="button" class="btn ghost cmp" data-cmp={c.id} data-name={c.name}>비교에 담기</button>
+      </div>
+    </section>
+  )}
+
+  {hasGeo && (
+    <section class="card mapcard" data-amap={JSON.stringify(mapData)} data-key={KAKAO_KEY}>
+      <h2>위치 <span class="sub">{c.sido} {c.sigungu} {c.umd}{c.jibun ? ` ${c.jibun}` : ''}</span></h2>
+      {KAKAO_KEY && (
+        <div class="amap" id="amap" aria-label={`${c.name} 위치 지도`}>
+          <div class="amap-ph sub">지도를 불러오는 중…</div>
+        </div>
+      )}
+      {KAKAO_KEY && <p class="legend sub">검은 말풍선 = 이 단지 · 파란 점 = 1.5km 안 호재 역 · 흰 말풍선 = 같은 시군구에서 대표 평형 시세가 ±10% 안인 단지(누르면 이동)</p>}
+      <div class="maplinks">
+        <a class="btn ghost" href={kakaoMapUrl} rel="noopener" target="_blank">카카오맵에서 열기</a>
+        <a class="btn ghost" href={roadviewUrl} rel="noopener" target="_blank">로드뷰</a>
+        <a class="btn ghost" href={`/find/?lawd=${lawd}`}>내 예산으로 {c.sigungu} 찾기</a>
       </div>
     </section>
   )}
@@ -283,6 +311,21 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
   .news li { padding: 9px 0; border-bottom: 1px solid var(--soft); display: flex; flex-direction: column; gap: 2px; }
   .news li:last-child { border-bottom: 0; } .news a { color: var(--fg); font-weight: 600; }
   .hotpill { font-size: 12px; vertical-align: 4px; margin-left: 8px; }
+  .amap { position: relative; height: 230px; border-radius: 14px; overflow: hidden; background: var(--soft); margin-top: 6px; }
+  @media (min-width: 600px) { .amap { height: 320px; } }
+  .amap-ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+  .amap :global(.am-pin) { position: relative; background: var(--fg); color: #fff; font-size: 12.5px; font-weight: 700; padding: 6px 10px; border-radius: 10px; white-space: nowrap; box-shadow: 0 4px 14px rgba(0,0,0,.2); }
+  .amap :global(.am-pin::after) { content: ''; position: absolute; left: 50%; bottom: -6px; margin-left: -6px; border: 6px solid transparent; border-top-color: var(--fg); border-bottom: 0; }
+  .amap :global(.am-st) { display: inline-flex; align-items: center; gap: 5px; background: rgba(255,255,255,.95); color: var(--fg); font-size: 11.5px; font-weight: 600; padding: 3px 8px 3px 5px; border-radius: 999px; white-space: nowrap; box-shadow: 0 1px 4px rgba(0,0,0,.15); }
+  .amap :global(.am-st i) { width: 9px; height: 9px; border-radius: 50%; background: var(--blue); border: 2px solid #fff; box-shadow: 0 0 0 1.5px var(--blue); }
+  .amap :global(.am-st span) { color: var(--fg2); font-weight: 500; }
+  .amap :global(.am-sim) { display: inline-block; background: #fff; color: var(--fg); font-size: 11.5px; font-weight: 700; padding: 4px 8px; border-radius: 8px; white-space: nowrap; box-shadow: 0 1px 5px rgba(0,0,0,.18); border: 1px solid var(--line); }
+  .amap :global(.am-sim:hover) { background: var(--blue-soft); border-color: var(--blue); }
+  .amap :global(.am-hint) { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; text-align: center; padding: 6px; font-size: 12px; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,.45)); pointer-events: none; }
+  .mapcard .legend { margin: 8px 0 0; }
+  .maplinks { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+  .maplinks .btn { width: auto; padding: 11px 8px; font-size: 13.5px; }
+  .maplinks .btn:last-child { grid-column: 1 / -1; }
   .trades :global(.ft.hi) { color: var(--red); background: var(--red-soft); }
   .type .tp .ppy { font-size: 11.5px; }
   .mybudget { margin-top: 8px; display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--fg2); }
@@ -293,6 +336,51 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
 </style>
 
 <script>
+  // 위치 지도: 카드가 화면 가까이 오면 카카오 SDK를 불러와 단지 핀·호재 역·비슷한 예산 단지를 그린다
+  declare const kakao: any;
+  const mapWrap = document.querySelector<HTMLElement>('.mapcard[data-amap]');
+  const mapEl = document.getElementById('amap');
+  if (mapWrap && mapEl && mapWrap.dataset.key) {
+    const d = JSON.parse(mapWrap.dataset.amap!) as { la: number; lo: number; n: string; st: { n: string; l: string; s: string; d: number; la: number; lo: number }[]; sim: { id: string; n: string; la: number; lo: number; p: number | null; r: number | null }[] };
+    const esc = (v: unknown) => String(v ?? '').replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch]!);
+    const eok = (man: number | null) => man == null ? '—' : man < 10000 ? `${Math.round(man).toLocaleString()}만` : `${(man / 10000).toFixed(man >= 1000000 ? 0 : 1).replace(/\.0$/, '')}억`;
+    const draw = () => {
+      const center = new kakao.maps.LatLng(d.la, d.lo);
+      const map = new kakao.maps.Map(mapEl, { center, level: 3 });
+      map.addControl(new kakao.maps.ZoomControl(), kakao.maps.ControlPosition.RIGHT);
+      // 모바일: 한 손가락 스크롤이 지도에 잡히지 않도록, 지도를 한 번 누르기 전까지는 드래그를 끈다
+      const touch = matchMedia('(pointer: coarse)').matches;
+      if (touch) {
+        map.setDraggable(false);
+        const hint = document.createElement('div'); hint.className = 'am-hint'; hint.textContent = '지도를 한 번 누르면 움직일 수 있어요'; mapEl.appendChild(hint);
+        const on = () => { map.setDraggable(true); hint.remove(); mapEl.removeEventListener('touchend', on); };
+        mapEl.addEventListener('touchend', on, { passive: true });
+      }
+      for (const x of d.sim) {
+        const o = new kakao.maps.CustomOverlay({ position: new kakao.maps.LatLng(x.la, x.lo), yAnchor: 1.4, zIndex: 1, content: `<a class="am-sim" href="/apt/${esc(x.id)}/" title="${esc(x.n)}">${eok(x.p)}</a>` });
+        o.setMap(map);
+      }
+      for (const s of d.st) {
+        const o = new kakao.maps.CustomOverlay({ position: new kakao.maps.LatLng(s.la, s.lo), yAnchor: 0.5, xAnchor: 0.1, zIndex: 2, content: `<div class="am-st"><i></i>${esc(s.n)}역 <span>${esc(s.l)} · ${s.d >= 1000 ? `${(s.d / 1000).toFixed(1)}km` : `${s.d}m`}</span></div>` });
+        o.setMap(map);
+      }
+      new kakao.maps.Marker({ position: center, map, title: d.n });
+      new kakao.maps.CustomOverlay({ position: center, yAnchor: 2.3, zIndex: 3, content: `<div class="am-pin">${esc(d.n)}</div>` }).setMap(map);
+      mapEl.querySelector('.amap-ph')?.remove();
+    };
+    const start = () => {
+      if ((window as any).kakao?.maps) { kakao.maps.load(draw); return; }
+      const sc = document.createElement('script');
+      sc.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${mapWrap.dataset.key}&autoload=false`;
+      sc.onload = () => kakao.maps.load(draw);
+      sc.onerror = () => { const ph = mapEl.querySelector('.amap-ph'); if (ph) ph.textContent = '지도를 불러오지 못했어요. 아래 "카카오맵에서 열기"를 눌러 주세요.'; };
+      document.head.appendChild(sc);
+    };
+    const io = new IntersectionObserver((es) => { if (es.some((e) => e.isIntersecting)) { io.disconnect(); start(); } }, { rootMargin: '300px' });
+    const arm = () => io.observe(mapEl);
+    if (document.readyState === 'complete') arm(); else window.addEventListener('load', arm, { once: true });
+  }
+
   // 실거래 내역: 평형 칩 · 저층 제외 · 더 보기 (36개월 전체 행이 페이지에 있고 보이기만 바꾼다)
   const sec = document.getElementById('trades');
   if (sec) {

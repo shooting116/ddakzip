@@ -135,7 +135,7 @@ function nearbyStations(lat, lng, stations, radius) {
     const d = distM(lat, lng, s.lat, s.lng);
     if (d > radius) continue;
     const cur = best.get(s.line);
-    if (!cur || d < cur.dist) best.set(s.line, { line: s.line, type: s.type, station: s.name, status: s.status, open: s.open, dist: Math.round(d), approx: !!s.approx });
+    if (!cur || d < cur.dist) best.set(s.line, { line: s.line, type: s.type, station: s.name, status: s.status, open: s.open, dist: Math.round(d), approx: !!s.approx, lat: s.lat, lng: s.lng });
   }
   return [...best.values()].sort((a, b) => a.dist - b.dist);
 }
