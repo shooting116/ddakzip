@@ -205,17 +205,18 @@ function main() {
       if (!c.built && row.built) c.built = row.built;
     }
     // 전월세 → 단지 연결 키 (전월세 API에는 aptSeq가 없다)
-    const rentIdx = new Map(), rentByName = new Map();
+    const rentIdx = new Map(), rentByName = new Map(), rentByJibun = new Map();
     for (const c of map.values()) {
       for (const nm of c.names.keys()) {
         rentIdx.set(`${c.umdNm}|${c.jibun}|${nm}`, c.id);
         const nk = `${c.umdNm}|${nm}`; rentByName.set(nk, rentByName.has(nk) ? null : c.id); // 같은 동에 같은 이름이 둘이면 null(모호)
       }
+      if (c.jibun) { const jk = `${c.umdNm}|${c.jibun}`; rentByJibun.set(jk, rentByJibun.has(jk) ? null : c.id); } // 같은 지번에 단지가 하나뿐일 때만 (이름 표기 차이 흡수)
     }
     const rentRows = new Map();
     let rentN = 0, rentMiss = 0;
     for (const x of loadRent(r.lawd, ymAdd(asOfYm, -11))) {
-      const id = rentIdx.get(`${x.umdNm}|${x.jibun}|${x.apt}`) ?? rentByName.get(`${x.umdNm}|${x.apt}`) ?? null;
+      const id = rentIdx.get(`${x.umdNm}|${x.jibun}|${x.apt}`) ?? rentByName.get(`${x.umdNm}|${x.apt}`) ?? (x.jibun ? rentByJibun.get(`${x.umdNm}|${x.jibun}`) : null) ?? null;
       if (!id) { rentMiss++; continue; }
       (rentRows.get(id) ?? rentRows.set(id, []).get(id)).push(x); rentN++;
     }
@@ -301,9 +302,9 @@ function main() {
     total += complexes.length; totalStatic += nStatic; totalTrades += trades;
   }
   summary.total = { complexes: total, static: totalStatic, trades36: totalTrades };
-  writeFileSync(join(OUT, 'summary.json'), JSON.stringify(summary, null, 1) + '\n');
   summary.jeonse = summary.sigungu.reduce((a, g) => a + (g.jeonse ?? 0), 0);
-  console.log(`[build-index] 시군구 ${regions.length} · 단지 ${total} (정적 ${totalStatic}, 상한 ${STATIC_MAX}, 커트 36개월 ${staticCut}건) · 거래 ${totalTrades} · 중복 aptSeq ${nDup} · 앞자리≠코드 ${Object.keys(summary.idPrefix).length} · ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+  writeFileSync(join(OUT, 'summary.json'), JSON.stringify(summary, null, 1) + '\n');
+  console.log(`[build-index] 시군구 ${regions.length} · 단지 ${total} (정적 ${totalStatic}, 상한 ${STATIC_MAX}, 커트 36개월 ${staticCut}건) · 거래 ${totalTrades} · 전세 ${summary.jeonse} · 중복 aptSeq ${nDup} · 앞자리≠코드 ${Object.keys(summary.idPrefix).length} · ${((Date.now() - t0) / 1000).toFixed(1)}s`);
 }
 
 if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) main();
