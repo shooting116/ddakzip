@@ -3,7 +3,7 @@ title: "수도권 광역·도시철도 2026~2031 — 신안산선·월판선·�
 description: "GTX를 뺀 수도권 주요 철도 8개 노선의 정차역, 공정률, 개통 목표를 2026년 10월 기준 보도와 발표로 정리했습니다. 사고·지연 사유도 같이 적었습니다."
 category: future
 publishAt: "2026-10-18T08:00:00+09:00"
-published: false
+published: true
 asOf: "2026-10-12"
 facts: []
 cta: ref
