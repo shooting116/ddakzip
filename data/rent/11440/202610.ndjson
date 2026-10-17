@@ -228,6 +228,7 @@
 {"lawd":"11440","umdNm":"대흥동","jibun":"806","apt":"마포그랑자이","area":59.96,"floor":19,"built":2020,"date":"2026-10-15","deposit":89000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11440","umdNm":"아현동","jibun":"777","apt":"마포래미안푸르지오4단지","area":59.97,"floor":4,"built":2014,"date":"2026-10-15","deposit":85000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11440","umdNm":"신수동","jibun":"462","apt":"마포아이파크포레","area":84.9,"floor":20,"built":2019,"date":"2026-10-15","deposit":45000,"rent":280,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11440","umdNm":"염리동","jibun":"532","apt":"마포프레스티지자이","area":39.98,"floor":9,"built":2021,"date":"2026-10-15","deposit":5562,"rent":7,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":3720,"preRent":17}
 {"lawd":"11440","umdNm":"상암동","jibun":"1637","apt":"상암월드컵파크2단지","area":59.92,"floor":3,"built":2003,"date":"2026-10-15","deposit":40000,"rent":80,"term":"26.10~28.08","type":"갱신","rrr":null,"preDeposit":40000,"preRent":60}
 {"lawd":"11440","umdNm":"상암동","jibun":"1752","apt":"상암월드컵파크9단지","area":84.66,"floor":10,"built":2010,"date":"2026-10-15","deposit":42262,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":40250,"preRent":0}
 {"lawd":"11440","umdNm":"서교동","jibun":"494","apt":"서교동효성해링턴타워","area":17.93,"floor":9,"built":2020,"date":"2026-10-15","deposit":5350,"rent":43,"term":"26.11~28.04","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
