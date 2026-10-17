@@ -52,6 +52,7 @@ import Base from '../../layouts/Base.astro';
     for (const k of keys) {
       rows.push(`<tr><th>${k}㎡</th>${items.map((x) => { const t = x.c.t.find((t: any) => t[0] === k); return t ? `<td>${eok(t[1])}${t[4] != null ? `<span class="sub ${t[4] >= 0 ? 'up' : 'down'}">1년 ${t[4] > 0 ? '+' : ''}${t[4]}%</span>` : ''}${t[3] ? `<span class="sub">6개월 ${t[3]}건</span>` : ''}</td>` : '<td><span class="sub">—</span></td>'; }).join('')}</tr>`);
     }
+    rows.push(`<tr><th>전용 평당가 <span class="sub">대표 평형</span></th>${items.map((x) => { const t = x.c.t.find((t: any) => t[0] === x.c.r); const a = t?.[5]; return x.c.p && a ? `<td>${eok(Math.round(x.c.p / (a / 3.3058)))}<span class="sub">${a}㎡ 기준</span></td>` : '<td><span class="sub">—</span></td>'; }).join('')}</tr>`);
     rows.push(`<tr><th>최근 6개월 거래</th>${items.map((x) => cell(`${x.c.n6}건`)).join('')}</tr>`);
     rows.push(`<tr><th>36개월 거래</th>${items.map((x) => cell(`${x.c.n36}건`)).join('')}</tr>`);
     rows.push(`<tr><th>준공</th>${items.map((x) => cell(x.c.b ? `${x.c.b}년 (${new Date().getFullYear() - x.c.b}년차)` : null)).join('')}</tr>`);
@@ -71,7 +72,7 @@ import Base from '../../layouts/Base.astro';
         <button type="button" class="btn ghost" data-share="${esc(share)}" style="flex:1">링크 복사</button>
         <button type="button" class="btn ghost" data-clear style="flex:1">모두 빼기</button>
       </div>
-      <p class="src">시세 = 최근 6개월 실거래 중앙값(해제·직거래 제외), 1년 = 1년 전 같은 기간 중앙값 대비. 출처: 국토교통부 실거래가(${esc(items[0].asOf)} 기준)·K-apt. 단지 정보는 등록 자료 기준이며 실제와 다를 수 있습니다. 쏙집은 특정 단지를 추천하지 않습니다.</p>`;
+      <p class="src">시세 = 최근 6개월 실거래 중앙값(해제·직거래 제외), 1년 = 1년 전 같은 기간 중앙값 대비. 평당가는 전용면적(공급면적 아님)을 3.3058㎡로 나눈 값이라 다른 사이트의 공급 기준 평당가보다 높게 나옵니다. 출처: 국토교통부 실거래가(${esc(items[0].asOf)} 기준)·K-apt. 단지 정보는 등록 자료 기준이며 실제와 다를 수 있습니다. 쏙집은 특정 단지를 추천하지 않습니다.</p>`;
   }
   root.addEventListener('click', (e) => {
     const t = (e.target as HTMLElement).closest<HTMLElement>('[data-rm],[data-share],[data-clear]');

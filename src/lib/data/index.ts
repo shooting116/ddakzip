@@ -92,7 +92,7 @@ export function slim(c: Complex) {
   return {
     id: c.id, n: c.name, d: c.umd, b: c.built, la: c.lat, lo: c.lng,
     u: c.kapt?.units ?? null, r: c.rep, p: c.price, pb: c.priceBasis, n6: c.n6, n36: c.n36, st: c.static ? 1 : 0, h: c.hot ? 1 : 0,
-    t: c.types.map((t) => [t.key, t.price, t.basis, t.n6, t.yoy]),
+    t: c.types.map((t) => [t.key, t.price, t.basis, t.n6, t.yoy, +(t.areas.reduce((a, b) => a + b, 0) / t.areas.length).toFixed(2)]),
     l: c.last ? [c.last.date, c.last.amt, c.last.area] : null,
     k: c.kapt ? { park: c.kapt.park, elev: c.kapt.elev, sub: c.kapt.subway, subw: c.kapt.subwayWalk, dongs: c.kapt.dongs, top: c.kapt.topFloor, heat: c.kapt.heat, used: c.kapt.used } : null,
     tr: c.transit.slice(0, 2).map((x) => `${x.line} ${x.station}${x.status === '운행중' ? '' : x.open ? ` ${x.open}예정` : ' 예정'}`),

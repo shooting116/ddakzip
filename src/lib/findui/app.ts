@@ -7,7 +7,7 @@ declare const kakao: any;
 type Slim = {
   id: string; n: string; d: string; b: number | null; la: number | null; lo: number | null;
   u: number | null; r: number | null; p: number | null; pb: string | null; n6: number; n36: number; st: number; h: number;
-  t: [number, number | null, string | null, number, number | null][];
+  t: [number, number | null, string | null, number, number | null, number?][];   // [평형키, 시세, 기준, 6개월 건수, 1년 변동, 평균 전용면적]
   l: [string, number, number] | null;
   sk: string[];              // 1.5km 안 호재 역 키 ("역·노선")
 };

@@ -22,3 +22,8 @@ export function pct(v: number | null | undefined, digits = 1): string {
   if (v == null) return '—';
   return `${v > 0 ? '+' : ''}${v.toFixed(digits)}%`;
 }
+/** 전용면적 기준 평(3.3058㎡)당 가격, 만 원. 공급면적이 아니라 전용면적으로 나눈 값 */
+export function perPyeong(priceMan: number | null | undefined, areaM2: number | null | undefined): number | null {
+  if (priceMan == null || !areaM2) return null;
+  return Math.round(priceMan / (areaM2 / 3.3058));
+}
