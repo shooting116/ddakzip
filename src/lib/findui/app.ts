@@ -7,7 +7,8 @@ declare const kakao: any;
 type Slim = {
   id: string; n: string; d: string; b: number | null; la: number | null; lo: number | null;
   u: number | null; r: number | null; p: number | null; pb: string | null; n6: number; n36: number; st: number; h: number;
-  t: [number, number | null, string | null, number, number | null, number?][];   // [평형키, 시세, 기준, 6개월 건수, 1년 변동, 평균 전용면적]
+  t: [number, number | null, string | null, number, number | null, number?, (number | null)?, (number | null)?][];   // [평형키, 시세, 기준, 6개월 건수, 1년 변동, 평균 전용면적, 전세 중앙값, 전세가율]
+  j: number | null; jr: number | null;   // 대표 평형 전세 중앙값 · 전세가율(%)
   l: [string, number, number] | null;
   sk: string[];              // 1.5km 안 호재 역 키 ("역·노선")
 };
@@ -280,7 +281,7 @@ function renderItem(f: typeof fitted[0]) {
     <a class="item ${selected === c.id ? 'sel' : ''}" href="/apt/${esc(c.id)}/" data-id="${esc(c.id)}">
       <div class="it-main">
         <div class="it-name">${esc(c.n)}${c.h ? ' <span class="pill p-hot">🔥 거래 활발</span>' : ''} <span class="sub">${esc(c.d)}${c.b ? ` · ${c.b}년` : ''}${c.u ? ` · ${c.u.toLocaleString()}세대` : ''}</span></div>
-        <div class="it-sub sub">${f.fitKey}㎡ · ${pyeong(f.fitKey!)}평형 · ${basis}${t && t[3] ? ` · 6개월 ${t[3]}건` : ''}${yoy != null ? ` · <span class="${yoy >= 0 ? 'up' : 'down'}">1년 ${yoy > 0 ? '+' : ''}${yoy}%</span>` : ''}</div>
+        <div class="it-sub sub">${f.fitKey}㎡ · ${pyeong(f.fitKey!)}평형 · ${basis}${t && t[3] ? ` · 6개월 ${t[3]}건` : ''}${yoy != null ? ` · <span class="${yoy >= 0 ? 'up' : 'down'}">1년 ${yoy > 0 ? '+' : ''}${yoy}%</span>` : ''}${t && t[7] != null ? ` · 전세가율 ${t[7]}%` : ''}</div>
         ${pct != null ? `<div class="bar"><i style="width:${Math.min(100, pct)}%"></i></div>` : ''}
       </div>
       <div class="it-price"><b>${eok(f.fitPrice, 2)}</b>${pct != null ? `<span class="pill ${fitCls}">예산의 ${pct}%</span>` : ''}</div>

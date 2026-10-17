@@ -102,6 +102,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
       <div class="big price">{eok(rep.price)}</div>
       <div class="sub2">{rep.basis ? basisLabel[rep.basis] : '거래 없음'}{rep.priceN ? ` · ${rep.priceN}건` : ''}{rep.yoy != null ? ` · 1년 전 대비 ` : ''}{rep.yoy != null && <b class={rep.yoy >= 0 ? 'up' : 'down'}>{pct(rep.yoy)}</b>}</div>
       {rep.price && <div class="sub" style="margin-top:4px">전용 평당 {eok(perPyeong(rep.price, areaOf(rep)))} <span style="opacity:.8">({areaOf(rep).toFixed(2).replace(/\.?0+$/, '')}㎡ 기준)</span></div>}
+      {rep.jeonse?.price && <div class="sub" style="margin-top:2px">전세 <b style="color:var(--fg2)">{eok(rep.jeonse.price)}</b> ({rep.jeonse.basis === 'median6' ? '6개월 중앙값' : '참고용'} · {rep.jeonse.n6}건){rep.jeonse.ratio != null && <> · 전세가율 <b style="color:var(--fg2)">{rep.jeonse.ratio}%</b></>}</div>}
       {rep.price && <div class="mybudget" data-price={rep.price} hidden></div>}
       <div class="actions">
         <a class="btn" href={`/find/?budget=${rep.price ?? ''}&lawd=${lawd}`}>이 가격대 다른 단지 보기</a>
@@ -112,7 +113,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
 
   <section class="card">
     <h2>평형별 시세</h2>
-    <p class="sub">전용면적 기준. 같은 타입(±3㎡)은 한 줄로 묶었어요. 해제·직거래는 시세 계산에서 뺍니다. 평당가는 전용면적을 3.3058㎡로 나눈 값이라 공급면적 기준보다 높게 보입니다.</p>
+    <p class="sub">전용면적 기준. 같은 타입(±3㎡)은 한 줄로 묶었어요. 해제·직거래는 시세 계산에서 뺍니다. 평당가는 전용면적을 3.3058㎡로 나눈 값이라 공급면적 기준보다 높게 보입니다.{c.types.some((t) => t.jeonse?.price) && ' 전세는 최근 6개월 전세 계약(월세 없음) 보증금 중앙값이고, 전세가율은 전세 중앙값 ÷ 매매 시세 — 둘 다 6개월 3건 이상일 때만 계산합니다. 출처: 국토교통부 전월세 실거래가.'}</p>
     <div class="types">
       {c.types.map((t) => (
         <div class="type">
@@ -120,6 +121,7 @@ const desc = `${c.sido} ${c.sigungu} ${c.umd} ${c.name} — ${rep ? `${rep.label
             <div>
               <b>{t.label}</b> <span class="sub">{t.pyeong}평형 · {t.areas.map((a) => a.toFixed(2).replace(/\.?0+$/, '')).join('/')}㎡</span>
               <div class="sub">{t.basis ? basisLabel[t.basis] : '거래 없음'}{t.priceN ? ` · ${t.priceN}건` : ''}{t.min6 != null && t.max6 != null && t.n6 >= 2 ? ` · ${eok(t.min6)}~${eok(t.max6)}` : ''}</div>
+              {t.jeonse?.price && <div class="sub">전세 {eok(t.jeonse.price)} ({t.jeonse.basis === 'median6' ? '6개월 중앙값' : '참고용'} · {t.jeonse.n6}건){t.jeonse.ratio != null ? ` · 전세가율 ${t.jeonse.ratio}%` : ''}{t.jeonse.wolse6 ? ` · 월세 ${t.jeonse.wolse6}건` : ''}</div>}
             </div>
             <div class="tp">
               <b>{eok(t.price)}</b>

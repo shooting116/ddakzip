@@ -6,6 +6,8 @@ const ROOT = join(process.cwd(), 'data', 'index');
 
 export interface TypeStat {
   key: number; label: string; pyeong: number; areas: number[];
+  /** 전세: 최근 6개월 전세 보증금 중앙값(월세 제외). ratio = 전세가율(%) — 전세·매매 모두 median6일 때만 */
+  jeonse: { price: number | null; basis: 'median6' | 'ref' | null; n6: number; n12: number; wolse6: number; ratio: number | null } | null;
   n36: number; n12: number; n6: number;
   price: number | null; basis: 'median6' | 'ref' | 'last' | null; priceN: number; priceDate: string | null;
   min6: number | null; max6: number | null; yoy: number | null;
@@ -30,6 +32,8 @@ export interface Complex {
   news: { t: string; o: string; d: string; u: string }[];
   /** 거래 활발: 같은 시군구 안 회전율(6개월 거래÷세대수) 상위 10% (세대수 모르면 건수 상위 10%). 기준값 포함 */
   hot: { byUnits: boolean; rate: number | null; n6: number; units: number | null; cut: number; of: number; rank: number } | null;
+  /** 대표 평형 전세 중앙값·기준·전세가율, 12개월 전월세 건수 */
+  jeonse: number | null; jeonseBasis: 'median6' | 'ref' | null; jeonseRatio: number | null; rent12: number;
 }
 /** 시군구별 호재 역 선택지 (k = "역·노선", c = 1.5km 안 단지 수) */
 export interface StationOpt { k: string; n: string; l: string; st: string; open: number | null; c: number; la: number | null; lo: number | null }
@@ -37,7 +41,7 @@ export interface SigunguIndex { lawd: string; sido: string; sigungu: string; reg
 export interface Summary {
   asOf: string; months: number; staticMin: number; staticMax: number; staticCut: number;
   sido: Record<string, { complexes: number; static: number; trades36: number }>;
-  sigungu: { lawd: string; sido: string; sigungu: string; regulated: boolean; complexes: number; static: number; trades36: number; geo: number; kapt: number; transit: number; redev: number; news: number; hot?: number; stations?: StationOpt[] }[];
+  sigungu: { lawd: string; sido: string; sigungu: string; regulated: boolean; complexes: number; static: number; trades36: number; geo: number; kapt: number; transit: number; redev: number; news: number; hot?: number; jeonse?: number; stations?: StationOpt[] }[];
   total: { complexes: number; static: number; trades36: number };
   /** aptSeq 앞 5자리 → 실제 시군구 코드 목록 (앞자리와 다른 경우만. 2026 행정구역 개편 지역) */
   idPrefix: Record<string, string[]>;
@@ -92,7 +96,8 @@ export function slim(c: Complex) {
   return {
     id: c.id, n: c.name, d: c.umd, b: c.built, la: c.lat, lo: c.lng,
     u: c.kapt?.units ?? null, r: c.rep, p: c.price, pb: c.priceBasis, n6: c.n6, n36: c.n36, st: c.static ? 1 : 0, h: c.hot ? 1 : 0,
-    t: c.types.map((t) => [t.key, t.price, t.basis, t.n6, t.yoy, +(t.areas.reduce((a, b) => a + b, 0) / t.areas.length).toFixed(2)]),
+    t: c.types.map((t) => [t.key, t.price, t.basis, t.n6, t.yoy, +(t.areas.reduce((a, b) => a + b, 0) / t.areas.length).toFixed(2), t.jeonse?.price ?? null, t.jeonse?.ratio ?? null]),
+    j: c.jeonse, jr: c.jeonseRatio,
     l: c.last ? [c.last.date, c.last.amt, c.last.area] : null,
     k: c.kapt ? { park: c.kapt.park, elev: c.kapt.elev, sub: c.kapt.subway, subw: c.kapt.subwayWalk, dongs: c.kapt.dongs, top: c.kapt.topFloor, heat: c.kapt.heat, used: c.kapt.used } : null,
     tr: c.transit.slice(0, 2).map((x) => `${x.line} ${x.station}${x.status === '운행중' ? '' : x.open ? ` ${x.open}예정` : ' 예정'}`),

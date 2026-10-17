@@ -1,0 +1,54 @@
+name: 전월세 실거래 매일 갱신
+# 매일 06:40 KST — 최근 2개월을 다시 받고, 12개월 백필이 덜 끝났으면 남은 쿼터로 이어받는다. 전월세 API는 매매와 별도 쿼터(하루 1,000회).
+# 변경이 있으면 커밋 → Cloudflare가 자동 빌드(단지 페이지 전세·전세가율 갱신).
+on:
+  schedule:
+    - cron: '40 21 * * *'   # UTC 21:40 = KST 06:40
+  workflow_dispatch:
+
+concurrency:
+  group: data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 최근 2개월 다시 받기
+        id: fetch
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: node scripts/fetch-rent.mjs --mode refresh --months 2 --max-calls 300
+      - name: 12개월 백필 이어받기
+        id: backfill
+        if: steps.fetch.outputs.stop == ''
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: node scripts/fetch-rent.mjs --mode backfill --months 12 --max-calls $(( 930 - ${{ steps.fetch.outputs.calls || 0 }} ))
+      - name: 커밋·푸시
+        if: always()
+        run: |
+          git config user.name "ssokjip-bot"
+          git config user.email "bot@korea-rich.com"
+          git add data/rent
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -m "전월세 갱신 $(TZ=Asia/Seoul date +%Y-%m-%d): 최근 2개월 ${{ steps.fetch.outputs.changed }}개 변경 · 백필 ${{ steps.backfill.outputs.done || 0 }}건 (호출 $(( ${{ steps.fetch.outputs.calls || 0 }} + ${{ steps.backfill.outputs.calls || 0 }} )))"
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: 요약
+        if: always()
+        run: |
+          {
+            echo "### 전월세 매일 갱신"
+            echo "- 최근 2개월: ${{ steps.fetch.outputs.done }}/${{ steps.fetch.outputs.jobs }} · 호출 ${{ steps.fetch.outputs.calls }} · 파일 변경 ${{ steps.fetch.outputs.changed }}"
+            echo "- 백필 이어받기: ${{ steps.backfill.outputs.done || 0 }}/${{ steps.backfill.outputs.jobs || 0 }} · 호출 ${{ steps.backfill.outputs.calls || 0 }}"
+            if [ -n "${{ steps.fetch.outputs.stop }}${{ steps.backfill.outputs.stop }}" ]; then echo "- 중단: ${{ steps.fetch.outputs.stop }} ${{ steps.backfill.outputs.stop }}"; fi
+          } >> "$GITHUB_STEP_SUMMARY"

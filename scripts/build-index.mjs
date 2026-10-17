@@ -13,7 +13,7 @@
 //   - 평형 = 전용면적을 대표 타입(59·74·84·101·114 …)에 ±3㎡로 묶음. 대표 평형 = 36개월 거래 최다 타입
 //   - 정적 상세 페이지 대상 = 36개월 거래 5건 이상
 
-import { mkdirSync, readFileSync, writeFileSync, existsSync, rmSync } from 'node:fs';
+import { readdirSync, mkdirSync, readFileSync, writeFileSync, existsSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadRegions, ROOT } from './lib/regions.mjs';
 import { iterTrades } from './lib/trades-index.mjs';
@@ -48,6 +48,39 @@ const median = (xs) => { if (!xs.length) return null; const s = [...xs].sort((a,
 function ymAdd(ym, delta) { let y = +ym.slice(0, 4), m = +ym.slice(5, 7) + delta; while (m <= 0) { m += 12; y--; } while (m > 12) { m -= 12; y++; } return `${y}-${String(m).padStart(2, '0')}`; }
 
 function loadJson(p, dflt) { try { return existsSync(p) ? JSON.parse(readFileSync(p, 'utf8')) : dflt; } catch { return dflt; } }
+
+/** data/rent/{lawd}/*.ndjson 에서 fromYm 이후 행만 */
+function loadRent(lawd, fromYm) {
+  const dir = join(ROOT, 'data', 'rent', lawd);
+  if (!existsSync(dir)) return [];
+  const out = [];
+  for (const f of readdirSync(dir).filter((x) => x.endsWith('.ndjson') && x.slice(0, 6) >= fromYm.replace('-', '')).sort()) {
+    for (const line of readFileSync(join(dir, f), 'utf8').split('\n')) if (line) out.push(JSON.parse(line));
+  }
+  return out;
+}
+/**
+ * 전세 집계 (평형별): 최근 6개월 전세(월세 0원) 보증금 중앙값. 3건 이상이면 median6, 1~2건이면 ref.
+ * 전세가율 = 전세 중앙값 ÷ 매매 시세 — 둘 다 median6일 때만 (표본이 얇으면 비율이 튀므로).
+ */
+function summarizeRent(rentRows, types, asOfYm) {
+  const from6 = ymAdd(asOfYm, -5), from12 = ymAdd(asOfYm, -11);
+  const ym = (r) => r.date.slice(0, 7);
+  const byType = new Map();
+  for (const r of rentRows) { const k = typeKey(r.area); (byType.get(k) ?? byType.set(k, []).get(k)).push(r); }
+  let repOut = null;
+  for (const t of types) {
+    const rows = byType.get(t.key) ?? [];
+    const j6 = rows.filter((r) => r.rent === 0 && ym(r) >= from6), j12 = rows.filter((r) => r.rent === 0 && ym(r) >= from12);
+    const w6 = rows.filter((r) => r.rent > 0 && ym(r) >= from6);
+    let price = null, basis = null;
+    if (j6.length >= 3) { price = median(j6.map((r) => r.deposit)); basis = 'median6'; }
+    else if (j6.length) { price = median(j6.map((r) => r.deposit)); basis = 'ref'; }
+    const ratio = price != null && basis === 'median6' && t.price && t.basis === 'median6' ? Math.round((price / t.price) * 100) : null;
+    t.jeonse = price != null ? { price, basis, n6: j6.length, n12: j12.length, wolse6: w6.length, ratio } : (w6.length || j12.length ? { price: null, basis: null, n6: 0, n12: j12.length, wolse6: w6.length, ratio: null } : null);
+  }
+  return repOut;
+}
 
 function summarizeComplex(c, asOfYm, months) {
   const from6 = ymAdd(asOfYm, -5), from12 = ymAdd(asOfYm, -11), fromPrev6a = ymAdd(asOfYm, -17), fromPrev6b = ymAdd(asOfYm, -12);
@@ -171,10 +204,29 @@ function main() {
       if (!c.jibun && row.jibun) c.jibun = row.jibun;
       if (!c.built && row.built) c.built = row.built;
     }
+    // 전월세 → 단지 연결 키 (전월세 API에는 aptSeq가 없다)
+    const rentIdx = new Map(), rentByName = new Map();
+    for (const c of map.values()) {
+      for (const nm of c.names.keys()) {
+        rentIdx.set(`${c.umdNm}|${c.jibun}|${nm}`, c.id);
+        const nk = `${c.umdNm}|${nm}`; rentByName.set(nk, rentByName.has(nk) ? null : c.id); // 같은 동에 같은 이름이 둘이면 null(모호)
+      }
+    }
+    const rentRows = new Map();
+    let rentN = 0, rentMiss = 0;
+    for (const x of loadRent(r.lawd, ymAdd(asOfYm, -11))) {
+      const id = rentIdx.get(`${x.umdNm}|${x.jibun}|${x.apt}`) ?? rentByName.get(`${x.umdNm}|${x.apt}`) ?? null;
+      if (!id) { rentMiss++; continue; }
+      (rentRows.get(id) ?? rentRows.set(id, []).get(id)).push(x); rentN++;
+    }
     const complexes = [];
     for (const c of map.values()) {
       const name = [...c.names.entries()].sort((a, b) => b[1] - a[1])[0][0];
       const s = summarizeComplex(c, asOfYm, months);
+      summarizeRent(rentRows.get(c.id) ?? [], s.types, asOfYm);
+      const repT = s.types.find((t) => t.key === s.rep);
+      s.jeonse = repT?.jeonse?.price ?? null; s.jeonseBasis = repT?.jeonse?.basis ?? null; s.jeonseRatio = repT?.jeonse?.ratio ?? null;
+      s.rent12 = (rentRows.get(c.id) ?? []).length;
       const g = geo[c.id];
       const kapt = kaptOf(match[c.id] ? info[match[c.id].kaptCode] : null);
       const tr = nearbyStations(g?.lat ?? null, g?.lng ?? null, stations, RADIUS);
@@ -188,7 +240,7 @@ function main() {
     }
     complexes.sort((a, b) => b.n36 - a.n36 || a.name.localeCompare(b.name, 'ko'));
     for (const c of complexes) { let a = seen.get(c.id); if (!a) seen.set(c.id, (a = [])); a.push({ lawd: r.lawd, n36: c.n36 }); }
-    writeFileSync(join(OUT, 'complexes', `${r.lawd}.json`), JSON.stringify({ lawd: r.lawd, sido: r.sido, sigungu: r.sigungu, regulated: r.regulated, asOf, months, complexes }));
+    writeFileSync(join(OUT, 'complexes', `${r.lawd}.json`), JSON.stringify({ lawd: r.lawd, sido: r.sido, sigungu: r.sigungu, regulated: r.regulated, asOf, months, rent: { n12: rentN, unmatched: rentMiss }, complexes }));
     summary.sigungu.push({ lawd: r.lawd, sido: r.sido, sigungu: r.sigungu, regulated: r.regulated });
   }
 
@@ -228,7 +280,7 @@ function main() {
     writeFileSync(p, JSON.stringify(d));
     const nStatic = complexes.filter((c) => c.static).length;
     const trades = complexes.reduce((s, c) => s + c.n36, 0);
-    Object.assign(g, { complexes: complexes.length, static: nStatic, trades36: trades, geo: complexes.filter((c) => c.lat).length, kapt: complexes.filter((c) => c.kapt).length, transit: complexes.filter((c) => c.transit.length).length, redev: complexes.filter((c) => c.redev).length, news: complexes.filter((c) => c.news.length).length, hot: complexes.filter((c) => c.hot).length });
+    Object.assign(g, { complexes: complexes.length, static: nStatic, trades36: trades, geo: complexes.filter((c) => c.lat).length, kapt: complexes.filter((c) => c.kapt).length, transit: complexes.filter((c) => c.transit.length).length, redev: complexes.filter((c) => c.redev).length, news: complexes.filter((c) => c.news.length).length, hot: complexes.filter((c) => c.hot).length, jeonse: complexes.filter((c) => c.jeonse != null).length });
     // 역 선택 필터용: 이 시군구 단지 1.5km 안에 있는 호재 역 (단지 수 많은 순, 좌표 포함)
     const stMap = new Map();
     for (const c of complexes) for (const t of c.transit) {
@@ -250,6 +302,7 @@ function main() {
   }
   summary.total = { complexes: total, static: totalStatic, trades36: totalTrades };
   writeFileSync(join(OUT, 'summary.json'), JSON.stringify(summary, null, 1) + '\n');
+  summary.jeonse = summary.sigungu.reduce((a, g) => a + (g.jeonse ?? 0), 0);
   console.log(`[build-index] 시군구 ${regions.length} · 단지 ${total} (정적 ${totalStatic}, 상한 ${STATIC_MAX}, 커트 36개월 ${staticCut}건) · 거래 ${totalTrades} · 중복 aptSeq ${nDup} · 앞자리≠코드 ${Object.keys(summary.idPrefix).length} · ${((Date.now() - t0) / 1000).toFixed(1)}s`);
 }
 
