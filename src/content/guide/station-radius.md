@@ -3,7 +3,7 @@ title: "'역세권 1.5km'는 무슨 뜻인가 — 쏙집 철도 호재 배지의
 description: "쏙집은 단지에서 1.5km 안에 공사 중이거나 예정인 역이 있으면 노선·역·거리·개통 목표를 배지로 붙입니다. 왜 1.5km인지, 도보로 몇 분인지, 어떤 노선이 들어 있고 무엇이 빠졌는지 정리했습니다."
 category: future
 publishAt: "2026-10-17T19:00:00+09:00"
-published: false
+published: true
 asOf: "2026-10-12"
 facts: []
 cta: find
