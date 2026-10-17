@@ -19,6 +19,10 @@ const situations = [
   <section class="hero">
     <h1 class="big">내 예산에 <span class="blue">쏙</span> 들어오는 집,<br />쏙집이 추려드려요</h1>
     <p class="sub2">대출 자격 → 최대 예산 → 갈 수 있는 아파트 → 비교, 한 번에</p>
+    <button type="button" class="searchbar" data-open-search>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5" /><path d="M20 20l-4-4" /></svg>
+      <span>단지 이름으로 바로 찾기 <em>예: 까치마을, 수서동</em></span>
+    </button>
   </section>
 
   <section class="card" aria-labelledby="sit">
@@ -57,6 +61,10 @@ const situations = [
   .hero { padding: 10px 4px 18px; }
   .hero h1 { margin: 0; }
   .hero p { margin: 8px 0 0; }
+  .searchbar { display: flex; align-items: center; gap: 10px; width: 100%; margin: 16px 0 0; padding: 14px 16px; border: 0; border-radius: var(--radius-btn); background: var(--card); color: var(--muted); font: inherit; font-size: 15px; text-align: left; cursor: pointer; box-shadow: 0 1px 2px rgba(0,0,0,.03); }
+  .searchbar span { flex: 1; min-width: 0; color: var(--fg2); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .searchbar em { font-style: normal; color: var(--muted); font-weight: 500; margin-left: 6px; }
+  .searchbar:hover { box-shadow: 0 2px 8px rgba(0,0,0,.06); }
   /* 상황 타일: 아래 "예산을 이미 알고 있다면"과 같은 격자. 폰에서는 한 줄에 하나, 480px부터 두 칸 */
   .sgrid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 10px; }
   .scell { position: relative; display: grid; grid-template-columns: 48px 1fr; grid-template-rows: auto auto; column-gap: 14px; row-gap: 2px; align-items: center; padding: 16px 40px 16px 16px; border-radius: 16px; color: inherit; background: var(--soft); }

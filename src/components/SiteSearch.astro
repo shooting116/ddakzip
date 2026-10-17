@@ -1,0 +1,90 @@
+---
+// 단지명 검색: 머리말의 돋보기 버튼(또는 data-open-search 요소)으로 여는 대화상자. 색인은 처음 열 때 /data/search.json 한 번만 받는다.
+---
+<button type="button" class="sbtn" data-open-search aria-label="단지 검색" title="단지 검색">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5" /><path d="M20 20l-4-4" /></svg>
+</button>
+<dialog id="site-search" aria-label="단지 검색">
+  <form class="sbox" role="search" autocomplete="off" method="dialog">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5" /><path d="M20 20l-4-4" /></svg>
+    <input type="search" name="q" placeholder="단지 이름 또는 동 이름 (예: 까치마을, 수서동, ㅇㅁ)" aria-label="단지 이름" enterkeyhint="search" />
+    <button type="button" class="sclose" data-close-search aria-label="닫기">닫기</button>
+  </form>
+  <div class="sres" id="site-search-results" aria-live="polite"><p class="sub shint">단지 이름, 동 이름, 초성(ㄲㅊㅁㅇ)으로 찾을 수 있어요. 전국 아파트 단지가 대상입니다.</p></div>
+</dialog>
+
+<script>
+  type Row = [string, string, string, string, number, string?];
+  const dlg = document.getElementById('site-search') as HTMLDialogElement | null;
+  if (dlg) {
+    const input = dlg.querySelector<HTMLInputElement>('input')!;
+    const res = dlg.querySelector<HTMLElement>('#site-search-results')!;
+    const hint = res.innerHTML;
+    let rows: Row[] | null = null, norm: { n: string; a: string; c: string }[] = [], loading: Promise<void> | null = null;
+    const CHO = 'ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ';
+    const esc = (v: unknown) => String(v ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+    const nz = (v: string) => v.toLowerCase().replace(/[\s·.,()\-]/g, '');
+    const cho = (v: string) => [...v].map((ch) => { const k = ch.charCodeAt(0) - 0xac00; return k >= 0 && k < 11172 ? CHO[Math.floor(k / 588)] : ch; }).join('');
+    const isCho = (q: string) => q.length > 0 && [...q].every((ch) => CHO.includes(ch));
+    async function load() {
+      if (rows || loading) return loading;
+      res.innerHTML = '<p class="sub shint">단지 목록을 불러오는 중…</p>';
+      loading = fetch('/data/search.json').then((r) => r.json()).then((j) => {
+        rows = j.c as Row[];
+        norm = rows.map((r) => ({ n: nz(r[1]), a: nz(`${r[2]} ${r[3]} ${r[5] ?? ''}`), c: cho(nz(r[1])) }));
+        res.innerHTML = hint;
+      }).catch(() => { res.innerHTML = '<p class="sub shint">단지 목록을 불러오지 못했어요. 잠시 후 다시 열어 주세요.</p>'; loading = null; });
+      return loading;
+    }
+    function search(qRaw: string) {
+      if (!rows) return;
+      const q = nz(qRaw);
+      if (q.length < 1) { res.innerHTML = hint; return; }
+      const toks = nz(qRaw.replace(/\s+/g, ' ')).length === q.length ? qRaw.trim().toLowerCase().split(/\s+/).map(nz).filter(Boolean) : [q];
+      const choMode = isCho(q);
+      const hits: { i: number; s: number }[] = [];
+      for (let i = 0; i < rows.length; i++) {
+        const m = norm[i];
+        let s = 0;
+        if (choMode) { if (m.c.startsWith(q)) s = 3; else if (m.c.includes(q)) s = 2; }
+        else if (toks.length > 1) { if (toks.every((t) => m.n.includes(t) || m.a.includes(t))) s = m.n.includes(toks[toks.length - 1]) ? 3 : 2; }
+        else if (m.n.startsWith(q)) s = 4; else if (m.n.includes(q)) s = 3; else if (m.a.includes(q)) s = 1;
+        if (s) { hits.push({ i, s }); if (hits.length > 400) break; }
+      }
+      hits.sort((a, b) => b.s - a.s || rows![b.i][4] - rows![a.i][4]);
+      const top = hits.slice(0, 30);
+      res.innerHTML = top.length
+        ? `<ul class="slist">${top.map(({ i }) => { const r = rows![i]; return `<li><a href="/apt/${esc(r[0])}/"><b>${esc(r[1])}</b><span class="sub">${esc(r[2])} ${esc(r[3])} · 36개월 ${r[4]}건</span></a></li>`; }).join('')}</ul>${hits.length > 30 ? `<p class="sub shint">${hits.length > 400 ? '400건 넘게' : `${hits.length}건`} 맞아요. 동 이름을 붙여 좁혀 보세요 (예: "래미안 개포동").</p>` : ''}`
+        : `<p class="sub shint">"${esc(qRaw)}"에 맞는 단지가 없어요. 실거래 신고 이름이 다를 수 있으니 짧게 줄여 보세요.</p>`;
+    }
+    const open = () => { if (dlg.open) return; dlg.showModal(); load(); setTimeout(() => input.focus(), 30); };
+    const close = () => { if (dlg.open) dlg.close(); };
+    document.querySelectorAll('[data-open-search]').forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); open(); }));
+    dlg.querySelector('[data-close-search]')!.addEventListener('click', close);
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) close(); });
+    let timer: number | undefined;
+    input.addEventListener('input', () => { clearTimeout(timer); timer = window.setTimeout(() => search(input.value), 80); });
+    dlg.querySelector('form')!.addEventListener('submit', (e) => { e.preventDefault(); const first = res.querySelector<HTMLAnchorElement>('a'); if (first) location.href = first.href; });
+    document.addEventListener('keydown', (e) => { if (e.key === '/' && !dlg.open && !(e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement || e.target instanceof HTMLSelectElement)) { e.preventDefault(); open(); } });
+  }
+</script>
+
+<style is:global>
+  .sbtn { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border: 0; border-radius: 10px; background: transparent; color: var(--fg2); cursor: pointer; flex: none; }
+  .sbtn:hover { background: var(--card); }
+  #site-search { border: 0; padding: 0; width: min(100vw - 24px, 560px); max-height: min(80vh, 640px); border-radius: var(--radius-card); background: var(--card); color: var(--fg); box-shadow: 0 20px 60px rgba(0,0,0,.18); margin: 12px auto auto; overflow: hidden; display: none; flex-direction: column; }
+  #site-search[open] { display: flex; }
+  #site-search::backdrop { background: rgba(25,31,40,.45); }
+  @media (min-width: 600px) { #site-search { margin-top: 10vh; } }
+  .sbox { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-bottom: 1px solid var(--soft); color: var(--muted); }
+  .sbox input { flex: 1; min-width: 0; border: 0; outline: 0; font: inherit; font-size: 17px; font-weight: 600; color: var(--fg); background: transparent; padding: 6px 0; }
+  .sbox input::placeholder { color: var(--muted); font-weight: 500; }
+  .sbox input::-webkit-search-cancel-button { -webkit-appearance: none; }
+  .sclose { border: 0; background: var(--soft); color: var(--fg2); font: inherit; font-size: 13px; font-weight: 600; padding: 7px 11px; border-radius: 999px; cursor: pointer; }
+  .sres { overflow-y: auto; padding: 4px 6px 10px; }
+  .shint { margin: 14px 10px; }
+  .slist { list-style: none; margin: 0; padding: 0; }
+  .slist a { display: flex; flex-direction: column; gap: 2px; padding: 11px 10px; border-radius: 12px; color: inherit; }
+  .slist a:hover, .slist a:focus { background: var(--soft); }
+  .slist b { font-size: 15px; }
+</style>
