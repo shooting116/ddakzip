@@ -433,7 +433,7 @@
    "by": "jibun+name"
   }
  ],
- "11410-54": [
+ "11410-57": [
   {
    "program": "서울시 정비사업",
    "zone": "홍제3",
@@ -1353,7 +1353,7 @@
    "by": "name"
   }
  ],
- "11680-278": [
+ "11680-277": [
   {
    "program": "서울시 정비사업",
    "zone": "경우현(개포경남,우성3차,현대1차)",
@@ -1379,6 +1379,20 @@
    "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
    "sourceDate": "2026-10",
    "by": "jibun"
+  }
+ ],
+ "11680-290": [
+  {
+   "program": "서울시 정비사업",
+   "zone": "개포주공6,7단지",
+   "type": "공동주택재건축",
+   "stage": "사업시행",
+   "stageDate": "2024-11",
+   "planned": 2698,
+   "existing": 1960,
+   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
+   "sourceDate": "2026-10",
+   "by": "jibun+name"
   }
  ],
  "11680-293": [
@@ -1628,20 +1642,6 @@
    "stageDate": "2026-03",
    "planned": 3914,
    "existing": 2436,
-   "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
-   "sourceDate": "2026-10",
-   "by": "jibun+name"
-  }
- ],
- "11680-578": [
-  {
-   "program": "서울시 정비사업",
-   "zone": "개포주공6,7단지",
-   "type": "공동주택재건축",
-   "stage": "사업시행",
-   "stageDate": "2024-11",
-   "planned": 2698,
-   "existing": 1960,
    "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
    "sourceDate": "2026-10",
    "by": "jibun+name"
@@ -1969,7 +1969,7 @@
    "by": "jibun"
   }
  ],
- "11740-147": [
+ "11740-15": [
   {
    "program": "서울시 정비사업",
    "zone": "상일동현대빌라",
@@ -1981,9 +1981,7 @@
    "source": "https://data.seoul.go.kr/dataList/OA-22856/S/1/datasetView.do",
    "sourceDate": "2026-10",
    "by": "name"
-  }
- ],
- "11740-15": [
+  },
   {
    "program": "서울시 정비사업",
    "zone": "명일동고덕현대",
@@ -2109,7 +2107,7 @@
    "by": "name 1.00"
   }
  ],
- "28200-126": [
+ "28200-124": [
   {
    "program": "인천 정비사업",
    "zone": "만수주공A",
@@ -2129,20 +2127,6 @@
    "zone": "산곡재원A",
    "type": "재건축",
    "stage": "관리처분계획인가",
-   "stageDate": null,
-   "planned": null,
-   "existing": null,
-   "source": "https://www.data.go.kr/data/15055212/fileData.do",
-   "sourceDate": "2026-08-31",
-   "by": "name 0.75"
-  }
- ],
- "28237-41": [
-  {
-   "program": "인천 정비사업",
-   "zone": "진흥동남",
-   "type": "재건축",
-   "stage": "추진위원회승인",
    "stageDate": null,
    "planned": null,
    "existing": null,
@@ -2219,7 +2203,21 @@
    "by": "name 0.75"
   }
  ],
- "28245-106": [
+ "28237-97": [
+  {
+   "program": "인천 정비사업",
+   "zone": "진흥동남",
+   "type": "재건축",
+   "stage": "추진위원회승인",
+   "stageDate": null,
+   "planned": null,
+   "existing": null,
+   "source": "https://www.data.go.kr/data/15055212/fileData.do",
+   "sourceDate": "2026-08-31",
+   "by": "name 0.75"
+  }
+ ],
+ "28245-109": [
   {
    "program": "인천 정비사업",
    "zone": "작전우영A",
@@ -2289,6 +2287,20 @@
    "by": "name 1.00"
   }
  ],
+ "41113-20": [
+  {
+   "program": "경기 정비사업",
+   "zone": "권선1구역(동남아파트)",
+   "type": "재건축",
+   "stage": "관리처분인가 → 이주",
+   "stageDate": "2025-07",
+   "planned": null,
+   "existing": null,
+   "source": "https://www.housingherald.co.kr/news/articleView.html?idxno=51282",
+   "sourceDate": "2025-11-06",
+   "by": "name 1.00"
+  }
+ ],
  "41113-22": [
   {
    "program": "경기 정비사업",
@@ -2301,20 +2313,6 @@
    "source": "https://www.housingherald.co.kr/news/articleView.html?idxno=51282",
    "sourceDate": "2025-11-06",
    "by": "name 0.75"
-  }
- ],
- "41113-8": [
-  {
-   "program": "경기 정비사업",
-   "zone": "권선1구역(동남아파트)",
-   "type": "재건축",
-   "stage": "관리처분인가 → 이주",
-   "stageDate": "2025-07",
-   "planned": null,
-   "existing": null,
-   "source": "https://www.housingherald.co.kr/news/articleView.html?idxno=51282",
-   "sourceDate": "2025-11-06",
-   "by": "name 1.00"
   }
  ],
  "41115-38": [
@@ -2477,7 +2475,7 @@
    "by": "name 0.64"
   }
  ],
- "41135-67": [
+ "41135-69": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "한솔마을2 (38구역) — 2026년 선정",
@@ -2577,7 +2575,7 @@
    "by": "name 0.61"
   }
  ],
- "41135-74": [
+ "41135-75": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "파크타운 (33구역) — 2026년 선정",
@@ -2929,7 +2927,7 @@
    "by": "name 0.61"
   }
  ],
- "41192-287": [
+ "41192-286": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "반달마을A",
@@ -3035,7 +3033,7 @@
    "by": "name 0.71"
   }
  ],
- "41285-219": [
+ "41285-18": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "정발마을 2·3단지 — 별도 정비물량",
@@ -3049,7 +3047,7 @@
    "by": "name 0.67"
   }
  ],
- "41285-223": [
+ "41285-234": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "정발마을 2·3단지 — 별도 정비물량",
@@ -3063,7 +3061,7 @@
    "by": "name 0.67"
   }
  ],
- "41285-48": [
+ "41285-45": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "백송마을 1·2·3·5단지 (21구역)",
@@ -3127,7 +3125,7 @@
    "by": "name 0.67"
   }
  ],
- "41285-69": [
+ "41285-66": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "16구역 (강촌1·2 + 백마1·2)",
@@ -3153,7 +3151,7 @@
    "by": "name 0.67"
   }
  ],
- "41287-14": [
+ "41287-17": [
   {
    "program": "1기 신도시 선도지구",
    "zone": "후곡마을 3·4·10·15단지 (7구역)",
