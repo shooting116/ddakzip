@@ -3,7 +3,7 @@ title: "1기 신도시 선도지구 현황 — 분당·일산·평촌·산본·�
 description: "2024년 11월 선정된 13개 구역과 별도 물량, 2026년에 추가된 분당 5곳·일산 16구역까지. 구역별 구성 단지, 세대수, 특별정비구역 지정·사업시행자 지정 단계를 보도 자료와 함께 정리했습니다."
 category: future
 publishAt: "2026-10-17T13:00:00+09:00"
-published: false
+published: true
 asOf: "2026-10-12"
 facts: []
 cta: ref
