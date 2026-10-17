@@ -76,7 +76,7 @@ import Base from '../../layouts/Base.astro';
         <button type="button" class="btn ghost" data-share="${esc(share)}" style="flex:1">링크 복사</button>
         <button type="button" class="btn ghost" data-clear style="flex:1">모두 빼기</button>
       </div>
-      <p class="src">시세 = 최근 6개월 실거래 중앙값(해제·직거래 제외), 1년 = 1년 전 같은 기간 중앙값 대비. 평당가는 전용면적(공급면적 아님)을 3.3058㎡로 나눈 값이라 다른 사이트의 공급 기준 평당가보다 높게 나옵니다. 전세는 최근 6개월 전세 계약 보증금 중앙값, 전세가율은 전세 ÷ 매매 시세(둘 다 6개월 3건 이상일 때만). 출처: 국토교통부 실거래가(${esc(items[0].asOf)} 기준)·K-apt. 단지 정보는 등록 자료 기준이며 실제와 다를 수 있습니다. 쏙집은 특정 단지를 추천하지 않습니다.</p>`;
+      <p class="src">시세 = 최근 6개월 실거래 중앙값(해제·직거래 제외), 1년 = 1년 전 같은 기간 중앙값 대비. 평당가는 전용면적(공급면적 아님)을 3.3058㎡로 나눈 값이라 다른 사이트의 공급 기준 평당가보다 높게 나옵니다. 전세는 최근 6개월 전세 계약 보증금 중앙값, 전세가율은 전세 ÷ 매매 시세(둘 다 6개월 3건 이상일 때만). 출처: 국토교통부 실거래가(${esc(items[0].asOf)} 기준)·K-apt(없는 단지는 건축물대장). 단지 정보는 등록 자료 기준이며 실제와 다를 수 있습니다. 쏙집은 특정 단지를 추천하지 않습니다.</p>`;
   }
   root.addEventListener('click', (e) => {
     const t = (e.target as HTMLElement).closest<HTMLElement>('[data-rm],[data-share],[data-clear]');

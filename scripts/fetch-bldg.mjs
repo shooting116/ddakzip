@@ -59,10 +59,11 @@ async function lookup(key, bjd, jibun) {
   const mains = tt.filter((it) => (it.mainAtchGbCdNm ?? '').includes('주') || !it.mainAtchGbCdNm);
   const top = mains.length ? Math.max(...mains.map((it) => num(it.grndFlrCnt) ?? 0)) : null;
   const dongs = r0 ? num(r0.mainBldCnt) : (mains.length || null);
-  const used = (r0?.useAprDay ?? mains.map((it) => it.useAprDay).filter(Boolean).sort()[0] ?? '').trim() || null;
+  // 사용승인일: 총괄표제부가 비어 있으면 동별 표제부 중 가장 이른 날 (YYYYMMDD만 인정)
+  const used = [r0?.useAprDay, ...mains.map((it) => it.useAprDay)].map((x) => String(x ?? '').trim()).filter((x) => /^\d{8}$/.test(x)).sort()[0] ?? null;
   return {
     ok: true,
-    data: { units: units || null, dongs: dongs || null, topFloor: top || null, used: used && /^\d{8}$/.test(used) ? `${used.slice(0, 4)}-${used.slice(4, 6)}-${used.slice(6, 8)}` : used,
+    data: { units: units || null, dongs: dongs || null, topFloor: top || null, used: used ? `${used.slice(0, 4)}-${used.slice(4, 6)}-${used.slice(6, 8)}` : null,
       park: r0 ? (num(r0.totPkngCnt) || null) : null, name: (r0?.bldNm ?? mains[0]?.bldNm ?? '').trim() || null, pk: r0?.mgmBldrgstPk ?? null, recapN: rc.length, titleN: tt.length },
     rawRecap: recap.items, rawTitle: title.items,
   };

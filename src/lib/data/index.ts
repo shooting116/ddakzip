@@ -15,7 +15,8 @@ export interface TypeStat {
   series: [string, number | null, number][];
 }
 export interface Kapt {
-  code: string; units: number | null; dongs: number | null; used: string | null; topFloor: number | null;
+  /** 출처: kapt = 공동주택관리정보시스템, bldg = 건축물대장(건축HUB; 세대수·동수·최고층·사용승인만) */
+  code: string | null; src: 'kapt' | 'bldg'; units: number | null; dongs: number | null; used: string | null; topFloor: number | null;
   sale: string | null; heat: string | null; hall: string | null; builder: string | null;
   park: number | null; parkUnder: number | null; elev: number | null; subway: string | null; subwayWalk: string | null; busWalk: string | null;
   ev: number | null; addr: string | null; road: string | null;
@@ -41,7 +42,7 @@ export interface SigunguIndex { lawd: string; sido: string; sigungu: string; reg
 export interface Summary {
   asOf: string; months: number; staticMin: number; staticMax: number; staticCut: number;
   sido: Record<string, { complexes: number; static: number; trades36: number }>;
-  sigungu: { lawd: string; sido: string; sigungu: string; regulated: boolean; complexes: number; static: number; trades36: number; geo: number; kapt: number; transit: number; redev: number; news: number; hot?: number; jeonse?: number; stations?: StationOpt[] }[];
+  sigungu: { lawd: string; sido: string; sigungu: string; regulated: boolean; complexes: number; static: number; trades36: number; geo: number; kapt: number; transit: number; redev: number; news: number; hot?: number; jeonse?: number; bldg?: number; stations?: StationOpt[] }[];
   total: { complexes: number; static: number; trades36: number };
   /** aptSeq 앞 5자리 → 실제 시군구 코드 목록 (앞자리와 다른 경우만. 2026 행정구역 개편 지역) */
   idPrefix: Record<string, string[]>;

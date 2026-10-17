@@ -140,11 +140,19 @@ function nearbyStations(lat, lng, stations, radius) {
   return [...best.values()].sort((a, b) => a.dist - b.dist);
 }
 
+/** K-apt가 없는 단지: 건축물대장(건축HUB) 총괄표제부·표제부로 세대수·동수·최고층·사용승인일만 채운다. 주차대수는 옛 대장이 부정확해 쓰지 않는다 */
+function bldgOf(b) {
+  if (!b || !b.units) return null;
+  return {
+    code: null, src: 'bldg', units: b.units, dongs: b.dongs || null, used: b.used || null, topFloor: b.topFloor || null,
+    sale: null, heat: null, hall: null, builder: null, park: null, parkUnder: null, elev: null, subway: null, subwayWalk: null, busWalk: null, ev: null, addr: null, road: null,
+  };
+}
 function kaptOf(info) {
   if (!info) return null;
   const park = (info.parkGround ?? 0) + (info.parkUnder ?? 0);
   return {
-    code: info.kaptCode, units: info.units || null, dongs: info.dongs || null, used: info.used || null, topFloor: info.topFloor || null,
+    code: info.kaptCode, src: 'kapt', units: info.units || null, dongs: info.dongs || null, used: info.used || null, topFloor: info.topFloor || null,
     sale: info.sale || null, heat: info.heat || null, hall: info.hall || null, builder: info.builder || null,
     park: park || null, parkUnder: info.parkUnder ?? null, elev: info.elevators ?? null,
     subway: info.subwayLine || info.subwayStation ? `${info.subwayLine ?? ''} ${info.subwayStation ?? ''}`.trim() : null, subwayWalk: info.subwayWalk || null, busWalk: info.busWalk || null,
@@ -177,6 +185,7 @@ function main() {
   const asOf = kst.toISOString().slice(0, 10), asOfYm = asOf.slice(0, 7);
   const months = Array.from({ length: MONTHS }, (_, i) => ymAdd(asOfYm, -(MONTHS - 1 - i)));
   const match = loadJson(join(CX, 'match.json'), {});
+  const bldg = loadJson(join(CX, 'bldg.json'), {});
   const geo = loadJson(join(CX, 'geo.json'), {});
   const redev = loadJson(join(CX, 'redev.json'), {});
   const newsSkip = loadJson(join(ROOT, 'data', 'overrides', 'news.json'), {});
@@ -229,7 +238,7 @@ function main() {
       s.jeonse = repT?.jeonse?.price ?? null; s.jeonseBasis = repT?.jeonse?.basis ?? null; s.jeonseRatio = repT?.jeonse?.ratio ?? null;
       s.rent12 = (rentRows.get(c.id) ?? []).length;
       const g = geo[c.id];
-      const kapt = kaptOf(match[c.id] ? info[match[c.id].kaptCode] : null);
+      const kapt = kaptOf(match[c.id] ? info[match[c.id].kaptCode] : null) ?? bldgOf(bldg[c.id]);
       const tr = nearbyStations(g?.lat ?? null, g?.lng ?? null, stations, RADIUS);
       const rd = redev[c.id] ?? null;
       const nw = newsSkip[c.id] ? [] : (news[c.id]?.items ?? []);
@@ -281,7 +290,7 @@ function main() {
     writeFileSync(p, JSON.stringify(d));
     const nStatic = complexes.filter((c) => c.static).length;
     const trades = complexes.reduce((s, c) => s + c.n36, 0);
-    Object.assign(g, { complexes: complexes.length, static: nStatic, trades36: trades, geo: complexes.filter((c) => c.lat).length, kapt: complexes.filter((c) => c.kapt).length, transit: complexes.filter((c) => c.transit.length).length, redev: complexes.filter((c) => c.redev).length, news: complexes.filter((c) => c.news.length).length, hot: complexes.filter((c) => c.hot).length, jeonse: complexes.filter((c) => c.jeonse != null).length });
+    Object.assign(g, { complexes: complexes.length, static: nStatic, trades36: trades, geo: complexes.filter((c) => c.lat).length, kapt: complexes.filter((c) => c.kapt).length, bldg: complexes.filter((c) => c.kapt?.src === 'bldg').length, transit: complexes.filter((c) => c.transit.length).length, redev: complexes.filter((c) => c.redev).length, news: complexes.filter((c) => c.news.length).length, hot: complexes.filter((c) => c.hot).length, jeonse: complexes.filter((c) => c.jeonse != null).length });
     // 역 선택 필터용: 이 시군구 단지 1.5km 안에 있는 호재 역 (단지 수 많은 순, 좌표 포함)
     const stMap = new Map();
     for (const c of complexes) for (const t of c.transit) {
