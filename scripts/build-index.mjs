@@ -229,6 +229,15 @@ function main() {
     const nStatic = complexes.filter((c) => c.static).length;
     const trades = complexes.reduce((s, c) => s + c.n36, 0);
     Object.assign(g, { complexes: complexes.length, static: nStatic, trades36: trades, geo: complexes.filter((c) => c.lat).length, kapt: complexes.filter((c) => c.kapt).length, transit: complexes.filter((c) => c.transit.length).length, redev: complexes.filter((c) => c.redev).length, news: complexes.filter((c) => c.news.length).length, hot: complexes.filter((c) => c.hot).length });
+    // 역 선택 필터용: 이 시군구 단지 1.5km 안에 있는 호재 역 (단지 수 많은 순, 좌표 포함)
+    const stMap = new Map();
+    for (const c of complexes) for (const t of c.transit) {
+      const key = `${t.station}·${t.line}`;
+      const e = stMap.get(key) ?? { k: key, n: t.station, l: t.line, st: t.status, open: t.open ?? null, c: 0, la: null, lo: null };
+      e.c++; stMap.set(key, e);
+    }
+    for (const e of stMap.values()) { const src = stations.find((x) => x.name === e.n && x.line === e.l); if (src) { e.la = src.lat; e.lo = src.lng; } }
+    g.stations = [...stMap.values()].sort((a, b) => b.c - a.c || a.n.localeCompare(b.n, 'ko'));
     for (const c of complexes) {
       const prefix = c.id.split('-')[0];
       if (prefix === g.lawd) continue;

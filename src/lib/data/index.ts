@@ -31,11 +31,13 @@ export interface Complex {
   /** 거래 활발: 같은 시군구 안 회전율(6개월 거래÷세대수) 상위 10% (세대수 모르면 건수 상위 10%). 기준값 포함 */
   hot: { byUnits: boolean; rate: number | null; n6: number; units: number | null; cut: number; of: number; rank: number } | null;
 }
+/** 시군구별 호재 역 선택지 (k = "역·노선", c = 1.5km 안 단지 수) */
+export interface StationOpt { k: string; n: string; l: string; st: string; open: number | null; c: number; la: number | null; lo: number | null }
 export interface SigunguIndex { lawd: string; sido: string; sigungu: string; regulated: boolean; asOf: string; months: string[]; complexes: Complex[] }
 export interface Summary {
   asOf: string; months: number; staticMin: number; staticMax: number; staticCut: number;
   sido: Record<string, { complexes: number; static: number; trades36: number }>;
-  sigungu: { lawd: string; sido: string; sigungu: string; regulated: boolean; complexes: number; static: number; trades36: number; geo: number; kapt: number; transit: number; redev: number; news: number; hot?: number }[];
+  sigungu: { lawd: string; sido: string; sigungu: string; regulated: boolean; complexes: number; static: number; trades36: number; geo: number; kapt: number; transit: number; redev: number; news: number; hot?: number; stations?: StationOpt[] }[];
   total: { complexes: number; static: number; trades36: number };
   /** aptSeq 앞 5자리 → 실제 시군구 코드 목록 (앞자리와 다른 경우만. 2026 행정구역 개편 지역) */
   idPrefix: Record<string, string[]>;
@@ -94,6 +96,7 @@ export function slim(c: Complex) {
     l: c.last ? [c.last.date, c.last.amt, c.last.area] : null,
     k: c.kapt ? { park: c.kapt.park, elev: c.kapt.elev, sub: c.kapt.subway, subw: c.kapt.subwayWalk, dongs: c.kapt.dongs, top: c.kapt.topFloor, heat: c.kapt.heat, used: c.kapt.used } : null,
     tr: c.transit.slice(0, 2).map((x) => `${x.line} ${x.station}${x.status === '운행중' ? '' : x.open ? ` ${x.open}예정` : ' 예정'}`),
+    sk: c.transit.map((x) => `${x.station}·${x.line}`),
     rd: c.redev ? `${c.redev[0].type.replace(/\(.*\)/, '')} · ${c.redev[0].stage.split(/\s*→\s*/).pop()!.slice(0, 20)}` : null,
   };
 }

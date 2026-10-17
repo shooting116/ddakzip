@@ -9,8 +9,10 @@ type Slim = {
   u: number | null; r: number | null; p: number | null; pb: string | null; n6: number; n36: number; st: number; h: number;
   t: [number, number | null, string | null, number, number | null][];
   l: [string, number, number] | null;
+  sk: string[];              // 1.5km 안 호재 역 키 ("역·노선")
 };
-type Regions = { asOf: string; sido: Record<string, { lawd: string; name: string; n: number; st: number }[]> };
+type Station = { k: string; n: string; l: string; st: string; open: number | null; c: number; la: number | null; lo: number | null };
+type Regions = { asOf: string; sido: Record<string, { lawd: string; name: string; n: number; st: number; s?: Station[] }[]> };
 
 interface State {
   budgetMan: number;         // 만 원. 0이면 예산 없이 전체
@@ -22,6 +24,7 @@ interface State {
   fitOnly: boolean;
   mapOnly: boolean;
   hotOnly: boolean;             // 🔥 거래 활발(같은 시군구 회전율 상위 10%)만
+  station: string;              // 역 기준 ("역·노선" 키). ''이면 없음. 그 역 1.5km 안 단지만
   sort: 'fit' | 'priceAsc' | 'priceDesc' | 'trades' | 'new' | 'units';
   view: 'both' | 'list';
 }
@@ -60,16 +63,65 @@ function pyeong(key: number) {
 const basisLabel: Record<string, string> = { median6: '6개월 중앙값', ref: '참고용', last: '마지막 거래가' };
 
 function load(): State {
-  const d: State = { budgetMan: 0, sido: '서울', lawd: 'all', type: 'all', built: 'all', units: 'all', fitOnly: false, mapOnly: false, hotOnly: false, sort: 'fit', view: 'both' };
+  const d: State = { budgetMan: 0, sido: '서울', lawd: 'all', type: 'all', built: 'all', units: 'all', fitOnly: false, mapOnly: false, hotOnly: false, station: '', sort: 'fit', view: 'both' };
   try { const raw = localStorage.getItem(KEY); if (raw) Object.assign(d, JSON.parse(raw)); } catch { /* */ }
   try { const b = localStorage.getItem(BUDGET_KEY); if (b && !d.budgetMan) { const j = JSON.parse(b); d.budgetMan = j.budgetMan ?? 0; if (j.lawd) { d.lawd = j.lawd; d.sido = j.sido ?? d.sido; } } } catch { /* */ }
+  // 공유 링크의 조건이 저장된 조건보다 우선
   const q = new URLSearchParams(location.search);
-  if (q.get('budget')) d.budgetMan = Number(q.get('budget')) || 0;
+  const num = (v: string | null) => (v && /^\d+$/.test(v) ? Number(v) : null);
+  if (q.get('budget') != null) d.budgetMan = num(q.get('budget')) ?? 0;
   if (q.get('lawd')) d.lawd = q.get('lawd')!;
   if (q.get('sido')) d.sido = q.get('sido')!;
+  if (q.get('type')) d.type = (q.get('type') === 'big' ? 'big' : num(q.get('type')) ?? 'all') as State['type'];
+  if (q.get('built')) d.built = (q.get('built') === 'old' ? 'old' : num(q.get('built')) ?? 'all') as State['built'];
+  if (q.get('units')) d.units = (num(q.get('units')) ?? 'all') as State['units'];
+  if (q.has('fit')) d.fitOnly = q.get('fit') === '1';
+  if (q.has('hot')) d.hotOnly = q.get('hot') === '1';
+  if (q.get('sort')) d.sort = q.get('sort') as State['sort'];
+  if (q.has('station')) d.station = q.get('station') ?? '';
+  if (q.get('view') === 'list') d.view = 'list';
+  if (q.toString()) { d.mapOnly = false; }  // 지도 영역은 링크로 못 옮기므로 끈 상태로 시작
   return d;
 }
-function save() { try { localStorage.setItem(KEY, JSON.stringify(s)); } catch { /* */ } }
+/** 현재 조건을 주소창에 반영 (기본값은 생략). 이 주소가 곧 "조건 링크" */
+function syncUrl() {
+  const q = new URLSearchParams();
+  if (s.budgetMan) q.set('budget', String(s.budgetMan));
+  q.set('sido', s.sido);
+  if (s.lawd !== 'all') q.set('lawd', s.lawd);
+  if (s.type !== 'all') q.set('type', String(s.type));
+  if (s.built !== 'all') q.set('built', String(s.built));
+  if (s.units !== 'all') q.set('units', String(s.units));
+  if (s.fitOnly && s.budgetMan) q.set('fit', '1');
+  if (s.hotOnly) q.set('hot', '1');
+  if (s.station) q.set('station', s.station);
+  if (s.sort !== 'fit') q.set('sort', s.sort);
+  if (s.view === 'list') q.set('view', 'list');
+  try { history.replaceState(null, '', `${location.pathname}?${q.toString()}`); } catch { /* */ }
+}
+function save() { try { localStorage.setItem(KEY, JSON.stringify(s)); } catch { /* */ } syncUrl(); }
+async function copyLink(btn: HTMLElement) {
+  const url = location.href;
+  let ok = false;
+  try { await navigator.clipboard.writeText(url); ok = true; } catch { /* */ }
+  if (!ok) { // 클립보드 API가 막힌 환경: 임시 입력창으로 복사
+    const ta = document.createElement('textarea'); ta.value = url; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select(); try { ok = document.execCommand('copy'); } catch { /* */ } ta.remove();
+  }
+  const prev = btn.innerHTML;
+  btn.innerHTML = ok ? '복사됐어요 ✓' : '복사 실패 — 주소창 주소를 복사해 주세요';
+  btn.classList.toggle('done', ok);
+  window.setTimeout(() => { btn.innerHTML = prev; btn.classList.remove('done'); }, 1800);
+}
+/** 현재 지역(시도 전체면 합산)의 호재 역 선택지 */
+function stationsFor(): Station[] {
+  const list = regions.sido[s.sido] ?? [];
+  const regs = s.lawd === 'all' ? list : list.filter((x) => x.lawd === s.lawd);
+  const m = new Map<string, Station>();
+  for (const r of regs) for (const st of r.s ?? []) { const e = m.get(st.k); if (e) e.c += st.c; else m.set(st.k, { ...st }); }
+  return [...m.values()].sort((a, b) => b.c - a.c || a.n.localeCompare(b.n, 'ko'));
+}
+const stationLabel = (x: Station) => `${x.n}역 · ${x.l} ${x.st === '운행중' ? '개통' : x.open ? `${x.open} 예정` : '예정'}`;
 
 // ---------- 데이터 ----------
 async function fetchJson<T>(url: string): Promise<T> { const r = await fetch(url); if (!r.ok) throw new Error(`${url} ${r.status}`); return r.json(); }
@@ -109,17 +161,18 @@ function unitsOk(u: number | null): boolean {
   return (u ?? 0) >= s.units;
 }
 // 결과가 0일 때 "어느 조건에서 몇 개가 빠졌는지" 보여주기 위한 단계별 집계
-type Funnel = { label: string; n: number; key?: 'built' | 'units' | 'type' | 'budget' | 'fitOnly' | 'hotOnly' | 'mapOnly' }[];
+type Funnel = { label: string; n: number; key?: 'built' | 'units' | 'station' | 'type' | 'budget' | 'fitOnly' | 'hotOnly' | 'mapOnly' }[];
 let funnel: Funnel = [];
 let noGeoDropped = 0;
 function compute() {
   const B = s.budgetMan;
   fitted = [];
-  const cnt = { built: 0, units: 0, type: 0, budget: 0, fit: 0, hot: 0, map: 0 };
+  const cnt = { built: 0, units: 0, station: 0, type: 0, budget: 0, fit: 0, hot: 0, map: 0 };
   noGeoDropped = 0;
   for (const c of rows) {
     if (!builtOk(c.b)) continue; cnt.built++;
     if (!unitsOk(c.u)) continue; cnt.units++;
+    if (s.station && !c.sk.includes(s.station)) continue; cnt.station++;
     const types = c.t.filter((t) => t[1] != null && typeOk(t[0]));
     if (!types.length) continue; cnt.type++;
     let fitKey: number | null = null, fitPrice: number | null = null, ratio: number | null = null;
@@ -143,6 +196,7 @@ function compute() {
   funnel = [{ label: s.lawd === 'all' ? s.sido + ' 전체' : '지역', n: rows.length }];
   if (s.built !== 'all') funnel.push({ label: '준공', n: cnt.built, key: 'built' });
   if (s.units !== 'all') funnel.push({ label: '세대수', n: cnt.units, key: 'units' });
+  if (s.station) funnel.push({ label: `${s.station.split('·')[0]}역 1.5km 안`, n: cnt.station, key: 'station' });
   if (s.type !== 'all') funnel.push({ label: '평형', n: cnt.type, key: 'type' });
   if (B > 0) funnel.push({ label: '예산 안', n: cnt.budget, key: 'budget' });
   if (B > 0 && s.fitOnly) funnel.push({ label: '쏙 들어오는 구간', n: cnt.fit, key: 'fitOnly' });
@@ -181,7 +235,19 @@ function renderBudget() {
           ${list.map((x) => `<option value="${x.lawd}" ${x.lawd === s.lawd ? 'selected' : ''}>${esc(x.name)} (${x.n})</option>`).join('')}
         </select>
       </div>
+      ${renderStation()}
     </div>`;
+}
+function renderStation() {
+  const sts = stationsFor();
+  if (!sts.length) return '';
+  return `
+      <div class="row selects stationrow">
+        <select data-select="station" aria-label="역 기준">
+          <option value="">역 기준 없음 · GTX·신설 노선 역 ${sts.length}개 중 고르기</option>
+          ${sts.map((x) => `<option value="${esc(x.k)}" ${x.k === s.station ? 'selected' : ''}>${esc(stationLabel(x))} · 1.5km 안 ${x.c}단지</option>`).join('')}
+        </select>
+      </div>`;
 }
 function renderFilters() {
   return `
@@ -226,7 +292,7 @@ function renderEmpty() {
   const zero = funnel.find((f) => f.n === 0 && f.key);
   const prev = zero ? funnel[funnel.indexOf(zero) - 1]?.n ?? 0 : 0;
   const hint: Record<string, string> = {
-    built: '준공 필터를 넓히면', units: '세대수 필터를 넓히면', type: '평형을 바꾸거나 "평형 전체"로 하면',
+    built: '준공 필터를 넓히면', units: '세대수 필터를 넓히면', station: '역 기준을 "없음"으로 하면', type: '평형을 바꾸거나 "평형 전체"로 하면',
     budget: '예산을 올리거나 지역을 바꾸면', fitOnly: '"쏙 들어오는 구간만"을 끄면', hotOnly: '"거래 활발만"을 끄면', mapOnly: '지도를 옮기거나 "지도 영역 안만"을 끄면',
   };
   const geo = zero?.key === 'mapOnly' && noGeoDropped ? ` 좌표가 없는 단지 ${noGeoDropped}개는 지도 필터에 잡히지 않아요.` : '';
@@ -242,7 +308,7 @@ function renderList() {
     ? `<b>${n.toLocaleString()}단지</b>가 예산 안에 있어요${fit ? ` · 쏙 들어오는 구간 <b>${fit.toLocaleString()}</b>` : ''}`
     : `<b>${n.toLocaleString()}단지</b>`;
   return `
-    <div class="count sub2" id="count">${head}<span class="src"> · 실거래 기준 ${esc(regions.asOf)}</span></div>
+    <div class="count sub2" id="count"><span>${head}<span class="src"> · 실거래 기준 ${esc(regions.asOf)}</span></span><button type="button" class="linkbtn" data-action="copy" title="지금 보고 있는 예산·지역·필터 조건을 주소로 복사">🔗 조건 링크 복사</button></div>
     <div class="card list" id="list">
       ${fitted.length ? fitted.slice(0, shown).map(renderItem).join('') : renderEmpty()}
       ${fitted.length > shown ? `<button type="button" class="btn ghost more" data-action="more">${(fitted.length - shown).toLocaleString()}개 더 보기</button>` : ''}
@@ -292,6 +358,7 @@ function initMap() {
     });
     mapReady = true;
     syncMarkers(true);
+    showStation();
   }).catch(() => { const tip = root.querySelector('#maptip'); if (tip) tip.textContent = '지도를 불러오지 못했어요.'; });
 }
 function markerContent(f: typeof fitted[0]) {
@@ -318,6 +385,21 @@ function syncMarkers(fitBounds = false) {
     for (const m of pts) b.extend(m.getPosition());
     map.setBounds(b);
   }
+}
+let stCircle: any = null, stMarker: any = null;
+/** 선택한 역을 지도에 표시(1.5km 원)하고 그 역으로 이동 */
+function showStation() {
+  if (!mapReady) return;
+  if (stCircle) { stCircle.setMap(null); stCircle = null; }
+  if (stMarker) { stMarker.setMap(null); stMarker = null; }
+  const st = s.station ? stationsFor().find((x) => x.k === s.station) : null;
+  if (!st || st.la == null || st.lo == null) return;
+  const pos = new kakao.maps.LatLng(st.la, st.lo);
+  stCircle = new kakao.maps.Circle({ center: pos, radius: 1500, strokeWeight: 1.5, strokeColor: '#3182f6', strokeOpacity: 0.7, fillColor: '#3182f6', fillOpacity: 0.06 });
+  stCircle.setMap(map);
+  stMarker = new kakao.maps.CustomOverlay({ position: pos, yAnchor: 0.5, content: `<div class="st-pin" title="${esc(stationLabel(st))}">${esc(st.n)}</div>` });
+  stMarker.setMap(map);
+  map.setLevel(6); map.setCenter(pos);
 }
 function select(id: string, fromMap = false) {
   selected = id;
@@ -347,7 +429,7 @@ async function changeRegion() {
   setStatus('불러오는 중…');
   try { await loadRows(); } catch { setStatus('데이터를 불러오지 못했어요.'); return; }
   setStatus('');
-  compute(); shown = PAGE; rerenderList(); syncMarkers(true);
+  compute(); shown = PAGE; rerenderList(); syncMarkers(!s.station); showStation();
 }
 function bind() {
   root.addEventListener('click', (e) => {
@@ -364,6 +446,8 @@ function bind() {
       compute(); shown = PAGE; save(); rerenderList(); syncMarkers();
     } else if (t.dataset.action === 'more') {
       shown += PAGE; rerenderList();
+    } else if (t.dataset.action === 'copy') {
+      copyLink(t);
     } else if (t.classList.contains('item')) {
       if (mapReady && s.view !== 'list' && !(e as MouseEvent).metaKey) {
         // 첫 클릭은 지도에서 위치 확인, 같은 항목 두 번째 클릭은 상세로 이동
@@ -373,8 +457,9 @@ function bind() {
   });
   root.addEventListener('change', (e) => {
     const t = e.target as HTMLSelectElement;
-    if (t.dataset.select === 'sido') { s.sido = t.value; s.lawd = 'all'; save(); renderTop(); changeRegion(); }
-    else if (t.dataset.select === 'lawd') { s.lawd = t.value; save(); changeRegion(); }
+    if (t.dataset.select === 'sido') { s.sido = t.value; s.lawd = 'all'; s.station = ''; save(); renderTop(); changeRegion(); }
+    else if (t.dataset.select === 'lawd') { s.lawd = t.value; if (!stationsFor().some((x) => x.k === s.station)) s.station = ''; save(); renderTop(); changeRegion(); }
+    else if (t.dataset.select === 'station') { s.station = t.value; compute(); shown = PAGE; save(); rerenderList(); syncMarkers(); showStation(); }
     else if (t.dataset.select === 'sort') { s.sort = t.value as State['sort']; compute(); shown = PAGE; save(); rerenderList(); }
   });
   let timer: number | undefined;

@@ -47,7 +47,11 @@ const sm = loadSummary();
   .find #map { width: 100%; aspect-ratio: 1 / 1; max-height: 640px; }
   @media (min-width: 600px) { .find #map { aspect-ratio: 4 / 3; } }
   .find .maptip { position: absolute; left: 10px; bottom: 8px; background: rgba(255,255,255,.92); padding: 4px 8px; border-radius: 8px; z-index: 2; }
-  .find .count { padding: 2px 4px; }
+  .find .count { padding: 2px 4px; display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .find .linkbtn { flex: none; border: 0; background: var(--card); color: var(--blue); font: inherit; font-size: 12.5px; font-weight: 600; padding: 7px 11px; border-radius: 999px; cursor: pointer; }
+  .find .linkbtn.done { background: var(--blue-soft); }
+  .find .stationrow { margin-top: 8px; } .find .stationrow select { flex: 1; }
+  .find .st-pin { background: var(--blue); color: #fff; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 999px; box-shadow: 0 1px 4px rgba(0,0,0,.2); white-space: nowrap; }
   .find .list { padding: 4px 16px; }
   .find .item { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--soft); color: inherit; }
   .find .item:last-of-type { border-bottom: 0; }
