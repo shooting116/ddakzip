@@ -15,11 +15,13 @@ type Slim = {
 type Station = { k: string; n: string; l: string; st: string; open: number | null; c: number; la: number | null; lo: number | null };
 type Regions = { asOf: string; sido: Record<string, { lawd: string; name: string; n: number; st: number; s?: Station[] }[]> };
 
+type TypeKey = 59 | 74 | 84 | 101 | 114 | 'big';
+const TYPE_KEYS: TypeKey[] = [59, 74, 84, 101, 114, 'big'];
 interface State {
   budgetMan: number;         // 만 원. 0이면 예산 없이 전체
   sido: string;
   lawd: string;              // 'all' = 시도 전체
-  type: 'all' | 59 | 74 | 84 | 101 | 114 | 'big';
+  types: TypeKey[];          // 평형 복수 선택. 빈 배열 = 전체
   built: 'all' | 10 | 20 | 'old';
   units: 'all' | 300 | 500 | 1000;
   fitOnly: boolean;
@@ -64,8 +66,13 @@ function pyeong(key: number) {
 const basisLabel: Record<string, string> = { median6: '6개월 중앙값', ref: '참고용', last: '마지막 거래가' };
 
 function load(): State {
-  const d: State = { budgetMan: 0, sido: '서울', lawd: 'all', type: 'all', built: 'all', units: 'all', fitOnly: false, mapOnly: false, hotOnly: false, station: '', sort: 'fit', view: 'both' };
-  try { const raw = localStorage.getItem(KEY); if (raw) Object.assign(d, JSON.parse(raw)); } catch { /* */ }
+  const d: State = { budgetMan: 0, sido: '서울', lawd: 'all', types: [], built: 'all', units: 'all', fitOnly: false, mapOnly: false, hotOnly: false, station: '', sort: 'fit', view: 'both' };
+  const parseTypes = (v: unknown): TypeKey[] => String(v ?? '').split(',').map((x) => (x === 'big' ? 'big' : Number(x))).filter((x): x is TypeKey => TYPE_KEYS.includes(x as TypeKey));
+  try {
+    const raw = localStorage.getItem(KEY);
+    if (raw) { const j = JSON.parse(raw); if ('type' in j && !('types' in j)) { j.types = parseTypes(j.type); delete j.type; } Object.assign(d, j); } // 예전 저장값(단일 선택) 변환
+  } catch { /* */ }
+  if (!Array.isArray(d.types)) d.types = [];
   try { const b = localStorage.getItem(BUDGET_KEY); if (b && !d.budgetMan) { const j = JSON.parse(b); d.budgetMan = j.budgetMan ?? 0; if (j.lawd) { d.lawd = j.lawd; d.sido = j.sido ?? d.sido; } } } catch { /* */ }
   // 공유 링크의 조건이 저장된 조건보다 우선
   const q = new URLSearchParams(location.search);
@@ -73,7 +80,7 @@ function load(): State {
   if (q.get('budget') != null) d.budgetMan = num(q.get('budget')) ?? 0;
   if (q.get('lawd')) d.lawd = q.get('lawd')!;
   if (q.get('sido')) d.sido = q.get('sido')!;
-  if (q.get('type')) d.type = (q.get('type') === 'big' ? 'big' : num(q.get('type')) ?? 'all') as State['type'];
+  if (q.get('type')) d.types = parseTypes(q.get('type'));
   if (q.get('built')) d.built = (q.get('built') === 'old' ? 'old' : num(q.get('built')) ?? 'all') as State['built'];
   if (q.get('units')) d.units = (num(q.get('units')) ?? 'all') as State['units'];
   if (q.has('fit')) d.fitOnly = q.get('fit') === '1';
@@ -90,7 +97,7 @@ function syncUrl() {
   if (s.budgetMan) q.set('budget', String(s.budgetMan));
   q.set('sido', s.sido);
   if (s.lawd !== 'all') q.set('lawd', s.lawd);
-  if (s.type !== 'all') q.set('type', String(s.type));
+  if (s.types.length) q.set('type', s.types.join(','));
   if (s.built !== 'all') q.set('built', String(s.built));
   if (s.units !== 'all') q.set('units', String(s.units));
   if (s.fitOnly && s.budgetMan) q.set('fit', '1');
@@ -145,10 +152,8 @@ function setStatus(t: string) { const el = root.querySelector('#status'); if (el
 
 // ---------- 계산 ----------
 function typeOk(key: number): boolean {
-  if (s.type === 'all') return true;
-  if (s.type === 'big') return key >= 125;
-  if (s.type === 114) return key >= 109 && key < 125;
-  return Math.abs(key - (s.type as number)) <= 5;
+  if (!s.types.length) return true;
+  return s.types.some((t) => (t === 'big' ? key >= 125 : t === 114 ? key >= 109 && key < 125 : Math.abs(key - t) <= 5));
 }
 function builtOk(b: number | null): boolean {
   if (s.built === 'all') return true;
@@ -198,7 +203,7 @@ function compute() {
   if (s.built !== 'all') funnel.push({ label: '준공', n: cnt.built, key: 'built' });
   if (s.units !== 'all') funnel.push({ label: '세대수', n: cnt.units, key: 'units' });
   if (s.station) funnel.push({ label: `${s.station.split('·')[0]}역 1.5km 안`, n: cnt.station, key: 'station' });
-  if (s.type !== 'all') funnel.push({ label: '평형', n: cnt.type, key: 'type' });
+  if (s.types.length) funnel.push({ label: `평형 ${s.types.map((t) => (t === 'big' ? '125㎡+' : `${t}㎡`)).join('·')}`, n: cnt.type, key: 'type' });
   if (B > 0) funnel.push({ label: '예산 안', n: cnt.budget, key: 'budget' });
   if (B > 0 && s.fitOnly) funnel.push({ label: '쏙 들어오는 구간', n: cnt.fit, key: 'fitOnly' });
   if (s.hotOnly) funnel.push({ label: '거래 활발', n: cnt.hot, key: 'hotOnly' });
@@ -250,10 +255,15 @@ function renderStation() {
         </select>
       </div>`;
 }
+// 평형 칩: 여러 개 켤 수 있다. "평형 전체"는 모두 끄기
+function typeChip(v: TypeKey | null, label: string) {
+  const on = v === null ? !s.types.length : s.types.includes(v);
+  return `<button type="button" class="chip ${on ? 'on' : ''}" data-type="${v === null ? 'all' : v}" aria-pressed="${on}">${esc(label)}</button>`;
+}
 function renderFilters() {
   return `
     <div class="filters">
-      <div class="chips">${chip('type', 'all', '평형 전체')}${chip('type', 59, '59㎡')}${chip('type', 74, '74㎡')}${chip('type', 84, '84㎡')}${chip('type', 101, '101㎡')}${chip('type', 114, '114㎡')}${chip('type', 'big', '125㎡+')}</div>
+      <div class="chips">${typeChip(null, '평형 전체')}${typeChip(59, '59㎡')}${typeChip(74, '74㎡')}${typeChip(84, '84㎡')}${typeChip(101, '101㎡')}${typeChip(114, '114㎡')}${typeChip('big', '125㎡+')}</div>
       <div class="chips">${chip('built', 'all', '준공 전체')}${chip('built', 10, '10년 이내')}${chip('built', 20, '20년 이내')}${chip('built', 'old', '20년 초과')}${chip('units', 'all', '세대 전체')}${chip('units', 300, '300+')}${chip('units', 500, '500+')}${chip('units', 1000, '1,000+')}</div>
       <div class="chips">
         ${s.budgetMan ? `<button type="button" class="chip ${s.fitOnly ? 'on' : ''}" data-toggle="fitOnly">쏙 들어오는 구간만 (예산의 85~100%)</button>` : ''}
@@ -293,7 +303,7 @@ function renderEmpty() {
   const zero = funnel.find((f) => f.n === 0 && f.key);
   const prev = zero ? funnel[funnel.indexOf(zero) - 1]?.n ?? 0 : 0;
   const hint: Record<string, string> = {
-    built: '준공 필터를 넓히면', units: '세대수 필터를 넓히면', station: '역 기준을 "없음"으로 하면', type: '평형을 바꾸거나 "평형 전체"로 하면',
+    built: '준공 필터를 넓히면', units: '세대수 필터를 넓히면', station: '역 기준을 "없음"으로 하면', type: '평형을 더 켜거나 "평형 전체"로 하면',
     budget: '예산을 올리거나 지역을 바꾸면', fitOnly: '"쏙 들어오는 구간만"을 끄면', hotOnly: '"거래 활발만"을 끄면', mapOnly: '지도를 옮기거나 "지도 영역 안만"을 끄면',
   };
   const geo = zero?.key === 'mapOnly' && noGeoDropped ? ` 좌표가 없는 단지 ${noGeoDropped}개는 지도 필터에 잡히지 않아요.` : '';
@@ -380,7 +390,14 @@ function syncMarkers(fitBounds = false) {
   }
   clusterer.addMarkers(pts);
   const tip = root.querySelector('#maptip');
-  if (tip) tip.textContent = list.length ? `지도에 ${list.length.toLocaleString()}단지` : (rows.length ? '이 지역은 아직 좌표가 없어요' : '');
+  if (tip) {
+    const geoRows = rows.filter((c) => c.la != null).length;
+    tip.textContent = list.length ? `지도에 ${list.length.toLocaleString()}단지`
+      : !rows.length ? ''
+      : fitted.length ? '조건에 맞는 단지는 있지만 좌표가 없어 지도에 못 찍었어요'
+      : geoRows ? `조건에 맞는 단지가 없어요 (이 지역 단지 ${rows.length.toLocaleString()}개)`
+      : '이 지역은 아직 좌표가 없어요';
+  }
   if (fitBounds && pts.length) {
     const b = new kakao.maps.LatLngBounds();
     for (const m of pts) b.extend(m.getPosition());
@@ -434,9 +451,16 @@ async function changeRegion() {
 }
 function bind() {
   root.addEventListener('click', (e) => {
-    const t = (e.target as HTMLElement).closest<HTMLElement>('[data-set],[data-toggle],[data-action],.item');
+    const t = (e.target as HTMLElement).closest<HTMLElement>('[data-set],[data-type],[data-toggle],[data-action],.item');
     if (!t) return;
-    if (t.dataset.set) {
+    if (t.dataset.type) {
+      const v = t.dataset.type;
+      if (v === 'all') s.types = [];
+      else { const k = (v === 'big' ? 'big' : Number(v)) as TypeKey; s.types = s.types.includes(k) ? s.types.filter((x) => x !== k) : [...s.types, k]; }
+      compute(); shown = PAGE; save();
+      const fl = root.querySelector('.filters'); if (fl) fl.outerHTML = renderFilters();
+      rerenderList(); syncMarkers();
+    } else if (t.dataset.set) {
       const k = t.dataset.set as keyof State; const raw = t.dataset.value!;
       (s as any)[k] = /^\d+$/.test(raw) ? Number(raw) : raw;
       compute(); shown = PAGE; save();
