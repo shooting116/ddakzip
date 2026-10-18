@@ -1,0 +1,14 @@
+{
+  "name": "쏙집 — 내 예산에 쏙 들어오는 집",
+  "short_name": "쏙집",
+  "description": "소득·현금으로 대출 자격과 최대 예산을 계산하고, 국토교통부 실거래가로 예산에 맞는 아파트를 찾아 비교합니다.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f2f4f6",
+  "theme_color": "#3182f6",
+  "lang": "ko",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
