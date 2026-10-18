@@ -3,7 +3,7 @@ title: "주담대 월 상환액 감 잡기 — 1억당 얼마, 금리·만기별
 description: "1억을 30년 원리금균등으로 빌리면 4%면 월 47.7만, 5%면 53.7만 원. 금리 3~6%, 만기 10~40년 표와 총이자, 그리고 '소득의 몇 %'로 보는 방법을 정리했습니다."
 category: loan
 publishAt: "2026-10-18T19:00:00+09:00"
-published: false
+published: true
 asOf: "2026-10-12"
 facts: [bank]
 cta: calc
