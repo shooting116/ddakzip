@@ -40,7 +40,22 @@ const sm = loadSummary();
   .find .chips::-webkit-scrollbar { display: none; }
   .find .chip { flex: none; font-size: 12.5px; font-weight: 600; padding: 7px 11px; border-radius: 999px; background: var(--card); color: var(--fg2); border: 0; cursor: pointer; white-space: nowrap; }
   .find .chip.on { background: var(--fg); color: #fff; }
-  .find .sortsel { margin-left: auto; padding: 6px 10px; font-size: 12.5px; border-radius: 999px; }
+  .find .sortsel { margin-left: auto; padding: 7px 10px; font-size: 12.5px; border-radius: 999px; flex: none; max-width: 46%; }
+  .find .fbar { display: flex; align-items: center; gap: 8px; min-height: 34px; }
+  .find .fbtn { display: inline-flex; align-items: center; gap: 4px; }
+  .find .fbtn b { font-weight: 800; }
+  .find .fbtn i { font-style: normal; display: inline-block; transition: transform .15s; line-height: 1; transform: translateY(-2px); }
+  .find .fbtn i.up { transform: translateY(1px) rotate(180deg); }
+  .find .fsum { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .find .fpanel { background: var(--card); border-radius: 16px; padding: 10px 12px; display: flex; flex-direction: column; gap: 8px; }
+  .find .fpanel[hidden] { display: none; }
+  .find .frow { display: flex; align-items: center; gap: 8px; }
+  .find .fl { flex: none; width: 46px; font-size: 12px; font-weight: 600; color: var(--muted); }
+  .find .frow .chips { flex: 1; min-width: 0; }
+  .find .frow select { flex: 1; min-width: 0; padding: 8px 10px; font-size: 13.5px; }
+  .find .fpanel .chip { background: var(--soft); }
+  .find .fpanel .chip.on { background: var(--fg); color: #fff; }
+  .find .fpanel .chip .sub { font-weight: 500; margin-left: 2px; color: inherit; opacity: .75; }
   /* 지도는 가로 전체: 폰은 정사각형, 넓은 화면은 4:3(640×480). 목록은 그 아래. 목록에서 단지를 누르면 지도까지 올라온다 */
   .find .mapwrap { position: relative; border-radius: 20px; overflow: hidden; background: var(--card); scroll-margin-top: 70px; }
   .find .mapwrap.hide { display: none; }
@@ -50,7 +65,6 @@ const sm = loadSummary();
   .find .count { padding: 2px 4px; display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
   .find .linkbtn { flex: none; border: 0; background: var(--card); color: var(--blue); font: inherit; font-size: 12.5px; font-weight: 600; padding: 7px 11px; border-radius: 999px; cursor: pointer; }
   .find .linkbtn.done { background: var(--blue-soft); }
-  .find .stationrow { margin-top: 8px; } .find .stationrow select { flex: 1; }
   .find .st-pin { background: var(--blue); color: #fff; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 999px; box-shadow: 0 1px 4px rgba(0,0,0,.2); white-space: nowrap; }
   .find .list { padding: 4px 16px; }
   .find .item { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--soft); color: inherit; }

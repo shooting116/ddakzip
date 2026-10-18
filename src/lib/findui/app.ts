@@ -241,19 +241,30 @@ function renderBudget() {
           ${list.map((x) => `<option value="${x.lawd}" ${x.lawd === s.lawd ? 'selected' : ''}>${esc(x.name)} (${x.n})</option>`).join('')}
         </select>
       </div>
-      ${renderStation()}
     </div>`;
 }
 function renderStation() {
   const sts = stationsFor();
   if (!sts.length) return '';
   return `
-      <div class="row selects stationrow">
+      <div class="frow"><span class="fl">역 기준</span>
         <select data-select="station" aria-label="역 기준">
-          <option value="">역 기준 없음 · GTX·신설 노선 역 ${sts.length}개 중 고르기</option>
+          <option value="">선택 안 함 · GTX·신설 노선 역 ${sts.length}개</option>
           ${sts.map((x) => `<option value="${esc(x.k)}" ${x.k === s.station ? 'selected' : ''}>${esc(stationLabel(x))} · 1.5km 안 ${x.c}단지</option>`).join('')}
         </select>
       </div>`;
+}
+// 접히는 필터 패널: 평형만 항상 보이고 나머지(준공·세대·역·보기 옵션)는 "필터" 버튼으로 연다. 켜진 조건 수·요약은 접혀 있어도 보인다
+let filtersOpen = false;
+function activeFilters(): string[] {
+  const out: string[] = [];
+  if (s.built !== 'all') out.push(s.built === 'old' ? '20년 초과' : `${s.built}년 이내`);
+  if (s.units !== 'all') out.push(`${s.units.toLocaleString()}세대+`);
+  if (s.station) out.push(`${s.station.split('·')[0]}역 1.5km`);
+  if (s.fitOnly && s.budgetMan) out.push('쏙 구간만');
+  if (s.hotOnly) out.push('거래 활발만');
+  if (s.mapOnly) out.push('지도 영역 안');
+  return out;
 }
 // 평형 칩: 여러 개 켤 수 있다. "평형 전체"는 모두 끄기
 function typeChip(v: TypeKey | null, label: string) {
@@ -261,14 +272,13 @@ function typeChip(v: TypeKey | null, label: string) {
   return `<button type="button" class="chip ${on ? 'on' : ''}" data-type="${v === null ? 'all' : v}" aria-pressed="${on}">${esc(label)}</button>`;
 }
 function renderFilters() {
+  const act = activeFilters();
   return `
     <div class="filters">
       <div class="chips">${typeChip(null, '평형 전체')}${typeChip(59, '59㎡')}${typeChip(74, '74㎡')}${typeChip(84, '84㎡')}${typeChip(101, '101㎡')}${typeChip(114, '114㎡')}${typeChip('big', '125㎡+')}</div>
-      <div class="chips">${chip('built', 'all', '준공 전체')}${chip('built', 10, '10년 이내')}${chip('built', 20, '20년 이내')}${chip('built', 'old', '20년 초과')}${chip('units', 'all', '세대 전체')}${chip('units', 300, '300+')}${chip('units', 500, '500+')}${chip('units', 1000, '1,000+')}</div>
-      <div class="chips">
-        ${s.budgetMan ? `<button type="button" class="chip ${s.fitOnly ? 'on' : ''}" data-toggle="fitOnly">쏙 들어오는 구간만 (예산의 85~100%)</button>` : ''}
-        <button type="button" class="chip ${s.hotOnly ? 'on' : ''}" data-toggle="hotOnly" title="같은 시군구 안에서 최근 6개월 거래 ÷ 세대수가 상위 10%인 단지">🔥 거래 활발만</button>
-        ${KAKAO_KEY ? `<button type="button" class="chip ${s.mapOnly ? 'on' : ''}" data-toggle="mapOnly">지도 영역 안만</button>` : ''}
+      <div class="fbar">
+        <button type="button" class="chip fbtn ${filtersOpen || act.length ? 'on' : ''}" data-action="filters" aria-expanded="${filtersOpen}">필터${act.length ? ` <b>${act.length}</b>` : ''} <i class="${filtersOpen ? 'up' : ''}">⌄</i></button>
+        <span class="fsum sub">${filtersOpen ? '' : esc(act.join(' · '))}</span>
         <select class="sortsel" data-select="sort" aria-label="정렬">
           <option value="fit" ${s.sort === 'fit' ? 'selected' : ''}>예산에 가까운 순</option>
           <option value="priceAsc" ${s.sort === 'priceAsc' ? 'selected' : ''}>가격 낮은 순</option>
@@ -277,6 +287,16 @@ function renderFilters() {
           <option value="new" ${s.sort === 'new' ? 'selected' : ''}>신축 순</option>
           <option value="units" ${s.sort === 'units' ? 'selected' : ''}>세대수 많은 순</option>
         </select>
+      </div>
+      <div class="fpanel" ${filtersOpen ? '' : 'hidden'}>
+        <div class="frow"><span class="fl">준공</span><div class="chips">${chip('built', 'all', '전체')}${chip('built', 10, '10년 이내')}${chip('built', 20, '20년 이내')}${chip('built', 'old', '20년 초과')}</div></div>
+        <div class="frow"><span class="fl">세대수</span><div class="chips">${chip('units', 'all', '전체')}${chip('units', 300, '300+')}${chip('units', 500, '500+')}${chip('units', 1000, '1,000+')}</div></div>
+        ${renderStation()}
+        <div class="frow"><span class="fl">보기</span><div class="chips">
+          ${s.budgetMan ? `<button type="button" class="chip ${s.fitOnly ? 'on' : ''}" data-toggle="fitOnly">쏙 구간만 <span class="sub">예산의 85~100%</span></button>` : ''}
+          <button type="button" class="chip ${s.hotOnly ? 'on' : ''}" data-toggle="hotOnly" title="같은 시군구 안에서 최근 6개월 거래 ÷ 세대수가 상위 10%인 단지">🔥 거래 활발만</button>
+          ${KAKAO_KEY ? `<button type="button" class="chip ${s.mapOnly ? 'on' : ''}" data-toggle="mapOnly">지도 영역 안만</button>` : ''}
+        </div></div>
       </div>
     </div>`;
 }
@@ -467,8 +487,13 @@ function bind() {
       const fl = root.querySelector('.filters'); if (fl) fl.outerHTML = renderFilters();
       rerenderList(); syncMarkers();
     } else if (t.dataset.toggle) {
-      const k = t.dataset.toggle as 'fitOnly' | 'mapOnly' | 'hotOnly'; s[k] = !s[k]; t.classList.toggle('on', s[k]);
-      compute(); shown = PAGE; save(); rerenderList(); syncMarkers();
+      const k = t.dataset.toggle as 'fitOnly' | 'mapOnly' | 'hotOnly'; s[k] = !s[k];
+      compute(); shown = PAGE; save();
+      const fl = root.querySelector('.filters'); if (fl) fl.outerHTML = renderFilters();
+      rerenderList(); syncMarkers();
+    } else if (t.dataset.action === 'filters') {
+      filtersOpen = !filtersOpen;
+      const fl = root.querySelector('.filters'); if (fl) fl.outerHTML = renderFilters();
     } else if (t.dataset.action === 'more') {
       shown += PAGE; rerenderList();
     } else if (t.dataset.action === 'copy') {
@@ -484,7 +509,7 @@ function bind() {
     const t = e.target as HTMLSelectElement;
     if (t.dataset.select === 'sido') { s.sido = t.value; s.lawd = 'all'; s.station = ''; save(); renderTop(); changeRegion(); }
     else if (t.dataset.select === 'lawd') { s.lawd = t.value; if (!stationsFor().some((x) => x.k === s.station)) s.station = ''; save(); renderTop(); changeRegion(); }
-    else if (t.dataset.select === 'station') { s.station = t.value; compute(); shown = PAGE; save(); rerenderList(); syncMarkers(); showStation(); }
+    else if (t.dataset.select === 'station') { s.station = t.value; compute(); shown = PAGE; save(); const fl = root.querySelector('.filters'); if (fl) fl.outerHTML = renderFilters(); rerenderList(); syncMarkers(); showStation(); }
     else if (t.dataset.select === 'sort') { s.sort = t.value as State['sort']; compute(); shown = PAGE; save(); rerenderList(); }
   });
   let timer: number | undefined;
