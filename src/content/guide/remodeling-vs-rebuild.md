@@ -3,7 +3,7 @@ title: "리모델링 vs 재건축 — 뭐가 다르고 단지는 어느 쪽으�
 description: "재건축은 허물고 새로 짓고, 리모델링은 뼈대를 남기고 고칩니다. 연한·동의율·세대수 증가·용적률에서 갈리는 차이와, 단지가 어느 쪽을 택하게 되는 구조적 이유를 정리했습니다."
 category: future
 publishAt: "2026-10-18T13:00:00+09:00"
-published: false
+published: true
 asOf: "2026-10-12"
 facts: []
 cta: ref
