@@ -26,9 +26,13 @@ const notices = [];
 const note = (m) => { console.log(m); notices.push(m); };
 const redact = (s) => String(s).replace(/KEY=[^&\s]+/g, 'KEY=***');
 
-async function getJson(path, params) {
+async function getJson(path, params, tries = 3) {
   const url = `${BASE}/${path}?KEY=${key}&Type=json&${new URLSearchParams(params)}`;
-  const res = await fetch(url, { headers: { accept: 'application/json' } });
+  let res;
+  for (let i = 1; ; i++) {
+    try { res = await fetch(url, { headers: { accept: 'application/json' }, signal: AbortSignal.timeout(30_000) }); break; }
+    catch (e) { if (i >= tries) throw new Error(`fetch failed (${tries}회 시도): ${e?.cause?.code ?? e?.message ?? e}`); await new Promise((r) => setTimeout(r, 2000 * i)); }
+  }
   const text = await res.text();
   let j; try { j = JSON.parse(text); } catch { throw new Error(`JSON 아님: ${text.slice(0, 160).replace(/\s+/g, ' ')}`); }
   // 오류 응답: { RESULT: { CODE, MESSAGE } } 또는 { SttsApiTblData: [ {head:[{RESULT:{CODE,MESSAGE}}]}, {row:[...]} ] }
