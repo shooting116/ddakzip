@@ -30,7 +30,6 @@
 {"lawd":"26500","umdNm":"남천동","jibun":"148-4","apt":"삼익비치","area":60.83,"floor":6,"built":1979,"date":"2026-09-04","deposit":1000,"rent":40,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26500","umdNm":"수영동","jibun":"541","apt":"현대","area":68.85,"floor":8,"built":1988,"date":"2026-09-04","deposit":3000,"rent":85,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26500","umdNm":"민락동","jibun":"782","apt":"e편한세상오션테라스4단지","area":84.98,"floor":12,"built":2020,"date":"2026-09-04","deposit":42000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
-{"lawd":"26500","umdNm":"광안동","jibun":"526-1","apt":"광원","area":59.94,"floor":19,"built":1995,"date":"2026-09-05","deposit":3000,"rent":70,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26500","umdNm":"광안동","jibun":"744-32","apt":"유림주상복합","area":34.29,"floor":6,"built":2004,"date":"2026-09-05","deposit":8000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26500","umdNm":"남천동","jibun":"3-5","apt":"협진태양","area":84.55,"floor":13,"built":1984,"date":"2026-09-05","deposit":23000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26500","umdNm":"민락동","jibun":"783","apt":"e편한세상오션테라스3단지","area":91.98,"floor":7,"built":2020,"date":"2026-09-05","deposit":44000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -94,6 +93,7 @@
 {"lawd":"26500","umdNm":"남천동","jibun":"556-3","apt":"뉴비치","area":41.46,"floor":14,"built":1986,"date":"2026-09-14","deposit":1000,"rent":55,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26500","umdNm":"광안동","jibun":"99-5","apt":"롯데골드로즈","area":40.71,"floor":15,"built":2006,"date":"2026-09-14","deposit":1000,"rent":62,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26500","umdNm":"남천동","jibun":"148-4","apt":"삼익비치","area":131.27,"floor":7,"built":1979,"date":"2026-09-14","deposit":2000,"rent":60,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26500","umdNm":"수영동","jibun":"562","apt":"수영에코하임리베","area":23.65,"floor":7,"built":2022,"date":"2026-09-14","deposit":1000,"rent":23,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26500","umdNm":"남천동","jibun":"151","apt":"코오롱하늘채골든비치","area":84.97,"floor":16,"built":2009,"date":"2026-09-14","deposit":10000,"rent":150,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26500","umdNm":"민락동","jibun":"782","apt":"e편한세상오션테라스4단지","area":84.93,"floor":7,"built":2020,"date":"2026-09-14","deposit":54000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26500","umdNm":"광안동","jibun":"1334","apt":"광안자이","area":84.48,"floor":3,"built":2020,"date":"2026-09-15","deposit":40000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":40000,"preRent":0}
@@ -170,8 +170,8 @@
 {"lawd":"26500","umdNm":"광안동","jibun":"744-32","apt":"유림주상복합","area":27.36,"floor":8,"built":2004,"date":"2026-09-28","deposit":300,"rent":37,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26500","umdNm":"남천동","jibun":"599","apt":"더샵남천프레스티지","area":84.13,"floor":9,"built":2022,"date":"2026-09-29","deposit":10000,"rent":200,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26500","umdNm":"광안동","jibun":"99-5","apt":"롯데골드로즈","area":33.06,"floor":15,"built":2006,"date":"2026-09-29","deposit":500,"rent":55,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
-{"lawd":"26500","umdNm":"남천동","jibun":"148-4","apt":"삼익비치","area":131.27,"floor":10,"built":1979,"date":"2026-09-29","deposit":10000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26500","umdNm":"남천동","jibun":"148-4","apt":"삼익비치","area":131.27,"floor":10,"built":1979,"date":"2026-09-29","deposit":10000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26500","umdNm":"남천동","jibun":"148-4","apt":"삼익비치","area":131.27,"floor":10,"built":1979,"date":"2026-09-29","deposit":10000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26500","umdNm":"광안동","jibun":"744-32","apt":"유림주상복합","area":34.29,"floor":7,"built":2004,"date":"2026-09-29","deposit":500,"rent":40,"term":"26.10~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26500","umdNm":"광안동","jibun":"744-32","apt":"유림주상복합","area":34.29,"floor":7,"built":2004,"date":"2026-09-29","deposit":500,"rent":40,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26500","umdNm":"남천동","jibun":"3-11","apt":"진주","area":84.15,"floor":3,"built":1986,"date":"2026-09-29","deposit":9000,"rent":35,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":18000,"preRent":0}
@@ -179,3 +179,5 @@
 {"lawd":"26500","umdNm":"민락동","jibun":"184-2","apt":"광안리슈빌DS","area":68.95,"floor":5,"built":2021,"date":"2026-09-30","deposit":0,"rent":50,"term":"26.10~27.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26500","umdNm":"광안동","jibun":"1334","apt":"광안자이","area":84.48,"floor":7,"built":2020,"date":"2026-09-30","deposit":17000,"rent":84,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":17000,"preRent":80}
 {"lawd":"26500","umdNm":"남천동","jibun":"613","apt":"남천자이","area":84.99,"floor":22,"built":2023,"date":"2026-09-30","deposit":70000,"rent":0,"term":"26.10~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26500","umdNm":"남천동","jibun":"3-5","apt":"협진태양","area":84.55,"floor":3,"built":1984,"date":"2026-09-30","deposit":3000,"rent":100,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26500","umdNm":"민락동","jibun":"780","apt":"e편한세상오션테라스1단지","area":84.98,"floor":11,"built":2020,"date":"2026-09-30","deposit":45000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

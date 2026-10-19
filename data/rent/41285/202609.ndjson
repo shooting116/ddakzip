@@ -252,6 +252,7 @@
 {"lawd":"41285","umdNm":"장항동","jibun":"881","apt":"호수마을(현대)","area":70.14,"floor":14,"built":1994,"date":"2026-09-21","deposit":35000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41285","umdNm":"백석동","jibun":"1183","apt":"백송마을(한신)","area":39.94,"floor":3,"built":1992,"date":"2026-09-22","deposit":1000,"rent":70,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41285","umdNm":"풍동","jibun":"1265","apt":"숲속마을4단지(임대)","area":51.88,"floor":6,"built":2006,"date":"2026-09-22","deposit":2957,"rent":29,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41285","umdNm":"중산동","jibun":"1841","apt":"일산센트럴아이파크","area":59.97,"floor":12,"built":2018,"date":"2026-09-22","deposit":40000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":40000,"preRent":0}
 {"lawd":"41285","umdNm":"장항동","jibun":"875","apt":"호수마을(럭키)","area":134.94,"floor":3,"built":1994,"date":"2026-09-22","deposit":55000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41285","umdNm":"백석동","jibun":"1194","apt":"흰돌마을(금호)","area":51.73,"floor":8,"built":1994,"date":"2026-09-22","deposit":2000,"rent":90,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":2000,"preRent":85}
 {"lawd":"41285","umdNm":"마두동","jibun":"789","apt":"강촌마을(라이프)","area":49.14,"floor":4,"built":1992,"date":"2026-09-23","deposit":24000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":23000,"preRent":0}

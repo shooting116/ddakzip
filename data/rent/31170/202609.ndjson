@@ -74,6 +74,7 @@
 {"lawd":"31170","umdNm":"방어동","jibun":"59-1","apt":"대왕암엘크루","area":59.6,"floor":4,"built":2014,"date":"2026-09-21","deposit":23000,"rent":0,"term":"26.10~28.04","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31170","umdNm":"화정동","jibun":"633-14","apt":"상림시드니2차","area":55.33,"floor":4,"built":2005,"date":"2026-09-21","deposit":1000,"rent":60,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":1000,"preRent":50}
 {"lawd":"31170","umdNm":"서부동","jibun":"257-4","apt":"현대패밀리서부","area":49.79,"floor":5,"built":1992,"date":"2026-09-21","deposit":500,"rent":50,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31170","umdNm":"서부동","jibun":"257-4","apt":"현대패밀리서부","area":59.78,"floor":7,"built":1992,"date":"2026-09-21","deposit":1000,"rent":60,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31170","umdNm":"동부동","jibun":"가-5-1","apt":"현대하이야트맨션2","area":61.91,"floor":13,"built":1991,"date":"2026-09-21","deposit":7000,"rent":25,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31170","umdNm":"전하동","jibun":"550-19","apt":"현대한마음","area":69.93,"floor":4,"built":1995,"date":"2026-09-21","deposit":2000,"rent":70,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31170","umdNm":"서부동","jibun":"248-24","apt":"서부성원상떼빌","area":114.03,"floor":25,"built":2005,"date":"2026-09-22","deposit":33000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

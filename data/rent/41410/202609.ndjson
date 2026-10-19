@@ -59,6 +59,7 @@
 {"lawd":"41410","umdNm":"산본동","jibun":"1151-9","apt":"설악2","area":49.89,"floor":18,"built":1996,"date":"2026-09-05","deposit":26000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41410","umdNm":"산본동","jibun":"1151-9","apt":"설악2","area":49.89,"floor":18,"built":1996,"date":"2026-09-05","deposit":26000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41410","umdNm":"산본동","jibun":"1145","apt":"세종","area":58.46,"floor":10,"built":1994,"date":"2026-09-05","deposit":29400,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41410","umdNm":"산본동","jibun":"1145","apt":"세종","area":58.46,"floor":10,"built":1994,"date":"2026-09-05","deposit":29400,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":28000,"preRent":0}
 {"lawd":"41410","umdNm":"산본동","jibun":"1146","apt":"솔거대림","area":101.91,"floor":7,"built":1993,"date":"2026-09-05","deposit":50000,"rent":10,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":50000,"preRent":0}
 {"lawd":"41410","umdNm":"부곡동","jibun":"1080","apt":"송부센트럴시티","area":101.94,"floor":8,"built":2010,"date":"2026-09-05","deposit":38000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41410","umdNm":"금정동","jibun":"876","apt":"율곡","area":58.65,"floor":10,"built":1994,"date":"2026-09-05","deposit":33000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -208,6 +209,7 @@
 {"lawd":"41410","umdNm":"산본동","jibun":"1151-9","apt":"설악2","area":49.89,"floor":21,"built":1996,"date":"2026-09-16","deposit":23000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":19000,"preRent":0}
 {"lawd":"41410","umdNm":"금정동","jibun":"744-1","apt":"신환","area":78.95,"floor":15,"built":1990,"date":"2026-09-16","deposit":26000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41410","umdNm":"금정동","jibun":"876","apt":"율곡","area":51.66,"floor":17,"built":1994,"date":"2026-09-16","deposit":30000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41410","umdNm":"산본동","jibun":"1148-4","apt":"주공9단지금강","area":42.75,"floor":18,"built":1994,"date":"2026-09-16","deposit":3000,"rent":87,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41410","umdNm":"당정동","jibun":"997-1","apt":"청천마을성원","area":84.13,"floor":9,"built":2004,"date":"2026-09-16","deposit":39500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":38000,"preRent":0}
 {"lawd":"41410","umdNm":"금정동","jibun":"872","apt":"충무주공(872)","area":42.75,"floor":2,"built":1992,"date":"2026-09-16","deposit":22000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41410","umdNm":"금정동","jibun":"872","apt":"충무주공(872)","area":42.75,"floor":13,"built":1992,"date":"2026-09-16","deposit":18000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -295,6 +297,7 @@
 {"lawd":"41410","umdNm":"산본동","jibun":"1066","apt":"개나리주공13","area":49.67,"floor":23,"built":1995,"date":"2026-09-23","deposit":18000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":18000,"preRent":0}
 {"lawd":"41410","umdNm":"도마교동","jibun":"458","apt":"금강펜테리움센트럴파크2차","area":76.34,"floor":24,"built":2018,"date":"2026-09-23","deposit":18000,"rent":125,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41410","umdNm":"산본동","jibun":"1059","apt":"동백(우성)","area":101.52,"floor":15,"built":1993,"date":"2026-09-23","deposit":43000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41410","umdNm":"산본동","jibun":"1146","apt":"솔거대림","area":101.91,"floor":13,"built":1993,"date":"2026-09-23","deposit":10000,"rent":200,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41410","umdNm":"산본동","jibun":"1146-11","apt":"우륵","area":58.46,"floor":8,"built":1994,"date":"2026-09-23","deposit":35700,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41410","umdNm":"금정동","jibun":"876","apt":"율곡","area":58.46,"floor":10,"built":1994,"date":"2026-09-23","deposit":33000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41410","umdNm":"당동","jibun":"885","apt":"주공4(885)","area":59.99,"floor":8,"built":1997,"date":"2026-09-23","deposit":9000,"rent":85,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

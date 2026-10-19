@@ -89,6 +89,7 @@
 {"lawd":"11170","umdNm":"문배동","jibun":"3-3","apt":"이안용산프리미어","area":109.03,"floor":13,"built":2007,"date":"2026-10-10","deposit":3000,"rent":450,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11170","umdNm":"이촌동","jibun":"404","apt":"한가람","area":59.88,"floor":17,"built":1998,"date":"2026-10-10","deposit":76600,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":73000,"preRent":0}
 {"lawd":"11170","umdNm":"한남동","jibun":"828","apt":"한남아이파크애비뉴","area":49.7,"floor":14,"built":2017,"date":"2026-10-10","deposit":10000,"rent":320,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11170","umdNm":"문배동","jibun":"11-34","apt":"G&P용산파크","area":28.28,"floor":11,"built":2018,"date":"2026-10-10","deposit":32970,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11170","umdNm":"한강로3가","jibun":"98","apt":"센트럴파크","area":114.5,"floor":5,"built":2020,"date":"2026-10-11","deposit":170000,"rent":30,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":170000,"preRent":0}
 {"lawd":"11170","umdNm":"효창동","jibun":"5-495","apt":"효창맨션","area":59.5,"floor":5,"built":1969,"date":"2026-10-11","deposit":30000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11170","umdNm":"이촌동","jibun":"395","apt":"대림","area":84.78,"floor":10,"built":1994,"date":"2026-10-12","deposit":52000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":49100,"preRent":0}
@@ -112,6 +113,7 @@
 {"lawd":"11170","umdNm":"효창동","jibun":"274","apt":"효창파크푸르지오","area":84.45,"floor":2,"built":2010,"date":"2026-10-13","deposit":92000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11170","umdNm":"효창동","jibun":"274","apt":"효창파크푸르지오","area":84.45,"floor":13,"built":2010,"date":"2026-10-13","deposit":78990,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":75230,"preRent":0}
 {"lawd":"11170","umdNm":"원효로1가","jibun":"17-5","apt":"로얄카운티-2","area":133.35,"floor":3,"built":2006,"date":"2026-10-14","deposit":75000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11170","umdNm":"용문동","jibun":"90","apt":"브라운스톤","area":84.76,"floor":6,"built":2011,"date":"2026-10-14","deposit":76000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11170","umdNm":"한강로3가","jibun":"98","apt":"센트럴파크","area":114.5,"floor":33,"built":2020,"date":"2026-10-14","deposit":185000,"rent":0,"term":"26.11~27.11","type":"갱신","rrr":"사용","preDeposit":185000,"preRent":0}
 {"lawd":"11170","umdNm":"한강로2가","jibun":"426","apt":"용산베르디움프렌즈","area":44.9,"floor":8,"built":2021,"date":"2026-10-14","deposit":17729,"rent":34,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":17729,"preRent":32}
 {"lawd":"11170","umdNm":"원효로1가","jibun":"134","apt":"용산원효루미니","area":17.98,"floor":6,"built":2022,"date":"2026-10-14","deposit":4601,"rent":7,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":3461,"preRent":13}
@@ -131,3 +133,17 @@
 {"lawd":"11170","umdNm":"한강로2가","jibun":"426","apt":"용산베르디움프렌즈","area":49.99,"floor":26,"built":2021,"date":"2026-10-16","deposit":19707,"rent":39,"term":"26.11~29.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11170","umdNm":"문배동","jibun":"24-8","apt":"프라임펠리스","area":13.69,"floor":16,"built":2012,"date":"2026-10-16","deposit":13000,"rent":25,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11170","umdNm":"이촌동","jibun":"404","apt":"한가람","area":114.96,"floor":10,"built":1998,"date":"2026-10-16","deposit":112300,"rent":0,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11170","umdNm":"이촌동","jibun":"395","apt":"대림","area":84.78,"floor":12,"built":1994,"date":"2026-10-17","deposit":75000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11170","umdNm":"이촌동","jibun":"411","apt":"동아그린","area":59.58,"floor":7,"built":1999,"date":"2026-10-17","deposit":55650,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":53000,"preRent":0}
+{"lawd":"11170","umdNm":"한강로2가","jibun":"422","apt":"래미안용산더센트럴","area":135.27,"floor":24,"built":2017,"date":"2026-10-17","deposit":20000,"rent":890,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":20000,"preRent":850}
+{"lawd":"11170","umdNm":"산천동","jibun":"193","apt":"리버힐삼성","area":114.48,"floor":12,"built":2001,"date":"2026-10-17","deposit":90000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11170","umdNm":"서빙고동","jibun":"241-21","apt":"신동아","area":140.81,"floor":13,"built":1984,"date":"2026-10-17","deposit":5000,"rent":400,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":380}
+{"lawd":"11170","umdNm":"이촌동","jibun":"412","apt":"이촌코오롱(A)","area":84.78,"floor":9,"built":1999,"date":"2026-10-17","deposit":50000,"rent":190,"term":"26.11~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11170","umdNm":"한남동","jibun":"827","apt":"한남해피트리","area":64.24,"floor":1,"built":2016,"date":"2026-10-17","deposit":9000,"rent":320,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":5000,"preRent":320}
+{"lawd":"11170","umdNm":"한강로2가","jibun":"422","apt":"래미안용산더센트럴","area":135.27,"floor":34,"built":2017,"date":"2026-10-18","deposit":210000,"rent":0,"term":"26.11~28.05","type":"갱신","rrr":null,"preDeposit":200000,"preRent":0}
+{"lawd":"11170","umdNm":"이촌동","jibun":"400","apt":"현대한강","area":59.55,"floor":2,"built":1997,"date":"2026-10-18","deposit":35000,"rent":100,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11170","umdNm":"후암동","jibun":"423-1","apt":"후암미주","area":62.78,"floor":5,"built":1980,"date":"2026-10-18","deposit":34000,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":"사용","preDeposit":34000,"preRent":0}
+{"lawd":"11170","umdNm":"도원동","jibun":"23","apt":"삼성래미안","area":59.94,"floor":19,"built":2001,"date":"2026-10-19","deposit":63000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":60000,"preRent":0}
+{"lawd":"11170","umdNm":"효창동","jibun":"288","apt":"용산데시앙포레","area":84.94,"floor":9,"built":2022,"date":"2026-10-19","deposit":95000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11170","umdNm":"효창동","jibun":"287","apt":"용산롯데캐슬센터포레","area":84.91,"floor":9,"built":2019,"date":"2026-10-19","deposit":97000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":95000,"preRent":0}
+{"lawd":"11170","umdNm":"문배동","jibun":"3-3","apt":"이안용산프리미어","area":84.98,"floor":22,"built":2007,"date":"2026-10-19","deposit":85000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":78000,"preRent":0}

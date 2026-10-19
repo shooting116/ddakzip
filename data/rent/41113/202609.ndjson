@@ -300,7 +300,7 @@
 {"lawd":"41113","umdNm":"오목천동","jibun":"1180","apt":"수원권선꿈에그린아파트","area":84.98,"floor":15,"built":2018,"date":"2026-09-17","deposit":9790,"rent":63,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":9790,"preRent":62}
 {"lawd":"41113","umdNm":"곡반정동","jibun":"580","apt":"수원권선삼성래미안","area":84.84,"floor":15,"built":2000,"date":"2026-09-17","deposit":25000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"권선동","jibun":"1361","apt":"수원아이파크시티2단지","area":123.61,"floor":8,"built":2012,"date":"2026-09-17","deposit":10000,"rent":200,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":190}
-{"lawd":"41113","umdNm":"권선동","jibun":"1337","apt":"수원아이파크시티7단지","area":59.87,"floor":15,"built":2016,"date":"2026-09-17","deposit":32413,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41113","umdNm":"권선동","jibun":"1337","apt":"수원아이파크시티7단지","area":59.87,"floor":15,"built":2016,"date":"2026-09-17","deposit":32413,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":30870,"preRent":0}
 {"lawd":"41113","umdNm":"곡반정동","jibun":"654","apt":"수원하늘채더퍼스트2단지","area":74.88,"floor":3,"built":2022,"date":"2026-09-17","deposit":45000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"금곡동","jibun":"262-10","apt":"신미주","area":59.89,"floor":2,"built":1994,"date":"2026-09-17","deposit":2000,"rent":90,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"고색동","jibun":"886-83","apt":"태산1","area":59.96,"floor":1,"built":1997,"date":"2026-09-17","deposit":6000,"rent":55,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -338,6 +338,7 @@
 {"lawd":"41113","umdNm":"호매실동","jibun":"1388","apt":"호매실경남아너스빌","area":84.98,"floor":3,"built":2011,"date":"2026-09-18","deposit":5000,"rent":120,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"호매실동","jibun":"1393","apt":"힐스테이트호매실","area":93.69,"floor":17,"built":2018,"date":"2026-09-18","deposit":16030,"rent":64,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":15490,"preRent":62}
 {"lawd":"41113","umdNm":"권선동","jibun":"1020-3","apt":"SONOHEIM","area":17.82,"floor":12,"built":2022,"date":"2026-09-18","deposit":15000,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41113","umdNm":"권선동","jibun":"1305","apt":"권선대우","area":84.94,"floor":7,"built":2000,"date":"2026-09-19","deposit":40000,"rent":0,"term":"26.10~27.10","type":"갱신","rrr":null,"preDeposit":39000,"preRent":0}
 {"lawd":"41113","umdNm":"권선동","jibun":"1185-1","apt":"권선삼성","area":49.14,"floor":3,"built":1993,"date":"2026-09-19","deposit":2000,"rent":75,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"권선동","jibun":"1330","apt":"권선자이e편한세상","area":59.96,"floor":8,"built":2011,"date":"2026-09-19","deposit":39000,"rent":30,"term":"27.01~29.01","type":"갱신","rrr":null,"preDeposit":35000,"preRent":0}
 {"lawd":"41113","umdNm":"권선동","jibun":"1017-9","apt":"디에이치타워(DHTOWER)","area":19.87,"floor":8,"built":2023,"date":"2026-09-19","deposit":1000,"rent":85,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -353,6 +354,7 @@
 {"lawd":"41113","umdNm":"세류동","jibun":"1280","apt":"수원역센트럴어반시티아파트(수원센트럴타운3단지)","area":84.98,"floor":14,"built":2015,"date":"2026-09-19","deposit":41000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"곡반정동","jibun":"652","apt":"수원하늘채더퍼스트1단지","area":84.94,"floor":9,"built":2022,"date":"2026-09-19","deposit":60000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"금곡동","jibun":"262-10","apt":"신미주","area":59.89,"floor":16,"built":1994,"date":"2026-09-19","deposit":20000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41113","umdNm":"권선동","jibun":"1013-12","apt":"엘리시아","area":23.4,"floor":9,"built":2016,"date":"2026-09-19","deposit":500,"rent":65,"term":"26.10~27.10","type":"갱신","rrr":"사용","preDeposit":500,"preRent":65}
 {"lawd":"41113","umdNm":"금곡동","jibun":"530","apt":"엘지빌리지2","area":84.99,"floor":10,"built":1998,"date":"2026-09-19","deposit":33000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":29000,"preRent":0}
 {"lawd":"41113","umdNm":"금곡동","jibun":"530","apt":"엘지빌리지3","area":84.42,"floor":1,"built":1998,"date":"2026-09-19","deposit":31000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":25200,"preRent":0}
 {"lawd":"41113","umdNm":"고색동","jibun":"915","apt":"우림필유","area":84.94,"floor":7,"built":2005,"date":"2026-09-19","deposit":29500,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":29500,"preRent":0}
@@ -478,5 +480,6 @@
 {"lawd":"41113","umdNm":"권선동","jibun":"1337","apt":"수원아이파크시티7단지","area":59.88,"floor":3,"built":2016,"date":"2026-09-30","deposit":5000,"rent":150,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41113","umdNm":"세류동","jibun":"1270","apt":"수원역센트럴타운","area":59.98,"floor":14,"built":2015,"date":"2026-09-30","deposit":3000,"rent":110,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":3000,"preRent":90}
 {"lawd":"41113","umdNm":"당수동","jibun":"745","apt":"쌍용스윗닷홈1단지","area":84.94,"floor":7,"built":2005,"date":"2026-09-30","deposit":27000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41113","umdNm":"오목천동","jibun":"381","apt":"청구2","area":59.81,"floor":14,"built":2002,"date":"2026-09-30","deposit":22000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":19000,"preRent":0}
 {"lawd":"41113","umdNm":"금곡동","jibun":"1076","apt":"호매실더센트라고","area":59.81,"floor":8,"built":2014,"date":"2026-09-30","deposit":33300,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":32000,"preRent":0}
 {"lawd":"41113","umdNm":"호매실동","jibun":"1394","apt":"호매실스위첸","area":59.9,"floor":13,"built":2014,"date":"2026-09-30","deposit":31500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":0}

@@ -108,6 +108,7 @@
 {"lawd":"28200","umdNm":"논현동","jibun":"755-4","apt":"에코메트로12","area":85,"floor":10,"built":2009,"date":"2026-09-06","deposit":40000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"서창동","jibun":"685","apt":"이편한세상서창","area":84.92,"floor":12,"built":2017,"date":"2026-09-06","deposit":40000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"간석동","jibun":"944","apt":"인천시청역힐스테이트","area":59.97,"floor":12,"built":2024,"date":"2026-09-06","deposit":28350,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":27000,"preRent":0}
+{"lawd":"28200","umdNm":"구월동","jibun":"1636","apt":"한화포레나인천구월","area":59.98,"floor":14,"built":2023,"date":"2026-09-06","deposit":3000,"rent":140,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"만수동","jibun":"1116-1","apt":"향촌휴먼시아2단지","area":59.9,"floor":13,"built":2012,"date":"2026-09-06","deposit":26000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"구월동","jibun":"1486","apt":"구월아시아드선수촌1단지","area":59.99,"floor":27,"built":2015,"date":"2026-09-07","deposit":30000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"구월동","jibun":"1551","apt":"구월아시아드선수촌7단지","area":25.86,"floor":4,"built":2023,"date":"2026-09-07","deposit":269,"rent":5,"term":"26.09~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -251,6 +252,7 @@
 {"lawd":"28200","umdNm":"간석동","jibun":"940","apt":"인천간석휴먼시아1단지","area":59.93,"floor":17,"built":2014,"date":"2026-09-12","deposit":25200,"rent":0,"term":"26.09~27.11","type":"갱신","rrr":"사용","preDeposit":24000,"preRent":0}
 {"lawd":"28200","umdNm":"간석동","jibun":"944","apt":"인천시청역힐스테이트","area":59.88,"floor":16,"built":2024,"date":"2026-09-12","deposit":30000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":29000,"preRent":0}
 {"lawd":"28200","umdNm":"간석동","jibun":"944","apt":"인천시청역힐스테이트","area":59.97,"floor":13,"built":2024,"date":"2026-09-12","deposit":30000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":27000,"preRent":0}
+{"lawd":"28200","umdNm":"논현동","jibun":"563-3","apt":"주공2단지","area":38.95,"floor":3,"built":1998,"date":"2026-09-12","deposit":12500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"논현동","jibun":"563-3","apt":"주공2단지","area":38.95,"floor":3,"built":1998,"date":"2026-09-12","deposit":13000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"만수동","jibun":"1005","apt":"주공8단지","area":44.94,"floor":10,"built":1989,"date":"2026-09-12","deposit":1000,"rent":55,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"구월동","jibun":"1636","apt":"한화포레나인천구월","area":84.99,"floor":16,"built":2023,"date":"2026-09-12","deposit":43000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":41000,"preRent":0}
@@ -374,6 +376,7 @@
 {"lawd":"28200","umdNm":"만수동","jibun":"1005","apt":"주공8단지","area":44.94,"floor":12,"built":1989,"date":"2026-09-19","deposit":1000,"rent":55,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"만수동","jibun":"1115-1","apt":"포레시안","area":46.89,"floor":10,"built":2011,"date":"2026-09-19","deposit":20000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":20000,"preRent":0}
 {"lawd":"28200","umdNm":"간석동","jibun":"519-4","apt":"한진","area":61.16,"floor":9,"built":1980,"date":"2026-09-19","deposit":3000,"rent":45,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":3000,"preRent":40}
+{"lawd":"28200","umdNm":"만수동","jibun":"29","apt":"만수주공2단지","area":54.9,"floor":9,"built":1987,"date":"2026-09-20","deposit":2000,"rent":65,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":2000,"preRent":55}
 {"lawd":"28200","umdNm":"만수동","jibun":"13","apt":"만수주공4단지","area":75.24,"floor":14,"built":1987,"date":"2026-09-20","deposit":9000,"rent":20,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"만수동","jibun":"20","apt":"만수주공6단지","area":38.52,"floor":2,"built":1986,"date":"2026-09-20","deposit":1000,"rent":55,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"서창동","jibun":"744","apt":"인천서창엘에에치14단지","area":36.64,"floor":3,"built":2020,"date":"2026-09-20","deposit":6118,"rent":9,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":3744,"preRent":20}
@@ -401,6 +404,7 @@
 {"lawd":"28200","umdNm":"만수동","jibun":"1115-1","apt":"포레시안","area":84.35,"floor":13,"built":2011,"date":"2026-09-21","deposit":33000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":33000,"preRent":0}
 {"lawd":"28200","umdNm":"간석동","jibun":"939-1","apt":"간석래미안자이","area":84.98,"floor":20,"built":2008,"date":"2026-09-22","deposit":36500,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"구월동","jibun":"23","apt":"구월힐스테이트1단지","area":75.3,"floor":18,"built":2007,"date":"2026-09-22","deposit":34125,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":32500,"preRent":0}
+{"lawd":"28200","umdNm":"구월동","jibun":"23","apt":"구월힐스테이트1단지","area":83.89,"floor":34,"built":2007,"date":"2026-09-22","deposit":5000,"rent":150,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"논현동","jibun":"580-1","apt":"논현 파크 포레","area":84.94,"floor":5,"built":2009,"date":"2026-09-22","deposit":30000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"논현동","jibun":"749-1","apt":"논현센트럴뷰","area":59.58,"floor":22,"built":2014,"date":"2026-09-22","deposit":32000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"논현동","jibun":"633-1","apt":"논현휴먼시아달맞이마을(5단지)","area":46.55,"floor":13,"built":2007,"date":"2026-09-22","deposit":2405,"rent":28,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":2335,"preRent":27}
@@ -415,8 +419,10 @@
 {"lawd":"28200","umdNm":"간석동","jibun":"944","apt":"인천시청역힐스테이트","area":59.97,"floor":14,"built":2024,"date":"2026-09-22","deposit":25000,"rent":0,"term":"26.09~26.12","type":"갱신","rrr":null,"preDeposit":25000,"preRent":0}
 {"lawd":"28200","umdNm":"논현동","jibun":"599-1","apt":"주공14단지(등대마을)","area":46.81,"floor":9,"built":2006,"date":"2026-09-22","deposit":2450,"rent":28,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":2334,"preRent":27}
 {"lawd":"28200","umdNm":"간석동","jibun":"315-5","apt":"간석트인자리애","area":40.43,"floor":9,"built":2016,"date":"2026-09-23","deposit":2000,"rent":40,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28200","umdNm":"만수동","jibun":"1014","apt":"남동아파트","area":60,"floor":12,"built":1992,"date":"2026-09-23","deposit":2000,"rent":75,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"논현동","jibun":"635-1","apt":"논현휴먼시아하늘마을(3단지)","area":46.9,"floor":2,"built":2008,"date":"2026-09-23","deposit":2539,"rent":28,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":2418,"preRent":27}
 {"lawd":"28200","umdNm":"만수동","jibun":"5-397","apt":"대동(5-397)","area":56.56,"floor":5,"built":1989,"date":"2026-09-23","deposit":7900,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28200","umdNm":"구월동","jibun":"1124-5","apt":"리치캐슬","area":30.52,"floor":3,"built":2012,"date":"2026-09-23","deposit":1500,"rent":50,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"만수동","jibun":"29","apt":"만수주공1단지","area":39.72,"floor":2,"built":1985,"date":"2026-09-23","deposit":1000,"rent":45,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"만수동","jibun":"29","apt":"만수주공2단지","area":61.52,"floor":10,"built":1987,"date":"2026-09-23","deposit":16000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"만수동","jibun":"29","apt":"만수주공2단지","area":64.62,"floor":5,"built":1987,"date":"2026-09-23","deposit":2000,"rent":75,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -453,6 +459,7 @@
 {"lawd":"28200","umdNm":"논현동","jibun":"749-1","apt":"논현센트럴뷰","area":59.58,"floor":15,"built":2014,"date":"2026-09-29","deposit":32500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"논현동","jibun":"618-1","apt":"논현신일해피트리","area":134.89,"floor":13,"built":2007,"date":"2026-09-29","deposit":51300,"rent":0,"term":"26.09~26.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"만수동","jibun":"5-397","apt":"대동(5-397)","area":59.83,"floor":3,"built":1989,"date":"2026-09-29","deposit":8500,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28200","umdNm":"구월동","jibun":"1142-2","apt":"대명어반스테이","area":20.04,"floor":2,"built":2018,"date":"2026-09-29","deposit":300,"rent":48,"term":"26.10~27.10","type":"갱신","rrr":null,"preDeposit":300,"preRent":48}
 {"lawd":"28200","umdNm":"서창동","jibun":"676","apt":"더포레스트","area":59.98,"floor":24,"built":2017,"date":"2026-09-29","deposit":11816,"rent":24,"term":"26.11~28.02","type":"갱신","rrr":null,"preDeposit":11582,"preRent":53}
 {"lawd":"28200","umdNm":"만수동","jibun":"904-18","apt":"동남","area":72.72,"floor":5,"built":1984,"date":"2026-09-29","deposit":1000,"rent":55,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"만수동","jibun":"29","apt":"만수주공1단지","area":47.1,"floor":2,"built":1985,"date":"2026-09-29","deposit":13000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

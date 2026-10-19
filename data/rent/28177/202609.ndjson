@@ -4,6 +4,7 @@
 {"lawd":"28177","umdNm":"도화동","jibun":"137-2","apt":"신태양2차","area":44.27,"floor":5,"built":1982,"date":"2026-09-01","deposit":10730,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28177","umdNm":"용현동","jibun":"690","apt":"엘에이치미추홀3단지","area":29.78,"floor":26,"built":2018,"date":"2026-09-01","deposit":4284,"rent":19,"term":"26.09~28.08","type":"갱신","rrr":null,"preDeposit":4104,"preRent":18}
 {"lawd":"28177","umdNm":"주안동","jibun":"1662","apt":"주안파크자이더플래티넘","area":73.96,"floor":6,"built":2023,"date":"2026-09-01","deposit":5000,"rent":130,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28177","umdNm":"주안동","jibun":"가-","apt":"포레나미추홀","area":59.92,"floor":7,"built":2022,"date":"2026-09-01","deposit":32000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":27000,"preRent":0}
 {"lawd":"28177","umdNm":"학익동","jibun":"681-6","apt":"하나아파트","area":26.4,"floor":6,"built":1997,"date":"2026-09-01","deposit":500,"rent":45,"term":"26.09~27.08","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28177","umdNm":"주안동","jibun":"1678","apt":"힐스테이트푸르지오주안","area":59.72,"floor":15,"built":2023,"date":"2026-09-01","deposit":36000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28177","umdNm":"도화동","jibun":"1009","apt":"e편한세상도화6-1단지","area":84.99,"floor":7,"built":2018,"date":"2026-09-01","deposit":14256,"rent":40,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -56,6 +57,8 @@
 {"lawd":"28177","umdNm":"학익동","jibun":"739","apt":"인천학익두산위브","area":21.8,"floor":2,"built":2011,"date":"2026-09-05","deposit":1000,"rent":54,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":1000,"preRent":52}
 {"lawd":"28177","umdNm":"학익동","jibun":"739","apt":"인천학익두산위브","area":27.52,"floor":5,"built":2011,"date":"2026-09-05","deposit":1000,"rent":63,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":1000,"preRent":60}
 {"lawd":"28177","umdNm":"주안동","jibun":"13-1","apt":"주안현대홈타운","area":66.71,"floor":11,"built":2002,"date":"2026-09-05","deposit":2000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28177","umdNm":"주안동","jibun":"가-","apt":"포레나미추홀","area":59.92,"floor":27,"built":2022,"date":"2026-09-05","deposit":31000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28177","umdNm":"주안동","jibun":"가-","apt":"포레나미추홀","area":70.95,"floor":32,"built":2022,"date":"2026-09-05","deposit":32100,"rent":10,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":30600,"preRent":10}
 {"lawd":"28177","umdNm":"학익동","jibun":"721","apt":"풍림아이원","area":59.94,"floor":10,"built":2007,"date":"2026-09-05","deposit":25000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28177","umdNm":"학익동","jibun":"681-6","apt":"하나아파트","area":26.4,"floor":4,"built":1997,"date":"2026-09-05","deposit":500,"rent":40,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28177","umdNm":"주안동","jibun":"1678","apt":"힐스테이트푸르지오주안","area":59.96,"floor":25,"built":2023,"date":"2026-09-05","deposit":34000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -74,6 +77,7 @@
 {"lawd":"28177","umdNm":"학익동","jibun":"739","apt":"인천학익두산위브","area":27.52,"floor":5,"built":2011,"date":"2026-09-07","deposit":1000,"rent":63,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":1000,"preRent":60}
 {"lawd":"28177","umdNm":"학익동","jibun":"413-1","apt":"장미1","area":90.78,"floor":4,"built":1984,"date":"2026-09-07","deposit":1000,"rent":75,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28177","umdNm":"주안동","jibun":"1662","apt":"주안파크자이더플래티넘","area":59.91,"floor":26,"built":2023,"date":"2026-09-07","deposit":3500,"rent":135,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28177","umdNm":"주안동","jibun":"가-","apt":"포레나미추홀","area":76.53,"floor":16,"built":2022,"date":"2026-09-07","deposit":40000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":39000,"preRent":0}
 {"lawd":"28177","umdNm":"학익동","jibun":"757","apt":"학익SKVIEW","area":59.92,"floor":25,"built":2025,"date":"2026-09-07","deposit":27000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":26000,"preRent":0}
 {"lawd":"28177","umdNm":"학익동","jibun":"757","apt":"학익SKVIEW","area":84.99,"floor":13,"built":2025,"date":"2026-09-07","deposit":35700,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":34000,"preRent":0}
 {"lawd":"28177","umdNm":"도화동","jibun":"1009","apt":"e편한세상도화6-1단지","area":59.79,"floor":5,"built":2018,"date":"2026-09-07","deposit":5280,"rent":45,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":5176,"preRent":45}
@@ -139,6 +143,7 @@
 {"lawd":"28177","umdNm":"학익동","jibun":"671-2","apt":"영남","area":54.27,"floor":4,"built":1989,"date":"2026-09-14","deposit":10500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28177","umdNm":"주안동","jibun":"18-141","apt":"우정","area":55.22,"floor":2,"built":1982,"date":"2026-09-14","deposit":1000,"rent":50,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28177","umdNm":"주안동","jibun":"51-1","apt":"주안애캐슬(51-1)","area":59.96,"floor":6,"built":2008,"date":"2026-09-14","deposit":15000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28177","umdNm":"학익동","jibun":"721","apt":"풍림아이원","area":155.93,"floor":17,"built":2007,"date":"2026-09-14","deposit":40000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28177","umdNm":"학익동","jibun":"757","apt":"학익SKVIEW","area":84.99,"floor":28,"built":2025,"date":"2026-09-14","deposit":35000,"rent":0,"term":"26.10~27.04","type":"갱신","rrr":"사용","preDeposit":35000,"preRent":0}
 {"lawd":"28177","umdNm":"주안동","jibun":"1678","apt":"힐스테이트푸르지오주안","area":59.72,"floor":8,"built":2023,"date":"2026-09-14","deposit":3000,"rent":145,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28177","umdNm":"주안동","jibun":"115-1","apt":"Wellga","area":15.04,"floor":4,"built":2014,"date":"2026-09-14","deposit":300,"rent":40,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -174,6 +179,7 @@
 {"lawd":"28177","umdNm":"용현동","jibun":"647","apt":"용현2단지금호타운","area":59.94,"floor":18,"built":1999,"date":"2026-09-17","deposit":2000,"rent":75,"term":"26.09~27.03","type":"갱신","rrr":"사용","preDeposit":2000,"preRent":75}
 {"lawd":"28177","umdNm":"용현동","jibun":"689","apt":"용현엘크루윈드포레","area":51.81,"floor":13,"built":2018,"date":"2026-09-17","deposit":18000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":18000,"preRent":0}
 {"lawd":"28177","umdNm":"용현동","jibun":"가-","apt":"용현자이크레스트","area":84.98,"floor":27,"built":2023,"date":"2026-09-17","deposit":40000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28177","umdNm":"주안동","jibun":"가-","apt":"포레나미추홀","area":76.53,"floor":24,"built":2022,"date":"2026-09-17","deposit":5000,"rent":150,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28177","umdNm":"용현동","jibun":"574-3","apt":"대진","area":39.78,"floor":2,"built":1989,"date":"2026-09-18","deposit":300,"rent":50,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28177","umdNm":"도화동","jibun":"1011","apt":"더샵인천스카이타워1단지","area":74.96,"floor":5,"built":2020,"date":"2026-09-18","deposit":5000,"rent":140,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28177","umdNm":"도화동","jibun":"1002","apt":"더샵인천스카이타워2단지","area":84.94,"floor":3,"built":2020,"date":"2026-09-18","deposit":12000,"rent":112,"term":"26.10~27.10","type":"갱신","rrr":null,"preDeposit":12000,"preRent":105}
@@ -212,7 +218,9 @@
 {"lawd":"28177","umdNm":"숭의동","jibun":"78-9","apt":"숭의동아르떼노블","area":17.46,"floor":14,"built":2014,"date":"2026-09-21","deposit":500,"rent":33,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28177","umdNm":"용현동","jibun":"664","apt":"인천 SK Sky VIEW","area":85,"floor":26,"built":2016,"date":"2026-09-21","deposit":48000,"rent":0,"term":"26.09~29.07","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28177","umdNm":"용현동","jibun":"664","apt":"인천 SK Sky VIEW","area":85,"floor":26,"built":2016,"date":"2026-09-21","deposit":48000,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28177","umdNm":"주안동","jibun":"가-","apt":"포레나미추홀","area":98.79,"floor":27,"built":2022,"date":"2026-09-21","deposit":41500,"rent":0,"term":"26.11~27.11","type":"갱신","rrr":"사용","preDeposit":39600,"preRent":0}
 {"lawd":"28177","umdNm":"학익동","jibun":"38","apt":"한국공영","area":46.45,"floor":2,"built":1980,"date":"2026-09-21","deposit":8000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28177","umdNm":"학익동","jibun":"692-1","apt":"호산1","area":59.3,"floor":9,"built":1996,"date":"2026-09-21","deposit":11000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28177","umdNm":"도화동","jibun":"1004","apt":"e편한세상도화5단지","area":59.79,"floor":29,"built":2018,"date":"2026-09-21","deposit":9504,"rent":35,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":9317,"preRent":35}
 {"lawd":"28177","umdNm":"도화동","jibun":"1009","apt":"e편한세상도화6-1단지","area":72.14,"floor":12,"built":2018,"date":"2026-09-21","deposit":6193,"rent":50,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":6072,"preRent":49}
 {"lawd":"28177","umdNm":"주안동","jibun":"200-15","apt":"NS타워텔","area":13.81,"floor":11,"built":2012,"date":"2026-09-21","deposit":3490,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

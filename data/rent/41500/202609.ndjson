@@ -266,6 +266,7 @@
 {"lawd":"41500","umdNm":"안흥동","jibun":"477","apt":"이천롯데캐슬페라즈스카이","area":84.98,"floor":22,"built":2023,"date":"2026-09-28","deposit":33000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"안흥동","jibun":"320-1","apt":"이천센트레빌레이크뷰","area":84.97,"floor":41,"built":2025,"date":"2026-09-28","deposit":36000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"부발읍 아미리","jibun":"730","apt":"이천신일해피트리트리빌1단지","area":84.98,"floor":4,"built":2014,"date":"2026-09-28","deposit":24000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41500","umdNm":"증포동","jibun":"502","apt":"이천자이더리체","area":84.94,"floor":6,"built":2026,"date":"2026-09-28","deposit":31000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"중리동","jibun":"497","apt":"이천중리우미린어반퍼스트","area":84.98,"floor":11,"built":2026,"date":"2026-09-28","deposit":3000,"rent":140,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"증포동","jibun":"491","apt":"이천증포새도시한양수자인5블럭","area":84.88,"floor":9,"built":2017,"date":"2026-09-28","deposit":2000,"rent":140,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"장호원읍 진암리","jibun":"814","apt":"이천진암지구우방아이유쉘메가하이브","area":59.97,"floor":7,"built":2023,"date":"2026-09-28","deposit":2000,"rent":75,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -284,3 +285,4 @@
 {"lawd":"41500","umdNm":"창전동","jibun":"417-2","apt":"청자국민주택","area":65.13,"floor":2,"built":1986,"date":"2026-09-30","deposit":1000,"rent":60,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"대월면 사동리","jibun":"386-72","apt":"현대5","area":59.87,"floor":2,"built":1997,"date":"2026-09-30","deposit":500,"rent":70,"term":"26.10~27.04","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41500","umdNm":"증일동","jibun":"394","apt":"힐스테이트이천역2단지","area":84.81,"floor":11,"built":2026,"date":"2026-09-30","deposit":31000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41500","umdNm":"증일동","jibun":"394","apt":"힐스테이트이천역2단지","area":84.81,"floor":21,"built":2026,"date":"2026-09-30","deposit":3000,"rent":150,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

@@ -246,6 +246,7 @@
 {"lawd":"28237","umdNm":"부개동","jibun":"477-1","apt":"대동","area":43.3,"floor":5,"built":1988,"date":"2026-09-12","deposit":1000,"rent":60,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28237","umdNm":"부개동","jibun":"477-2","apt":"대진","area":39.6,"floor":6,"built":1988,"date":"2026-09-12","deposit":12500,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28237","umdNm":"부개동","jibun":"477-2","apt":"대진","area":39.6,"floor":6,"built":1988,"date":"2026-09-12","deposit":14000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28237","umdNm":"부개동","jibun":"477-5","apt":"동아","area":49.2,"floor":3,"built":1988,"date":"2026-09-12","deposit":1000,"rent":68,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28237","umdNm":"부평동","jibun":"70-5","apt":"동아(1차)","area":52.43,"floor":9,"built":1986,"date":"2026-09-12","deposit":19000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":18000,"preRent":0}
 {"lawd":"28237","umdNm":"부평동","jibun":"70-5","apt":"동아(1차)","area":52.43,"floor":11,"built":1986,"date":"2026-09-12","deposit":20000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28237","umdNm":"부평동","jibun":"70-5","apt":"동아(1차)","area":52.43,"floor":14,"built":1986,"date":"2026-09-12","deposit":22000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -476,6 +477,7 @@
 {"lawd":"28237","umdNm":"청천동","jibun":"200","apt":"부평1,2차금호타운","area":59.81,"floor":7,"built":1998,"date":"2026-09-22","deposit":28000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28237","umdNm":"청천동","jibun":"200","apt":"부평1,2차금호타운","area":59.81,"floor":20,"built":1998,"date":"2026-09-22","deposit":27000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":26000,"preRent":0}
 {"lawd":"28237","umdNm":"산곡동","jibun":"524","apt":"부평신일해피트리더루츠","area":59.58,"floor":5,"built":2022,"date":"2026-09-22","deposit":34650,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":33000,"preRent":0}
+{"lawd":"28237","umdNm":"삼산동","jibun":"440-1","apt":"삼산타운주공1단지","area":51.83,"floor":2,"built":2005,"date":"2026-09-22","deposit":28000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28237","umdNm":"부평동","jibun":"431-15","apt":"헤리움노블레스","area":16.76,"floor":5,"built":2014,"date":"2026-09-22","deposit":300,"rent":50,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28237","umdNm":"산곡동","jibun":"311-126","apt":"현대2차","area":84.96,"floor":4,"built":1987,"date":"2026-09-22","deposit":14000,"rent":70,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28237","umdNm":"부개동","jibun":"477-3","apt":"뉴서울","area":39.48,"floor":11,"built":1989,"date":"2026-09-23","deposit":1000,"rent":60,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

@@ -23,3 +23,7 @@
 {"lawd":"26170","umdNm":"범일동","jibun":"1655","apt":"오션브릿지","area":84.98,"floor":23,"built":2018,"date":"2026-10-14","deposit":34000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26170","umdNm":"범일동","jibun":"1664","apt":"두산위브더제니스하버시티","area":59.88,"floor":19,"built":2023,"date":"2026-10-16","deposit":30000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26170","umdNm":"범일동","jibun":"825-7","apt":"두산위브포세이돈2","area":84.99,"floor":27,"built":2006,"date":"2026-10-16","deposit":30000,"rent":0,"term":"26.10~28.06","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":0}
+{"lawd":"26170","umdNm":"범일동","jibun":"830-179","apt":"범일역신화하니엘팔라시오","area":49.2,"floor":23,"built":2024,"date":"2026-10-17","deposit":3000,"rent":100,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26170","umdNm":"범일동","jibun":"1655","apt":"오션브릿지","area":84.95,"floor":35,"built":2018,"date":"2026-10-17","deposit":34000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26170","umdNm":"수정동","jibun":"1352","apt":"협성휴포레부산진역오션뷰","area":69.51,"floor":13,"built":2019,"date":"2026-10-19","deposit":38000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26170","umdNm":"수정동","jibun":"1352","apt":"협성휴포레부산진역오션뷰","area":69.51,"floor":30,"built":2019,"date":"2026-10-19","deposit":36750,"rent":0,"term":"26.10~28.11","type":"갱신","rrr":null,"preDeposit":35000,"preRent":0}

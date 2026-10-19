@@ -523,6 +523,8 @@
 {"lawd":"11350","umdNm":"공릉동","jibun":"81","apt":"태강아파트(아이파크)","area":49.6,"floor":13,"built":1999,"date":"2026-09-12","deposit":38000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11350","umdNm":"공릉동","jibun":"758","apt":"태릉해링턴플레이스","area":59.98,"floor":15,"built":2022,"date":"2026-09-12","deposit":54000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":52000,"preRent":0}
 {"lawd":"11350","umdNm":"공릉동","jibun":"758","apt":"태릉해링턴플레이스","area":84.98,"floor":7,"built":2022,"date":"2026-09-12","deposit":80000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11350","umdNm":"하계동","jibun":"288","apt":"하계2현대","area":84.51,"floor":1,"built":1997,"date":"2026-09-12","deposit":66000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":63000,"preRent":0}
+{"lawd":"11350","umdNm":"하계동","jibun":"354","apt":"학여울청구","area":59.4,"floor":15,"built":1999,"date":"2026-09-12","deposit":39900,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":38000,"preRent":0}
 {"lawd":"11350","umdNm":"상계동","jibun":"135","apt":"한신1차","area":53.96,"floor":9,"built":1987,"date":"2026-09-12","deposit":29925,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":28500,"preRent":0}
 {"lawd":"11350","umdNm":"하계동","jibun":"256-5","apt":"한신동성","area":138.29,"floor":14,"built":1993,"date":"2026-09-12","deposit":40000,"rent":180,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11350","umdNm":"공릉동","jibun":"742","apt":"효성아파트","area":73.18,"floor":5,"built":1995,"date":"2026-09-12","deposit":32000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -578,6 +580,7 @@
 {"lawd":"11350","umdNm":"월계동","jibun":"320-11","apt":"사슴3","area":39.6,"floor":13,"built":1995,"date":"2026-09-15","deposit":1000,"rent":60,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11350","umdNm":"월계동","jibun":"320-11","apt":"사슴3","area":39.6,"floor":13,"built":1995,"date":"2026-09-15","deposit":1000,"rent":60,"term":"26.09~30.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11350","umdNm":"상계동","jibun":"652","apt":"상계주공11(고층)","area":58.01,"floor":13,"built":1988,"date":"2026-09-15","deposit":33600,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":32000,"preRent":0}
+{"lawd":"11350","umdNm":"상계동","jibun":"647","apt":"상계주공12(고층)","area":49.94,"floor":7,"built":1988,"date":"2026-09-15","deposit":23000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11350","umdNm":"상계동","jibun":"626","apt":"상계주공14(고층)","area":49.94,"floor":3,"built":1989,"date":"2026-09-15","deposit":20790,"rent":0,"term":"26.10~26.11","type":"갱신","rrr":null,"preDeposit":19800,"preRent":0}
 {"lawd":"11350","umdNm":"상계동","jibun":"624","apt":"상계주공15(고층,공무원임대)","area":41.3,"floor":9,"built":1988,"date":"2026-09-15","deposit":4089,"rent":22,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":3894,"preRent":21}
 {"lawd":"11350","umdNm":"상계동","jibun":"624","apt":"상계주공15(고층,공무원임대)","area":41.3,"floor":9,"built":1988,"date":"2026-09-15","deposit":11112,"rent":8,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":9260,"preRent":13}
@@ -849,6 +852,7 @@
 {"lawd":"11350","umdNm":"하계동","jibun":"255-1","apt":"삼익선경","area":107.95,"floor":4,"built":1993,"date":"2026-09-24","deposit":50000,"rent":100,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11350","umdNm":"상계동","jibun":"624","apt":"상계주공16(고층)","area":59.39,"floor":10,"built":1988,"date":"2026-09-24","deposit":32000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11350","umdNm":"중계동","jibun":"592","apt":"중계3벽산","area":85,"floor":1,"built":1999,"date":"2026-09-24","deposit":54600,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":52000,"preRent":0}
+{"lawd":"11350","umdNm":"중계동","jibun":"512","apt":"중계무지개","area":49.54,"floor":6,"built":1991,"date":"2026-09-24","deposit":35000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":20000,"preRent":0}
 {"lawd":"11350","umdNm":"상계동","jibun":"749-5","apt":"상계주공4(고층)","area":32.39,"floor":7,"built":1988,"date":"2026-09-26","deposit":16000,"rent":0,"term":"26.10~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11350","umdNm":"하계동","jibun":"274","apt":"청솔(시영7)","area":49.5,"floor":10,"built":1989,"date":"2026-09-26","deposit":5000,"rent":80,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":70}
 {"lawd":"11350","umdNm":"상계동","jibun":"666","apt":"상계주공10(고층)","area":49.94,"floor":3,"built":1988,"date":"2026-09-27","deposit":31000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -872,6 +876,7 @@
 {"lawd":"11350","umdNm":"상계동","jibun":"691","apt":"상계주공7(고층)","area":41.3,"floor":1,"built":1988,"date":"2026-09-28","deposit":15000,"rent":30,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":10000,"preRent":30}
 {"lawd":"11350","umdNm":"상계동","jibun":"670","apt":"상계주공9(고층)","area":49.94,"floor":8,"built":1988,"date":"2026-09-28","deposit":33000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11350","umdNm":"상계동","jibun":"1296","apt":"상록수1단지","area":53.66,"floor":15,"built":2002,"date":"2026-09-28","deposit":33000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11350","umdNm":"월계동","jibun":"942","apt":"월계역신도브래뉴","area":84.51,"floor":10,"built":2005,"date":"2026-09-28","deposit":8000,"rent":165,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":5000,"preRent":150}
 {"lawd":"11350","umdNm":"월계동","jibun":"939","apt":"월계흥화브라운빌","area":84.99,"floor":5,"built":2004,"date":"2026-09-28","deposit":42000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":33600,"preRent":0}
 {"lawd":"11350","umdNm":"중계동","jibun":"364-12","apt":"주공6","area":44.1,"floor":1,"built":1993,"date":"2026-09-28","deposit":26000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11350","umdNm":"중계동","jibun":"502-1","apt":"중계그린1단지","area":49.85,"floor":1,"built":1990,"date":"2026-09-28","deposit":26100,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":25500,"preRent":0}

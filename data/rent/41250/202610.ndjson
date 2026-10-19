@@ -26,5 +26,9 @@
 {"lawd":"41250","umdNm":"지행동","jibun":"282-3","apt":"지행현대2차아파트","area":84.95,"floor":9,"built":1999,"date":"2026-10-12","deposit":16500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41250","umdNm":"지행동","jibun":"691-3","apt":"현진에버빌","area":90.17,"floor":1,"built":2005,"date":"2026-10-12","deposit":1000,"rent":100,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41250","umdNm":"송내동","jibun":"696-3","apt":"송내주공5단지","area":84.8,"floor":2,"built":2003,"date":"2026-10-13","deposit":12000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":12000,"preRent":0}
+{"lawd":"41250","umdNm":"지행동","jibun":"717-2","apt":"송내주공1단지","area":75.79,"floor":16,"built":2004,"date":"2026-10-14","deposit":18000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":19000,"preRent":0}
 {"lawd":"41250","umdNm":"지행동","jibun":"717-2","apt":"송내주공1단지","area":59.56,"floor":12,"built":2004,"date":"2026-10-15","deposit":1000,"rent":60,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":1000,"preRent":50}
 {"lawd":"41250","umdNm":"지행동","jibun":"722-5","apt":"송내주공2단지","area":59.56,"floor":1,"built":2004,"date":"2026-10-15","deposit":3000,"rent":60,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":3000,"preRent":55}
+{"lawd":"41250","umdNm":"송내동","jibun":"665-3","apt":"송내주공4단지","area":45.32,"floor":2,"built":2003,"date":"2026-10-19","deposit":1000,"rent":48,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":1000,"preRent":48}
+{"lawd":"41250","umdNm":"지행동","jibun":"270-4","apt":"지행주공1단지","area":59.99,"floor":6,"built":2000,"date":"2026-10-19","deposit":10500,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41250","umdNm":"지행동","jibun":"270-3","apt":"지행주공2단지","area":59.99,"floor":7,"built":1999,"date":"2026-10-19","deposit":525,"rent":55,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":525,"preRent":55}

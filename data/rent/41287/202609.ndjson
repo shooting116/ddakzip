@@ -403,6 +403,7 @@
 {"lawd":"41287","umdNm":"일산동","jibun":"1050","apt":"후곡마을(동부)","area":51.06,"floor":9,"built":1994,"date":"2026-09-28","deposit":22500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41287","umdNm":"일산동","jibun":"1103","apt":"후곡마을(주공)","area":68.13,"floor":15,"built":1995,"date":"2026-09-28","deposit":3000,"rent":130,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41287","umdNm":"가좌동","jibun":"1087","apt":"가좌마을5단지벽산","area":124.94,"floor":5,"built":2005,"date":"2026-09-29","deposit":32000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41287","umdNm":"주엽동","jibun":"86","apt":"강선마을16단지동문","area":57.92,"floor":7,"built":1993,"date":"2026-09-29","deposit":27000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41287","umdNm":"주엽동","jibun":"63","apt":"강선마을8단지(롯데,럭키)","area":84.99,"floor":2,"built":1993,"date":"2026-09-29","deposit":40950,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":39000,"preRent":0}
 {"lawd":"41287","umdNm":"주엽동","jibun":"60","apt":"강선마을9단지화성","area":69.9,"floor":7,"built":1993,"date":"2026-09-29","deposit":3000,"rent":130,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41287","umdNm":"주엽동","jibun":"12","apt":"문촌마을(동아)8단지","area":71.64,"floor":6,"built":1994,"date":"2026-09-29","deposit":32000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
