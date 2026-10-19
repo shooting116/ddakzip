@@ -31,29 +31,29 @@ const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${
         <div class="wide">
           <div class="half">
             <span class="nm">수도권 <span class="sub">서울·인천·경기</span></span>
-            <b class={yoyCls(cap)}>{yoyText(cap)}</b>
-            <span class="sub">{cap?.n ? `${cap.n.toLocaleString()}개 평형` : ''}</span>
-            {rCap && <span class="rone">부동산원 {roneYoy(rCap)} <Fragment set:html={streakPill(rCap)} /></span>}
+            <b class={yoyCls(cap)}><i>실거래</i>{yoyText(cap)}</b>
+            <span class="sub">{cap?.n ? `${cap.n.toLocaleString()}개 평형 비교` : ''}</span>
+            {rCap && <span class="rone">부동산원 매매가격지수: {roneYoy(rCap)} <Fragment set:html={streakPill(rCap)} /></span>}
           </div>
           <div class="half">
-            <span class="nm">전국 <span class="sub">부동산원 지수</span></span>
-            <b class={rAll && rAll.yoy != null ? (rAll.yoy > 0 ? 'up' : rAll.yoy < 0 ? 'down' : '') : 'na'}>{rAll && rAll.yoy != null ? roneYoy(rAll) : '—'}</b>
+            <span class="nm">전국 <span class="sub">부동산원 매매가격지수</span></span>
+            <b class={rAll && rAll.yoy != null ? (rAll.yoy > 0 ? 'up' : rAll.yoy < 0 ? 'down' : '') : 'na'}><i>지수 1년</i>{rAll && rAll.yoy != null ? `${rAll.yoy > 0 ? '+' : ''}${rAll.yoy.toFixed(1)}%` : '—'}</b>
             <span class="rone"><Fragment set:html={streakPill(rAll)} /></span>
-            <span class="sub">쏙집 실거래는 수도권·광역시만 집계</span>
+            <span class="sub">실거래 집계는 수도권·광역시만</span>
           </div>
         </div>
       )}
       {sidos.map((sido) => { const c = sm.sido[sido].chg; const r = roneSido(sido); return (
         <a class="scell" href={`#s-${sido}`}>
           <span class="nm">{sido}</span>
-          <b class={yoyCls(c)}>{yoyText(c)}</b>
+          <b class={yoyCls(c)}><i>실거래</i>{yoyText(c)}</b>
           <span class="sub">{c?.n ? `${c.n.toLocaleString()}개 평형` : ''}{sido === '전남광주' ? ' · 옛 광주 5개 구' : ''}</span>
-          {roneYoy(r) && <span class="rone">부동산원 {roneYoy(r)}{sido === '전남광주' ? ' (옛 광주)' : ''}</span>}
+          {roneYoy(r) && <span class="rone">부동산원 지수: {roneYoy(r)}{sido === '전남광주' ? ' (옛 광주)' : ''}</span>}
           {streakPill(r) && <span class="rone"><Fragment set:html={streakPill(r)} /></span>}
         </a>
       ); })}
     </div>
-    <p class="src">큰 숫자는 쏙집 실거래 기준: 같은 단지·같은 평형의 최근 6개월 실거래 중앙값을 1년 전 같은 6개월과 비교한 변동률(두 기간 모두 3건 이상)의 <b>중앙값</b>입니다. 해제·직거래 제외, 표본이 10개 평형 미만이면 비웁니다. 거래가 활발한 단지의 움직임이 더 반영되므로 공식 지수보다 크게 움직일 수 있습니다.{rAsOf && <> 작은 글씨 "부동산원"은 <b>한국부동산원 주간 아파트 매매가격지수</b>({rAsOf.label} 기준 주)의 52주 전 대비 변동률("1년")이고, "최근 N주째 ↑"는 전주 대비 지수가 연속으로 오른 주 수입니다(출처: R-ONE 부동산통계).</>} 전남광주는 2026-07-01 출범한 전남광주통합특별시이며, 쏙집 실거래와 부동산원 지수 모두 옛 광주광역시 5개 구 기준입니다(전남 시·군은 미수집). 어느 쪽도 가격 전망이 아닙니다.</p>
+    <p class="src"><b>실거래</b> = 쏙집이 국토교통부 실거래로 계산한 1년 변동률. 평균이 아니라, 같은 단지·같은 평형의 최근 6개월 실거래 중앙값을 1년 전 같은 6개월과 비교한 변동률(두 기간 모두 3건 이상)의 <b>중앙값</b>입니다. 해제·직거래 제외, 비교 평형이 10개 미만이면 비웁니다. 거래가 활발한 단지의 움직임이 더 반영되므로 공식 지수보다 크게 움직일 수 있습니다.{rAsOf && <> <b>부동산원 지수</b> = <b>한국부동산원 주간 아파트 매매가격지수</b>({rAsOf.label} 기준 주). "1년"은 52주 전 대비 변동률, "최근 N주째 ↑"는 전주 대비 지수가 연속으로 오른 주 수입니다(출처: R-ONE 부동산통계).</>} 전남광주는 2026-07-01 출범한 전남광주통합특별시이며, 쏙집 실거래와 부동산원 지수 모두 옛 광주광역시 5개 구 기준입니다(전남 시·군은 미수집). 어느 쪽도 가격 전망이 아닙니다.</p>
   </section>
 
   <div class="sortbar">
@@ -65,15 +65,15 @@ const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${
 
   {sidos.map((sido) => { const list = cities[sido] ?? []; const c = sm.sido[sido].chg; return (
     <section class="card" id={`s-${sido}`} style="margin-bottom:12px">
-      <h2 style="font-size:16px;margin:0 0 2px">{sido} <b class={`yoy ${yoyCls(c)}`}>{yoyText(c)}</b> <span class="sub">{sm.sido[sido].complexes.toLocaleString()}단지</span></h2>
-      {c && volText(c) && <p class="sub" style="margin:0 0 6px">{volText(c)} · 최근 6개월{roneText(roneSido(sido)) && ` · 부동산원 ${roneText(roneSido(sido))}`}</p>}
+      <h2 style="font-size:16px;margin:0 0 2px">{sido} <span class="sub">실거래</span> <b class={`yoy ${yoyCls(c)}`}>{yoyText(c)}</b> <span class="sub">{sm.sido[sido].complexes.toLocaleString()}단지</span></h2>
+      {c && volText(c) && <p class="sub" style="margin:0 0 6px">{volText(c)} · 최근 6개월{roneText(roneSido(sido)) && ` · 부동산원 매매가격지수: ${roneText(roneSido(sido))}`}</p>}
       {list.every((x) => x.lawds.every((l) => (byLawd[l]?.complexes ?? 0) === 0)) ? <p class="sub2" style="margin:6px 0 0">실거래 수집 중입니다. 곧 열려요.</p> : (<>
         {list.some((x) => x.merged) && (
           <div class="grid one" data-list>
             {list.filter((x) => x.merged).map((x) => { const n = x.lawds.reduce((a, l) => a + (byLawd[l]?.complexes ?? 0), 0); return (
               <div class="cell merged" data-name={x.name} data-yoy={x.chg.yoy ?? ''}>
                 <div class="row"><b>{x.name}</b><span class={`yoy ${yoyCls(x.chg)}`}>{yoyText(x.chg)}</span></div>
-                <span class="sub">{n.toLocaleString()}단지 · {x.lawds.length}개 구{x.chg.n ? ` · 표본 ${x.chg.n}` : ''}{roneText(roneCity(sido, x.name)) && ` · 부동산원 ${roneText(roneCity(sido, x.name))}`}</span>
+                <span class="sub">실거래 {n.toLocaleString()}단지 · {x.lawds.length}개 구{x.chg.n ? ` · ${x.chg.n}개 평형 비교` : ''}{roneText(roneCity(sido, x.name)) && ` · 부동산원 매매가격지수: ${roneText(roneCity(sido, x.name))}`}</span>
                 <div class="subs">{x.lawds.map((l) => { const g = byLawd[l]; return g && g.complexes > 0 ? <a href={`/area/${l}/`}>{g.sigungu.replace(`${x.name} `, '')}<i class={yoyCls(g.chg)}>{g.chg?.yoy != null ? pct(g.chg.yoy) : '—'}</i></a> : null; })}</div>
               </div>
             ); })}
@@ -85,8 +85,8 @@ const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${
             return n > 0 ? (
               <a class="cell" href={`/area/${x.lawds[0]}/`} data-name={x.name} data-yoy={x.chg.yoy ?? ''}>
                 <div class="row"><b>{x.name}</b><span class={`yoy ${yoyCls(x.chg)}`}>{yoyText(x.chg)}</span></div>
-                <span class="sub">{n.toLocaleString()}단지{x.chg.n ? ` · 표본 ${x.chg.n}` : ''}</span>
-                {roneText(roneSigungu(sido, x.name)) && <span class="rone">부동산원 {roneText(roneSigungu(sido, x.name))}</span>}
+                <span class="sub">실거래 {n.toLocaleString()}단지{x.chg.n ? ` · ${x.chg.n}개 평형 비교` : ''}</span>
+                {roneText(roneSigungu(sido, x.name)) && <span class="rone">부동산원 지수: {roneText(roneSigungu(sido, x.name))}</span>}
               </a>
             ) : <span class="cell off" data-name={x.name} data-yoy=""><b>{x.name}</b><span class="sub">수집 중</span></span>;
           })}
@@ -126,6 +126,8 @@ const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${
   .scell { display: flex; flex-direction: column; gap: 1px; padding: 10px 12px; border-radius: 12px; background: var(--soft); color: inherit; }
   .scell .nm { font-size: 13px; color: var(--fg2); font-weight: 600; }
   .scell b { font-size: 20px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .scell b i, .half b i { display: block; font-style: normal; font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0; line-height: 1.2; margin: 2px 0 0; white-space: nowrap; }
+  .scell, .half, .cell { word-break: keep-all; overflow-wrap: anywhere; }
   .scell b.na { font-size: 13px; }
   .rone { font-size: 11.5px; color: var(--muted); font-weight: 500; line-height: 1.35; }
   .rone .pill { font-size: 10.5px; padding: 2px 7px; }

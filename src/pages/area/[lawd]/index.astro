@@ -46,8 +46,8 @@ const desc = `${sg.sigungu} 아파트 ${cs.length.toLocaleString()}개 단지의
     <h1 class="big" style="margin:0;font-size:24px">{sg.sido} {sg.sigungu}</h1>
     <p class="sub2" style="margin:6px 0 0">단지 {cs.length.toLocaleString()}개 · 36개월 거래 {trades36.toLocaleString()}건 · 최근 6개월 {trades6.toLocaleString()}건{sg.regulated ? ' · 규제지역' : ''}</p>
     {med84 && <p class="sub2" style="margin:4px 0 0">84㎡ 타입 시세 중앙값 <b>{eok(med84)}</b> <span class="sub">(6개월 거래 3건 이상 {p84.length}개 단지)</span></p>}
-    {chg && <p class="sub2 chgline" style="margin:6px 0 0">1년 변동률 <b class={yoyCls(chg)}>{yoyText(chg)}</b>{chg.n ? <span class="sub"> (표본 {chg.n}개 평형)</span> : null}{city && <> · {city.name} <b class={yoyCls(city.chg)}>{yoyText(city.chg)}</b></>}{sidoChg && <> · {sg.sido} 전체 <b class={yoyCls(sidoChg)}>{yoyText(sidoChg)}</b></>}{chg.volPct != null && <span class="sub"> · 최근 6개월 거래 {chg.cur.toLocaleString()}건, 1년 전보다 {chg.volPct > 0 ? '+' : ''}{chg.volPct}%</span>}</p>}
-    {roneLine && <p class="sub" style="margin:4px 0 0">한국부동산원 주간 매매가격지수(52주 전 대비{rone ? `, ${rone.asOfLabel} 기준 주` : ''}): {roneLine}</p>}
+    {chg && <p class="sub2 chgline" style="margin:6px 0 0">실거래 1년 변동률 <b class={yoyCls(chg)}>{yoyText(chg)}</b>{chg.n ? <span class="sub"> ({chg.n}개 평형 비교)</span> : null}{city && <> · {city.name} <b class={yoyCls(city.chg)}>{yoyText(city.chg)}</b></>}{sidoChg && <> · {sg.sido} 전체 <b class={yoyCls(sidoChg)}>{yoyText(sidoChg)}</b></>}{chg.volPct != null && <span class="sub"> · 최근 6개월 거래 {chg.cur.toLocaleString()}건, 1년 전보다 {chg.volPct > 0 ? '+' : ''}{chg.volPct}%</span>}</p>}
+    {roneLine && <p class="sub" style="margin:4px 0 0">부동산원 매매가격지수(한국부동산원 주간{rone ? `, ${rone.asOfLabel} 기준 주` : ''}): {roneLine}</p>}
   </header>
   <a class="btn" href={`/find/?lawd=${lawd}`} style="margin-bottom:12px">내 예산으로 {sg.sigungu} 단지 찾기</a>
 
