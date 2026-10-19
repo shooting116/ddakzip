@@ -5,6 +5,11 @@ import { pct } from '../lib/ui/format.ts';
 import { roneSido, roneText } from '../lib/data/rone.ts';
 const sm = loadSummary();
 const chgList = Object.entries(sm.sido).map(([sido, v]) => ({ sido, chg: v.chg })).filter((x) => x.chg);
+const cap = sm.groups?.수도권?.chg ?? null;
+const rCap = roneSido('수도권'), rAll = roneSido('전국');
+const streakPill = (r: ReturnType<typeof roneSido>) => (r && Math.abs(r.streak) >= 2 ? `<span class="pill ${r.streak > 0 ? 'p-bad' : 'p-blue'}">${Math.abs(r.streak)}주째 ${r.streak > 0 ? '↑' : '↓'}</span>` : '');
+const roneYoy = (r: ReturnType<typeof roneSido>) => (r && r.yoy != null ? `${r.yoy > 0 ? '+' : ''}${r.yoy.toFixed(1)}%` : '');
+const cls = (y: number | null | undefined) => (y == null ? 'na' : y > 0 ? 'up' : y < 0 ? 'down' : '');
 
 // 내 상황 5개 → 계산기 진입. 계산기는 1단계에서 채워진다.
 const situations = [
@@ -50,9 +55,15 @@ const situations = [
     <section class="card chg" aria-labelledby="chg-h">
       <h2 id="chg-h" class="h">지역별 1년 변동률 <span class="sub">실거래 {sm.asOf} 기준</span></h2>
       <div class="cgrid">
-        {chgList.map(({ sido, chg }) => (
-          <a class="ccell" href={`/area/#s-${sido}`}><span class="nm">{sido}</span><b class={chg!.yoy == null ? 'na' : chg!.yoy > 0 ? 'up' : chg!.yoy < 0 ? 'down' : ''}>{chg!.yoy == null ? '표본 부족' : pct(chg!.yoy)}</b>{roneText(roneSido(sido)) && <span class="rone">부동산원 {roneText(roneSido(sido))}</span>}</a>
-        ))}
+        {(cap || rAll) && (
+          <a class="wide" href="/area/">
+            <span class="half"><span class="nm">수도권 <span class="sub">서울·인천·경기</span></span><b class={cls(cap?.yoy)}>{cap?.yoy == null ? '표본 부족' : pct(cap.yoy)}</b>{rCap && <span class="rone">부동산원 {roneYoy(rCap)} <Fragment set:html={streakPill(rCap)} /></span>}</span>
+            <span class="half"><span class="nm">전국 <span class="sub">부동산원 지수</span></span><b class={cls(rAll?.yoy)}>{rAll && rAll.yoy != null ? roneYoy(rAll) : '—'}</b><span class="rone"><Fragment set:html={streakPill(rAll)} /></span></span>
+          </a>
+        )}
+        {chgList.map(({ sido, chg }) => { const r = roneSido(sido); return (
+          <a class="ccell" href={`/area/#s-${sido}`}><span class="nm">{sido}</span><b class={cls(chg!.yoy)}>{chg!.yoy == null ? '표본 부족' : pct(chg!.yoy)}</b>{roneYoy(r) && <span class="rone">부동산원 {roneYoy(r)}</span>}{streakPill(r) && <span class="rone"><Fragment set:html={streakPill(r)} /></span>}</a>
+        ); })}
       </div>
       <p class="src">큰 숫자는 쏙집 실거래(같은 단지·같은 평형끼리 1년 전과 비교한 변동률의 중앙값), 작은 글씨는 한국부동산원 주간 매매가격지수의 52주 전 대비와 연속 상승 주 수. 시·구 단위는 <a href="/area/">지역별 페이지</a>에서. 가격 전망이 아닙니다.</p>
     </section>
@@ -108,7 +119,13 @@ const situations = [
   .ccell b.na { font-size: 13px; color: var(--muted); font-weight: 500; }
   .ccell .up { color: var(--red); } .ccell .down { color: var(--blue); }
   .ccell { min-width: 0; }
-  .ccell .rone { font-size: 11px; color: var(--muted); font-weight: 500; line-height: 1.35; }
+  .cgrid .wide { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; color: inherit; }
+  .cgrid .half { display: flex; flex-direction: column; gap: 1px; padding: 12px 14px; border-radius: 12px; background: var(--card); box-shadow: inset 0 0 0 1.5px var(--line); min-width: 0; }
+  .cgrid .half .nm { font-size: 13px; color: var(--fg2); font-weight: 700; } .cgrid .half .nm .sub { font-weight: 500; }
+  .cgrid .half b { font-size: 21px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; } .cgrid .half b.na { font-size: 13px; color: var(--muted); font-weight: 500; }
+  .cgrid .half .up { color: var(--red); } .cgrid .half .down { color: var(--blue); }
+  .cgrid .rone .pill { font-size: 10.5px; padding: 2px 7px; }
+  .cgrid .rone { font-size: 11px; color: var(--muted); font-weight: 500; line-height: 1.35; }
   .chg .src a { color: var(--blue); }
   .qgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
   .qcell { display: flex; flex-direction: column; gap: 3px; padding: 12px 14px; border-radius: 14px; background: var(--soft); color: inherit; }

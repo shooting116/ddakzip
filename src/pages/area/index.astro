@@ -5,6 +5,11 @@ import { pct } from '../../lib/ui/format.ts';
 import { roneSido, roneSigungu, roneCity, roneText, roneAsOf } from '../../lib/data/rone.ts';
 const sm = loadSummary();
 const rAsOf = roneAsOf();
+const cap = sm.groups?.수도권?.chg ?? null;
+const rCap = roneSido('수도권'), rAll = roneSido('전국');
+// 연속 상승·하락 주 수 알약 (2주 이상일 때만)
+const streakPill = (r: ReturnType<typeof roneSido>) => (r && Math.abs(r.streak) >= 2 ? `<span class="pill ${r.streak > 0 ? 'p-bad' : 'p-blue'}">${Math.abs(r.streak)}주째 ${r.streak > 0 ? '↑' : '↓'}</span>` : '');
+const roneYoy = (r: ReturnType<typeof roneSido>) => (r && r.yoy != null ? `${r.yoy > 0 ? '+' : ''}${r.yoy.toFixed(1)}%` : '');
 const sidos = Object.keys(sm.sido);
 const cities = sm.cities ?? {};
 const byLawd = Object.fromEntries(sm.sigungu.map((g) => [g.lawd, g]));
@@ -22,12 +27,29 @@ const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${
   <section class="card" aria-labelledby="sido-h">
     <h2 id="sido-h">시도별 1년 변동률 <span class="sub">실거래 {sm.asOf} 기준</span></h2>
     <div class="sgrid">
-      {sidos.map((sido) => { const c = sm.sido[sido].chg; return (
+      {(cap || rAll) && (
+        <div class="wide">
+          <div class="half">
+            <span class="nm">수도권 <span class="sub">서울·인천·경기</span></span>
+            <b class={yoyCls(cap)}>{yoyText(cap)}</b>
+            <span class="sub">{cap?.n ? `${cap.n.toLocaleString()}개 평형` : ''}</span>
+            {rCap && <span class="rone">부동산원 {roneYoy(rCap)} <Fragment set:html={streakPill(rCap)} /></span>}
+          </div>
+          <div class="half">
+            <span class="nm">전국 <span class="sub">부동산원 지수</span></span>
+            <b class={rAll && rAll.yoy != null ? (rAll.yoy > 0 ? 'up' : rAll.yoy < 0 ? 'down' : '') : 'na'}>{rAll && rAll.yoy != null ? roneYoy(rAll) : '—'}</b>
+            <span class="rone"><Fragment set:html={streakPill(rAll)} /></span>
+            <span class="sub">쏙집 실거래는 수도권·광역시만 집계</span>
+          </div>
+        </div>
+      )}
+      {sidos.map((sido) => { const c = sm.sido[sido].chg; const r = roneSido(sido); return (
         <a class="scell" href={`#s-${sido}`}>
           <span class="nm">{sido}</span>
           <b class={yoyCls(c)}>{yoyText(c)}</b>
           <span class="sub">{c?.n ? `${c.n.toLocaleString()}개 평형` : ''}</span>
-          {roneText(roneSido(sido)) && <span class="rone">부동산원 {roneText(roneSido(sido))}</span>}
+          {roneYoy(r) && <span class="rone">부동산원 {roneYoy(r)}</span>}
+          {streakPill(r) && <span class="rone"><Fragment set:html={streakPill(r)} /></span>}
         </a>
       ); })}
     </div>
@@ -103,6 +125,11 @@ const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${
   .scell b { font-size: 20px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
   .scell b.na { font-size: 13px; }
   .rone { font-size: 11.5px; color: var(--muted); font-weight: 500; line-height: 1.35; }
+  .rone .pill { font-size: 10.5px; padding: 2px 7px; }
+  .wide { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .half { display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border-radius: 12px; background: var(--card); box-shadow: inset 0 0 0 1.5px var(--line); min-width: 0; }
+  .half .nm { font-size: 13px; color: var(--fg2); font-weight: 700; } .half .nm .sub { font-weight: 500; margin-left: 2px; }
+  .half b { font-size: 22px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; } .half b.na { font-size: 13px; }
   .scell, .cell { min-width: 0; }
   .sortbar { display: flex; align-items: center; gap: 6px; padding: 2px 4px 10px; overflow-x: auto; scrollbar-width: none; }
   .sortbar .chip { flex: none; font-size: 12.5px; font-weight: 600; padding: 7px 11px; border-radius: 999px; background: var(--card); color: var(--fg2); border: 0; cursor: pointer; white-space: nowrap; }
