@@ -1,30 +1,115 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { loadSummary } from '../../lib/data/index.ts';
+import { loadSummary, type RegionChange } from '../../lib/data/index.ts';
+import { pct } from '../../lib/ui/format.ts';
 const sm = loadSummary();
-const bySido: Record<string, typeof sm.sigungu> = {};
-for (const g of sm.sigungu) (bySido[g.sido] ??= []).push(g);
+const sidos = Object.keys(sm.sido);
+const cities = sm.cities ?? {};
+const byLawd = Object.fromEntries(sm.sigungu.map((g) => [g.lawd, g]));
+// 1년 변동률 표기: 표본이 모자라면 비움
+const yoyText = (c?: RegionChange | null) => (c && c.yoy != null ? pct(c.yoy) : '표본 부족');
+const yoyCls = (c?: RegionChange | null) => (c && c.yoy != null ? (c.yoy > 0 ? 'up' : c.yoy < 0 ? 'down' : '') : 'na');
+const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${c.cur.toLocaleString()}건 (1년 전 대비 ${c.volPct > 0 ? '+' : ''}${c.volPct}%)` : '');
 ---
-<Base title="지역별 아파트 실거래" description={`수도권·광역시 시군구별 아파트 단지 ${sm.total.complexes.toLocaleString()}개의 실거래 시세. 국토교통부 ${sm.asOf} 기준.`}>
+<Base title="지역별 아파트 실거래" description={`수도권·광역시 ${sm.sigungu.length}개 시군구의 아파트 1년 변동률과 단지 ${sm.total.complexes.toLocaleString()}개의 실거래 시세. 국토교통부 ${sm.asOf} 기준.`}>
   <div class="q" style="padding:4px 4px 10px">
     <h1 class="big" style="margin:0;font-size:22px">지역별 실거래</h1>
-    <p class="sub2" style="margin:4px 0 0">시군구를 고르면 대장 단지·거래 활발 단지·1년 변동과 전체 단지 목록을 볼 수 있어요.</p>
+    <p class="sub2" style="margin:4px 0 0">시도 전체와 시·구 단위의 1년 변동률. 시군구를 고르면 대장 단지·거래 활발 단지·전체 단지 목록을 볼 수 있어요.</p>
   </div>
-  {Object.entries(bySido).map(([sido, list]) => (
-    <section class="card" style="margin-bottom:12px">
-      <h2 style="font-size:16px;margin:0 0 4px">{sido} <span class="sub">{list.reduce((a, g) => a + g.complexes, 0).toLocaleString()}단지</span></h2>
-      {list.every((g) => g.complexes === 0) ? <p class="sub2" style="margin:6px 0 0">실거래 수집 중입니다. 곧 열려요.</p> : (
-        <div class="grid">
-          {list.map((g) => g.complexes > 0
-            ? <a class="cell" href={`/area/${g.lawd}/`}><b>{g.sigungu}</b><span class="sub">{g.complexes.toLocaleString()}단지</span></a>
-            : <span class="cell off"><b>{g.sigungu}</b><span class="sub">수집 중</span></span>)}
+
+  <section class="card" aria-labelledby="sido-h">
+    <h2 id="sido-h">시도별 1년 변동률 <span class="sub">실거래 {sm.asOf} 기준</span></h2>
+    <div class="sgrid">
+      {sidos.map((sido) => { const c = sm.sido[sido].chg; return (
+        <a class="scell" href={`#s-${sido}`}>
+          <span class="nm">{sido}</span>
+          <b class={yoyCls(c)}>{yoyText(c)}</b>
+          <span class="sub">{c?.n ? `${c.n.toLocaleString()}개 평형` : ''}</span>
+        </a>
+      ); })}
+    </div>
+    <p class="src">같은 단지·같은 평형의 최근 6개월 실거래 중앙값을 1년 전 같은 6개월과 비교한 변동률(두 기간 모두 3건 이상)의 <b>중앙값</b>입니다. 해제·직거래 제외, 표본이 10개 평형 미만이면 비웁니다. 거래가 활발한 단지의 움직임이 더 반영되므로 공식 지수(한국부동산원)와 수치가 다를 수 있고, 가격 전망이 아닙니다.</p>
+  </section>
+
+  <div class="sortbar">
+    <span class="sub2">목록 정렬</span>
+    <button type="button" class="chip on" data-sort="name">이름순</button>
+    <button type="button" class="chip" data-sort="yoy">변동률 높은 순</button>
+    <button type="button" class="chip" data-sort="yoyAsc">변동률 낮은 순</button>
+  </div>
+
+  {sidos.map((sido) => { const list = cities[sido] ?? []; const c = sm.sido[sido].chg; return (
+    <section class="card" id={`s-${sido}`} style="margin-bottom:12px">
+      <h2 style="font-size:16px;margin:0 0 2px">{sido} <b class={`yoy ${yoyCls(c)}`}>{yoyText(c)}</b> <span class="sub">{sm.sido[sido].complexes.toLocaleString()}단지</span></h2>
+      {c && volText(c) && <p class="sub" style="margin:0 0 6px">{volText(c)} · 최근 6개월</p>}
+      {list.every((x) => x.lawds.every((l) => (byLawd[l]?.complexes ?? 0) === 0)) ? <p class="sub2" style="margin:6px 0 0">실거래 수집 중입니다. 곧 열려요.</p> : (<>
+        {list.some((x) => x.merged) && (
+          <div class="grid one" data-list>
+            {list.filter((x) => x.merged).map((x) => { const n = x.lawds.reduce((a, l) => a + (byLawd[l]?.complexes ?? 0), 0); return (
+              <div class="cell merged" data-name={x.name} data-yoy={x.chg.yoy ?? ''}>
+                <div class="row"><b>{x.name}</b><span class={`yoy ${yoyCls(x.chg)}`}>{yoyText(x.chg)}</span></div>
+                <span class="sub">{n.toLocaleString()}단지 · {x.lawds.length}개 구{x.chg.n ? ` · 표본 ${x.chg.n}` : ''}</span>
+                <div class="subs">{x.lawds.map((l) => { const g = byLawd[l]; return g && g.complexes > 0 ? <a href={`/area/${l}/`}>{g.sigungu.replace(`${x.name} `, '')}<i class={yoyCls(g.chg)}>{g.chg?.yoy != null ? pct(g.chg.yoy) : '—'}</i></a> : null; })}</div>
+              </div>
+            ); })}
+          </div>
+        )}
+        <div class="grid" data-list>
+          {list.filter((x) => !x.merged).map((x) => {
+            const n = x.lawds.reduce((a, l) => a + (byLawd[l]?.complexes ?? 0), 0);
+            return n > 0 ? (
+              <a class="cell" href={`/area/${x.lawds[0]}/`} data-name={x.name} data-yoy={x.chg.yoy ?? ''}>
+                <div class="row"><b>{x.name}</b><span class={`yoy ${yoyCls(x.chg)}`}>{yoyText(x.chg)}</span></div>
+                <span class="sub">{n.toLocaleString()}단지{x.chg.n ? ` · 표본 ${x.chg.n}` : ''}</span>
+              </a>
+            ) : <span class="cell off" data-name={x.name} data-yoy=""><b>{x.name}</b><span class="sub">수집 중</span></span>;
+          })}
         </div>
-      )}
+      </>)}
     </section>
-  ))}
+  ); })}
 </Base>
+
+<script>
+  // 목록 정렬: 이름순 / 변동률 순 (표본 부족은 맨 뒤)
+  const bar = document.querySelector('.sortbar');
+  bar?.addEventListener('click', (e) => {
+    const b = (e.target as HTMLElement).closest<HTMLElement>('[data-sort]'); if (!b) return;
+    bar.querySelectorAll('.chip').forEach((x) => x.classList.toggle('on', x === b));
+    const mode = b.dataset.sort;
+    document.querySelectorAll<HTMLElement>('[data-list]').forEach((grid) => {
+      const cells = Array.from(grid.children) as HTMLElement[];
+      cells.sort((a, c) => {
+        if (mode === 'name') return (a.dataset.name ?? '').localeCompare(c.dataset.name ?? '', 'ko');
+        const ya = a.dataset.yoy === '' ? null : Number(a.dataset.yoy), yc = c.dataset.yoy === '' ? null : Number(c.dataset.yoy);
+        if (ya == null && yc == null) return 0; if (ya == null) return 1; if (yc == null) return -1;
+        return mode === 'yoy' ? yc - ya : ya - yc;
+      });
+      for (const el of cells) grid.appendChild(el);
+    });
+  });
+</script>
+
 <style>
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 6px; margin-top: 8px; }
-  .cell { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border-radius: 12px; background: var(--soft); color: inherit; font-size: 14px; }
+  .card h2 { font-size: 16px; margin: 0 0 4px; } .card h2 .sub { font-weight: 500; margin-left: 4px; }
+  .up { color: var(--red); } .down { color: var(--blue); } .na { color: var(--muted); font-weight: 500; }
+  .sgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 8px; }
+  .scell { display: flex; flex-direction: column; gap: 1px; padding: 10px 12px; border-radius: 12px; background: var(--soft); color: inherit; }
+  .scell .nm { font-size: 13px; color: var(--fg2); font-weight: 600; }
+  .scell b { font-size: 20px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .scell b.na { font-size: 13px; }
+  .sortbar { display: flex; align-items: center; gap: 6px; padding: 2px 4px 10px; overflow-x: auto; scrollbar-width: none; }
+  .sortbar .chip { flex: none; font-size: 12.5px; font-weight: 600; padding: 7px 11px; border-radius: 999px; background: var(--card); color: var(--fg2); border: 0; cursor: pointer; white-space: nowrap; }
+  .sortbar .chip.on { background: var(--fg); color: #fff; }
+  .yoy { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; margin-top: 8px; }
+  .cell { display: flex; flex-direction: column; gap: 2px; padding: 10px 12px; border-radius: 12px; background: var(--soft); color: inherit; font-size: 14px; min-width: 0; }
+  .cell .row { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; }
+  .cell .row b { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .cell.off { opacity: .5; }
+  .grid.one { grid-template-columns: 1fr; margin-bottom: 6px; }
+  .subs { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+  .subs a { display: inline-flex; align-items: center; gap: 4px; font-size: 12.5px; font-weight: 600; color: var(--fg); background: var(--card); padding: 5px 9px; border-radius: 999px; }
+  .subs a i { font-style: normal; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .subs a i.na { color: var(--muted); font-weight: 500; }
 </style>

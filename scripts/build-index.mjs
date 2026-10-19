@@ -108,7 +108,7 @@ function summarizeComplex(c, asOfYm, months) {
     const series = months.map((m) => { const xs = t.valid.filter((r) => ym(r) === m).map((r) => r.amt); return [m, median(xs), xs.length]; });
     return {
       key: t.key, label: `${t.key}㎡`, pyeong: pyeongOf(t.key), areas: [...t.areas].sort((a, b) => a - b),
-      n36: t.rows.length, n12: v12.length, n6: v6.length, price, basis, priceN, priceDate,
+      n36: t.rows.length, n12: v12.length, n6: v6.length, nPrev6: prev.length, price, basis, priceN, priceDate,
       min6: v6.length ? Math.min(...v6.map((r) => r.amt)) : null, max6: v6.length ? Math.max(...v6.map((r) => r.amt)) : null,
       yoy, last: lastValid ? { date: lastValid.date, amt: lastValid.amt, floor: lastValid.floor, area: lastValid.area } : null, series,
     };
@@ -198,6 +198,7 @@ function main() {
   // aptSeq 앞 5자리는 "그 단지가 처음 등록된 시군구"라 지금 코드와 다를 수 있다(2026 행정구역 개편: 광주 29xxx→12xxx, 인천 28140→28125 등).
   // 같은 aptSeq가 두 시군구 파일에 들어가면 /apt/{id} 경로가 겹치므로 한 곳에만 둔다. 앞자리와 같은 시군구가 있으면 거기, 없으면 거래가 많은 쪽.
   const seen = new Map(); // id → [{lawd, n36}]
+  const yoyPool = new Map(); // lawd → { yoys: number[], vol: {cur, prev} } (지역별 1년 변동률 재료)
 
   for (const r of regions) {
     const info = loadJson(join(CX, 'info', `${r.lawd}.json`), {});
@@ -309,8 +310,34 @@ function main() {
     const sd = summary.sido[g.sido] ?? (summary.sido[g.sido] = { complexes: 0, static: 0, trades36: 0 });
     sd.complexes += complexes.length; sd.static += nStatic; sd.trades36 += trades;
     total += complexes.length; totalStatic += nStatic; totalTrades += trades;
+    // 1년 변동률 재료: 같은 단지·같은 평형의 6개월 중앙값 vs 1년 전 6개월(둘 다 3건↑)의 변동률 목록 + 거래량(최근 6개월 / 1년 전 6개월)
+    const yoys = [], vol = { cur: 0, prev: 0 };
+    for (const c of complexes) for (const t of c.types) { if (t.yoy != null) yoys.push(t.yoy); vol.cur += t.n6; vol.prev += t.nPrev6 ?? 0; }
+    yoyPool.set(g.lawd, { yoys, vol });
   }
   summary.total = { complexes: total, static: totalStatic, trades36: totalTrades };
+
+  // 지역별 1년 변동률: 시군구 → (경기처럼 시 아래 구가 있으면) 시 → 시도. 표본(평형) CHG_MIN개 미만이면 비움
+  const CHG_MIN = 10;
+  const chgOf = (pool) => {
+    const yoys = pool.flatMap((p) => p.yoys), cur = pool.reduce((a, p) => a + p.vol.cur, 0), prev = pool.reduce((a, p) => a + p.vol.prev, 0);
+    const med = yoys.length >= CHG_MIN ? median(yoys.map((v) => v * 10)) / 10 : null; // 소수 첫째 자리 유지
+    return { yoy: med, n: yoys.length, cur, prev, volPct: prev ? Math.round(((cur - prev) / prev) * 100) : null };
+  };
+  for (const g of summary.sigungu) g.chg = chgOf([yoyPool.get(g.lawd)]);
+  summary.cities = {};
+  for (const [sido, _] of Object.entries(summary.sido)) {
+    const regs = summary.sigungu.filter((g) => g.sido === sido);
+    summary.sido[sido].chg = chgOf(regs.map((g) => yoyPool.get(g.lawd)));
+    // "성남시 분당구"처럼 시 + 구 로 된 이름은 시로 묶는다 (광역시의 구는 그대로)
+    const byCity = new Map();
+    for (const g of regs) {
+      const m = g.sigungu.match(/^(\S+시)\s+(\S+구)$/);
+      const city = m ? m[1] : g.sigungu;
+      (byCity.get(city) ?? byCity.set(city, []).get(city)).push(g);
+    }
+    summary.cities[sido] = [...byCity.entries()].map(([name, gs]) => ({ name, lawds: gs.map((g) => g.lawd), merged: gs.length > 1, chg: chgOf(gs.map((g) => yoyPool.get(g.lawd))) }));
+  }
   summary.jeonse = summary.sigungu.reduce((a, g) => a + (g.jeonse ?? 0), 0);
   writeFileSync(join(OUT, 'summary.json'), JSON.stringify(summary, null, 1) + '\n');
   console.log(`[build-index] 시군구 ${regions.length} · 단지 ${total} (정적 ${totalStatic}, 상한 ${STATIC_MAX}, 커트 36개월 ${staticCut}건) · 거래 ${totalTrades} · 전세 ${summary.jeonse} · 중복 aptSeq ${nDup} · 앞자리≠코드 ${Object.keys(summary.idPrefix).length} · ${((Date.now() - t0) / 1000).toFixed(1)}s`);

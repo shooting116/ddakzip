@@ -9,6 +9,14 @@ export function getStaticPaths() {
 const { lawd } = Astro.params;
 const sg = loadSigungu(lawd!)!;
 const cs = sg.complexes;
+// 1년 변동률: 이 시군구 · (구가 속한 시) · 시도 전체
+const sm = loadSummary();
+const meta = sm.sigungu.find((g) => g.lawd === lawd);
+const chg = meta?.chg ?? null;
+const city = (sm.cities?.[sg.sido] ?? []).find((x) => x.merged && x.lawds.includes(lawd!)) ?? null;
+const sidoChg = sm.sido[sg.sido]?.chg ?? null;
+const yoyText = (c: { yoy: number | null } | null | undefined) => (c && c.yoy != null ? pct(c.yoy) : '표본 부족');
+const yoyCls = (c: { yoy: number | null } | null | undefined) => (c && c.yoy != null ? (c.yoy > 0 ? 'up' : c.yoy < 0 ? 'down' : '') : 'na');
 const repOf = (c: Complex) => c.types.find((t) => t.key === c.rep);
 const trades36 = cs.reduce((a, c) => a + c.n36, 0);
 const trades6 = cs.reduce((a, c) => a + c.n6, 0);
@@ -35,6 +43,7 @@ const desc = `${sg.sigungu} 아파트 ${cs.length.toLocaleString()}개 단지의
     <h1 class="big" style="margin:0;font-size:24px">{sg.sido} {sg.sigungu}</h1>
     <p class="sub2" style="margin:6px 0 0">단지 {cs.length.toLocaleString()}개 · 36개월 거래 {trades36.toLocaleString()}건 · 최근 6개월 {trades6.toLocaleString()}건{sg.regulated ? ' · 규제지역' : ''}</p>
     {med84 && <p class="sub2" style="margin:4px 0 0">84㎡ 타입 시세 중앙값 <b>{eok(med84)}</b> <span class="sub">(6개월 거래 3건 이상 {p84.length}개 단지)</span></p>}
+    {chg && <p class="sub2 chgline" style="margin:6px 0 0">1년 변동률 <b class={yoyCls(chg)}>{yoyText(chg)}</b>{chg.n ? <span class="sub"> (표본 {chg.n}개 평형)</span> : null}{city && <> · {city.name} <b class={yoyCls(city.chg)}>{yoyText(city.chg)}</b></>}{sidoChg && <> · {sg.sido} 전체 <b class={yoyCls(sidoChg)}>{yoyText(sidoChg)}</b></>}{chg.volPct != null && <span class="sub"> · 최근 6개월 거래 {chg.cur.toLocaleString()}건, 1년 전보다 {chg.volPct > 0 ? '+' : ''}{chg.volPct}%</span>}</p>}
   </header>
   <a class="btn" href={`/find/?lawd=${lawd}`} style="margin-bottom:12px">내 예산으로 {sg.sigungu} 단지 찾기</a>
 
@@ -76,6 +85,7 @@ const desc = `${sg.sigungu} 아파트 ${cs.length.toLocaleString()}개 단지의
   <p class="src">출처: 국토교통부 아파트 매매 실거래가 ({sg.asOf} 기준) · K-apt. 시세는 최근 6개월 실거래 중앙값(해제·직거래 제외).</p>
 </Base>
 <style>
+  .chgline .na { color: var(--muted); font-weight: 500; }
   .sec { margin-bottom: 12px; }
   .sec h2 { font-size: 16px; margin: 0 0 6px; } .sec h2 .sub { font-weight: 500; margin-left: 6px; }
   .rank { list-style: none; margin: 0; padding: 0; counter-reset: r; }

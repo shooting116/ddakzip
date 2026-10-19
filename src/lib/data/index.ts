@@ -6,6 +6,7 @@ const ROOT = join(process.cwd(), 'data', 'index');
 
 export interface TypeStat {
   key: number; label: string; pyeong: number; areas: number[];
+  nPrev6?: number;
   /** 전세: 최근 6개월 전세 보증금 중앙값(월세 제외). ratio = 전세가율(%) — 전세·매매 모두 median6일 때만 */
   jeonse: { price: number | null; basis: 'median6' | 'ref' | null; n6: number; n12: number; wolse6: number; ratio: number | null } | null;
   n36: number; n12: number; n6: number;
@@ -39,10 +40,14 @@ export interface Complex {
 /** 시군구별 호재 역 선택지 (k = "역·노선", c = 1.5km 안 단지 수) */
 export interface StationOpt { k: string; n: string; l: string; st: string; open: number | null; c: number; la: number | null; lo: number | null }
 export interface SigunguIndex { lawd: string; sido: string; sigungu: string; regulated: boolean; asOf: string; months: string[]; complexes: Complex[] }
+/** 지역 1년 변동률: 같은 단지·평형의 6개월 중앙값 vs 1년 전 6개월(둘 다 3건↑) 변동률의 중앙값. n = 표본 평형 수, cur/prev = 최근 6개월·1년 전 6개월 거래 건수 */
+export interface RegionChange { yoy: number | null; n: number; cur: number; prev: number; volPct: number | null }
 export interface Summary {
   asOf: string; months: number; staticMin: number; staticMax: number; staticCut: number;
-  sido: Record<string, { complexes: number; static: number; trades36: number }>;
-  sigungu: { lawd: string; sido: string; sigungu: string; regulated: boolean; complexes: number; static: number; trades36: number; geo: number; kapt: number; transit: number; redev: number; news: number; hot?: number; jeonse?: number; bldg?: number; stations?: StationOpt[] }[];
+  sido: Record<string, { complexes: number; static: number; trades36: number; chg?: RegionChange }>;
+  sigungu: { lawd: string; sido: string; sigungu: string; regulated: boolean; complexes: number; static: number; trades36: number; geo: number; kapt: number; transit: number; redev: number; news: number; hot?: number; jeonse?: number; bldg?: number; stations?: StationOpt[]; chg?: RegionChange }[];
+  /** 시도별 시 단위 묶음 ("성남시 분당구"+"수정구"+"중원구" → 성남시). merged=false면 시군구 하나 그대로 */
+  cities?: Record<string, { name: string; lawds: string[]; merged: boolean; chg: RegionChange }[]>;
   total: { complexes: number; static: number; trades36: number };
   /** aptSeq 앞 5자리 → 실제 시군구 코드 목록 (앞자리와 다른 경우만. 2026 행정구역 개편 지역) */
   idPrefix: Record<string, string[]>;

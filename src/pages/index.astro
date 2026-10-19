@@ -1,5 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
+import { loadSummary } from '../lib/data/index.ts';
+import { pct } from '../lib/ui/format.ts';
+const sm = loadSummary();
+const chgList = Object.entries(sm.sido).map(([sido, v]) => ({ sido, chg: v.chg })).filter((x) => x.chg);
 
 // 내 상황 5개 → 계산기 진입. 계산기는 1단계에서 채워진다.
 const situations = [
@@ -40,6 +44,18 @@ const situations = [
       ))}
     </div>
   </section>
+
+  {chgList.length > 0 && (
+    <section class="card chg" aria-labelledby="chg-h">
+      <h2 id="chg-h" class="h">지역별 1년 변동률 <span class="sub">실거래 {sm.asOf} 기준</span></h2>
+      <div class="cgrid">
+        {chgList.map(({ sido, chg }) => (
+          <a class="ccell" href={`/area/#s-${sido}`}><span class="nm">{sido}</span><b class={chg!.yoy == null ? 'na' : chg!.yoy > 0 ? 'up' : chg!.yoy < 0 ? 'down' : ''}>{chg!.yoy == null ? '표본 부족' : pct(chg!.yoy)}</b></a>
+        ))}
+      </div>
+      <p class="src">같은 단지·같은 평형끼리 1년 전과 비교한 변동률의 중앙값(해제·직거래 제외). 시·구 단위는 <a href="/area/">지역별 페이지</a>에서. 가격 전망이 아닙니다.</p>
+    </section>
+  )}
 
   <section class="card quick" aria-labelledby="qk">
     <h2 id="qk" class="h">예산을 이미 알고 있다면</h2>
@@ -83,6 +99,14 @@ const situations = [
     .scell:last-child { grid-column: 1 / -1; }
   }
   .quick { margin-top: var(--gap); }
+  .chg { margin-top: var(--gap); }
+  .cgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 8px; }
+  .ccell { display: flex; flex-direction: column; gap: 1px; padding: 10px 12px; border-radius: 12px; background: var(--soft); color: inherit; }
+  .ccell .nm { font-size: 13px; color: var(--fg2); font-weight: 600; }
+  .ccell b { font-size: 19px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .ccell b.na { font-size: 13px; color: var(--muted); font-weight: 500; }
+  .ccell .up { color: var(--red); } .ccell .down { color: var(--blue); }
+  .chg .src a { color: var(--blue); }
   .qgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
   .qcell { display: flex; flex-direction: column; gap: 3px; padding: 12px 14px; border-radius: 14px; background: var(--soft); color: inherit; }
   .qcell b { font-size: 15px; } .qcell .d { font-size: 12px; color: var(--fg2); }
