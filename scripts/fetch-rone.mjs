@@ -70,7 +70,7 @@ async function weekly() {
   const tbl = args.tbl ?? 'T244183132827305'; // (주) 매매가격지수 — 2026-10 probe로 확인
   const weeks = Number(args.weeks ?? 110);
   const cycle = args.cycle ?? 'WK';
-  const SIDOS = ['전국', '서울', '인천', '경기', '부산', '대구', '대전', '광주', '울산', '세종'];
+  const SIDOS = ['전국', '서울', '인천', '경기', '부산', '대구', '대전', '광주', '전남광주', '울산', '세종']; // 2026 통합으로 광주는 '전남광주' 아래
   mkdirSync(OUT, { recursive: true });
   // 행은 기간 오름차순으로 정렬돼 있어, 마지막 페이지부터 거꾸로 받아 최근 weeks주만 모은다
   const first = await getJson('SttsApiTblData.do', { STATBL_ID: tbl, DTACYCLE_CD: cycle, pIndex: 1, pSize: 1 });

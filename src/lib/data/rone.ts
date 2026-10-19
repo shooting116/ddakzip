@@ -42,8 +42,10 @@ function statOf(key: string): RoneStat | null {
 const keys = () => Object.keys(load()?.series ?? {});
 
 /** 시도 전체 ("서울", "경기" …) · 권역("수도권", "전국"). 최상위 이름이 조금 달라도(광주광역시 등) 찾는다 */
+const SIDO_ALIAS: Record<string, string[]> = { 광주: ['전남광주>광주', '전남광주>광주광역시'] }; // 2026 통합 뒤 R-ONE 표기
 export function roneSido(sido: string): RoneStat | null {
   const direct = statOf(sido); if (direct) return direct;
+  for (const a of SIDO_ALIAS[sido] ?? []) { const r = statOf(a); if (r) return r; }
   const k = keys().find((x) => !x.includes('>') && x.replace(/(특별시|광역시|특별자치시|특별자치도|도)$/, '') === sido);
   return k ? statOf(k) : null;
 }
@@ -51,7 +53,8 @@ export function roneSido(sido: string): RoneStat | null {
 export function roneSigungu(sido: string, sigungu: string): RoneStat | null {
   const parts = sigungu.trim().split(/\s+/);
   const tail = '>' + parts.join('>');
-  const k = keys().find((x) => x.startsWith(sido + '>') && x.endsWith(tail));
+  const roots = [sido, ...(SIDO_ALIAS[sido] ?? []).map((a) => a.split('>')[0])];
+  const k = keys().find((x) => roots.some((r) => x.startsWith(r + '>')) && x.endsWith(tail));
   return k ? statOf(k) : null;
 }
 /** 시 단위 ("성남시") — 구가 있는 시는 R-ONE에 시 합계 행이 따로 있다 */
