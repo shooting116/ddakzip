@@ -67,35 +67,40 @@ async function probe() {
 }
 
 async function weekly() {
-  const tbl = args.tbl; if (!tbl) throw new Error('--tbl 이 필요합니다');
+  const tbl = args.tbl ?? 'T244183132827305'; // (주) 매매가격지수 — 2026-10 probe로 확인
   const weeks = Number(args.weeks ?? 110);
   const cycle = args.cycle ?? 'WK';
+  const SIDOS = ['전국', '서울', '인천', '경기', '부산', '대구', '대전', '광주', '울산', '세종'];
   mkdirSync(OUT, { recursive: true });
-  const file = join(OUT, 'weekly.json');
-  const prev = existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : { tbl, cycle, updated: null, series: {} };
-  // 전체 행을 받아 (지역, 기간) → 값. pSize 1000으로 페이지 넘기며 받는다 (최근 weeks주 × 지역 수)
-  const rows = [];
-  for (let p = 1; p <= 200; p++) {
-    const r = await getJson('SttsApiTblData.do', { STATBL_ID: tbl, DTACYCLE_CD: cycle, pIndex: p, pSize: 1000 });
-    rows.push(...r.rows);
-    if (rows.length >= r.total || !r.rows.length) break;
+  // 행은 기간 오름차순으로 정렬돼 있어, 마지막 페이지부터 거꾸로 받아 최근 weeks주만 모은다
+  const first = await getJson('SttsApiTblData.do', { STATBL_ID: tbl, DTACYCLE_CD: cycle, pIndex: 1, pSize: 1 });
+  const total = first.total, SIZE = 1000, lastPage = Math.max(1, Math.ceil(total / SIZE));
+  const rows = []; const periods = new Set(); let calls = 1;
+  for (let p = lastPage; p >= 1; p--) {
+    const r = await getJson('SttsApiTblData.do', { STATBL_ID: tbl, DTACYCLE_CD: cycle, pIndex: p, pSize: SIZE }); calls++;
+    for (const x of r.rows) { rows.push(x); periods.add(x.WRTTIME_IDTFR_ID); }
+    if (periods.size > weeks + 1) break;
+    if (calls > 80) break;
   }
-  const periods = [...new Set(rows.map((r) => r.WRTTIME_IDTFR_ID))].sort();
-  const keep = new Set(periods.slice(-weeks));
-  const series = prev.series ?? {};
+  const keepList = [...periods].sort().slice(-weeks);
+  const keep = new Set(keepList);
+  const series = {}, labels = {};
   let n = 0;
   for (const r of rows) {
     if (!keep.has(r.WRTTIME_IDTFR_ID)) continue;
-    const itm = (r.ITM_FULLNM ?? r.ITM_NM ?? '').trim();
-    if (args.itm && !itm.includes(args.itm)) continue;
-    const region = (r.CLS_FULLNM ?? r.CLS_NM ?? '').trim();
+    if ((r.ITM_NM ?? '').trim() !== '지수') continue;
+    const full = (r.CLS_FULLNM ?? r.CLS_NM ?? '').trim();
+    if (!SIDOS.includes(full.split('>')[0])) continue;
     const val = Number(r.DTA_VAL);
-    if (!region || !Number.isFinite(val)) continue;
-    (series[region] ??= {})[r.WRTTIME_IDTFR_ID] = val; n++;
+    if (!full || !Number.isFinite(val)) continue;
+    (series[full] ??= {})[r.WRTTIME_IDTFR_ID] = +val.toFixed(2); n++;
+    if (r.WRTTIME_DESC && !labels[r.WRTTIME_IDTFR_ID]) labels[r.WRTTIME_IDTFR_ID] = String(r.WRTTIME_DESC).trim();
   }
-  const out = { tbl, cycle, itm: args.itm ?? null, updated: new Date().toISOString().slice(0, 10), periods: periods.slice(-weeks), series };
-  writeFileSync(file, JSON.stringify(out));
-  note(`[rone weekly] 표 ${tbl} · 기간 ${periods.slice(-weeks)[0]}~${periods.at(-1)} (${Math.min(weeks, periods.length)}주) · 지역 ${Object.keys(series).length} · 값 ${n}`);
+  const out = { source: '한국부동산원 R-ONE 주간 아파트 매매가격지수 (STATBL ' + tbl + ')', tbl, cycle, updated: new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10), periods: keepList, labels, series };
+  writeFileSync(join(OUT, 'weekly.json'), JSON.stringify(out));
+  note(`[rone weekly] 총 ${total}행 중 ${rows.length}행 받음(호출 ${calls}) · 기간 ${keepList[0]}~${keepList.at(-1)} (${keepList.length}주, 최근 라벨 "${labels[keepList.at(-1)] ?? ''}") · 지역 ${Object.keys(series).length} · 값 ${n}`);
+  note(`지역 예: ${Object.keys(series).slice(0, 12).join(' / ')}`);
+  if (process.env.GITHUB_OUTPUT) writeFileSync(process.env.GITHUB_OUTPUT, `latest=${keepList.at(-1)}\nregions=${Object.keys(series).length}\n`, { flag: 'a' });
 }
 
 async function main() {
