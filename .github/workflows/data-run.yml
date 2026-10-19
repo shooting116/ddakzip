@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       script:
-        description: '스크립트 이름 (scripts/*.mjs): fetch-trades · fetch-rent · fetch-complexes · fetch-bldg · match-complexes · geocode · geocode-transit · match-redev · fetch-news · fetch-rates · fetch-redev-seoul · kakao-notify'
+        description: '스크립트 이름 (scripts/*.mjs): fetch-trades · fetch-rent · fetch-complexes · fetch-bldg · fetch-rone · match-complexes · geocode · geocode-transit · match-redev · fetch-news · fetch-rates · fetch-redev-seoul · kakao-notify'
         type: string
         default: fetch-complexes
       args:
@@ -39,6 +39,7 @@ jobs:
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
           SEOUL_OPENAPI_KEY: ${{ secrets.SEOUL_OPENAPI_KEY }}
+          RONE_KEY: ${{ secrets.RONE_KEY }}
         run: node scripts/${{ inputs.script }}.mjs ${{ inputs.args }}
       - name: 커밋·푸시
         if: always()
