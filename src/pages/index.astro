@@ -57,12 +57,12 @@ const situations = [
       <div class="cgrid">
         {(cap || rAll) && (
           <a class="wide" href="/area/">
-            <span class="half"><span class="nm">수도권 <span class="sub">서울·인천·경기</span></span><b class={cls(cap?.yoy)}><i>실거래</i>{cap?.yoy == null ? '표본 부족' : pct(cap.yoy)}</b>{rCap && <span class="rone">부동산원 매매가격지수: {roneYoy(rCap)} <Fragment set:html={streakPill(rCap)} /></span>}</span>
-            <span class="half"><span class="nm">전국 <span class="sub">부동산원 매매가격지수</span></span><b class={cls(rAll?.yoy)}><i>지수 1년</i>{rAll && rAll.yoy != null ? `${rAll.yoy > 0 ? '+' : ''}${rAll.yoy.toFixed(1)}%` : '—'}</b><span class="rone"><Fragment set:html={streakPill(rAll)} /></span></span>
+            <span class="half"><span class="nm">수도권 <span class="sub">서울·인천·경기</span></span><b class={cls(cap?.yoy)}><i>실거래</i>{cap?.yoy == null ? '표본 부족' : pct(cap.yoy)}</b>{rCap && <span class="rone"><span class="org">부동산원 </span><span class="short">지수</span><span class="long">매매가격지수:</span> {roneYoy(rCap)}</span>}{rCap && streakPill(rCap) && <span class="rone"><Fragment set:html={streakPill(rCap)} /></span>}</span>
+            <span class="half"><span class="nm">전국 <span class="sub short">지수</span><span class="sub long">부동산원 매매가격지수</span></span><b class={cls(rAll?.yoy)}><i>지수 1년</i>{rAll && rAll.yoy != null ? `${rAll.yoy > 0 ? '+' : ''}${rAll.yoy.toFixed(1)}%` : '—'}</b><span class="rone"><Fragment set:html={streakPill(rAll)} /></span></span>
           </a>
         )}
         {chgList.map(({ sido, chg }) => { const r = roneSido(sido); return (
-          <a class="ccell" href={`/area/#s-${sido}`}><span class="nm">{sido}</span><b class={cls(chg!.yoy)}><i>실거래</i>{chg!.yoy == null ? '표본 부족' : pct(chg!.yoy)}</b>{roneYoy(r) && <span class="rone">부동산원 지수: {roneYoy(r)}{sido === '전남광주' ? ' (옛 광주)' : ''}</span>}{streakPill(r) && <span class="rone"><Fragment set:html={streakPill(r)} /></span>}</a>
+          <a class="ccell" href={`/area/#s-${sido}`}><span class="nm">{sido}</span><b class={cls(chg!.yoy)}><i>실거래</i>{chg!.yoy == null ? '표본 부족' : pct(chg!.yoy)}</b>{roneYoy(r) && <span class="rone"><span class="org">부동산원 </span>지수<span class="long">:</span> {roneYoy(r)}</span>}{streakPill(r) && <span class="rone"><Fragment set:html={streakPill(r)} /></span>}</a>
         ); })}
       </div>
       <p class="src"><b>실거래</b> = 쏙집이 국토부 실거래로 계산한 1년 변동률(평균이 아니라 같은 단지·같은 평형끼리 비교한 중앙값). <b>부동산원 지수</b> = 한국부동산원 주간 아파트 매매가격지수의 52주 전 대비(1년)와 전주 대비 연속 상승·하락 주 수(최근). 시·구 단위는 <a href="/area/">지역별 페이지</a>에서. 가격 전망이 아닙니다.</p>
@@ -112,12 +112,17 @@ const situations = [
   }
   .quick { margin-top: var(--gap); }
   .chg { margin-top: var(--gap); }
-  .cgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 8px; }
+  .cgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; margin-top: 8px; }
+  @media (min-width: 600px) { .cgrid { grid-template-columns: repeat(3, 1fr); } }
   .ccell { display: flex; flex-direction: column; gap: 1px; padding: 10px 12px; border-radius: 12px; background: var(--soft); color: inherit; }
   .ccell .nm { font-size: 13px; color: var(--fg2); font-weight: 600; }
   .ccell b { font-size: 19px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
   .ccell b i, .cgrid .half b i { display: block; font-style: normal; font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0; line-height: 1.2; margin: 2px 0 0; white-space: nowrap; }
   .ccell, .cgrid .half { word-break: keep-all; overflow-wrap: anywhere; }
+  .cgrid .long { display: none; } .cgrid .short { display: inline; } .cgrid .org { display: none; }
+  @media (min-width: 375px) { .cgrid .org { display: inline; } }
+  @media (min-width: 600px) { .cgrid .long { display: inline; } .cgrid .short { display: none !important; } }
+
   .ccell b.na { font-size: 13px; color: var(--muted); font-weight: 500; }
   .ccell .up { color: var(--red); } .ccell .down { color: var(--blue); }
   .ccell { min-width: 0; }

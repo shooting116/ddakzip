@@ -33,13 +33,14 @@ const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${
             <span class="nm">수도권 <span class="sub">서울·인천·경기</span></span>
             <b class={yoyCls(cap)}><i>실거래</i>{yoyText(cap)}</b>
             <span class="sub">{cap?.n ? `${cap.n.toLocaleString()}개 평형 비교` : ''}</span>
-            {rCap && <span class="rone">부동산원 매매가격지수: {roneYoy(rCap)} <Fragment set:html={streakPill(rCap)} /></span>}
+            {rCap && <span class="rone"><span class="org">부동산원 </span><span class="short">지수</span><span class="long">매매가격지수:</span> {roneYoy(rCap)}</span>}
+            {rCap && streakPill(rCap) && <span class="rone"><Fragment set:html={streakPill(rCap)} /></span>}
           </div>
           <div class="half">
-            <span class="nm">전국 <span class="sub">부동산원 매매가격지수</span></span>
+            <span class="nm">전국 <span class="sub short">지수</span><span class="sub long">부동산원 매매가격지수</span></span>
             <b class={rAll && rAll.yoy != null ? (rAll.yoy > 0 ? 'up' : rAll.yoy < 0 ? 'down' : '') : 'na'}><i>지수 1년</i>{rAll && rAll.yoy != null ? `${rAll.yoy > 0 ? '+' : ''}${rAll.yoy.toFixed(1)}%` : '—'}</b>
             <span class="rone"><Fragment set:html={streakPill(rAll)} /></span>
-            <span class="sub">실거래 집계는 수도권·광역시만</span>
+            <span class="sub">실거래는 <span class="nw">수도권·광역시만</span></span>
           </div>
         </div>
       )}
@@ -47,8 +48,8 @@ const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${
         <a class="scell" href={`#s-${sido}`}>
           <span class="nm">{sido}</span>
           <b class={yoyCls(c)}><i>실거래</i>{yoyText(c)}</b>
-          <span class="sub">{c?.n ? `${c.n.toLocaleString()}개 평형` : ''}{sido === '전남광주' ? ' · 옛 광주 5개 구' : ''}</span>
-          {roneYoy(r) && <span class="rone">부동산원 지수: {roneYoy(r)}{sido === '전남광주' ? ' (옛 광주)' : ''}</span>}
+          <span class="sub">{c?.n ? `${c.n.toLocaleString()}개 평형` : ''}{sido === '전남광주' ? ' · 옛 광주' : ''}</span>
+          {roneYoy(r) && <span class="rone"><span class="org">부동산원 </span>지수<span class="long">:</span> {roneYoy(r)}</span>}
           {streakPill(r) && <span class="rone"><Fragment set:html={streakPill(r)} /></span>}
         </a>
       ); })}
@@ -122,12 +123,19 @@ const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${
   .card[id] { scroll-margin-top: 72px; } /* 시도 칸을 눌러 내려올 때 고정 머리말에 제목이 가리지 않게 */
   .card h2 { font-size: 16px; margin: 0 0 4px; } .card h2 .sub { font-weight: 500; margin-left: 4px; }
   .up { color: var(--red); } .down { color: var(--blue); } .na { color: var(--muted); font-weight: 500; }
-  .sgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 8px; }
+  .sgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; margin-top: 8px; }
+  @media (min-width: 600px) { .sgrid { grid-template-columns: repeat(3, 1fr); } }
   .scell { display: flex; flex-direction: column; gap: 1px; padding: 10px 12px; border-radius: 12px; background: var(--soft); color: inherit; }
   .scell .nm { font-size: 13px; color: var(--fg2); font-weight: 600; }
   .scell b { font-size: 20px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
   .scell b i, .half b i { display: block; font-style: normal; font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0; line-height: 1.2; margin: 2px 0 0; white-space: nowrap; }
   .scell, .half, .cell { word-break: keep-all; overflow-wrap: anywhere; }
+  .nw { white-space: nowrap; }
+  /* 폰(2열)은 "지수 1년 +x%", 375px 이상은 "부동산원 지수 1년 +x%", 600px 이상(3열)은 풀 표기 */
+  .long { display: none; } .short { display: inline; } .org { display: none; }
+  @media (min-width: 375px) { .org { display: inline; } }
+  @media (min-width: 600px) { .long { display: inline; } .short { display: none !important; } }
+
   .scell b.na { font-size: 13px; }
   .rone { font-size: 11.5px; color: var(--muted); font-weight: 500; line-height: 1.35; }
   .rone .pill { font-size: 10.5px; padding: 2px 7px; }
