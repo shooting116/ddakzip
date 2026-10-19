@@ -1,4 +1,4 @@
-# 쏙집 (ssokjip) — 작업 규칙 · 저장소 shooting116/ddakzip
+# 쏙집 (ssokjip) — 작업 규칙 · 저장소 shooting116/ssokjip (옛 이름 ddakzip)
 
 한국 부동산 예산·대출 계산 + 아파트 찾기·비교 사이트. 도메인 korea-rich.com. Astro 7 정적 사이트, Cloudflare Workers 배포, GitHub Actions 데이터 파이프라인.
 

@@ -13,7 +13,7 @@ async function refreshAccessToken() {
       body: new URLSearchParams({ grant_type: 'refresh_token', client_id, refresh_token: refresh }),
     }).then((r) => r.json()).catch((e) => ({ error: String(e?.message ?? e) }));
     if (tok.access_token) {
-      if (tok.refresh_token) console.log('::warning title=카카오 refresh token 갱신됨::새 refresh_token이 발급되었습니다. ddakzip Secrets의 KAKAO_REFRESH_TOKEN을 바꿔야 두 달 뒤에도 알림이 갑니다.');
+      if (tok.refresh_token) console.log('::warning title=카카오 refresh token 갱신됨::새 refresh_token이 발급되었습니다. ssokjip 저장소 Secrets의 KAKAO_REFRESH_TOKEN을 바꿔야 두 달 뒤에도 알림이 갑니다.');
       return { access: tok.access_token };
     }
     errs.push(`${tok.error ?? '?'}${tok.error_code ? ` ${tok.error_code}` : ''}: ${tok.error_description ?? ''}`.trim());

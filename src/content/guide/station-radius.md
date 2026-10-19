@@ -9,7 +9,7 @@ facts: []
 cta: find
 related: [gtx-timeline-2026, metro-rail-2026-2031]
 sources:
-  - { title: "쏙집 교통 호재 규칙표 (GitHub, 출처·날짜 포함)", url: "https://github.com/shooting116/ddakzip/blob/main/data/transit/lines.json" }
+  - { title: "쏙집 교통 호재 규칙표 (GitHub, 출처·날짜 포함)", url: "https://github.com/shooting116/ssokjip/blob/main/data/transit/lines.json" }
 ---
 
 ## 배지가 생기는 조건

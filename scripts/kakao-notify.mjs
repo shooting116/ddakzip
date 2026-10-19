@@ -8,7 +8,7 @@ let text, url = 'https://korea-rich.com', button = '쏙집 열기';
 const i = args.indexOf('--text');
 if (i >= 0) text = args[i + 1];
 else if (args[0] === 'build-failed') {
-  const repo = process.env.GITHUB_REPOSITORY ?? 'shooting116/ddakzip';
+  const repo = process.env.GITHUB_REPOSITORY ?? 'shooting116/ssokjip';
   const run = process.env.GITHUB_RUN_ID;
   const sha = (process.env.GITHUB_SHA ?? '').slice(0, 7);
   const msg = (process.env.COMMIT_MESSAGE ?? '').split('\n')[0].slice(0, 80);
