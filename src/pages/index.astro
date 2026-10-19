@@ -62,7 +62,7 @@ const situations = [
           </a>
         )}
         {chgList.map(({ sido, chg }) => { const r = roneSido(sido); return (
-          <a class="ccell" href={`/area/#s-${sido}`}><span class="nm">{sido}</span><b class={cls(chg!.yoy)}>{chg!.yoy == null ? '표본 부족' : pct(chg!.yoy)}</b>{roneYoy(r) && <span class="rone">부동산원 {roneYoy(r)}{sido === '전남광주' ? ' (통합시)' : ''}</span>}{streakPill(r) && <span class="rone"><Fragment set:html={streakPill(r)} /></span>}</a>
+          <a class="ccell" href={`/area/#s-${sido}`}><span class="nm">{sido}</span><b class={cls(chg!.yoy)}>{chg!.yoy == null ? '표본 부족' : pct(chg!.yoy)}</b>{roneYoy(r) && <span class="rone">부동산원 {roneYoy(r)}{sido === '전남광주' ? ' (옛 광주)' : ''}</span>}{streakPill(r) && <span class="rone"><Fragment set:html={streakPill(r)} /></span>}</a>
         ); })}
       </div>
       <p class="src">큰 숫자는 쏙집 실거래(같은 단지·같은 평형끼리 1년 전과 비교한 변동률의 중앙값), 작은 글씨는 한국부동산원 주간 매매가격지수의 52주 전 대비(1년)와 전주 대비 연속 상승·하락 주 수(최근). 시·구 단위는 <a href="/area/">지역별 페이지</a>에서. 가격 전망이 아닙니다.</p>

@@ -42,10 +42,12 @@ function statOf(key: string): RoneStat | null {
 const keys = () => Object.keys(load()?.series ?? {});
 
 /** 시도 전체 ("서울", "경기" …) · 권역("수도권", "전국"). 최상위 이름이 조금 달라도(광주광역시 등) 찾는다 */
-const SIDO_ALIAS: Record<string, string[]> = { 광주: ['전남광주>광주', '전남광주>광주광역시'] }; // 2026 통합 뒤 R-ONE 표기
+// 2026 통합 뒤 R-ONE 표기: 통합시 전체 '전남광주'(2026-07부터)와 옛 광주광역시 '전남광주>광주'(2012년부터)가 따로 있다.
+// 쏙집 수집 범위가 옛 광주 5개 구이므로 시도 '전남광주'는 '전남광주>광주' 시계열을 먼저 쓴다
+const SIDO_ALIAS: Record<string, string[]> = { 전남광주: ['전남광주>광주'], 광주: ['전남광주>광주'] };
 export function roneSido(sido: string): RoneStat | null {
-  const direct = statOf(sido); if (direct) return direct;
   for (const a of SIDO_ALIAS[sido] ?? []) { const r = statOf(a); if (r) return r; }
+  const direct = statOf(sido); if (direct) return direct;
   const k = keys().find((x) => !x.includes('>') && x.replace(/(특별시|광역시|특별자치시|특별자치도|도)$/, '') === sido);
   return k ? statOf(k) : null;
 }
