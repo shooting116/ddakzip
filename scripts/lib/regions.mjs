@@ -14,8 +14,8 @@ export function loadRules(asOf = new Date(Date.now() + 9 * 3600 * 1000).toISOStr
   return JSON.parse(readFileSync(join(dir, pick), 'utf8'));
 }
 
-/** 백필 우선순위: 서울 → 인천 → 경기 → 부산 → 대구 → 대전 → 광주 → 울산 → 세종 */
-export const SIDO_ORDER = ['서울', '인천', '경기', '부산', '대구', '대전', '광주', '울산', '세종'];
+/** 백필 우선순위: 서울 → 인천 → 경기 → 부산 → 대구 → 대전 → 전남광주 → 울산 → 세종 */
+export const SIDO_ORDER = ['서울', '인천', '경기', '부산', '대구', '대전', '전남광주', '울산', '세종'];
 
 export function loadRegions() {
   const rules = loadRules();

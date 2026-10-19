@@ -27,7 +27,7 @@ const concurrency = Number(args.concurrency ?? 4);
 const KEY = process.env.KAKAO_REST_KEY;
 if (!KEY) { console.error('KAKAO_REST_KEY 환경변수가 없습니다'); process.exit(1); }
 
-const SIDO_FULL = { 서울: '서울특별시', 경기: '경기도', 인천: '인천광역시', 부산: '부산광역시', 대구: '대구광역시', 광주: '광주광역시', 대전: '대전광역시', 울산: '울산광역시', 세종: '세종특별자치시' };
+const SIDO_FULL = { 서울: '서울특별시', 경기: '경기도', 인천: '인천광역시', 부산: '부산광역시', 대구: '대구광역시', 광주: '광주광역시', 전남광주: '광주광역시', 대전: '대전광역시', 울산: '울산광역시', 세종: '세종특별자치시' };
 
 let calls = 0, stopReason = null;
 async function kakao(path, query) {

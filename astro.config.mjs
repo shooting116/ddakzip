@@ -15,5 +15,10 @@ export default defineConfig({
       filter: (page) => !/\/(about|privacy|contact)\/$/.test(page),
     }),
   ],
+  // 2026-10-19 시도 표기 변경(광주 → 전남광주): 옛 주소는 새 주소로 (예산별 페이지 금액 2만~20만, 5천 단위)
+  redirects: Object.fromEntries([
+    ['/ref/광주/', '/ref/전남광주/'],
+    ...Array.from({ length: 37 }, (_, i) => 20000 + i * 5000).map((a) => [`/budget/${a}/광주/`, `/budget/${a}/전남광주/`]),
+  ]),
   build: { format: 'directory' },
 });

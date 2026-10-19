@@ -47,13 +47,13 @@ const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${
         <a class="scell" href={`#s-${sido}`}>
           <span class="nm">{sido}</span>
           <b class={yoyCls(c)}>{yoyText(c)}</b>
-          <span class="sub">{c?.n ? `${c.n.toLocaleString()}개 평형` : ''}</span>
-          {roneYoy(r) && <span class="rone">부동산원 {roneYoy(r)}</span>}
+          <span class="sub">{c?.n ? `${c.n.toLocaleString()}개 평형` : ''}{sido === '전남광주' ? ' · 옛 광주 5개 구' : ''}</span>
+          {roneYoy(r) && <span class="rone">부동산원 {roneYoy(r)}{sido === '전남광주' ? ' (통합시 전체)' : ''}</span>}
           {streakPill(r) && <span class="rone"><Fragment set:html={streakPill(r)} /></span>}
         </a>
       ); })}
     </div>
-    <p class="src">큰 숫자는 쏙집 실거래 기준: 같은 단지·같은 평형의 최근 6개월 실거래 중앙값을 1년 전 같은 6개월과 비교한 변동률(두 기간 모두 3건 이상)의 <b>중앙값</b>입니다. 해제·직거래 제외, 표본이 10개 평형 미만이면 비웁니다. 거래가 활발한 단지의 움직임이 더 반영되므로 공식 지수보다 크게 움직일 수 있습니다.{rAsOf && <> 작은 글씨 "부동산원"은 <b>한국부동산원 주간 아파트 매매가격지수</b>({rAsOf.label} 기준 주)의 52주 전 대비 변동률이고, "N주째 ↑"는 전주 대비 지수가 연속으로 오른 주 수입니다(출처: R-ONE 부동산통계).</>} 어느 쪽도 가격 전망이 아닙니다.</p>
+    <p class="src">큰 숫자는 쏙집 실거래 기준: 같은 단지·같은 평형의 최근 6개월 실거래 중앙값을 1년 전 같은 6개월과 비교한 변동률(두 기간 모두 3건 이상)의 <b>중앙값</b>입니다. 해제·직거래 제외, 표본이 10개 평형 미만이면 비웁니다. 거래가 활발한 단지의 움직임이 더 반영되므로 공식 지수보다 크게 움직일 수 있습니다.{rAsOf && <> 작은 글씨 "부동산원"은 <b>한국부동산원 주간 아파트 매매가격지수</b>({rAsOf.label} 기준 주)의 52주 전 대비 변동률이고, "N주째 ↑"는 전주 대비 지수가 연속으로 오른 주 수입니다(출처: R-ONE 부동산통계).</>} 전남광주는 2026-07-01 출범한 전남광주통합특별시이며, 쏙집은 옛 광주광역시 5개 구만 수집하고 부동산원 지수는 전남 시·군을 포함한 통합시 전체 기준입니다. 어느 쪽도 가격 전망이 아닙니다.</p>
   </section>
 
   <div class="sortbar">

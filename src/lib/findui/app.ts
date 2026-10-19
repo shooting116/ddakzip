@@ -534,6 +534,7 @@ export async function mount(el: HTMLElement) {
   s = load();
   try { regions = await fetchJson<Regions>('/data/regions.json'); }
   catch { root.innerHTML = '<div class="card"><p class="sub2" style="margin:0">데이터를 불러오지 못했어요. 잠시 후 다시 시도해 주세요.</p></div>'; return; }
+  if (s.sido === '광주' && regions.sido['전남광주']) s.sido = '전남광주'; // 2026-10 시도 표기 변경
   if (!regions.sido[s.sido]) s.sido = Object.keys(regions.sido)[0];
   if (s.lawd !== 'all' && !regions.sido[s.sido].some((x) => x.lawd === s.lawd)) {
     const owner = Object.entries(regions.sido).find(([, l]) => l.some((x) => x.lawd === s.lawd));
