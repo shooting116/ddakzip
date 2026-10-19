@@ -62,9 +62,9 @@ export function roneCity(sido: string, city: string): RoneStat | null {
   const k = keys().find((x) => x.startsWith(sido + '>') && x.endsWith('>' + city) && x.split('>').length <= 4);
   return k ? statOf(k) : null;
 }
-/** 표시용: "+11.2% · 89주째 ↑" */
+/** 표시용: "1년 +11.2% · 최근 89주째 ↑" — 1년(52주 전 대비)과 최근(전주 대비 연속)을 글자로 구분 */
 export function roneText(r: RoneStat | null): string {
   if (!r || r.yoy == null) return '';
-  const s = r.streak >= 2 ? ` · ${r.streak}주째 ↑` : r.streak <= -2 ? ` · ${-r.streak}주째 ↓` : '';
-  return `${r.yoy > 0 ? '+' : ''}${r.yoy.toFixed(1)}%${s}`;
+  const s = r.streak >= 2 ? ` · 최근 ${r.streak}주째 ↑` : r.streak <= -2 ? ` · 최근 ${-r.streak}주째 ↓` : '';
+  return `1년 ${r.yoy > 0 ? '+' : ''}${r.yoy.toFixed(1)}%${s}`;
 }

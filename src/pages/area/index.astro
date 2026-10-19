@@ -8,8 +8,8 @@ const rAsOf = roneAsOf();
 const cap = sm.groups?.수도권?.chg ?? null;
 const rCap = roneSido('수도권'), rAll = roneSido('전국');
 // 연속 상승·하락 주 수 알약 (2주 이상일 때만)
-const streakPill = (r: ReturnType<typeof roneSido>) => (r && Math.abs(r.streak) >= 2 ? `<span class="pill ${r.streak > 0 ? 'p-bad' : 'p-blue'}">${Math.abs(r.streak)}주째 ${r.streak > 0 ? '↑' : '↓'}</span>` : '');
-const roneYoy = (r: ReturnType<typeof roneSido>) => (r && r.yoy != null ? `${r.yoy > 0 ? '+' : ''}${r.yoy.toFixed(1)}%` : '');
+const streakPill = (r: ReturnType<typeof roneSido>) => (r && Math.abs(r.streak) >= 2 ? `<span class="pill ${r.streak > 0 ? 'p-bad' : 'p-blue'}">최근 ${Math.abs(r.streak)}주째 ${r.streak > 0 ? '↑' : '↓'}</span>` : '');
+const roneYoy = (r: ReturnType<typeof roneSido>) => (r && r.yoy != null ? `1년 ${r.yoy > 0 ? '+' : ''}${r.yoy.toFixed(1)}%` : '');
 const sidos = Object.keys(sm.sido);
 const cities = sm.cities ?? {};
 const byLawd = Object.fromEntries(sm.sigungu.map((g) => [g.lawd, g]));
@@ -53,7 +53,7 @@ const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${
         </a>
       ); })}
     </div>
-    <p class="src">큰 숫자는 쏙집 실거래 기준: 같은 단지·같은 평형의 최근 6개월 실거래 중앙값을 1년 전 같은 6개월과 비교한 변동률(두 기간 모두 3건 이상)의 <b>중앙값</b>입니다. 해제·직거래 제외, 표본이 10개 평형 미만이면 비웁니다. 거래가 활발한 단지의 움직임이 더 반영되므로 공식 지수보다 크게 움직일 수 있습니다.{rAsOf && <> 작은 글씨 "부동산원"은 <b>한국부동산원 주간 아파트 매매가격지수</b>({rAsOf.label} 기준 주)의 52주 전 대비 변동률이고, "N주째 ↑"는 전주 대비 지수가 연속으로 오른 주 수입니다(출처: R-ONE 부동산통계).</>} 전남광주는 2026-07-01 출범한 전남광주통합특별시이며, 쏙집은 옛 광주광역시 5개 구만 수집하고 부동산원 지수는 전남 시·군을 포함한 통합시 전체 기준입니다. 어느 쪽도 가격 전망이 아닙니다.</p>
+    <p class="src">큰 숫자는 쏙집 실거래 기준: 같은 단지·같은 평형의 최근 6개월 실거래 중앙값을 1년 전 같은 6개월과 비교한 변동률(두 기간 모두 3건 이상)의 <b>중앙값</b>입니다. 해제·직거래 제외, 표본이 10개 평형 미만이면 비웁니다. 거래가 활발한 단지의 움직임이 더 반영되므로 공식 지수보다 크게 움직일 수 있습니다.{rAsOf && <> 작은 글씨 "부동산원"은 <b>한국부동산원 주간 아파트 매매가격지수</b>({rAsOf.label} 기준 주)의 52주 전 대비 변동률("1년")이고, "최근 N주째 ↑"는 전주 대비 지수가 연속으로 오른 주 수입니다(출처: R-ONE 부동산통계).</>} 전남광주는 2026-07-01 출범한 전남광주통합특별시이며, 쏙집은 옛 광주광역시 5개 구만 수집하고 부동산원 지수는 전남 시·군을 포함한 통합시 전체 기준입니다. 어느 쪽도 가격 전망이 아닙니다.</p>
   </section>
 
   <div class="sortbar">
