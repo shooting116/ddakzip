@@ -97,6 +97,8 @@ const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${
 </Base>
 
 <script>
+  // 홈 카드 등에서 #s-서울 같은 앵커로 들어오면 글꼴 로딩 뒤 위치가 밀리므로 한 번 더 맞춘다
+  if (location.hash) { const el = document.querySelector(decodeURIComponent(location.hash)); if (el) document.fonts.ready.then(() => el.scrollIntoView({ block: 'start' })); }
   // 목록 정렬: 이름순 / 변동률 순 (표본 부족은 맨 뒤)
   const bar = document.querySelector('.sortbar');
   bar?.addEventListener('click', (e) => {
@@ -117,6 +119,7 @@ const volText = (c?: RegionChange | null) => (c && c.volPct != null ? `거래 ${
 </script>
 
 <style>
+  .card[id] { scroll-margin-top: 72px; } /* 시도 칸을 눌러 내려올 때 고정 머리말에 제목이 가리지 않게 */
   .card h2 { font-size: 16px; margin: 0 0 4px; } .card h2 .sub { font-weight: 500; margin-left: 4px; }
   .up { color: var(--red); } .down { color: var(--blue); } .na { color: var(--muted); font-weight: 500; }
   .sgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 8px; }
