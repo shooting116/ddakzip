@@ -41,8 +41,12 @@ function statOf(key: string): RoneStat | null {
 }
 const keys = () => Object.keys(load()?.series ?? {});
 
-/** 시도 전체 ("서울", "경기" …) */
-export function roneSido(sido: string): RoneStat | null { return statOf(sido); }
+/** 시도 전체 ("서울", "경기" …) · 권역("수도권", "전국"). 최상위 이름이 조금 달라도(광주광역시 등) 찾는다 */
+export function roneSido(sido: string): RoneStat | null {
+  const direct = statOf(sido); if (direct) return direct;
+  const k = keys().find((x) => !x.includes('>') && x.replace(/(특별시|광역시|특별자치시|특별자치도|도)$/, '') === sido);
+  return k ? statOf(k) : null;
+}
 /** 시군구: "종로구"(서울·광역시) 또는 "안양시 만안구"(경기). 이름이 안 맞으면 null */
 export function roneSigungu(sido: string, sigungu: string): RoneStat | null {
   const parts = sigungu.trim().split(/\s+/);

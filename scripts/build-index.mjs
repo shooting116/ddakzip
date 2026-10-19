@@ -325,6 +325,9 @@ function main() {
     return { yoy: med, n: yoys.length, cur, prev, volPct: prev ? Math.round(((cur - prev) / prev) * 100) : null };
   };
   for (const g of summary.sigungu) g.chg = chgOf([yoyPool.get(g.lawd)]);
+  // 권역: 수도권 = 서울·인천·경기 (쏙집이 전수 수집하는 범위). '전국'은 수집 범위 밖이라 만들지 않는다
+  const capital = summary.sigungu.filter((g) => ['서울', '인천', '경기'].includes(g.sido));
+  summary.groups = { 수도권: { sidos: ['서울', '인천', '경기'], chg: chgOf(capital.map((g) => yoyPool.get(g.lawd))) } };
   summary.cities = {};
   for (const [sido, _] of Object.entries(summary.sido)) {
     const regs = summary.sigungu.filter((g) => g.sido === sido);

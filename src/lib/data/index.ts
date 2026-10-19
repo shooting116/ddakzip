@@ -46,6 +46,8 @@ export interface Summary {
   asOf: string; months: number; staticMin: number; staticMax: number; staticCut: number;
   sido: Record<string, { complexes: number; static: number; trades36: number; chg?: RegionChange }>;
   sigungu: { lawd: string; sido: string; sigungu: string; regulated: boolean; complexes: number; static: number; trades36: number; geo: number; kapt: number; transit: number; redev: number; news: number; hot?: number; jeonse?: number; bldg?: number; stations?: StationOpt[]; chg?: RegionChange }[];
+  /** 권역 집계 (수도권 = 서울·인천·경기). 전국은 수집 범위 밖이라 없음 */
+  groups?: Record<string, { sidos: string[]; chg: RegionChange }>;
   /** 시도별 시 단위 묶음 ("성남시 분당구"+"수정구"+"중원구" → 성남시). merged=false면 시군구 하나 그대로 */
   cities?: Record<string, { name: string; lawds: string[]; merged: boolean; chg: RegionChange }[]>;
   total: { complexes: number; static: number; trades36: number };

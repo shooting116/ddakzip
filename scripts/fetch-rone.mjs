@@ -90,7 +90,7 @@ async function weekly() {
     if (!keep.has(r.WRTTIME_IDTFR_ID)) continue;
     if ((r.ITM_NM ?? '').trim() !== '지수') continue;
     const full = (r.CLS_FULLNM ?? r.CLS_NM ?? '').trim();
-    if (!SIDOS.includes(full.split('>')[0])) continue;
+    if (!SIDOS.includes(full.split('>')[0]) && full.includes('>')) continue; // 대상 시도의 하위 지역 + 최상위 집계(전국·수도권·지방권·광주 등)는 모두 저장
     const val = Number(r.DTA_VAL);
     if (!full || !Number.isFinite(val)) continue;
     (series[full] ??= {})[r.WRTTIME_IDTFR_ID] = +val.toFixed(2); n++;
