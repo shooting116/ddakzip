@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import { loadSummary } from '../lib/data/index.ts';
 import { pct } from '../lib/ui/format.ts';
+import { roneSido, roneText } from '../lib/data/rone.ts';
 const sm = loadSummary();
 const chgList = Object.entries(sm.sido).map(([sido, v]) => ({ sido, chg: v.chg })).filter((x) => x.chg);
 
@@ -50,10 +51,10 @@ const situations = [
       <h2 id="chg-h" class="h">지역별 1년 변동률 <span class="sub">실거래 {sm.asOf} 기준</span></h2>
       <div class="cgrid">
         {chgList.map(({ sido, chg }) => (
-          <a class="ccell" href={`/area/#s-${sido}`}><span class="nm">{sido}</span><b class={chg!.yoy == null ? 'na' : chg!.yoy > 0 ? 'up' : chg!.yoy < 0 ? 'down' : ''}>{chg!.yoy == null ? '표본 부족' : pct(chg!.yoy)}</b></a>
+          <a class="ccell" href={`/area/#s-${sido}`}><span class="nm">{sido}</span><b class={chg!.yoy == null ? 'na' : chg!.yoy > 0 ? 'up' : chg!.yoy < 0 ? 'down' : ''}>{chg!.yoy == null ? '표본 부족' : pct(chg!.yoy)}</b>{roneText(roneSido(sido)) && <span class="rone">부동산원 {roneText(roneSido(sido))}</span>}</a>
         ))}
       </div>
-      <p class="src">같은 단지·같은 평형끼리 1년 전과 비교한 변동률의 중앙값(해제·직거래 제외). 시·구 단위는 <a href="/area/">지역별 페이지</a>에서. 가격 전망이 아닙니다.</p>
+      <p class="src">큰 숫자는 쏙집 실거래(같은 단지·같은 평형끼리 1년 전과 비교한 변동률의 중앙값), 작은 글씨는 한국부동산원 주간 매매가격지수의 52주 전 대비와 연속 상승 주 수. 시·구 단위는 <a href="/area/">지역별 페이지</a>에서. 가격 전망이 아닙니다.</p>
     </section>
   )}
 
@@ -106,6 +107,8 @@ const situations = [
   .ccell b { font-size: 19px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
   .ccell b.na { font-size: 13px; color: var(--muted); font-weight: 500; }
   .ccell .up { color: var(--red); } .ccell .down { color: var(--blue); }
+  .ccell { min-width: 0; }
+  .ccell .rone { font-size: 11px; color: var(--muted); font-weight: 500; line-height: 1.35; }
   .chg .src a { color: var(--blue); }
   .qgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
   .qcell { display: flex; flex-direction: column; gap: 3px; padding: 12px 14px; border-radius: 14px; background: var(--soft); color: inherit; }
