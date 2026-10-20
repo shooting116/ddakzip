@@ -197,6 +197,7 @@
 {"lawd":"28200","umdNm":"구월동","jibun":"342-1","apt":"신세계","area":88.68,"floor":7,"built":1980,"date":"2026-09-10","deposit":2000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"구월동","jibun":"342-1","apt":"신세계","area":88.68,"floor":8,"built":1980,"date":"2026-09-10","deposit":18000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"구월동","jibun":"342-1","apt":"신세계","area":88.68,"floor":13,"built":1980,"date":"2026-09-10","deposit":12000,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28200","umdNm":"구월동","jibun":"1143-31","apt":"에코라이프주상복합","area":20.19,"floor":12,"built":2013,"date":"2026-09-10","deposit":500,"rent":48,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"논현동","jibun":"774-1","apt":"에코메트로11","area":84.99,"floor":7,"built":2009,"date":"2026-09-10","deposit":34500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":33000,"preRent":0}
 {"lawd":"28200","umdNm":"논현동","jibun":"757-1","apt":"에코메트로7","area":84.95,"floor":11,"built":2010,"date":"2026-09-10","deposit":40000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28200","umdNm":"서창동","jibun":"745","apt":"인천서창꿈에그린","area":74.99,"floor":15,"built":2019,"date":"2026-09-10","deposit":5000,"rent":59,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":5000,"preRent":59}

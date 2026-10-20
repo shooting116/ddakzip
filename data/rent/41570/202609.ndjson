@@ -471,6 +471,7 @@
 {"lawd":"41570","umdNm":"풍무동","jibun":"1060","apt":"풍무푸르지오센트레빌","area":111.9,"floor":27,"built":2016,"date":"2026-09-12","deposit":1000,"rent":65,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41570","umdNm":"걸포동","jibun":"1591","apt":"한강메트로자이2단지","area":59.95,"floor":15,"built":2020,"date":"2026-09-12","deposit":36200,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":35000,"preRent":0}
 {"lawd":"41570","umdNm":"걸포동","jibun":"1591","apt":"한강메트로자이2단지","area":84.23,"floor":3,"built":2020,"date":"2026-09-12","deposit":5000,"rent":172,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":165}
+{"lawd":"41570","umdNm":"걸포동","jibun":"1593","apt":"한강메트로자이3단지","area":84.94,"floor":2,"built":2020,"date":"2026-09-12","deposit":5000,"rent":168,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":160}
 {"lawd":"41570","umdNm":"장기동","jibun":"2193","apt":"한강센트럴자이1단지","area":84.98,"floor":6,"built":2017,"date":"2026-09-12","deposit":5000,"rent":155,"term":"26.10~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41570","umdNm":"마산동","jibun":"640-5","apt":"한강신도시반도유보라3차","area":60,"floor":1,"built":2017,"date":"2026-09-12","deposit":3000,"rent":130,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41570","umdNm":"운양동","jibun":"1250-3","apt":"한강신도시e편한세상","area":121.74,"floor":3,"built":2012,"date":"2026-09-12","deposit":47250,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":45000,"preRent":0}
@@ -600,6 +601,7 @@
 {"lawd":"41570","umdNm":"양촌읍 양곡리","jibun":"1551","apt":"김포한강삼정그린코아더베스트","area":52.26,"floor":8,"built":2020,"date":"2026-09-17","deposit":22000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41570","umdNm":"구래동","jibun":"6893-2","apt":"김포한강예미지뉴스테이","area":70.97,"floor":14,"built":2018,"date":"2026-09-17","deposit":15413,"rent":24,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":15413,"preRent":22}
 {"lawd":"41570","umdNm":"구래동","jibun":"6893-2","apt":"김포한강예미지뉴스테이","area":77.36,"floor":11,"built":2018,"date":"2026-09-17","deposit":13066,"rent":39,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41570","umdNm":"구래동","jibun":"6893-2","apt":"김포한강예미지뉴스테이","area":77.36,"floor":15,"built":2018,"date":"2026-09-17","deposit":15921,"rent":28,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":15921,"preRent":26}
 {"lawd":"41570","umdNm":"구래동","jibun":"6893-2","apt":"김포한강예미지뉴스테이","area":77.36,"floor":20,"built":2018,"date":"2026-09-17","deposit":7620,"rent":62,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":7620,"preRent":60}
 {"lawd":"41570","umdNm":"구래동","jibun":"6893-2","apt":"김포한강예미지뉴스테이","area":77.96,"floor":2,"built":2018,"date":"2026-09-17","deposit":10211,"rent":49,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":10211,"preRent":47}
 {"lawd":"41570","umdNm":"구래동","jibun":"6893-2","apt":"김포한강예미지뉴스테이","area":77.96,"floor":14,"built":2018,"date":"2026-09-17","deposit":15921,"rent":29,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":15921,"preRent":28}
@@ -621,6 +623,7 @@
 {"lawd":"41570","umdNm":"고촌읍 신곡리","jibun":"가-","apt":"캐슬앤파밀리에시티 2단지","area":84.9,"floor":8,"built":2020,"date":"2026-09-17","deposit":44000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":38000,"preRent":0}
 {"lawd":"41570","umdNm":"사우동","jibun":"1474","apt":"풍년마을(건영)","area":84.39,"floor":5,"built":2001,"date":"2026-09-17","deposit":23000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41570","umdNm":"사우동","jibun":"912","apt":"풍년마을(동양)","area":84.98,"floor":7,"built":1999,"date":"2026-09-17","deposit":33000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41570","umdNm":"북변동","jibun":"815","apt":"풍년마을(한라)","area":59.97,"floor":12,"built":1998,"date":"2026-09-17","deposit":14000,"rent":50,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":21510,"preRent":0}
 {"lawd":"41570","umdNm":"사우동","jibun":"911","apt":"풍년마을(현대)","area":60,"floor":10,"built":1998,"date":"2026-09-17","deposit":13000,"rent":50,"term":"26.09~27.09","type":"갱신","rrr":null,"preDeposit":28000,"preRent":0}
 {"lawd":"41570","umdNm":"풍무동","jibun":"1060","apt":"풍무푸르지오센트레빌","area":59.94,"floor":25,"built":2016,"date":"2026-09-17","deposit":40000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41570","umdNm":"풍무동","jibun":"1060","apt":"풍무푸르지오센트레빌","area":111.9,"floor":4,"built":2016,"date":"2026-09-17","deposit":35000,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -955,6 +958,7 @@
 {"lawd":"41570","umdNm":"풍무동","jibun":"775","apt":"한화유로메트로2차","area":84.99,"floor":5,"built":2014,"date":"2026-09-28","deposit":35500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41570","umdNm":"장기동","jibun":"1642","apt":"고창마을(반도유보라)","area":123.39,"floor":7,"built":2008,"date":"2026-09-29","deposit":33000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41570","umdNm":"장기동","jibun":"1886-2","apt":"고창마을(케이씨씨스위첸)","area":59.96,"floor":8,"built":2011,"date":"2026-09-29","deposit":29000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":28000,"preRent":0}
+{"lawd":"41570","umdNm":"사우동","jibun":"1481","apt":"김포사우아이파크","area":59.98,"floor":14,"built":2018,"date":"2026-09-29","deposit":35000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41570","umdNm":"감정동","jibun":"705","apt":"김포센트럴헤센1단지","area":59.99,"floor":9,"built":2021,"date":"2026-09-29","deposit":12000,"rent":50,"term":"26.11~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41570","umdNm":"감정동","jibun":"706","apt":"김포센트럴헤센2단지","area":59.99,"floor":17,"built":2022,"date":"2026-09-29","deposit":19400,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":18500,"preRent":0}
 {"lawd":"41570","umdNm":"구래동","jibun":"6893-2","apt":"김포한강예미지뉴스테이","area":77.36,"floor":10,"built":2018,"date":"2026-09-29","deposit":15921,"rent":29,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":15921,"preRent":28}

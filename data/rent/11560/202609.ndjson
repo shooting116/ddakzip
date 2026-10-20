@@ -48,6 +48,7 @@
 {"lawd":"11560","umdNm":"양평동6가","jibun":"100","apt":"동양","area":59.86,"floor":4,"built":2000,"date":"2026-09-03","deposit":50000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":45000,"preRent":0}
 {"lawd":"11560","umdNm":"신길동","jibun":"4950","apt":"래미안에스티움","area":118.39,"floor":24,"built":2017,"date":"2026-09-03","deposit":130000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11560","umdNm":"당산동3가","jibun":"567","apt":"리마크빌당산","area":26.96,"floor":3,"built":2025,"date":"2026-09-03","deposit":2000,"rent":169,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11560","umdNm":"대림동","jibun":"993-8","apt":"무림","area":69.98,"floor":5,"built":1981,"date":"2026-09-03","deposit":1000,"rent":120,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11560","umdNm":"문래동3가","jibun":"54","apt":"문래자이","area":84.98,"floor":10,"built":2001,"date":"2026-09-03","deposit":28000,"rent":220,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11560","umdNm":"신길동","jibun":"4958","apt":"보라매에스케이뷰","area":39.98,"floor":9,"built":2020,"date":"2026-09-03","deposit":17457,"rent":44,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":14672,"preRent":51}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":53.71,"floor":13,"built":2024,"date":"2026-09-03","deposit":24500,"rent":61,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
@@ -497,6 +498,7 @@
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":6,"built":2024,"date":"2026-09-21","deposit":3900,"rent":41,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":3900,"preRent":39}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":6,"built":2024,"date":"2026-09-21","deposit":7800,"rent":24,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":7800,"preRent":22}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":6,"built":2024,"date":"2026-09-21","deposit":13000,"rent":2,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":13000,"preRent":0}
+{"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":6,"built":2024,"date":"2026-09-21","deposit":13462,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":13000,"preRent":0}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":6,"built":2024,"date":"2026-09-21","deposit":13462,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":13000,"preRent":0}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":7,"built":2024,"date":"2026-09-21","deposit":3900,"rent":41,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":3900,"preRent":39}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":7,"built":2024,"date":"2026-09-21","deposit":7800,"rent":24,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":7800,"preRent":22}
@@ -526,6 +528,7 @@
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":10,"built":2024,"date":"2026-09-21","deposit":16568,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":16000,"preRent":0}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":10,"built":2024,"date":"2026-09-21","deposit":16568,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":16000,"preRent":0}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":11,"built":2024,"date":"2026-09-21","deposit":4800,"rent":50,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":4800,"preRent":48}
+{"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":11,"built":2024,"date":"2026-09-21","deposit":9600,"rent":29,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":9600,"preRent":27}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":11,"built":2024,"date":"2026-09-21","deposit":9600,"rent":29,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":9600,"preRent":27}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":11,"built":2024,"date":"2026-09-21","deposit":16000,"rent":2,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":16000,"preRent":0}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":11,"built":2024,"date":"2026-09-21","deposit":16568,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":16000,"preRent":0}
@@ -571,6 +574,7 @@
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":52.86,"floor":5,"built":2024,"date":"2026-09-21","deposit":19900,"rent":55,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":19900,"preRent":50}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":52.86,"floor":6,"built":2024,"date":"2026-09-21","deposit":11010,"rent":89,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":9900,"preRent":89}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":52.86,"floor":7,"built":2024,"date":"2026-09-21","deposit":30960,"rent":12,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":29800,"preRent":12}
+{"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":52.86,"floor":9,"built":2024,"date":"2026-09-21","deposit":42248,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":40800,"preRent":0}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":52.86,"floor":11,"built":2024,"date":"2026-09-21","deposit":36700,"rent":21,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":36700,"preRent":15}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":52.86,"floor":11,"built":2024,"date":"2026-09-21","deposit":42248,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":52.86,"floor":12,"built":2024,"date":"2026-09-21","deposit":36700,"rent":21,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":36700,"preRent":15}
@@ -709,6 +713,7 @@
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":22,"built":2024,"date":"2026-09-23","deposit":14400,"rent":8,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":14400,"preRent":6}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":22,"built":2024,"date":"2026-09-23","deposit":14962,"rent":6,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":14400,"preRent":6}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":22,"built":2024,"date":"2026-09-23","deposit":16000,"rent":2,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":22,"built":2024,"date":"2026-09-23","deposit":16000,"rent":2,"term":"26.11~28.10","type":"갱신","rrr":"사용","preDeposit":16000,"preRent":0}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":22,"built":2024,"date":"2026-09-23","deposit":16000,"rent":2,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":16000,"preRent":0}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":22,"built":2024,"date":"2026-09-23","deposit":16568,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":16000,"preRent":0}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":23,"built":2024,"date":"2026-09-23","deposit":9600,"rent":29,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":9600,"preRent":27}
@@ -743,6 +748,7 @@
 {"lawd":"11560","umdNm":"당산동3가","jibun":"561","apt":"동부센트레빌","area":114.96,"floor":16,"built":2003,"date":"2026-09-28","deposit":34000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":34000,"preRent":0}
 {"lawd":"11560","umdNm":"문래동5가","jibun":"1","apt":"문래대림","area":59.96,"floor":12,"built":2000,"date":"2026-09-28","deposit":42000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":37000,"preRent":0}
 {"lawd":"11560","umdNm":"문래동3가","jibun":"54","apt":"문래자이","area":84.98,"floor":20,"built":2001,"date":"2026-09-28","deposit":83000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":77000,"preRent":0}
+{"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":5,"built":2024,"date":"2026-09-28","deposit":7800,"rent":24,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":7800,"preRent":22}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":6,"built":2024,"date":"2026-09-28","deposit":13000,"rent":2,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":6,"built":2024,"date":"2026-09-28","deposit":13000,"rent":2,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":13000,"preRent":0}
 {"lawd":"11560","umdNm":"신길동","jibun":"4975","apt":"비스타동원","area":15.37,"floor":6,"built":2024,"date":"2026-09-28","deposit":13000,"rent":2,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":13000,"preRent":0}

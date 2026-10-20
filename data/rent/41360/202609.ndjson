@@ -648,6 +648,7 @@
 {"lawd":"41360","umdNm":"진접읍 장현리","jibun":"51-1","apt":"정광산호","area":84.91,"floor":16,"built":1994,"date":"2026-09-04","deposit":2000,"rent":90,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"와부읍 덕소리","jibun":"110-1","apt":"주공1","area":58.14,"floor":1,"built":1996,"date":"2026-09-04","deposit":21210,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":20200,"preRent":0}
 {"lawd":"41360","umdNm":"화도읍 창현리","jibun":"745","apt":"창현두산2단지아파트","area":59.88,"floor":9,"built":1997,"date":"2026-09-04","deposit":3000,"rent":90,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41360","umdNm":"별내면 청학리","jibun":"412","apt":"청학주공(5단지)","area":99.66,"floor":16,"built":2000,"date":"2026-09-04","deposit":5000,"rent":117,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":5000,"preRent":110}
 {"lawd":"41360","umdNm":"퇴계원읍 퇴계원리","jibun":"370","apt":"퇴계원힐스테이트","area":84.98,"floor":4,"built":2014,"date":"2026-09-04","deposit":42000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":40000,"preRent":0}
 {"lawd":"41360","umdNm":"평내동","jibun":"592","apt":"평내마을상록데시앙","area":69.59,"floor":6,"built":2005,"date":"2026-09-04","deposit":27000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"진접읍 금곡리","jibun":"971","apt":"해밀마을5단지 반도유보라 메이플타운","area":84.73,"floor":4,"built":2009,"date":"2026-09-04","deposit":29400,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":28000,"preRent":0}
@@ -861,6 +862,7 @@
 {"lawd":"41360","umdNm":"다산동","jibun":"6234","apt":"다산한강반도유보라","area":76.98,"floor":13,"built":2019,"date":"2026-09-07","deposit":62000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"다산동","jibun":"6297","apt":"다산해모로","area":59.94,"floor":10,"built":2021,"date":"2026-09-07","deposit":53000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"진접읍 부평리","jibun":"771","apt":"더샵남양주퍼스트시티","area":84.78,"floor":16,"built":2021,"date":"2026-09-07","deposit":5000,"rent":170,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41360","umdNm":"오남읍 오남리","jibun":"785","apt":"두산1","area":59.94,"floor":1,"built":1998,"date":"2026-09-07","deposit":1000,"rent":70,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"호평동","jibun":"371","apt":"라인그린","area":84.68,"floor":3,"built":1997,"date":"2026-09-07","deposit":13000,"rent":55,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":13000,"preRent":50}
 {"lawd":"41360","umdNm":"별내동","jibun":"895","apt":"별내우미린스타포레","area":84.84,"floor":14,"built":2019,"date":"2026-09-07","deposit":55000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"별내동","jibun":"871","apt":"별내푸르지오","area":84.97,"floor":19,"built":2015,"date":"2026-09-07","deposit":48825,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":46500,"preRent":0}
@@ -1287,6 +1289,7 @@
 {"lawd":"41360","umdNm":"다산동","jibun":"6133","apt":"다산 이편한세상자이","area":59.98,"floor":28,"built":2018,"date":"2026-09-12","deposit":30200,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":28800,"preRent":0}
 {"lawd":"41360","umdNm":"다산동","jibun":"6029","apt":"다산롯데캐슬","area":84.97,"floor":10,"built":2017,"date":"2026-09-12","deposit":40000,"rent":76,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":40000,"preRent":65}
 {"lawd":"41360","umdNm":"다산동","jibun":"6014","apt":"다산반도유보라메이플타운","area":84.97,"floor":24,"built":2018,"date":"2026-09-12","deposit":10000,"rent":250,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41360","umdNm":"다산동","jibun":"6213","apt":"다산신안인스빌퍼스트포레","area":84.97,"floor":22,"built":2020,"date":"2026-09-12","deposit":35000,"rent":130,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"다산동","jibun":"6090","apt":"다산유승한내들센트럴","area":84.04,"floor":24,"built":2018,"date":"2026-09-12","deposit":70000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"다산동","jibun":"6109","apt":"다산지금데시앙","area":59.13,"floor":9,"built":2022,"date":"2026-09-12","deposit":23761,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":22695,"preRent":0}
 {"lawd":"41360","umdNm":"다산동","jibun":"6109","apt":"다산지금데시앙","area":59.13,"floor":18,"built":2022,"date":"2026-09-12","deposit":23761,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":22695,"preRent":0}
@@ -1721,6 +1724,7 @@
 {"lawd":"41360","umdNm":"진접읍 장현리","jibun":"710","apt":"진접하우스토리","area":121.62,"floor":13,"built":2010,"date":"2026-09-18","deposit":4000,"rent":145,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"오남읍 오남리","jibun":"683-5","apt":"진주(1차)","area":39.96,"floor":1,"built":1988,"date":"2026-09-18","deposit":7700,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"오남읍 오남리","jibun":"683-11","apt":"진주(4차)","area":39.54,"floor":3,"built":1990,"date":"2026-09-18","deposit":9000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41360","umdNm":"오남읍 오남리","jibun":"632","apt":"진주(6차)","area":39.96,"floor":3,"built":1990,"date":"2026-09-18","deposit":8550,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":9000,"preRent":0}
 {"lawd":"41360","umdNm":"오남읍 오남리","jibun":"632","apt":"진주(6차)","area":39.96,"floor":3,"built":1990,"date":"2026-09-18","deposit":9450,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":9000,"preRent":0}
 {"lawd":"41360","umdNm":"화도읍 창현리","jibun":"757","apt":"창현두산1단지아파트","area":99.69,"floor":4,"built":1997,"date":"2026-09-18","deposit":3000,"rent":130,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"별내면 청학리","jibun":"353-1","apt":"청학주공(7단지)","area":84.34,"floor":6,"built":2002,"date":"2026-09-18","deposit":5000,"rent":83,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":75}
@@ -1833,6 +1837,7 @@
 {"lawd":"41360","umdNm":"다산동","jibun":"6026","apt":"다산진건데시앙","area":84.99,"floor":20,"built":2022,"date":"2026-09-21","deposit":30211,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":28855,"preRent":0}
 {"lawd":"41360","umdNm":"다산동","jibun":"6026","apt":"다산진건데시앙","area":84.99,"floor":21,"built":2022,"date":"2026-09-21","deposit":30211,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":28855,"preRent":0}
 {"lawd":"41360","umdNm":"다산동","jibun":"6026","apt":"다산진건데시앙","area":84.99,"floor":24,"built":2022,"date":"2026-09-21","deposit":30211,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":28855,"preRent":0}
+{"lawd":"41360","umdNm":"다산동","jibun":"6235","apt":"다산펜테리움리버테라스Ⅱ","area":79.82,"floor":16,"built":2019,"date":"2026-09-21","deposit":68000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"다산동","jibun":"6013","apt":"다산포레스트2단지아파트","area":26.32,"floor":5,"built":2023,"date":"2026-09-21","deposit":270,"rent":5,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":263,"preRent":5}
 {"lawd":"41360","umdNm":"다산동","jibun":"6075","apt":"다산한양수자인리버파크","area":97.67,"floor":11,"built":2018,"date":"2026-09-21","deposit":70000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":57000,"preRent":0}
 {"lawd":"41360","umdNm":"다산동","jibun":"6297","apt":"다산해모로","area":59.94,"floor":15,"built":2021,"date":"2026-09-21","deposit":40000,"rent":40,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -1857,6 +1862,7 @@
 {"lawd":"41360","umdNm":"호평동","jibun":"668","apt":"호평마을금강","area":64.07,"floor":17,"built":2004,"date":"2026-09-21","deposit":3000,"rent":140,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"호평동","jibun":"215-1","apt":"호평마을쌍용스윗닷홈","area":84.95,"floor":2,"built":2006,"date":"2026-09-21","deposit":26618,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":25358,"preRent":0}
 {"lawd":"41360","umdNm":"호평동","jibun":"729","apt":"호평오네뜨센트럴","area":60,"floor":1,"built":2019,"date":"2026-09-21","deposit":33500,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":32000,"preRent":0}
+{"lawd":"41360","umdNm":"다산동","jibun":"669","apt":"휴먼시아1단지","area":46.61,"floor":11,"built":2008,"date":"2026-09-21","deposit":3882,"rent":32,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":3697,"preRent":31}
 {"lawd":"41360","umdNm":"다산동","jibun":"6091","apt":"e편한세상 다산","area":84.97,"floor":10,"built":2017,"date":"2026-09-21","deposit":5000,"rent":230,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":220}
 {"lawd":"41360","umdNm":"호평동","jibun":"726","apt":"LH호평1단지","area":46.9,"floor":8,"built":2014,"date":"2026-09-21","deposit":5255,"rent":13,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":5124,"preRent":11}
 {"lawd":"41360","umdNm":"와부읍 덕소리","jibun":"600-3","apt":"강변삼익","area":59.88,"floor":13,"built":1996,"date":"2026-09-22","deposit":26250,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":25000,"preRent":0}
@@ -1892,6 +1898,7 @@
 {"lawd":"41360","umdNm":"진접읍 진벌리","jibun":"657","apt":"신창비바패밀리","area":84.99,"floor":5,"built":2006,"date":"2026-09-22","deposit":22500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":22500,"preRent":0}
 {"lawd":"41360","umdNm":"금곡동","jibun":"산108-1","apt":"인정프린스","area":49.08,"floor":1,"built":1986,"date":"2026-09-22","deposit":12600,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"금곡동","jibun":"751-1","apt":"진덕","area":44.94,"floor":4,"built":1991,"date":"2026-09-22","deposit":1000,"rent":40,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41360","umdNm":"화도읍 창현리","jibun":"774","apt":"창현대주피오레","area":84.72,"floor":11,"built":2006,"date":"2026-09-22","deposit":5000,"rent":120,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"별내면 청학리","jibun":"409","apt":"청학주공(3단지)","area":84.8,"floor":20,"built":1999,"date":"2026-09-22","deposit":24000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"퇴계원읍 퇴계원리","jibun":"365","apt":"퇴계원쌍용예가","area":84.9,"floor":4,"built":2007,"date":"2026-09-22","deposit":39500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"평내동","jibun":"602","apt":"평내마을평내2차대주파크빌","area":84.98,"floor":2,"built":2005,"date":"2026-09-22","deposit":24000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":24000,"preRent":0}
@@ -2248,6 +2255,7 @@
 {"lawd":"41360","umdNm":"평내동","jibun":"667","apt":"e편한세상평내메트로원","area":59.99,"floor":6,"built":2022,"date":"2026-09-29","deposit":10000,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"평내동","jibun":"667","apt":"e편한세상평내메트로원","area":84.98,"floor":4,"built":2022,"date":"2026-09-29","deposit":47000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"금곡동","jibun":"778","apt":"LH남양주금곡홍유마을","area":21.35,"floor":3,"built":2022,"date":"2026-09-29","deposit":472,"rent":15,"term":"26.10~28.11","type":"갱신","rrr":null,"preDeposit":2272,"preRent":10}
+{"lawd":"41360","umdNm":"와부읍 덕소리","jibun":"600-3","apt":"강변삼익","area":59.88,"floor":14,"built":1996,"date":"2026-09-30","deposit":3000,"rent":95,"term":"26.09~27.09","type":"갱신","rrr":null,"preDeposit":3000,"preRent":80}
 {"lawd":"41360","umdNm":"와부읍 덕소리","jibun":"600-3","apt":"강변삼익","area":84.81,"floor":5,"built":1996,"date":"2026-09-30","deposit":10000,"rent":120,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":3000,"preRent":120}
 {"lawd":"41360","umdNm":"와부읍 덕소리","jibun":"600-3","apt":"강변삼익","area":84.81,"floor":14,"built":1996,"date":"2026-09-30","deposit":42000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41360","umdNm":"와부읍 덕소리","jibun":"614","apt":"경남아너스빌","area":84.78,"floor":5,"built":2007,"date":"2026-09-30","deposit":47000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

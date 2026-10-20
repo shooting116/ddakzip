@@ -481,6 +481,7 @@
 {"lawd":"28185","umdNm":"연수동","jibun":"535-2","apt":"우주","area":84.98,"floor":4,"built":1992,"date":"2026-09-17","deposit":5000,"rent":80,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28185","umdNm":"연수동","jibun":"578-2","apt":"주공3","area":44.66,"floor":8,"built":1993,"date":"2026-09-17","deposit":14500,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28185","umdNm":"청학동","jibun":"568-1","apt":"청학","area":38.52,"floor":2,"built":1993,"date":"2026-09-17","deposit":4115,"rent":0,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":3999,"preRent":0}
+{"lawd":"28185","umdNm":"옥련동","jibun":"633","apt":"현대2차아파트","area":59.99,"floor":15,"built":1995,"date":"2026-09-17","deposit":2000,"rent":100,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28185","umdNm":"송도동","jibun":"30-2","apt":"힐스테이트송도더스카이","area":84.88,"floor":19,"built":2024,"date":"2026-09-17","deposit":5000,"rent":250,"term":"26.10~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28185","umdNm":"송도동","jibun":"319-1","apt":"e편한세상송도","area":70.23,"floor":38,"built":2018,"date":"2026-09-17","deposit":35000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28185","umdNm":"송도동","jibun":"319-1","apt":"e편한세상송도","area":70.56,"floor":10,"built":2018,"date":"2026-09-17","deposit":3000,"rent":160,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -748,6 +749,7 @@
 {"lawd":"28185","umdNm":"동춘동","jibun":"929","apt":"풍림2","area":84.22,"floor":9,"built":1993,"date":"2026-09-29","deposit":24000,"rent":0,"term":"26.09~28.03","type":"갱신","rrr":"사용","preDeposit":24000,"preRent":0}
 {"lawd":"28185","umdNm":"동춘동","jibun":"932","apt":"한양2","area":84.97,"floor":4,"built":1994,"date":"2026-09-29","deposit":22050,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":21000,"preRent":0}
 {"lawd":"28185","umdNm":"옥련동","jibun":"633","apt":"현대2차아파트","area":59.99,"floor":1,"built":1995,"date":"2026-09-29","deposit":1000,"rent":60,"term":"26.09~30.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28185","umdNm":"송도동","jibun":"397-2","apt":"힐스테이트레이크송도4차","area":84.99,"floor":26,"built":2025,"date":"2026-09-29","deposit":5000,"rent":250,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28185","umdNm":"송도동","jibun":"319-1","apt":"e편한세상송도","area":70.56,"floor":17,"built":2018,"date":"2026-09-29","deposit":20000,"rent":72,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28185","umdNm":"송도동","jibun":"319-1","apt":"e편한세상송도","area":84.25,"floor":38,"built":2018,"date":"2026-09-29","deposit":6000,"rent":160,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28185","umdNm":"송도동","jibun":"190-2","apt":"글로벌캠퍼스푸르지오","area":84.98,"floor":32,"built":2013,"date":"2026-09-30","deposit":31900,"rent":0,"term":"26.09~26.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

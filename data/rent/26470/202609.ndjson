@@ -16,6 +16,7 @@
 {"lawd":"26470","umdNm":"연산동","jibun":"704-9","apt":"더라임시티뷰","area":28.07,"floor":8,"built":2019,"date":"2026-09-03","deposit":2000,"rent":65,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26470","umdNm":"연산동","jibun":"2311","apt":"더샵파크시티","area":69.93,"floor":2,"built":2015,"date":"2026-09-03","deposit":31500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":0}
 {"lawd":"26470","umdNm":"거제동","jibun":"1536","apt":"레이카운티(1단지)","area":60,"floor":33,"built":2023,"date":"2026-09-03","deposit":42000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26470","umdNm":"연산동","jibun":"2367","apt":"연산롯데캐슬골드포레","area":39.87,"floor":17,"built":2020,"date":"2026-09-03","deposit":3000,"rent":75,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26470","umdNm":"연산동","jibun":"2367","apt":"연산롯데캐슬골드포레","area":84.99,"floor":29,"built":2020,"date":"2026-09-03","deposit":39900,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":38000,"preRent":0}
 {"lawd":"26470","umdNm":"연산동","jibun":"2406","apt":"연산하늘채엘센트로","area":59.97,"floor":24,"built":2025,"date":"2026-09-03","deposit":5000,"rent":110,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26470","umdNm":"거제동","jibun":"768-1","apt":"유림아시아드타워","area":59.98,"floor":23,"built":2004,"date":"2026-09-03","deposit":15200,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -162,6 +163,7 @@
 {"lawd":"26470","umdNm":"연산동","jibun":"243-18","apt":"연산엘지","area":60,"floor":15,"built":1999,"date":"2026-09-22","deposit":22000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26470","umdNm":"연산동","jibun":"1092","apt":"연산오성빌라맨션","area":49.07,"floor":2,"built":1986,"date":"2026-09-22","deposit":1000,"rent":40,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26470","umdNm":"연산동","jibun":"2341","apt":"연제롯데캐슬데시앙","area":84.9,"floor":7,"built":2018,"date":"2026-09-22","deposit":48000,"rent":0,"term":"26.12~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26470","umdNm":"거제동","jibun":"768-1","apt":"유림아시아드타워","area":59.98,"floor":15,"built":2004,"date":"2026-09-22","deposit":15750,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":15000,"preRent":0}
 {"lawd":"26470","umdNm":"연산동","jibun":"1136-5","apt":"한일유앤아이","area":71.83,"floor":17,"built":2006,"date":"2026-09-22","deposit":10000,"rent":40,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26470","umdNm":"연산동","jibun":"2382","apt":"힐스테이트연산","area":84.97,"floor":19,"built":2021,"date":"2026-09-22","deposit":3000,"rent":165,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26470","umdNm":"연산동","jibun":"2311","apt":"더샵파크시티","area":101.95,"floor":12,"built":2015,"date":"2026-09-23","deposit":46000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":45000,"preRent":0}

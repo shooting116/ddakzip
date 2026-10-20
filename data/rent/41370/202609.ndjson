@@ -273,9 +273,11 @@
 {"lawd":"41370","umdNm":"원동","jibun":"771-1","apt":"오산역영무파라드","area":56.21,"floor":5,"built":2022,"date":"2026-09-17","deposit":25000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"원동","jibun":"768-1","apt":"우경싸이트빌","area":39.11,"floor":3,"built":2005,"date":"2026-09-17","deposit":1000,"rent":50,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"갈곶동","jibun":"251","apt":"우림","area":39.84,"floor":12,"built":1998,"date":"2026-09-17","deposit":11700,"rent":5,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41370","umdNm":"갈곶동","jibun":"251","apt":"우림","area":39.84,"floor":18,"built":1998,"date":"2026-09-17","deposit":11700,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"원동","jibun":"299-8","apt":"원동주공","area":46.98,"floor":1,"built":1988,"date":"2026-09-17","deposit":13000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"원동","jibun":"299-8","apt":"원동주공","area":46.98,"floor":4,"built":1988,"date":"2026-09-17","deposit":13000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"부산동","jibun":"778-1","apt":"주공1","area":49.44,"floor":5,"built":2000,"date":"2026-09-17","deposit":14000,"rent":30,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":13000,"preRent":20}
+{"lawd":"41370","umdNm":"금암동","jibun":"483","apt":"죽미마을휴먼시아(8단지)","area":46.99,"floor":3,"built":2009,"date":"2026-09-17","deposit":3258,"rent":22,"term":"26.10~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"갈곶동","jibun":"235-3","apt":"힐스테이트오산더퍼스트","area":59.99,"floor":23,"built":2024,"date":"2026-09-17","deposit":2000,"rent":130,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"원동","jibun":"30","apt":"대원레스피아","area":59.55,"floor":5,"built":2000,"date":"2026-09-18","deposit":13000,"rent":18,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"원동","jibun":"30","apt":"대원레스피아","area":59.87,"floor":12,"built":2000,"date":"2026-09-18","deposit":16000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -337,6 +339,7 @@
 {"lawd":"41370","umdNm":"원동","jibun":"805-2","apt":"원동동아","area":84.73,"floor":16,"built":1999,"date":"2026-09-23","deposit":23000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"탑동","jibun":"284","apt":"오산세교우미린센트럴시티","area":59.86,"floor":11,"built":2025,"date":"2026-09-24","deposit":3000,"rent":130,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"탑동","jibun":"284","apt":"오산세교우미린센트럴시티","area":59.86,"floor":11,"built":2025,"date":"2026-09-24","deposit":3000,"rent":130,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41370","umdNm":"서동","jibun":"643","apt":"오산세교한양수자인","area":64.81,"floor":27,"built":2024,"date":"2026-09-25","deposit":30800,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"서동","jibun":"125-8","apt":"신동아(파밀리에)2","area":59.85,"floor":4,"built":1999,"date":"2026-09-26","deposit":15000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41370","umdNm":"부산동","jibun":"778-1","apt":"주공1","area":49.76,"floor":13,"built":2000,"date":"2026-09-26","deposit":2000,"rent":70,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":2000,"preRent":65}
 {"lawd":"41370","umdNm":"벌음동","jibun":"397","apt":"호반써밋라프리미어","area":59.83,"floor":18,"built":2026,"date":"2026-09-26","deposit":3000,"rent":130,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

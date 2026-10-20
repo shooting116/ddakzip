@@ -529,6 +529,7 @@
 {"lawd":"41450","umdNm":"망월동","jibun":"907","apt":"미사강변도시14단지","area":36.95,"floor":4,"built":2018,"date":"2026-09-22","deposit":4874,"rent":11,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":4761,"preRent":10}
 {"lawd":"41450","umdNm":"망월동","jibun":"1044","apt":"미사강변도시17단지","area":36.87,"floor":10,"built":2016,"date":"2026-09-22","deposit":2316,"rent":25,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":2205,"preRent":24}
 {"lawd":"41450","umdNm":"풍산동","jibun":"480","apt":"미사강변센트럴자이","area":101.79,"floor":26,"built":2017,"date":"2026-09-22","deposit":10000,"rent":380,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41450","umdNm":"망월동","jibun":"1060","apt":"미사강변푸르지오","area":74.95,"floor":13,"built":2016,"date":"2026-09-22","deposit":68200,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":65000,"preRent":0}
 {"lawd":"41450","umdNm":"망월동","jibun":"1177","apt":"미사레스티아","area":84.98,"floor":19,"built":2017,"date":"2026-09-22","deposit":77000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41450","umdNm":"망월동","jibun":"1177","apt":"미사레스티아","area":84.99,"floor":13,"built":2017,"date":"2026-09-22","deposit":10000,"rent":210,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":200}
 {"lawd":"41450","umdNm":"학암동","jibun":"646","apt":"위례숲우미린","area":102.24,"floor":6,"built":2022,"date":"2026-09-22","deposit":73500,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":70000,"preRent":0}
@@ -590,6 +591,7 @@
 {"lawd":"41450","umdNm":"학암동","jibun":"641","apt":"위례중흥에스-클래스","area":101.75,"floor":13,"built":2022,"date":"2026-09-28","deposit":64000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":52000,"preRent":50}
 {"lawd":"41450","umdNm":"풍산동","jibun":"568","apt":"이편한세상미사","area":84.94,"floor":26,"built":2018,"date":"2026-09-28","deposit":82500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41450","umdNm":"감이동","jibun":"458","apt":"힐스테이트포웰시티","area":73.81,"floor":23,"built":2020,"date":"2026-09-28","deposit":63000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":60000,"preRent":0}
+{"lawd":"41450","umdNm":"감이동","jibun":"458","apt":"힐스테이트포웰시티","area":84.43,"floor":9,"built":2020,"date":"2026-09-28","deposit":78000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41450","umdNm":"덕풍동","jibun":"519-4","apt":"가화만사성","area":70.69,"floor":2,"built":2004,"date":"2026-09-29","deposit":32000,"rent":0,"term":"28.10~30.10","type":"갱신","rrr":"사용","preDeposit":32000,"preRent":0}
 {"lawd":"41450","umdNm":"감이동","jibun":"445","apt":"감일수자인","area":84.65,"floor":11,"built":2022,"date":"2026-09-29","deposit":55100,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":52500,"preRent":0}
 {"lawd":"41450","umdNm":"감이동","jibun":"445","apt":"감일수자인","area":84.65,"floor":13,"built":2022,"date":"2026-09-29","deposit":62286,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":55000,"preRent":18}

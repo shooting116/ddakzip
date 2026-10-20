@@ -70,6 +70,7 @@
 {"lawd":"27710","umdNm":"화원읍 설화리","jibun":"536-2","apt":"화원한빛타운","area":59.54,"floor":4,"built":1995,"date":"2026-09-09","deposit":1000,"rent":50,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"현풍읍 대리","jibun":"1176","apt":"국가산단서한이다음아파트","area":74.55,"floor":13,"built":2019,"date":"2026-09-10","deposit":4047,"rent":23,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"현풍읍 대리","jibun":"1176","apt":"국가산단서한이다음아파트","area":74.55,"floor":13,"built":2019,"date":"2026-09-10","deposit":4047,"rent":23,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27710","umdNm":"구지읍 응암리","jibun":"1199","apt":"대구국가산단반도유보라아이비파크","area":84.96,"floor":17,"built":2017,"date":"2026-09-10","deposit":1000,"rent":70,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"구지읍 화산리","jibun":"1105","apt":"대구국가산단반도유보라아이비파크3","area":74.96,"floor":17,"built":2020,"date":"2026-09-10","deposit":1000,"rent":65,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"현풍읍 중리","jibun":"481","apt":"대구테크노폴리스엘에이치천년나무3단지","area":21.86,"floor":5,"built":2017,"date":"2026-09-10","deposit":1528,"rent":7,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":1387,"preRent":7}
 {"lawd":"27710","umdNm":"화원읍 명곡리","jibun":"101","apt":"미래빌2단지","area":49.26,"floor":8,"built":2000,"date":"2026-09-10","deposit":3891,"rent":19,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -172,6 +173,7 @@
 {"lawd":"27710","umdNm":"현풍읍 중리","jibun":"486","apt":"대구테크노폴리스서한이다음","area":66.85,"floor":3,"built":2014,"date":"2026-09-21","deposit":1000,"rent":75,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"화원읍 명곡리","jibun":"139","apt":"명곡미래빌4","area":59.63,"floor":16,"built":2000,"date":"2026-09-21","deposit":1000,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"유가읍 봉리","jibun":"627","apt":"반도유보라","area":84.96,"floor":5,"built":2016,"date":"2026-09-21","deposit":2000,"rent":88,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27710","umdNm":"유가읍 봉리","jibun":"601","apt":"하나리움퀸즈파크","area":59.88,"floor":1,"built":2015,"date":"2026-09-21","deposit":12800,"rent":0,"term":"26.12~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"유가읍 봉리","jibun":"601","apt":"하나리움퀸즈파크","area":59.88,"floor":1,"built":2015,"date":"2026-09-21","deposit":13000,"rent":0,"term":"26.12~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"유가읍 봉리","jibun":"659","apt":"호반베르디움2차","area":111.01,"floor":6,"built":2016,"date":"2026-09-21","deposit":29000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":28000,"preRent":0}
 {"lawd":"27710","umdNm":"화원읍 설화리","jibun":"1150","apt":"화원신일해피트리꿈의숲","area":69.85,"floor":14,"built":2022,"date":"2026-09-21","deposit":13800,"rent":0,"term":"26.09~27.09","type":"갱신","rrr":null,"preDeposit":13800,"preRent":0}
@@ -211,6 +213,7 @@
 {"lawd":"27710","umdNm":"현풍읍 중리","jibun":"487","apt":"대구테크노폴리스엘에이치천년나무1단지","area":29.8,"floor":18,"built":2016,"date":"2026-09-28","deposit":851,"rent":15,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"현풍읍 중리","jibun":"487","apt":"대구테크노폴리스엘에이치천년나무1단지","area":51.82,"floor":9,"built":2016,"date":"2026-09-28","deposit":2583,"rent":31,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"현풍읍 중리","jibun":"487","apt":"대구테크노폴리스엘에이치천년나무1단지","area":51.82,"floor":11,"built":2016,"date":"2026-09-28","deposit":3070,"rent":36,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27710","umdNm":"현풍읍 중리","jibun":"487","apt":"대구테크노폴리스엘에이치천년나무1단지","area":51.82,"floor":17,"built":2016,"date":"2026-09-28","deposit":2583,"rent":31,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"현풍읍 중리","jibun":"487","apt":"대구테크노폴리스엘에이치천년나무1단지","area":51.82,"floor":17,"built":2016,"date":"2026-09-28","deposit":3070,"rent":36,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"다사읍 죽곡리","jibun":"373","apt":"대실역이편한세상","area":117.54,"floor":6,"built":2008,"date":"2026-09-28","deposit":2000,"rent":120,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27710","umdNm":"다사읍 죽곡리","jibun":"814","apt":"대실역태왕아너스","area":49.95,"floor":18,"built":2017,"date":"2026-09-28","deposit":2000,"rent":80,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

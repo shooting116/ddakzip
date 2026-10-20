@@ -39,6 +39,7 @@
 {"lawd":"12270","umdNm":"주월동","jibun":"1021-3","apt":"극동마이다스빌2차","area":43.56,"floor":14,"built":2002,"date":"2026-09-07","deposit":1000,"rent":42,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12270","umdNm":"주월동","jibun":"1199-12","apt":"라인가든1","area":59.4,"floor":4,"built":1985,"date":"2026-09-07","deposit":1500,"rent":40,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12270","umdNm":"봉선동","jibun":"983","apt":"라인하이츠","area":59.9,"floor":3,"built":1987,"date":"2026-09-07","deposit":1500,"rent":45,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"12270","umdNm":"봉선동","jibun":"1043","apt":"모아2단지1차","area":47.65,"floor":2,"built":1988,"date":"2026-09-07","deposit":500,"rent":35,"term":"26.10~28.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12270","umdNm":"방림동","jibun":"579","apt":"방림더퍼스트골드클래스","area":84.67,"floor":19,"built":2024,"date":"2026-09-07","deposit":34000,"rent":0,"term":"26.11~28.04","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12270","umdNm":"노대동","jibun":"731","apt":"송화마을휴먼시아(진월3블럭주공)","area":46.9,"floor":3,"built":2007,"date":"2026-09-07","deposit":3324,"rent":11,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":3194,"preRent":10}
 {"lawd":"12270","umdNm":"봉선동","jibun":"107","apt":"쌍용스윗닷홈","area":120.54,"floor":15,"built":2005,"date":"2026-09-07","deposit":85000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -96,6 +97,7 @@
 {"lawd":"12270","umdNm":"월산동","jibun":"1065","apt":"반도유보라더퍼스트","area":35.48,"floor":7,"built":2022,"date":"2026-09-15","deposit":2800,"rent":40,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12270","umdNm":"방림동","jibun":"579","apt":"방림더퍼스트골드클래스","area":84.67,"floor":10,"built":2024,"date":"2026-09-15","deposit":3000,"rent":110,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":3000,"preRent":110}
 {"lawd":"12270","umdNm":"봉선동","jibun":"470","apt":"삼익1","area":84.96,"floor":1,"built":1990,"date":"2026-09-15","deposit":3000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"12270","umdNm":"진월동","jibun":"250-3","apt":"진월아파트","area":79.65,"floor":3,"built":1986,"date":"2026-09-15","deposit":2000,"rent":45,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12270","umdNm":"진월동","jibun":"249","apt":"대주1","area":84.41,"floor":8,"built":1990,"date":"2026-09-16","deposit":1000,"rent":65,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12270","umdNm":"백운동","jibun":"461-1","apt":"목우","area":84.82,"floor":14,"built":1989,"date":"2026-09-16","deposit":2000,"rent":50,"term":"26.09~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12270","umdNm":"주월동","jibun":"1312","apt":"봉선로남해오네뜨","area":84.99,"floor":4,"built":2018,"date":"2026-09-16","deposit":5000,"rent":120,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

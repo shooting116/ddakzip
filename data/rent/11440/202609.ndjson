@@ -252,6 +252,7 @@
 {"lawd":"11440","umdNm":"신공덕동","jibun":"172","apt":"펜트라우스","area":152.85,"floor":7,"built":2011,"date":"2026-09-09","deposit":138000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":130000,"preRent":0}
 {"lawd":"11440","umdNm":"도화동","jibun":"555","apt":"한화오벨리스크","area":38.08,"floor":14,"built":2004,"date":"2026-09-09","deposit":2000,"rent":140,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11440","umdNm":"아현동","jibun":"800","apt":"공덕자이","area":84.99,"floor":11,"built":2015,"date":"2026-09-10","deposit":70000,"rent":140,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11440","umdNm":"대흥동","jibun":"660","apt":"대흥동태영아파트","area":114.93,"floor":4,"built":1999,"date":"2026-09-10","deposit":117000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11440","umdNm":"도화동","jibun":"357","apt":"도화동현대","area":112.09,"floor":4,"built":1996,"date":"2026-09-10","deposit":10000,"rent":300,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11440","umdNm":"도화동","jibun":"357","apt":"도화동현대","area":128.26,"floor":6,"built":1996,"date":"2026-09-10","deposit":71000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":68000,"preRent":0}
 {"lawd":"11440","umdNm":"아현동","jibun":"777","apt":"마포래미안푸르지오1단지","area":84.89,"floor":8,"built":2014,"date":"2026-09-10","deposit":105000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":100000,"preRent":0}

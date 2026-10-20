@@ -91,6 +91,7 @@
 {"lawd":"31200","umdNm":"정자동","jibun":"3","apt":"벽산블루밍","area":75.86,"floor":1,"built":1993,"date":"2026-09-15","deposit":1000,"rent":60,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31200","umdNm":"천곡동","jibun":"940-1","apt":"우방","area":49.5,"floor":9,"built":1998,"date":"2026-09-15","deposit":5300,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31200","umdNm":"화봉동","jibun":"1492-2","apt":"울산송정한라비발디캠퍼스","area":84.9,"floor":12,"built":2019,"date":"2026-09-15","deposit":47000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31200","umdNm":"달천동","jibun":"107-1","apt":"그린카운티2","area":84,"floor":10,"built":2004,"date":"2026-09-16","deposit":2000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31200","umdNm":"화봉동","jibun":"452","apt":"동아.청구아파트","area":59.99,"floor":4,"built":1994,"date":"2026-09-16","deposit":15000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31200","umdNm":"화봉동","jibun":"452","apt":"동아.청구아파트","area":85,"floor":6,"built":1994,"date":"2026-09-16","deposit":16500,"rent":10,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31200","umdNm":"천곡동","jibun":"410-1","apt":"쌍용아진그린4","area":59.98,"floor":7,"built":1998,"date":"2026-09-16","deposit":2000,"rent":70,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -140,6 +141,7 @@
 {"lawd":"31200","umdNm":"효문동","jibun":"1039","apt":"효문코오롱하늘채","area":77.03,"floor":17,"built":2018,"date":"2026-09-24","deposit":27000,"rent":15,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":27000,"preRent":0}
 {"lawd":"31200","umdNm":"매곡동","jibun":"917","apt":"오토밸리로효성해링턴플레이스아파트","area":84.83,"floor":10,"built":2016,"date":"2026-09-25","deposit":27300,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":26000,"preRent":0}
 {"lawd":"31200","umdNm":"중산동","jibun":"546-6","apt":"대암훼미리102동","area":59.87,"floor":5,"built":1993,"date":"2026-09-26","deposit":500,"rent":46,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31200","umdNm":"신천동","jibun":"394-1","apt":"한라신천지타운","area":59.61,"floor":11,"built":1993,"date":"2026-09-26","deposit":2500,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31200","umdNm":"화봉동","jibun":"1440","apt":"화봉2주공","area":51.93,"floor":1,"built":2009,"date":"2026-09-26","deposit":3299,"rent":27,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":3203,"preRent":27}
 {"lawd":"31200","umdNm":"매곡동","jibun":"895","apt":"드림인시티에일린의뜰2차","area":104.85,"floor":17,"built":2017,"date":"2026-09-27","deposit":34650,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":33000,"preRent":0}
 {"lawd":"31200","umdNm":"산하동","jibun":"1037-1","apt":"블루마시티KCC스위첸","area":84.99,"floor":28,"built":2019,"date":"2026-09-27","deposit":2000,"rent":120,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

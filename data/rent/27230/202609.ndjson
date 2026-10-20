@@ -268,6 +268,7 @@
 {"lawd":"27230","umdNm":"복현동","jibun":"241-1","apt":"복현블루밍브라운스톤명문세가","area":59.95,"floor":12,"built":2011,"date":"2026-09-28","deposit":4154,"rent":20,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":4090,"preRent":20}
 {"lawd":"27230","umdNm":"복현동","jibun":"241-1","apt":"복현블루밍브라운스톤명문세가","area":59.95,"floor":13,"built":2011,"date":"2026-09-28","deposit":13787,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":13131,"preRent":0}
 {"lawd":"27230","umdNm":"복현동","jibun":"241-1","apt":"복현블루밍브라운스톤명문세가","area":76,"floor":7,"built":2011,"date":"2026-09-28","deposit":10556,"rent":9,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":10556,"preRent":9}
+{"lawd":"27230","umdNm":"복현동","jibun":"241-1","apt":"복현블루밍브라운스톤명문세가","area":76,"floor":8,"built":2011,"date":"2026-09-28","deposit":9048,"rent":18,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":9048,"preRent":20}
 {"lawd":"27230","umdNm":"복현동","jibun":"241-1","apt":"복현블루밍브라운스톤명문세가","area":76,"floor":10,"built":2011,"date":"2026-09-28","deposit":15080,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":15080,"preRent":0}
 {"lawd":"27230","umdNm":"복현동","jibun":"241-1","apt":"복현블루밍브라운스톤명문세가","area":85,"floor":2,"built":2011,"date":"2026-09-28","deposit":15760,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":15760,"preRent":0}
 {"lawd":"27230","umdNm":"복현동","jibun":"241-1","apt":"복현블루밍브라운스톤명문세가","area":85,"floor":4,"built":2011,"date":"2026-09-28","deposit":15760,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":15760,"preRent":0}
@@ -278,6 +279,7 @@
 {"lawd":"27230","umdNm":"칠성동2가","jibun":"733","apt":"오페라삼정그린코아더베스트","area":84.97,"floor":12,"built":2017,"date":"2026-09-28","deposit":3000,"rent":145,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"칠성동2가","jibun":"725","apt":"호반써밋하이브파크","area":84.98,"floor":6,"built":2026,"date":"2026-09-28","deposit":40290,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"태전동","jibun":"1103","apt":"휴먼시아1단지","area":39.71,"floor":2,"built":2008,"date":"2026-09-28","deposit":2212,"rent":13,"term":"26.11~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27230","umdNm":"구암동","jibun":"786","apt":"그린빌3차","area":49.71,"floor":10,"built":2000,"date":"2026-09-29","deposit":1000,"rent":55,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"사수동","jibun":"803","apt":"대구금호스타힐스엔에이치에프6단지","area":84.9,"floor":4,"built":2018,"date":"2026-09-29","deposit":13600,"rent":25,"term":"26.12~28.10","type":"갱신","rrr":null,"preDeposit":6300,"preRent":61}
 {"lawd":"27230","umdNm":"사수동","jibun":"803","apt":"대구금호스타힐스엔에이치에프6단지","area":84.9,"floor":11,"built":2018,"date":"2026-09-29","deposit":12700,"rent":29,"term":"26.11~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"칠성동2가","jibun":"302-141","apt":"대구역센트레빌더오페라","area":84.8,"floor":22,"built":2026,"date":"2026-09-29","deposit":30000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -304,4 +306,5 @@
 {"lawd":"27230","umdNm":"고성동1가","jibun":"275","apt":"태왕THE아너스오페라","area":84.82,"floor":38,"built":2025,"date":"2026-09-30","deposit":2000,"rent":130,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"매천동","jibun":"750","apt":"한신더휴웨스턴팰리스","area":84.83,"floor":34,"built":2019,"date":"2026-09-30","deposit":31500,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":0}
 {"lawd":"27230","umdNm":"태전동","jibun":"936-1","apt":"한신중앙","area":47.25,"floor":7,"built":1993,"date":"2026-09-30","deposit":500,"rent":40,"term":"26.10~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27230","umdNm":"서변동","jibun":"1793","apt":"화성리버파크2","area":59.97,"floor":3,"built":2003,"date":"2026-09-30","deposit":2000,"rent":60,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27230","umdNm":"국우동","jibun":"1238","apt":"힐스테이트데시앙도남2단지","area":84.96,"floor":21,"built":2021,"date":"2026-09-30","deposit":30000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

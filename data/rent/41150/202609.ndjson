@@ -464,6 +464,7 @@
 {"lawd":"41150","umdNm":"용현동","jibun":"567","apt":"탑석센트럴자이","area":59.98,"floor":23,"built":2021,"date":"2026-09-20","deposit":30000,"rent":25,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41150","umdNm":"산곡동","jibun":"710","apt":"고산더라피니엘","area":55.86,"floor":9,"built":2022,"date":"2026-09-21","deposit":9731,"rent":45,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41150","umdNm":"산곡동","jibun":"710","apt":"고산더라피니엘","area":55.99,"floor":6,"built":2022,"date":"2026-09-21","deposit":9731,"rent":45,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41150","umdNm":"고산동","jibun":"903","apt":"고산리슈빌포레","area":55.94,"floor":8,"built":2021,"date":"2026-09-21","deposit":3000,"rent":120,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41150","umdNm":"산곡동","jibun":"671","apt":"고산센트레빌엔에이치에프","area":59.94,"floor":12,"built":2020,"date":"2026-09-21","deposit":4727,"rent":45,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41150","umdNm":"산곡동","jibun":"671","apt":"고산센트레빌엔에이치에프","area":59.94,"floor":20,"built":2020,"date":"2026-09-21","deposit":4727,"rent":45,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41150","umdNm":"녹양동","jibun":"404","apt":"녹양엘에이치5단지","area":16.72,"floor":5,"built":2018,"date":"2026-09-21","deposit":2141,"rent":10,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -588,6 +589,7 @@
 {"lawd":"41150","umdNm":"민락동","jibun":"757-4","apt":"탑석드림캐슬","area":59.42,"floor":9,"built":2002,"date":"2026-09-22","deposit":2000,"rent":78,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":2000,"preRent":75}
 {"lawd":"41150","umdNm":"고산동","jibun":"874","apt":"한신더휴고산NHF","area":59.94,"floor":9,"built":2020,"date":"2026-09-22","deposit":9317,"rent":25,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":9097,"preRent":23}
 {"lawd":"41150","umdNm":"호원동","jibun":"436-1","apt":"한주1","area":59.93,"floor":3,"built":1994,"date":"2026-09-22","deposit":13000,"rent":30,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41150","umdNm":"금오동","jibun":"469-4","apt":"현대아이파크","area":84.68,"floor":10,"built":2002,"date":"2026-09-22","deposit":3000,"rent":125,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":3000,"preRent":110}
 {"lawd":"41150","umdNm":"가능동","jibun":"50","apt":"힐스테이트녹양역","area":59.99,"floor":14,"built":2018,"date":"2026-09-22","deposit":28000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41150","umdNm":"가능동","jibun":"656-1","apt":"SKVIEW","area":59.98,"floor":17,"built":2007,"date":"2026-09-22","deposit":25000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41150","umdNm":"고산동","jibun":"903","apt":"고산리슈빌포레","area":59.71,"floor":8,"built":2021,"date":"2026-09-23","deposit":2000,"rent":135,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -681,6 +683,7 @@
 {"lawd":"41150","umdNm":"가능동","jibun":"50","apt":"힐스테이트녹양역","area":84.82,"floor":10,"built":2018,"date":"2026-09-29","deposit":5000,"rent":150,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41150","umdNm":"신곡동","jibun":"817","apt":"e편한세상신곡포레스타뷰","area":74.96,"floor":16,"built":2020,"date":"2026-09-29","deposit":37000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41150","umdNm":"산곡동","jibun":"671","apt":"고산센트레빌엔에이치에프","area":59.94,"floor":20,"built":2020,"date":"2026-09-30","deposit":9027,"rent":26,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":8802,"preRent":24}
+{"lawd":"41150","umdNm":"의정부동","jibun":"167-16","apt":"드림타운","area":15.77,"floor":4,"built":2012,"date":"2026-09-30","deposit":200,"rent":40,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41150","umdNm":"낙양동","jibun":"746","apt":"라디언트캐슬","area":74.99,"floor":17,"built":2018,"date":"2026-09-30","deposit":12386,"rent":34,"term":"26.10~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41150","umdNm":"의정부동","jibun":"166-12","apt":"맥스타워","area":18.23,"floor":14,"built":2013,"date":"2026-09-30","deposit":500,"rent":45,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41150","umdNm":"민락동","jibun":"695-1","apt":"민락주공2단지","area":59.39,"floor":12,"built":1999,"date":"2026-09-30","deposit":15750,"rent":0,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":15750,"preRent":0}

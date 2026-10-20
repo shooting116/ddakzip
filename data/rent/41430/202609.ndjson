@@ -135,6 +135,7 @@
 {"lawd":"41430","umdNm":"고천동","jibun":"544","apt":"오봉산마을1단지","area":44.56,"floor":8,"built":2020,"date":"2026-09-18","deposit":11660,"rent":14,"term":"26.12~28.11","type":"갱신","rrr":null,"preDeposit":8040,"preRent":32}
 {"lawd":"41430","umdNm":"삼동","jibun":"146-71","apt":"우성6차","area":35.55,"floor":2,"built":1986,"date":"2026-09-18","deposit":13000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":13000,"preRent":0}
 {"lawd":"41430","umdNm":"오전동","jibun":"898","apt":"의왕더샵캐슬","area":84.97,"floor":20,"built":2021,"date":"2026-09-18","deposit":53000,"rent":10,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":53000,"preRent":0}
+{"lawd":"41430","umdNm":"학의동","jibun":"1126","apt":"의왕백운 해링턴 플레이스 4단지","area":84.94,"floor":12,"built":2019,"date":"2026-09-18","deposit":62000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41430","umdNm":"고천동","jibun":"550","apt":"의왕시청역풍경채어바니티","area":84.22,"floor":22,"built":2026,"date":"2026-09-18","deposit":5000,"rent":220,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41430","umdNm":"포일동","jibun":"645","apt":"인덕원숲속마을3단지","area":84.82,"floor":11,"built":2011,"date":"2026-09-18","deposit":54600,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":52000,"preRent":0}
 {"lawd":"41430","umdNm":"왕곡동","jibun":"592","apt":"인스빌1단지","area":101.95,"floor":2,"built":1994,"date":"2026-09-18","deposit":43000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

@@ -314,6 +314,7 @@
 {"lawd":"11170","umdNm":"한강로3가","jibun":"89","apt":"쌍용스윗닷홈","area":84.97,"floor":3,"built":2003,"date":"2026-09-23","deposit":60000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11170","umdNm":"갈월동","jibun":"98-6","apt":"용산남영역롯데캐슬헤리티지","area":39.83,"floor":21,"built":2025,"date":"2026-09-23","deposit":19900,"rent":83,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11170","umdNm":"한강로3가","jibun":"63-389","apt":"용산시티파크(1단지)","area":181.89,"floor":21,"built":2007,"date":"2026-09-23","deposit":250000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":210000,"preRent":0}
+{"lawd":"11170","umdNm":"이촌동","jibun":"426","apt":"이촌동삼성리버스위트","area":134.9,"floor":14,"built":2002,"date":"2026-09-23","deposit":180000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11170","umdNm":"문배동","jibun":"24-8","apt":"프라임펠리스","area":13.69,"floor":17,"built":2012,"date":"2026-09-23","deposit":14800,"rent":10,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11170","umdNm":"이촌동","jibun":"300-23","apt":"한강맨숀","area":101.95,"floor":4,"built":1971,"date":"2026-09-23","deposit":20000,"rent":100,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11170","umdNm":"이촌동","jibun":"400","apt":"현대한강","area":84.88,"floor":5,"built":1997,"date":"2026-09-23","deposit":70300,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":67000,"preRent":0}

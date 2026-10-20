@@ -531,6 +531,7 @@
 {"lawd":"11380","umdNm":"진관동","jibun":"83","apt":"우물골2단지두산위브(204~208동)BL2-5","area":84.04,"floor":4,"built":2009,"date":"2026-09-19","deposit":10000,"rent":230,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11380","umdNm":"진관동","jibun":"150","apt":"은평뉴타운기자촌11단지","area":59.88,"floor":10,"built":2015,"date":"2026-09-19","deposit":46200,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":44000,"preRent":0}
 {"lawd":"11380","umdNm":"진관동","jibun":"60","apt":"은평뉴타운솔하임","area":45.04,"floor":12,"built":2017,"date":"2026-09-19","deposit":20000,"rent":120,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11380","umdNm":"진관동","jibun":"62","apt":"은평스카이뷰자이","area":84.75,"floor":16,"built":2019,"date":"2026-09-19","deposit":65900,"rent":0,"term":"26.10~27.10","type":"갱신","rrr":null,"preDeposit":62800,"preRent":0}
 {"lawd":"11380","umdNm":"신사동","jibun":"370","apt":"은평신사두산위브","area":85,"floor":3,"built":2006,"date":"2026-09-19","deposit":54300,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11380","umdNm":"응암동","jibun":"770","apt":"힐스테이트녹번역","area":59.99,"floor":5,"built":2022,"date":"2026-09-19","deposit":70000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11380","umdNm":"응암동","jibun":"770","apt":"힐스테이트녹번역","area":84.99,"floor":12,"built":2022,"date":"2026-09-19","deposit":78000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":73000,"preRent":0}
@@ -662,6 +663,7 @@
 {"lawd":"11380","umdNm":"대조동","jibun":"231","apt":"삼성타운","area":59.4,"floor":14,"built":1997,"date":"2026-09-30","deposit":500,"rent":40,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11380","umdNm":"대조동","jibun":"231","apt":"삼성타운","area":84.82,"floor":20,"built":1997,"date":"2026-09-30","deposit":48000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11380","umdNm":"진관동","jibun":"13","apt":"상림마을7단지아이파크(706~708동)BL1-3","area":84.87,"floor":8,"built":2008,"date":"2026-09-30","deposit":35831,"rent":0,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":34125,"preRent":0}
+{"lawd":"11380","umdNm":"신사동","jibun":"19-100","apt":"은평자이더스타","area":49.97,"floor":6,"built":2026,"date":"2026-09-30","deposit":54000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11380","umdNm":"신사동","jibun":"19-100","apt":"은평자이더스타","area":49.97,"floor":6,"built":2026,"date":"2026-09-30","deposit":54000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11380","umdNm":"불광동","jibun":"486-14","apt":"정익제이원5차","area":16.07,"floor":12,"built":2016,"date":"2026-09-30","deposit":16300,"rent":10,"term":"26.11~28.10","type":"갱신","rrr":"사용","preDeposit":16300,"preRent":7}
 {"lawd":"11380","umdNm":"증산동","jibun":"220-1","apt":"DMC덕원","area":84.84,"floor":4,"built":1997,"date":"2026-09-30","deposit":50000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":48000,"preRent":0}

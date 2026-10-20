@@ -56,6 +56,7 @@
 {"lawd":"31140","umdNm":"무거동","jibun":"478-1","apt":"울산옥현주공2","area":59.89,"floor":2,"built":2000,"date":"2026-10-09","deposit":25000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31140","umdNm":"야음동","jibun":"401-1","apt":"울산호수공원대명루첸아파트","area":73.02,"floor":14,"built":2020,"date":"2026-10-09","deposit":39000,"rent":0,"term":"26.12~27.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31140","umdNm":"삼산동","jibun":"1607-1","apt":"현대문화2차","area":59.76,"floor":15,"built":1998,"date":"2026-10-09","deposit":0,"rent":65,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31140","umdNm":"야음동","jibun":"878","apt":"롯데캐슬골드1단지","area":129.53,"floor":16,"built":2008,"date":"2026-10-10","deposit":44000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31140","umdNm":"신정동","jibun":"851-20","apt":"신정현대홈타운4","area":40.8,"floor":22,"built":2001,"date":"2026-10-10","deposit":1000,"rent":60,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31140","umdNm":"신정동","jibun":"851-20","apt":"신정현대홈타운4","area":81.87,"floor":21,"built":2001,"date":"2026-10-10","deposit":40000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31140","umdNm":"야음동","jibun":"910","apt":"울산번영로두산위브","area":84.92,"floor":7,"built":2017,"date":"2026-10-10","deposit":50000,"rent":0,"term":"26.12~28.04","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -89,6 +90,7 @@
 {"lawd":"31140","umdNm":"옥동","jibun":"129-6","apt":"대공원현대","area":79.88,"floor":8,"built":1992,"date":"2026-10-15","deposit":15000,"rent":65,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31140","umdNm":"옥동","jibun":"162","apt":"대륙현대2차","area":84.96,"floor":7,"built":1991,"date":"2026-10-16","deposit":20000,"rent":18,"term":"26.10~28.04","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31140","umdNm":"야음동","jibun":"487-8","apt":"더샵번영센트로","area":84.88,"floor":28,"built":2023,"date":"2026-10-16","deposit":58000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31140","umdNm":"야음동","jibun":"796-17","apt":"신선","area":46.53,"floor":15,"built":1995,"date":"2026-10-16","deposit":9000,"rent":10,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31140","umdNm":"옥동","jibun":"196","apt":"한양코아","area":84.63,"floor":4,"built":1989,"date":"2026-10-16","deposit":34000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31140","umdNm":"달동","jibun":"580-4","apt":"해인비동","area":58.94,"floor":5,"built":1980,"date":"2026-10-16","deposit":8190,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31140","umdNm":"선암동","jibun":"650","apt":"SKVIEW","area":59.76,"floor":4,"built":1994,"date":"2026-10-16","deposit":12000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -97,7 +99,13 @@
 {"lawd":"31140","umdNm":"신정동","jibun":"1165-3","apt":"울산문수로동문디이스트","area":84.37,"floor":9,"built":2022,"date":"2026-10-17","deposit":31000,"rent":0,"term":"26.11~27.07","type":"갱신","rrr":null,"preDeposit":31000,"preRent":0}
 {"lawd":"31140","umdNm":"야음동","jibun":"910","apt":"울산번영로두산위브","area":84.91,"floor":22,"built":2017,"date":"2026-10-17","deposit":50000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31140","umdNm":"야음동","jibun":"401-1","apt":"울산호수공원대명루첸아파트","area":73.11,"floor":24,"built":2020,"date":"2026-10-17","deposit":42000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31140","umdNm":"삼산동","jibun":"1547","apt":"평창2차현대","area":84.85,"floor":11,"built":1994,"date":"2026-10-17","deposit":21000,"rent":30,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31140","umdNm":"달동","jibun":"1403-1","apt":"현대하이얏트","area":84.85,"floor":4,"built":1994,"date":"2026-10-17","deposit":29000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31140","umdNm":"달동","jibun":"118-3","apt":"달동주공1단지","area":41.85,"floor":15,"built":1993,"date":"2026-10-19","deposit":10000,"rent":20,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31140","umdNm":"신정동","jibun":"1919","apt":"문수로대공원에일린의뜰","area":59.72,"floor":3,"built":2023,"date":"2026-10-19","deposit":15000,"rent":150,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31140","umdNm":"신정동","jibun":"1154-7","apt":"문수로아테라","area":84.84,"floor":7,"built":2025,"date":"2026-10-19","deposit":55000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31140","umdNm":"무거동","jibun":"1630","apt":"문수비스타동원","area":85,"floor":17,"built":2025,"date":"2026-10-19","deposit":36750,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":35000,"preRent":0}
 {"lawd":"31140","umdNm":"선암동","jibun":"537-1","apt":"삼익세라믹","area":76.53,"floor":9,"built":1990,"date":"2026-10-19","deposit":13000,"rent":20,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31140","umdNm":"신정동","jibun":"1626","apt":"신정수필아파트","area":77.82,"floor":1,"built":1980,"date":"2026-10-19","deposit":15200,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":14500,"preRent":0}
+{"lawd":"31140","umdNm":"신정동","jibun":"886","apt":"정일","area":58.85,"floor":2,"built":1984,"date":"2026-10-19","deposit":9000,"rent":10,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31140","umdNm":"야음동","jibun":"938","apt":"힐스테이트수암(2단지)","area":72.84,"floor":17,"built":2019,"date":"2026-10-19","deposit":6000,"rent":163,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
