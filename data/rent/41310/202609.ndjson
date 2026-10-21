@@ -242,6 +242,7 @@
 {"lawd":"41310","umdNm":"수택동","jibun":"877","apt":"금호베스트빌","area":134.1,"floor":10,"built":2001,"date":"2026-09-28","deposit":60000,"rent":90,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41310","umdNm":"수택동","jibun":"854-2","apt":"엘지원앙","area":49.83,"floor":11,"built":1995,"date":"2026-09-28","deposit":43000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41310","umdNm":"인창동","jibun":"663-1","apt":"주공1","area":59.93,"floor":6,"built":1996,"date":"2026-09-28","deposit":31500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":0}
+{"lawd":"41310","umdNm":"인창동","jibun":"664-1","apt":"주공2","area":39.86,"floor":9,"built":1997,"date":"2026-09-28","deposit":3000,"rent":120,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41310","umdNm":"인창동","jibun":"29","apt":"한진","area":84.97,"floor":8,"built":2002,"date":"2026-09-28","deposit":45000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41310","umdNm":"갈매동","jibun":"573","apt":"갈매1단지","area":36.98,"floor":4,"built":2016,"date":"2026-09-29","deposit":4404,"rent":12,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":4223,"preRent":10}
 {"lawd":"41310","umdNm":"갈매동","jibun":"573","apt":"갈매1단지","area":36.98,"floor":16,"built":2016,"date":"2026-09-29","deposit":4404,"rent":12,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":4095,"preRent":8}

@@ -231,6 +231,7 @@
 {"lawd":"11590","umdNm":"노량진동","jibun":"39-20","apt":"한강더퍼스트타워","area":18.28,"floor":12,"built":2026,"date":"2026-09-11","deposit":7300,"rent":66,"term":"26.11~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"노량진동","jibun":"39-20","apt":"한강더퍼스트타워","area":18.28,"floor":13,"built":2026,"date":"2026-09-11","deposit":7300,"rent":66,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"노량진동","jibun":"39-20","apt":"한강더퍼스트타워","area":18.28,"floor":13,"built":2026,"date":"2026-09-11","deposit":9700,"rent":56,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11590","umdNm":"노량진동","jibun":"39-20","apt":"한강더퍼스트타워","area":18.28,"floor":14,"built":2026,"date":"2026-09-11","deposit":9700,"rent":56,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"노량진동","jibun":"39-20","apt":"한강더퍼스트타워","area":18.28,"floor":15,"built":2026,"date":"2026-09-11","deposit":9700,"rent":56,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"노량진동","jibun":"39-20","apt":"한강더퍼스트타워","area":18.28,"floor":17,"built":2026,"date":"2026-09-11","deposit":9700,"rent":56,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"노량진동","jibun":"39-20","apt":"한강더퍼스트타워","area":18.28,"floor":18,"built":2026,"date":"2026-09-11","deposit":9700,"rent":56,"term":"26.11~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -299,6 +300,7 @@
 {"lawd":"11590","umdNm":"상도동","jibun":"904","apt":"상도역롯데캐슬파크엘","area":59.98,"floor":10,"built":2021,"date":"2026-09-14","deposit":80000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"상도동","jibun":"906","apt":"상도푸르지오클라베뉴","area":75,"floor":7,"built":2024,"date":"2026-09-14","deposit":68250,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":65000,"preRent":0}
 {"lawd":"11590","umdNm":"상도동","jibun":"536","apt":"상도효성해링턴플레이스","area":84.81,"floor":20,"built":2016,"date":"2026-09-14","deposit":70300,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":67000,"preRent":0}
+{"lawd":"11590","umdNm":"사당동","jibun":"105","apt":"신동아4","area":59.89,"floor":9,"built":1993,"date":"2026-09-14","deposit":35000,"rent":70,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"대방동","jibun":"405-8","apt":"올리브빌딩","area":15.96,"floor":9,"built":2018,"date":"2026-09-14","deposit":5000,"rent":54,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"노량진동","jibun":"39-20","apt":"한강더퍼스트타워","area":18.28,"floor":22,"built":2026,"date":"2026-09-14","deposit":9700,"rent":56,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"흑석동","jibun":"343","apt":"흑석리버파크자이","area":84.99,"floor":18,"built":2025,"date":"2026-09-14","deposit":60000,"rent":180,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -500,6 +502,7 @@
 {"lawd":"11590","umdNm":"흑석동","jibun":"28","apt":"한강현대","area":66.22,"floor":2,"built":1988,"date":"2026-09-28","deposit":57000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"흑석동","jibun":"28","apt":"한강현대","area":66.22,"floor":6,"built":1988,"date":"2026-09-28","deposit":40000,"rent":100,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11590","umdNm":"흑석동","jibun":"335","apt":"흑석한강센트레빌","area":59.95,"floor":4,"built":2011,"date":"2026-09-28","deposit":72500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":70000,"preRent":0}
+{"lawd":"11590","umdNm":"흑석동","jibun":"335","apt":"흑석한강센트레빌","area":114.83,"floor":9,"built":2011,"date":"2026-09-28","deposit":115500,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":110000,"preRent":0}
 {"lawd":"11590","umdNm":"흑석동","jibun":"336","apt":"흑석한강푸르지오","area":51.68,"floor":4,"built":2012,"date":"2026-09-28","deposit":3189,"rent":18,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":3189,"preRent":18}
 {"lawd":"11590","umdNm":"대방동","jibun":"508","apt":"대방1차e-편한세상","area":84.32,"floor":3,"built":2003,"date":"2026-09-29","deposit":60000,"rent":46,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":60000,"preRent":34}
 {"lawd":"11590","umdNm":"상도동","jibun":"535","apt":"두산위브트레지움2차","area":84.86,"floor":20,"built":2016,"date":"2026-09-29","deposit":75000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

@@ -29,6 +29,7 @@
 {"lawd":"31170","umdNm":"서부동","jibun":"257-4","apt":"현대패밀리서부","area":49.79,"floor":9,"built":1992,"date":"2026-10-09","deposit":500,"rent":55,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31170","umdNm":"전하동","jibun":"308-36","apt":"주식회사동천씨엔디","area":28.6,"floor":6,"built":2013,"date":"2026-10-10","deposit":1000,"rent":50,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31170","umdNm":"방어동","jibun":"992-2","apt":"풍성비치","area":81.61,"floor":4,"built":1998,"date":"2026-10-10","deposit":500,"rent":70,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31170","umdNm":"동부동","jibun":"150","apt":"현대패밀리동부","area":49.85,"floor":10,"built":1993,"date":"2026-10-10","deposit":500,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31170","umdNm":"서부동","jibun":"238-29","apt":"현대패밀리명덕","area":59.78,"floor":8,"built":1992,"date":"2026-10-10","deposit":7000,"rent":40,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31170","umdNm":"화정동","jibun":"949","apt":"힐스테이트 이스턴베이","area":84.98,"floor":16,"built":2015,"date":"2026-10-11","deposit":2000,"rent":142,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":2000,"preRent":135}
 {"lawd":"31170","umdNm":"방어동","jibun":"1122","apt":"문현아이파크","area":84.85,"floor":5,"built":2007,"date":"2026-10-12","deposit":19500,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -38,6 +39,7 @@
 {"lawd":"31170","umdNm":"서부동","jibun":"1055","apt":"울산지웰시티자이2단지","area":84.98,"floor":7,"built":2023,"date":"2026-10-14","deposit":44000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31170","umdNm":"서부동","jibun":"257-4","apt":"현대패밀리서부","area":49.79,"floor":15,"built":1992,"date":"2026-10-14","deposit":8000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31170","umdNm":"방어동","jibun":"931-7","apt":"명성블루빌2차","area":84.8,"floor":4,"built":2014,"date":"2026-10-15","deposit":17000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31170","umdNm":"방어동","jibun":"1064","apt":"외국인사택","area":48.21,"floor":1,"built":2007,"date":"2026-10-15","deposit":500,"rent":55,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31170","umdNm":"서부동","jibun":"493-1","apt":"우주","area":59.13,"floor":4,"built":1987,"date":"2026-10-15","deposit":6200,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31170","umdNm":"서부동","jibun":"257-4","apt":"현대패밀리서부","area":49.79,"floor":11,"built":1992,"date":"2026-10-15","deposit":7300,"rent":0,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31170","umdNm":"방어동","jibun":"480-21","apt":"금성국민","area":60.4,"floor":5,"built":1985,"date":"2026-10-16","deposit":6000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -48,3 +50,5 @@
 {"lawd":"31170","umdNm":"서부동","jibun":"1049","apt":"울산지웰시티자이1단지","area":85,"floor":25,"built":2023,"date":"2026-10-18","deposit":45000,"rent":0,"term":"26.11~28.08","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31170","umdNm":"전하동","jibun":"640-1","apt":"전하아이파크","area":101.88,"floor":6,"built":2012,"date":"2026-10-19","deposit":200,"rent":200,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31170","umdNm":"서부동","jibun":"238-29","apt":"현대패밀리명덕","area":59.78,"floor":3,"built":1992,"date":"2026-10-19","deposit":1000,"rent":70,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31170","umdNm":"전하동","jibun":"549-14","apt":"현대패밀리전하","area":59.96,"floor":10,"built":1997,"date":"2026-10-20","deposit":15000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31170","umdNm":"화정동","jibun":"949","apt":"힐스테이트 이스턴베이","area":68.92,"floor":29,"built":2015,"date":"2026-10-20","deposit":3000,"rent":100,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

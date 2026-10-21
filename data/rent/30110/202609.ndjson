@@ -13,6 +13,7 @@
 {"lawd":"30110","umdNm":"천동","jibun":"529","apt":"휴먼시아1단지","area":59.99,"floor":15,"built":2008,"date":"2026-09-02","deposit":6186,"rent":12,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":3773,"preRent":25}
 {"lawd":"30110","umdNm":"낭월동","jibun":"723","apt":"e편한세상","area":84.98,"floor":1,"built":2011,"date":"2026-09-02","deposit":1000,"rent":100,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"용운동","jibun":"783","apt":"e편한세상 대전에코포레","area":85,"floor":13,"built":2020,"date":"2026-09-02","deposit":20000,"rent":60,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"30110","umdNm":"삼성동","jibun":"575","apt":"e편한세상대전역센텀비스타","area":84.86,"floor":25,"built":2026,"date":"2026-09-02","deposit":5000,"rent":120,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"용운동","jibun":"147","apt":"용운주공2단지","area":49.94,"floor":2,"built":1987,"date":"2026-09-03","deposit":1000,"rent":50,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"가양동","jibun":"35-14","apt":"임광하이츠4동","area":59.79,"floor":1,"built":1991,"date":"2026-09-03","deposit":8000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"삼성동","jibun":"479","apt":"한밭자이","area":84.98,"floor":7,"built":2006,"date":"2026-09-03","deposit":7000,"rent":70,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -125,6 +126,7 @@
 {"lawd":"30110","umdNm":"신흥동","jibun":"264","apt":"신흥SKVIEW","area":59.96,"floor":30,"built":2022,"date":"2026-09-22","deposit":32000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"판암동","jibun":"178","apt":"주공1","area":59.39,"floor":14,"built":1990,"date":"2026-09-22","deposit":12000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"신흥동","jibun":"264","apt":"신흥SKVIEW","area":39.02,"floor":18,"built":2022,"date":"2026-09-23","deposit":17320,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":16500,"preRent":0}
+{"lawd":"30110","umdNm":"성남동","jibun":"528","apt":"스마트뷰","area":84.98,"floor":14,"built":2011,"date":"2026-09-27","deposit":28000,"rent":0,"term":"26.11~27.11","type":"갱신","rrr":null,"preDeposit":28000,"preRent":0}
 {"lawd":"30110","umdNm":"신흥동","jibun":"262","apt":"이스트시티2단지","area":46.81,"floor":3,"built":2018,"date":"2026-09-27","deposit":20000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"대성동","jibun":"454","apt":"은어송하늘채리버뷰","area":84.96,"floor":20,"built":2024,"date":"2026-09-28","deposit":30450,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":29000,"preRent":0}
 {"lawd":"30110","umdNm":"용전동","jibun":"131-1","apt":"한울","area":37.25,"floor":8,"built":2002,"date":"2026-09-28","deposit":500,"rent":40,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -145,6 +147,7 @@
 {"lawd":"30110","umdNm":"홍도동","jibun":"14-1","apt":"홍도","area":42.02,"floor":11,"built":1996,"date":"2026-09-30","deposit":9000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"홍도동","jibun":"14-1","apt":"홍도","area":42.02,"floor":11,"built":1996,"date":"2026-09-30","deposit":9000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"홍도동","jibun":"14-1","apt":"홍도","area":42.02,"floor":15,"built":1996,"date":"2026-09-30","deposit":9000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"30110","umdNm":"홍도동","jibun":"14-1","apt":"홍도","area":42.02,"floor":15,"built":1996,"date":"2026-09-30","deposit":9000,"rent":16,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"홍도동","jibun":"14-1","apt":"홍도","area":42.02,"floor":15,"built":1996,"date":"2026-09-30","deposit":9000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"천동","jibun":"529","apt":"휴먼시아1단지","area":59.99,"floor":6,"built":2008,"date":"2026-09-30","deposit":6586,"rent":12,"term":"26.12~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30110","umdNm":"용운동","jibun":"783","apt":"e편한세상 대전에코포레","area":72.82,"floor":18,"built":2020,"date":"2026-09-30","deposit":3000,"rent":95,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

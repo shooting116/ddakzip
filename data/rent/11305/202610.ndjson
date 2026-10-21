@@ -53,6 +53,7 @@
 {"lawd":"11305","umdNm":"미아동","jibun":"1357","apt":"삼각산아이원","area":84.71,"floor":5,"built":2003,"date":"2026-10-12","deposit":54500,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":45000,"preRent":0}
 {"lawd":"11305","umdNm":"미아동","jibun":"812","apt":"삼성래미안트리베라2단지","area":84.29,"floor":16,"built":2010,"date":"2026-10-12","deposit":49000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":47000,"preRent":0}
 {"lawd":"11305","umdNm":"미아동","jibun":"1353","apt":"에스케이북한산시티","area":59.98,"floor":4,"built":2004,"date":"2026-10-12","deposit":55000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11305","umdNm":"미아동","jibun":"194-2","apt":"엘리프미아역1단지","area":60,"floor":4,"built":2026,"date":"2026-10-12","deposit":58000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11305","umdNm":"미아동","jibun":"474","apt":"미아동부센트레빌","area":84.93,"floor":11,"built":2006,"date":"2026-10-13","deposit":65000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11305","umdNm":"미아동","jibun":"1374","apt":"북서울자이폴라리스(1단지)","area":112.91,"floor":10,"built":2024,"date":"2026-10-13","deposit":82000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":79000,"preRent":0}
 {"lawd":"11305","umdNm":"미아동","jibun":"1357-2","apt":"삼각산아이원(임대)","area":24.05,"floor":16,"built":2003,"date":"2026-10-13","deposit":2568,"rent":5,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":2568,"preRent":5}
@@ -66,6 +67,7 @@
 {"lawd":"11305","umdNm":"미아동","jibun":"813","apt":"래미안트리베라1단지","area":84.97,"floor":6,"built":2010,"date":"2026-10-15","deposit":72000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11305","umdNm":"미아동","jibun":"1374","apt":"북서울자이폴라리스(1단지)","area":84.96,"floor":8,"built":2024,"date":"2026-10-15","deposit":56700,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":54000,"preRent":0}
 {"lawd":"11305","umdNm":"미아동","jibun":"812","apt":"삼성래미안트리베라2단지","area":84.29,"floor":5,"built":2010,"date":"2026-10-15","deposit":30000,"rent":111,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":100}
+{"lawd":"11305","umdNm":"번동","jibun":"446-59","apt":"스카이캐슬","area":15.67,"floor":3,"built":2021,"date":"2026-10-15","deposit":1000,"rent":88,"term":"26.10~28.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11305","umdNm":"미아동","jibun":"1353","apt":"에스케이북한산시티","area":59.98,"floor":11,"built":2004,"date":"2026-10-15","deposit":39900,"rent":0,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":38000,"preRent":0}
 {"lawd":"11305","umdNm":"번동","jibun":"136","apt":"번동솔그린","area":59.82,"floor":3,"built":1999,"date":"2026-10-16","deposit":35000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11305","umdNm":"미아동","jibun":"811","apt":"두산위브트레지움","area":59.82,"floor":11,"built":2011,"date":"2026-10-17","deposit":47250,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":45000,"preRent":0}
@@ -77,6 +79,11 @@
 {"lawd":"11305","umdNm":"미아동","jibun":"1369","apt":"꿈의숲해링턴플레이스","area":84.67,"floor":8,"built":2019,"date":"2026-10-19","deposit":57700,"rent":0,"term":"27.02~29.02","type":"갱신","rrr":"사용","preDeposit":55000,"preRent":0}
 {"lawd":"11305","umdNm":"미아동","jibun":"813","apt":"래미안트리베라1단지(임대)","area":39.93,"floor":12,"built":2010,"date":"2026-10-19","deposit":5716,"rent":12,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":5716,"preRent":11}
 {"lawd":"11305","umdNm":"미아동","jibun":"812","apt":"삼성래미안트리베라2단지","area":84.18,"floor":17,"built":2010,"date":"2026-10-19","deposit":50000,"rent":80,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11305","umdNm":"미아동","jibun":"195","apt":"엘리프미아역2단지","area":49.68,"floor":8,"built":2026,"date":"2026-10-19","deposit":38064,"rent":0,"term":"26.11~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11305","umdNm":"미아동","jibun":"195","apt":"엘리프미아역2단지","area":49.68,"floor":12,"built":2026,"date":"2026-10-19","deposit":38064,"rent":0,"term":"26.11~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11305","umdNm":"미아동","jibun":"195","apt":"엘리프미아역2단지","area":59.92,"floor":20,"built":2026,"date":"2026-10-19","deposit":49374,"rent":0,"term":"26.11~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11305","umdNm":"미아동","jibun":"195","apt":"엘리프미아역2단지","area":74.83,"floor":23,"built":2026,"date":"2026-10-19","deposit":54132,"rent":0,"term":"26.11~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11305","umdNm":"미아동","jibun":"1356","apt":"경남아너스빌(1356-0)","area":59.96,"floor":2,"built":2003,"date":"2026-10-20","deposit":50000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11305","umdNm":"미아동","jibun":"813","apt":"래미안트리베라1단지(임대)","area":44.85,"floor":8,"built":2010,"date":"2026-10-20","deposit":3170,"rent":32,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":3170,"preRent":32}
 {"lawd":"11305","umdNm":"미아동","jibun":"813","apt":"래미안트리베라1단지(임대)","area":44.85,"floor":9,"built":2010,"date":"2026-10-20","deposit":3170,"rent":32,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":3170,"preRent":32}
 {"lawd":"11305","umdNm":"미아동","jibun":"1373","apt":"미아에스하임","area":37.57,"floor":3,"built":2023,"date":"2026-10-20","deposit":6686,"rent":6,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":6686,"preRent":6}
@@ -85,3 +92,4 @@
 {"lawd":"11305","umdNm":"미아동","jibun":"195","apt":"엘리프미아역2단지","area":59.99,"floor":18,"built":2026,"date":"2026-10-20","deposit":40000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11305","umdNm":"수유동","jibun":"90-3","apt":"유경와이케이빌","area":14.07,"floor":10,"built":2020,"date":"2026-10-20","deposit":15700,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11305","umdNm":"수유동","jibun":"392-132","apt":"프롬하우징","area":36.75,"floor":6,"built":2025,"date":"2026-10-20","deposit":100,"rent":28,"term":"26.11~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11305","umdNm":"미아동","jibun":"1369","apt":"꿈의숲해링턴플레이스","area":84.88,"floor":5,"built":2019,"date":"2026-10-21","deposit":55650,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":53000,"preRent":0}

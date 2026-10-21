@@ -432,6 +432,7 @@
 {"lawd":"11440","umdNm":"상암동","jibun":"1655","apt":"상암월드컵파크4단지","area":84.76,"floor":6,"built":2006,"date":"2026-09-16","deposit":73500,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":70000,"preRent":0}
 {"lawd":"11440","umdNm":"성산동","jibun":"446","apt":"성산시영(대우)","area":50.03,"floor":5,"built":1986,"date":"2026-09-16","deposit":3000,"rent":130,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11440","umdNm":"성산동","jibun":"446","apt":"성산시영(유원)","area":59.43,"floor":4,"built":1986,"date":"2026-09-16","deposit":34650,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":33000,"preRent":0}
+{"lawd":"11440","umdNm":"성산동","jibun":"446","apt":"성산시영(유원)","area":59.43,"floor":8,"built":1986,"date":"2026-09-16","deposit":32600,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":31100,"preRent":0}
 {"lawd":"11440","umdNm":"노고산동","jibun":"1-3","apt":"신촌포스빌","area":32.34,"floor":14,"built":2004,"date":"2026-09-16","deposit":1000,"rent":110,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11440","umdNm":"창전동","jibun":"450","apt":"이랜드PEER신촌","area":17.3,"floor":9,"built":2021,"date":"2026-09-16","deposit":4003,"rent":32,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11440","umdNm":"창전동","jibun":"437","apt":"창전래미안","area":32.76,"floor":6,"built":1998,"date":"2026-09-16","deposit":1125,"rent":14,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":1125,"preRent":14}

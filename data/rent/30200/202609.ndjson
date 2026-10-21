@@ -437,6 +437,7 @@
 {"lawd":"30200","umdNm":"도룡동","jibun":"399-22","apt":"스타빌플러스","area":23.3,"floor":7,"built":2019,"date":"2026-09-22","deposit":8700,"rent":15,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30200","umdNm":"봉명동","jibun":"676-4","apt":"에이스타운4차","area":25.43,"floor":11,"built":2018,"date":"2026-09-22","deposit":1000,"rent":50,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30200","umdNm":"전민동","jibun":"464-1","apt":"엑스포","area":116.37,"floor":5,"built":1994,"date":"2026-09-22","deposit":30000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"30200","umdNm":"전민동","jibun":"464-1","apt":"엑스포","area":133.11,"floor":6,"built":1994,"date":"2026-09-22","deposit":40000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30200","umdNm":"봉명동","jibun":"648-3","apt":"엘도라도","area":19.49,"floor":3,"built":2012,"date":"2026-09-22","deposit":1000,"rent":40,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30200","umdNm":"원신흥동","jibun":"511","apt":"엘에이치도안천년나무11단지","area":46.97,"floor":7,"built":2016,"date":"2026-09-22","deposit":7417,"rent":15,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":3609,"preRent":32}
 {"lawd":"30200","umdNm":"노은동","jibun":"522-2","apt":"열매마을10단지(상록)","area":59.92,"floor":10,"built":2005,"date":"2026-09-22","deposit":3129,"rent":37,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":2980,"preRent":40}

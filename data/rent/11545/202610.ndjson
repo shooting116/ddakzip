@@ -79,6 +79,7 @@
 {"lawd":"11545","umdNm":"시흥동","jibun":"1010","apt":"벽산","area":114.84,"floor":10,"built":2000,"date":"2026-10-09","deposit":45000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11545","umdNm":"가산동","jibun":"140-36","apt":"비즈트위트바이올렛5차","area":18.47,"floor":13,"built":2014,"date":"2026-10-09","deposit":15000,"rent":3,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":15000,"preRent":0}
 {"lawd":"11545","umdNm":"가산동","jibun":"139-15","apt":"G밸리페트라힐스","area":13.76,"floor":8,"built":2020,"date":"2026-10-09","deposit":14700,"rent":3,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":14700,"preRent":0}
+{"lawd":"11545","umdNm":"가산동","jibun":"141-2","apt":"가산양우내안에애플","area":12.04,"floor":15,"built":2013,"date":"2026-10-10","deposit":500,"rent":55,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11545","umdNm":"가산동","jibun":"143-6","apt":"가산지웰에스테이트2차","area":14.12,"floor":6,"built":2018,"date":"2026-10-10","deposit":2900,"rent":45,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11545","umdNm":"시흥동","jibun":"1013","apt":"관악산벽산타운5","area":59.34,"floor":12,"built":2004,"date":"2026-10-10","deposit":38000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11545","umdNm":"독산동","jibun":"1155","apt":"금천롯데캐슬골드파크3차","area":59.97,"floor":40,"built":2018,"date":"2026-10-10","deposit":58800,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":56000,"preRent":0}
@@ -96,6 +97,7 @@
 {"lawd":"11545","umdNm":"독산동","jibun":"1155","apt":"금천롯데캐슬골드파크3차","area":59.97,"floor":44,"built":2018,"date":"2026-10-14","deposit":52000,"rent":60,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11545","umdNm":"시흥동","jibun":"1026","apt":"남서울힐스테이트","area":150.72,"floor":2,"built":2014,"date":"2026-10-14","deposit":85000,"rent":0,"term":"27.01~29.01","type":"갱신","rrr":null,"preDeposit":80000,"preRent":0}
 {"lawd":"11545","umdNm":"독산동","jibun":"1140","apt":"독산동중앙하이츠빌","area":84.88,"floor":19,"built":2004,"date":"2026-10-14","deposit":55000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":41670,"preRent":0}
+{"lawd":"11545","umdNm":"시흥동","jibun":"1002-1","apt":"럭키남서울아파트","area":49.75,"floor":7,"built":1981,"date":"2026-10-14","deposit":26000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11545","umdNm":"시흥동","jibun":"1010","apt":"벽산","area":32.7,"floor":8,"built":2000,"date":"2026-10-14","deposit":2571,"rent":6,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":1037,"preRent":14}
 {"lawd":"11545","umdNm":"독산동","jibun":"1007-13","apt":"e편한세상독산더타워","area":78.55,"floor":28,"built":2019,"date":"2026-10-14","deposit":64000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11545","umdNm":"독산동","jibun":"1133","apt":"진도2차","area":84.58,"floor":21,"built":1997,"date":"2026-10-15","deposit":49000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -110,6 +112,9 @@
 {"lawd":"11545","umdNm":"가산동","jibun":"234-46","apt":"삼익","area":84.69,"floor":8,"built":1998,"date":"2026-10-17","deposit":35000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11545","umdNm":"독산동","jibun":"1147","apt":"금천롯데캐슬골드파크1차","area":59.99,"floor":29,"built":2016,"date":"2026-10-19","deposit":45786,"rent":0,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11545","umdNm":"독산동","jibun":"1155","apt":"금천롯데캐슬골드파크3차","area":59.97,"floor":38,"built":2018,"date":"2026-10-19","deposit":68000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11545","umdNm":"독산동","jibun":"1155","apt":"금천롯데캐슬골드파크3차","area":59.97,"floor":27,"built":2018,"date":"2026-10-20","deposit":10000,"rent":201,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":190}
+{"lawd":"11545","umdNm":"가산동","jibun":"769","apt":"두산","area":134.95,"floor":3,"built":1998,"date":"2026-10-20","deposit":70000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":57750,"preRent":0}
+{"lawd":"11545","umdNm":"시흥동","jibun":"1010","apt":"벽산","area":32.7,"floor":10,"built":2000,"date":"2026-10-20","deposit":2498,"rent":6,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":1037,"preRent":14}
 {"lawd":"11545","umdNm":"가산동","jibun":"779","apt":"서울금천행복주택","area":16.13,"floor":8,"built":2023,"date":"2026-10-20","deposit":2736,"rent":10,"term":"26.11~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11545","umdNm":"가산동","jibun":"779","apt":"서울금천행복주택","area":16.13,"floor":9,"built":2023,"date":"2026-10-20","deposit":2736,"rent":10,"term":"26.11~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11545","umdNm":"가산동","jibun":"779","apt":"서울금천행복주택","area":16.13,"floor":12,"built":2023,"date":"2026-10-20","deposit":2736,"rent":10,"term":"26.11~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -118,3 +123,6 @@
 {"lawd":"11545","umdNm":"가산동","jibun":"779","apt":"서울금천행복주택","area":44.43,"floor":15,"built":2023,"date":"2026-10-20","deposit":8120,"rent":30,"term":"26.11~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11545","umdNm":"가산동","jibun":"779","apt":"서울금천행복주택","area":44.43,"floor":16,"built":2023,"date":"2026-10-20","deposit":7308,"rent":27,"term":"26.11~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11545","umdNm":"가산동","jibun":"777","apt":"씨앤에스타워","area":21.13,"floor":3,"built":2017,"date":"2026-10-20","deposit":17000,"rent":8,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11545","umdNm":"독산동","jibun":"1147","apt":"금천롯데캐슬골드파크1차","area":59.99,"floor":29,"built":2016,"date":"2026-10-21","deposit":45786,"rent":0,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11545","umdNm":"독산동","jibun":"1155","apt":"금천롯데캐슬골드파크3차","area":84.41,"floor":43,"built":2018,"date":"2026-10-21","deposit":63205,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":60196,"preRent":0}
+{"lawd":"11545","umdNm":"독산동","jibun":"183-1","apt":"독산동아아파트","area":59.96,"floor":3,"built":1997,"date":"2026-10-21","deposit":26000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

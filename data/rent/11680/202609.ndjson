@@ -628,6 +628,7 @@
 {"lawd":"11680","umdNm":"청담동","jibun":"134-38","apt":"청담자이","area":49.62,"floor":30,"built":2011,"date":"2026-09-14","deposit":110000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11680","umdNm":"도곡동","jibun":"467-17","apt":"타워팰리스2","area":92.8,"floor":23,"built":2003,"date":"2026-09-14","deposit":60000,"rent":360,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11680","umdNm":"대치동","jibun":"891-6","apt":"테헤란로대우아이빌(891-6)","area":33.11,"floor":4,"built":2004,"date":"2026-09-14","deposit":1000,"rent":115,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11680","umdNm":"일원동","jibun":"719","apt":"푸른마을아파트101동~111동","area":59.76,"floor":14,"built":1994,"date":"2026-09-14","deposit":10000,"rent":340,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11680","umdNm":"압구정동","jibun":"490","apt":"한양1차(영동한양)","area":60.07,"floor":5,"built":1977,"date":"2026-09-14","deposit":70000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11680","umdNm":"압구정동","jibun":"490","apt":"한양1차(영동한양)","area":63.87,"floor":11,"built":1977,"date":"2026-09-14","deposit":64000,"rent":12,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":64000,"preRent":0}
 {"lawd":"11680","umdNm":"압구정동","jibun":"481","apt":"현대8차(성수현대:91~95동)","area":111.5,"floor":5,"built":1980,"date":"2026-09-14","deposit":10000,"rent":250,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -966,6 +967,7 @@
 {"lawd":"11680","umdNm":"도곡동","jibun":"467-10","apt":"우성리빙텔","area":120.21,"floor":15,"built":1996,"date":"2026-09-22","deposit":3000,"rent":590,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11680","umdNm":"대치동","jibun":"316","apt":"은마","area":76.79,"floor":9,"built":1979,"date":"2026-09-22","deposit":40000,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11680","umdNm":"대치동","jibun":"316","apt":"은마","area":76.79,"floor":10,"built":1979,"date":"2026-09-22","deposit":20000,"rent":120,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":160}
+{"lawd":"11680","umdNm":"삼성동","jibun":"144-14","apt":"채널리저브","area":84.97,"floor":19,"built":2007,"date":"2026-09-22","deposit":10000,"rent":480,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11680","umdNm":"청담동","jibun":"14","apt":"청담2차이-편한세상(201동,202동,203동)","area":101.7,"floor":11,"built":2006,"date":"2026-09-22","deposit":80000,"rent":160,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11680","umdNm":"청담동","jibun":"14","apt":"청담2차이-편한세상(201동,202동,203동)","area":113.21,"floor":10,"built":2006,"date":"2026-09-22","deposit":127000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11680","umdNm":"일원동","jibun":"719","apt":"푸른마을아파트101동~111동","area":84.93,"floor":6,"built":1994,"date":"2026-09-22","deposit":110000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

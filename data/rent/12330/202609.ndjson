@@ -249,6 +249,7 @@
 {"lawd":"12330","umdNm":"신가동","jibun":"1055","apt":"한양수자인","area":84.61,"floor":15,"built":2009,"date":"2026-09-16","deposit":34000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"선암동","jibun":"560","apt":"광주선운지구EGthe12단지","area":84.98,"floor":5,"built":2014,"date":"2026-09-17","deposit":2000,"rent":110,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"우산동","jibun":"1599-1","apt":"광주우산엘에이치1단지","area":36.44,"floor":8,"built":2019,"date":"2026-09-17","deposit":604,"rent":24,"term":"26.09~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"12330","umdNm":"우산동","jibun":"1599-1","apt":"광주우산엘에이치1단지","area":36.44,"floor":9,"built":2019,"date":"2026-09-17","deposit":3204,"rent":17,"term":"26.09~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"우산동","jibun":"1599-1","apt":"광주우산엘에이치1단지","area":36.44,"floor":10,"built":2019,"date":"2026-09-17","deposit":3204,"rent":17,"term":"26.09~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"월곡동","jibun":"613-1","apt":"금호타운","area":74,"floor":3,"built":1991,"date":"2026-09-17","deposit":14000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":14000,"preRent":0}
 {"lawd":"12330","umdNm":"월계동","jibun":"758-7","apt":"삼성","area":84.93,"floor":4,"built":1996,"date":"2026-09-17","deposit":17000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -375,6 +376,7 @@
 {"lawd":"12330","umdNm":"우산동","jibun":"1571-1","apt":"하남주공(2단지)","area":44.52,"floor":3,"built":1991,"date":"2026-09-23","deposit":7110,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"우산동","jibun":"1571-1","apt":"하남주공(2단지)","area":44.52,"floor":13,"built":1991,"date":"2026-09-23","deposit":300,"rent":45,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"수완동","jibun":"970","apt":"해솔마을대방노블랜드2차","area":84.94,"floor":10,"built":2011,"date":"2026-09-23","deposit":45000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"12330","umdNm":"비아동","jibun":"152-5","apt":"호반","area":59.88,"floor":7,"built":1998,"date":"2026-09-23","deposit":1000,"rent":53,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"월계동","jibun":"764-3","apt":"호반1차","area":59.95,"floor":5,"built":1995,"date":"2026-09-23","deposit":12000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"산정동","jibun":"1056","apt":"부영애시앙2차","area":84.82,"floor":11,"built":2008,"date":"2026-09-24","deposit":10000,"rent":60,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"신가동","jibun":"1306","apt":"중흥S클래스1단지","area":84.63,"floor":20,"built":2009,"date":"2026-09-24","deposit":38000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -407,7 +409,6 @@
 {"lawd":"12330","umdNm":"장덕동","jibun":"1044","apt":"광주수완6신완마을휴먼시아","area":51.26,"floor":1,"built":2010,"date":"2026-09-29","deposit":3706,"rent":18,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":3550,"preRent":17}
 {"lawd":"12330","umdNm":"소촌동","jibun":"286-1","apt":"모아드림타운1차","area":82.89,"floor":2,"built":2000,"date":"2026-09-29","deposit":3000,"rent":60,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"월계동","jibun":"758-7","apt":"삼성","area":84.93,"floor":3,"built":1996,"date":"2026-09-29","deposit":17000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
-{"lawd":"12330","umdNm":"하남동","jibun":"1264","apt":"센테니엘수완","area":30.06,"floor":9,"built":2023,"date":"2026-09-29","deposit":16980,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"하남동","jibun":"1264","apt":"센테니엘수완","area":30.06,"floor":9,"built":2023,"date":"2026-09-29","deposit":16980,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"소촌동","jibun":"산83","apt":"소촌2차국제미소래아파트","area":81.9,"floor":8,"built":2020,"date":"2026-09-29","deposit":22290,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":22290,"preRent":0}
 {"lawd":"12330","umdNm":"소촌동","jibun":"874","apt":"소촌동지오스테이션아파트","area":67.45,"floor":2,"built":2015,"date":"2026-09-29","deposit":16700,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -428,6 +429,7 @@
 {"lawd":"12330","umdNm":"장덕동","jibun":"1037","apt":"광주수완7신완마을휴먼시아","area":46.9,"floor":13,"built":2011,"date":"2026-09-30","deposit":2778,"rent":16,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":2697,"preRent":15}
 {"lawd":"12330","umdNm":"송정동","jibun":"425-2","apt":"라인1","area":59.82,"floor":7,"built":1997,"date":"2026-09-30","deposit":1000,"rent":40,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"소촌동","jibun":"97-1","apt":"라인2차","area":59.9,"floor":7,"built":1997,"date":"2026-09-30","deposit":1000,"rent":45,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"12330","umdNm":"우산동","jibun":"1602-2","apt":"리버힐","area":49.86,"floor":11,"built":1992,"date":"2026-09-30","deposit":9240,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":8800,"preRent":0}
 {"lawd":"12330","umdNm":"송정동","jibun":"948-4","apt":"마이다스빌","area":35.04,"floor":4,"built":1999,"date":"2026-09-30","deposit":500,"rent":45,"term":"26.10~26.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"송정동","jibun":"593","apt":"모아","area":39.52,"floor":2,"built":1997,"date":"2026-09-30","deposit":500,"rent":35,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"12330","umdNm":"소촌동","jibun":"286-1","apt":"모아드림타운1차","area":82.89,"floor":1,"built":2000,"date":"2026-09-30","deposit":2000,"rent":85,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

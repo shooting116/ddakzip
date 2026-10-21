@@ -383,6 +383,7 @@
 {"lawd":"11470","umdNm":"목동","jibun":"908-28","apt":"부영2","area":123.08,"floor":7,"built":2000,"date":"2026-09-16","deposit":150000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11470","umdNm":"목동","jibun":"907-12","apt":"부영그린타운1","area":133.36,"floor":6,"built":1999,"date":"2026-09-16","deposit":120000,"rent":75,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11470","umdNm":"신월동","jibun":"517-6","apt":"서울","area":66.42,"floor":5,"built":1993,"date":"2026-09-16","deposit":19900,"rent":20,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11470","umdNm":"신월동","jibun":"987-1","apt":"신월시영","area":43.2,"floor":7,"built":1988,"date":"2026-09-16","deposit":3700,"rent":45,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":14000,"preRent":0}
 {"lawd":"11470","umdNm":"신월동","jibun":"987-1","apt":"신월시영","area":43.2,"floor":7,"built":1988,"date":"2026-09-16","deposit":14700,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":14000,"preRent":0}
 {"lawd":"11470","umdNm":"신월동","jibun":"987-1","apt":"신월시영","area":43.2,"floor":11,"built":1988,"date":"2026-09-16","deposit":3000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11470","umdNm":"신월동","jibun":"987-1","apt":"신월시영","area":50.67,"floor":8,"built":1988,"date":"2026-09-16","deposit":19670,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":18740,"preRent":0}
@@ -423,6 +424,7 @@
 {"lawd":"11470","umdNm":"신정동","jibun":"276","apt":"양천","area":33.62,"floor":12,"built":1995,"date":"2026-09-18","deposit":867,"rent":11,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":867,"preRent":11}
 {"lawd":"11470","umdNm":"신정동","jibun":"1283","apt":"푸른마을3","area":59.91,"floor":8,"built":2001,"date":"2026-09-18","deposit":43000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11470","umdNm":"신정동","jibun":"1297","apt":"길훈로즈빌","area":84.95,"floor":14,"built":2002,"date":"2026-09-19","deposit":95000,"rent":40,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11470","umdNm":"신정동","jibun":"1311","apt":"동일하이빌2단지","area":84.96,"floor":19,"built":2005,"date":"2026-09-19","deposit":2000,"rent":150,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11470","umdNm":"신정동","jibun":"1326","apt":"래미안목동아델리체(101동~118동)","area":84.95,"floor":5,"built":2021,"date":"2026-09-19","deposit":88000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":84000,"preRent":0}
 {"lawd":"11470","umdNm":"신정동","jibun":"1295","apt":"목동2삼성래미안","area":84.65,"floor":11,"built":2001,"date":"2026-09-19","deposit":79000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11470","umdNm":"목동","jibun":"758-2","apt":"목동2차아이파크","area":84.85,"floor":7,"built":2004,"date":"2026-09-19","deposit":76500,"rent":0,"term":"27.01~27.06","type":"갱신","rrr":null,"preDeposit":76500,"preRent":0}
@@ -534,6 +536,8 @@
 {"lawd":"11470","umdNm":"신월동","jibun":"1040","apt":"신월2차미소지움","area":83.32,"floor":3,"built":2005,"date":"2026-09-24","deposit":45000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":40000,"preRent":0}
 {"lawd":"11470","umdNm":"신정동","jibun":"1218-1","apt":"일진아이윌","area":84.98,"floor":3,"built":2003,"date":"2026-09-24","deposit":24000,"rent":45,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":24000,"preRent":45}
 {"lawd":"11470","umdNm":"신월동","jibun":"491-1","apt":"신월대림","area":84.99,"floor":6,"built":2001,"date":"2026-09-25","deposit":55000,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11470","umdNm":"신월동","jibun":"607-1","apt":"동방","area":27.69,"floor":15,"built":1999,"date":"2026-09-26","deposit":1000,"rent":60,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11470","umdNm":"신월동","jibun":"607-1","apt":"동방","area":27.69,"floor":15,"built":1999,"date":"2026-09-26","deposit":1000,"rent":65,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11470","umdNm":"신월동","jibun":"1076","apt":"목동센트럴아이파크위브2단지","area":59.68,"floor":19,"built":2020,"date":"2026-09-26","deposit":40000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11470","umdNm":"신월동","jibun":"1055","apt":"신정두산위브","area":84.22,"floor":5,"built":2012,"date":"2026-09-26","deposit":60000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11470","umdNm":"목동","jibun":"965","apt":"목동롯데캐슬마에스트로","area":84.98,"floor":10,"built":2019,"date":"2026-09-27","deposit":84000,"rent":0,"term":"27.02~29.02","type":"갱신","rrr":null,"preDeposit":68250,"preRent":0}

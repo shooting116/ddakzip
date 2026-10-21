@@ -130,6 +130,7 @@
 {"lawd":"11200","umdNm":"옥수동","jibun":"528-1","apt":"옥수파크힐스117동~125동","area":59.77,"floor":13,"built":2016,"date":"2026-09-09","deposit":93000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11200","umdNm":"하왕십리동","jibun":"1071","apt":"왕십리자이","area":84.99,"floor":7,"built":2017,"date":"2026-09-09","deposit":82950,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":79000,"preRent":0}
 {"lawd":"11200","umdNm":"하왕십리동","jibun":"1061","apt":"왕십리풍림아이원","area":59.94,"floor":2,"built":2004,"date":"2026-09-09","deposit":10000,"rent":240,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11200","umdNm":"행당동","jibun":"387","apt":"지웰홈스왕십리","area":16.41,"floor":9,"built":2020,"date":"2026-09-09","deposit":1000,"rent":103,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11200","umdNm":"행당동","jibun":"387","apt":"지웰홈스왕십리","area":16.41,"floor":17,"built":2020,"date":"2026-09-09","deposit":1000,"rent":104,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11200","umdNm":"하왕십리동","jibun":"1066","apt":"텐즈힐(1단지)","area":84.96,"floor":23,"built":2015,"date":"2026-09-09","deposit":92500,"rent":20,"term":"26.09~27.02","type":"갱신","rrr":"사용","preDeposit":92500,"preRent":0}
 {"lawd":"11200","umdNm":"옥수동","jibun":"60","apt":"풍림아이원","area":84.77,"floor":7,"built":2004,"date":"2026-09-09","deposit":78700,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":75000,"preRent":0}
@@ -383,6 +384,7 @@
 {"lawd":"11200","umdNm":"금호동4가","jibun":"1250","apt":"롯데","area":84.99,"floor":6,"built":2003,"date":"2026-09-27","deposit":68000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":66000,"preRent":0}
 {"lawd":"11200","umdNm":"상왕십리동","jibun":"12-47","apt":"센트럴큐브","area":24.76,"floor":8,"built":2019,"date":"2026-09-27","deposit":5000,"rent":100,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11200","umdNm":"성수동1가","jibun":"710","apt":"강변건영아파트","area":84.94,"floor":15,"built":2002,"date":"2026-09-28","deposit":99750,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":95000,"preRent":0}
+{"lawd":"11200","umdNm":"성수동1가","jibun":"710","apt":"강변건영아파트","area":84.95,"floor":3,"built":2002,"date":"2026-09-28","deposit":52000,"rent":138,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":50000,"preRent":130}
 {"lawd":"11200","umdNm":"옥수동","jibun":"428","apt":"극동","area":68.58,"floor":7,"built":1986,"date":"2026-09-28","deposit":55000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11200","umdNm":"금호동3가","jibun":"700","apt":"금호자이2차","area":36.64,"floor":12,"built":2012,"date":"2026-09-28","deposit":4706,"rent":7,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":4706,"preRent":7}
 {"lawd":"11200","umdNm":"응봉동","jibun":"97","apt":"대림(2차)","area":59.91,"floor":12,"built":1989,"date":"2026-09-28","deposit":50000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

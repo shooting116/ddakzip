@@ -174,7 +174,6 @@
 {"lawd":"27260","umdNm":"황금동","jibun":"985","apt":"힐스테이트황금동","area":59.98,"floor":3,"built":2018,"date":"2026-09-11","deposit":26000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":25000,"preRent":0}
 {"lawd":"27260","umdNm":"황금동","jibun":"985","apt":"힐스테이트황금동","area":59.98,"floor":14,"built":2018,"date":"2026-09-11","deposit":32000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"범어동","jibun":"300","apt":"가든하이츠1","area":84.95,"floor":6,"built":1985,"date":"2026-09-12","deposit":2000,"rent":150,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
-{"lawd":"27260","umdNm":"지산동","jibun":"1766","apt":"더샵수성라크에르","area":59.85,"floor":1,"built":2024,"date":"2026-09-12","deposit":3000,"rent":105,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"만촌동","jibun":"1479","apt":"만촌3차화성파크드림","area":67.29,"floor":18,"built":2016,"date":"2026-09-12","deposit":39000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":39000,"preRent":0}
 {"lawd":"27260","umdNm":"만촌동","jibun":"816","apt":"만촌우방타운1단지","area":59.73,"floor":5,"built":1997,"date":"2026-09-12","deposit":2000,"rent":75,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"범어동","jibun":"2238","apt":"범어 화산샬레","area":59.74,"floor":19,"built":2014,"date":"2026-09-12","deposit":27000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -356,6 +355,7 @@
 {"lawd":"27260","umdNm":"범물동","jibun":"1261","apt":"범물하이츠","area":34.44,"floor":13,"built":1992,"date":"2026-09-23","deposit":500,"rent":40,"term":"26.10~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"범어동","jibun":"2250","apt":"범어효성해링턴플레이스","area":74.83,"floor":6,"built":2018,"date":"2026-09-23","deposit":38850,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":37000,"preRent":0}
 {"lawd":"27260","umdNm":"파동","jibun":"581-28","apt":"송원맨션","area":84.99,"floor":4,"built":1989,"date":"2026-09-23","deposit":22000,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27260","umdNm":"중동","jibun":"645","apt":"수성데시앙리버뷰","area":84.98,"floor":10,"built":2022,"date":"2026-09-23","deposit":3000,"rent":140,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"두산동","jibun":"999","apt":"수성레이크푸르지오","area":84.94,"floor":12,"built":2022,"date":"2026-09-23","deposit":3000,"rent":160,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"범물동","jibun":"1397","apt":"수성하늘채르레브","area":77.65,"floor":8,"built":2020,"date":"2026-09-23","deposit":28000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":28000,"preRent":0}
 {"lawd":"27260","umdNm":"시지동","jibun":"70","apt":"제림은탑맨션","area":59.97,"floor":14,"built":1994,"date":"2026-09-23","deposit":3000,"rent":55,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -380,6 +380,7 @@
 {"lawd":"27260","umdNm":"범어동","jibun":"2272","apt":"범어에일린의뜰","area":84.94,"floor":20,"built":2021,"date":"2026-09-28","deposit":9000,"rent":165,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"범어동","jibun":"792-43","apt":"범어역아이위시","area":57.72,"floor":15,"built":2013,"date":"2026-09-28","deposit":2000,"rent":90,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"범어동","jibun":"48-26","apt":"범어자이","area":84.99,"floor":25,"built":2026,"date":"2026-09-28","deposit":30000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27260","umdNm":"범물동","jibun":"697-1","apt":"보성송정타운","area":59.96,"floor":20,"built":1995,"date":"2026-09-28","deposit":1000,"rent":50,"term":"26.10~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"수성동3가","jibun":"57","apt":"수성3가롯데캐슬","area":136.22,"floor":3,"built":2008,"date":"2026-09-28","deposit":10000,"rent":230,"term":"26.12~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27260","umdNm":"중동","jibun":"641","apt":"수성효성해링턴플레이스","area":84.6,"floor":3,"built":2020,"date":"2026-09-28","deposit":16000,"rent":90,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":11000,"preRent":90}
 {"lawd":"27260","umdNm":"신매동","jibun":"570","apt":"시지삼주한라협화","area":59.88,"floor":5,"built":1994,"date":"2026-09-28","deposit":13800,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":14500,"preRent":0}

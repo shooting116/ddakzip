@@ -563,6 +563,7 @@
 {"lawd":"11260","umdNm":"상봉동","jibun":"504","apt":"와이센트럴시티상봉","area":34.52,"floor":8,"built":2025,"date":"2026-09-18","deposit":15700,"rent":58,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11260","umdNm":"신내동","jibun":"826","apt":"우디안3단지","area":29.84,"floor":5,"built":2017,"date":"2026-09-18","deposit":5896,"rent":22,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":5616,"preRent":21}
 {"lawd":"11260","umdNm":"신내동","jibun":"831","apt":"우디안4단지","area":21.96,"floor":5,"built":2018,"date":"2026-09-18","deposit":5492,"rent":8,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":3888,"preRent":15}
+{"lawd":"11260","umdNm":"상봉동","jibun":"500","apt":"프레미어스엠코","area":111.56,"floor":14,"built":2013,"date":"2026-09-18","deposit":85000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":77000,"preRent":0}
 {"lawd":"11260","umdNm":"상봉동","jibun":"500","apt":"프레미어스엠코","area":111.56,"floor":40,"built":2013,"date":"2026-09-18","deposit":30000,"rent":300,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11260","umdNm":"상봉동","jibun":"63","apt":"건영2차아파트","area":84.96,"floor":1,"built":1996,"date":"2026-09-19","deposit":47000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":45000,"preRent":0}
 {"lawd":"11260","umdNm":"상봉동","jibun":"499","apt":"건영캐스빌","area":84.65,"floor":21,"built":2006,"date":"2026-09-19","deposit":58800,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":56000,"preRent":0}
@@ -651,6 +652,7 @@
 {"lawd":"11260","umdNm":"상봉동","jibun":"116-49","apt":"상봉생활","area":43.61,"floor":17,"built":2026,"date":"2026-09-30","deposit":29890,"rent":45,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11260","umdNm":"상봉동","jibun":"116-49","apt":"상봉생활","area":44.46,"floor":6,"built":2026,"date":"2026-09-30","deposit":30570,"rent":46,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11260","umdNm":"상봉동","jibun":"116-49","apt":"상봉생활","area":59.77,"floor":23,"built":2026,"date":"2026-09-30","deposit":37870,"rent":56,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11260","umdNm":"묵동","jibun":"13","apt":"신내","area":39.84,"floor":8,"built":1996,"date":"2026-09-30","deposit":2000,"rent":110,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11260","umdNm":"신내동","jibun":"657","apt":"신내9진흥","area":33.18,"floor":2,"built":1996,"date":"2026-09-30","deposit":2000,"rent":80,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11260","umdNm":"면목동","jibun":"538","apt":"신영","area":14.43,"floor":4,"built":2013,"date":"2026-09-30","deposit":1000,"rent":50,"term":"26.10~27.10","type":"갱신","rrr":null,"preDeposit":1000,"preRent":47}
 {"lawd":"11260","umdNm":"망우동","jibun":"583","apt":"중랑숲리가","area":84.96,"floor":3,"built":2012,"date":"2026-09-30","deposit":20000,"rent":130,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
