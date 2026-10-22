@@ -4,6 +4,7 @@
 {"lawd":"26290","umdNm":"문현동","jibun":"776-22","apt":"리버빌","area":74.59,"floor":5,"built":2004,"date":"2026-10-01","deposit":15000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26290","umdNm":"문현동","jibun":"1244","apt":"문현경동리인아파트","area":72.58,"floor":15,"built":2020,"date":"2026-10-01","deposit":30000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26290","umdNm":"문현동","jibun":"1234","apt":"베스티움","area":33.68,"floor":4,"built":2019,"date":"2026-10-01","deposit":14950,"rent":0,"term":"26.10~28.08","type":"갱신","rrr":null,"preDeposit":16000,"preRent":0}
+{"lawd":"26290","umdNm":"용호동","jibun":"176-30","apt":"엘지메트로시티4-1(201-214)","area":85,"floor":8,"built":2003,"date":"2026-10-01","deposit":35000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26290","umdNm":"대연동","jibun":"39-34","apt":"오름B동","area":20.99,"floor":8,"built":2013,"date":"2026-10-01","deposit":500,"rent":48,"term":"26.10~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26290","umdNm":"문현동","jibun":"331-4","apt":"우성맨션","area":60,"floor":5,"built":1979,"date":"2026-10-01","deposit":8500,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26290","umdNm":"용호동","jibun":"179-4","apt":"일신프리빌리지","area":84.93,"floor":4,"built":1996,"date":"2026-10-01","deposit":23000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -101,6 +102,7 @@
 {"lawd":"26290","umdNm":"대연동","jibun":"1920","apt":"대연삼정그린코아더베스트","area":71.31,"floor":11,"built":2022,"date":"2026-10-17","deposit":34000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26290","umdNm":"대연동","jibun":"1858","apt":"대연힐스테이트푸르지오","area":59.99,"floor":1,"built":2013,"date":"2026-10-17","deposit":42000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26290","umdNm":"용호동","jibun":"954","apt":"더블유","area":100.2,"floor":48,"built":2018,"date":"2026-10-17","deposit":73500,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":70000,"preRent":0}
+{"lawd":"26290","umdNm":"용호동","jibun":"954","apt":"더블유","area":141.08,"floor":43,"built":2018,"date":"2026-10-17","deposit":115000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26290","umdNm":"대연동","jibun":"1946","apt":"더비치푸르지오써밋","area":84.93,"floor":38,"built":2025,"date":"2026-10-17","deposit":80000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26290","umdNm":"용호동","jibun":"776-12","apt":"롯데캐슬아인스","area":59.93,"floor":7,"built":2007,"date":"2026-10-17","deposit":17000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26290","umdNm":"용호동","jibun":"176-30","apt":"엘지메트로시티1","area":59.97,"floor":2,"built":2001,"date":"2026-10-17","deposit":26000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":25000,"preRent":0}
@@ -111,7 +113,10 @@
 {"lawd":"26290","umdNm":"대연동","jibun":"1858","apt":"대연힐스테이트푸르지오","area":84.36,"floor":19,"built":2013,"date":"2026-10-20","deposit":60000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26290","umdNm":"대연동","jibun":"1909","apt":"대연SKVIEWHills(2단지)","area":18.1,"floor":5,"built":2019,"date":"2026-10-20","deposit":8000,"rent":20,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26290","umdNm":"용호동","jibun":"176-30","apt":"엘지메트로시티1","area":84.98,"floor":18,"built":2001,"date":"2026-10-20","deposit":33000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26290","umdNm":"우암동","jibun":"46","apt":"우암대진","area":49.14,"floor":5,"built":1986,"date":"2026-10-20","deposit":10000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26290","umdNm":"감만동","jibun":"44-2","apt":"하얏트","area":52.23,"floor":12,"built":1995,"date":"2026-10-20","deposit":12150,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26290","umdNm":"문현동","jibun":"1250","apt":"대연양우내안애퍼스트","area":84.97,"floor":17,"built":2022,"date":"2026-10-21","deposit":37500,"rent":0,"term":"26.11~27.09","type":"갱신","rrr":"사용","preDeposit":37500,"preRent":0}
+{"lawd":"26290","umdNm":"용호동","jibun":"176-30","apt":"엘지메트로시티1","area":84.98,"floor":4,"built":2001,"date":"2026-10-21","deposit":35000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26290","umdNm":"용호동","jibun":"176-30","apt":"엘지메트로시티1","area":84.98,"floor":7,"built":2001,"date":"2026-10-21","deposit":30000,"rent":10,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26290","umdNm":"대연동","jibun":"255-1","apt":"장백장미타워1","area":83.1,"floor":21,"built":1996,"date":"2026-10-21","deposit":3000,"rent":75,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26290","umdNm":"문현동","jibun":"2","apt":"문현2차현대","area":84.99,"floor":14,"built":2000,"date":"2026-10-22","deposit":2000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

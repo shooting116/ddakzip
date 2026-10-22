@@ -667,6 +667,7 @@
 {"lawd":"11680","umdNm":"일원동","jibun":"734","apt":"상록수","area":74.54,"floor":1,"built":1993,"date":"2026-09-15","deposit":63000,"rent":50,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11680","umdNm":"일원동","jibun":"688","apt":"상록스타힐스","area":18.88,"floor":4,"built":2022,"date":"2026-09-15","deposit":3929,"rent":36,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":3742,"preRent":34}
 {"lawd":"11680","umdNm":"일원동","jibun":"688","apt":"상록스타힐스","area":59.59,"floor":19,"built":2022,"date":"2026-09-15","deposit":25968,"rent":50,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":32976,"preRent":27}
+{"lawd":"11680","umdNm":"일원동","jibun":"688","apt":"상록스타힐스","area":59.96,"floor":4,"built":2022,"date":"2026-09-15","deposit":12499,"rent":115,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":11904,"preRent":109}
 {"lawd":"11680","umdNm":"개포동","jibun":"12","apt":"성원대치2단지아파트","area":39.53,"floor":6,"built":1992,"date":"2026-09-15","deposit":44100,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":42000,"preRent":0}
 {"lawd":"11680","umdNm":"세곡동","jibun":"533","apt":"세곡푸르지오","area":59.89,"floor":7,"built":2012,"date":"2026-09-15","deposit":40000,"rent":140,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11680","umdNm":"수서동","jibun":"736","apt":"신동아","area":39.51,"floor":1,"built":1992,"date":"2026-09-15","deposit":20000,"rent":110,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -973,6 +974,7 @@
 {"lawd":"11680","umdNm":"일원동","jibun":"719","apt":"푸른마을아파트101동~111동","area":84.93,"floor":6,"built":1994,"date":"2026-09-22","deposit":110000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11680","umdNm":"논현동","jibun":"221-7","apt":"한양수자인어반게이트","area":16.2,"floor":3,"built":2013,"date":"2026-09-22","deposit":1000,"rent":90,"term":"26.09~27.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11680","umdNm":"개포동","jibun":"653","apt":"현대1차101동~106동","area":95.4,"floor":1,"built":1984,"date":"2026-09-22","deposit":90000,"rent":80,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11680","umdNm":"삼성동","jibun":"6","apt":"현대아파트101동","area":59.83,"floor":1,"built":1999,"date":"2026-09-22","deposit":25000,"rent":110,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":21000,"preRent":110}
 {"lawd":"11680","umdNm":"역삼동","jibun":"755-4","apt":"e-편한세상","area":59.61,"floor":20,"built":2005,"date":"2026-09-22","deposit":10000,"rent":359,"term":"26.10~27.10","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":340}
 {"lawd":"11680","umdNm":"자곡동","jibun":"138-2","apt":"LH수서2단지아파트","area":14.69,"floor":5,"built":2024,"date":"2026-09-22","deposit":6916,"rent":8,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":4968,"preRent":17}
 {"lawd":"11680","umdNm":"자곡동","jibun":"138-2","apt":"LH수서2단지아파트","area":14.69,"floor":9,"built":2024,"date":"2026-09-22","deposit":6816,"rent":8,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":4692,"preRent":16}
@@ -1059,6 +1061,7 @@
 {"lawd":"11680","umdNm":"일원동","jibun":"719","apt":"푸른마을아파트101동~111동","area":84.93,"floor":6,"built":1994,"date":"2026-09-28","deposit":20000,"rent":250,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11680","umdNm":"일원동","jibun":"719","apt":"푸른마을아파트101동~111동","area":84.93,"floor":13,"built":1994,"date":"2026-09-28","deposit":70000,"rent":120,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":70000,"preRent":105}
 {"lawd":"11680","umdNm":"압구정동","jibun":"490","apt":"한양1차(영동한양)","area":78.05,"floor":6,"built":1977,"date":"2026-09-28","deposit":55500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":55500,"preRent":0}
+{"lawd":"11680","umdNm":"압구정동","jibun":"513","apt":"한양5","area":100.5,"floor":4,"built":1979,"date":"2026-09-28","deposit":78000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":77000,"preRent":0}
 {"lawd":"11680","umdNm":"역삼동","jibun":"706-20","apt":"한화진넥스빌","area":43.58,"floor":6,"built":2001,"date":"2026-09-28","deposit":36000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":34000,"preRent":0}
 {"lawd":"11680","umdNm":"압구정동","jibun":"443","apt":"현대3차(61~64동)","area":82.5,"floor":4,"built":1976,"date":"2026-09-28","deposit":75000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":65000,"preRent":60}
 {"lawd":"11680","umdNm":"일원동","jibun":"614","apt":"현대4","area":84.98,"floor":10,"built":1987,"date":"2026-09-28","deposit":90000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":87000,"preRent":0}
@@ -1137,6 +1140,7 @@
 {"lawd":"11680","umdNm":"역삼동","jibun":"738-29","apt":"더원역삼","area":30.4,"floor":4,"built":2023,"date":"2026-09-30","deposit":11000,"rent":69,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11680","umdNm":"도곡동","jibun":"934-10","apt":"도곡우성아파트","area":84.83,"floor":10,"built":1986,"date":"2026-09-30","deposit":65000,"rent":50,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":65000,"preRent":20}
 {"lawd":"11680","umdNm":"도곡동","jibun":"934-10","apt":"도곡우성아파트","area":84.83,"floor":10,"built":1986,"date":"2026-09-30","deposit":73500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":70000,"preRent":0}
+{"lawd":"11680","umdNm":"대치동","jibun":"670","apt":"동부센트레빌","area":145.83,"floor":7,"built":2005,"date":"2026-09-30","deposit":232920,"rent":160,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":220000,"preRent":160}
 {"lawd":"11680","umdNm":"논현동","jibun":"258","apt":"두산위브2단지","area":84.25,"floor":6,"built":2004,"date":"2026-09-30","deposit":20000,"rent":380,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11680","umdNm":"개포동","jibun":"1281","apt":"디에이치아너힐즈","area":49.4,"floor":1,"built":2019,"date":"2026-09-30","deposit":30368,"rent":58,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":19280,"preRent":68}
 {"lawd":"11680","umdNm":"개포동","jibun":"1281","apt":"디에이치아너힐즈","area":49.4,"floor":2,"built":2019,"date":"2026-09-30","deposit":17440,"rent":68,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

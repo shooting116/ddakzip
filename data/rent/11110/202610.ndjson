@@ -5,6 +5,7 @@
 {"lawd":"11110","umdNm":"숭인동","jibun":"296-19","apt":"삼전솔하임2차","area":15,"floor":6,"built":2012,"date":"2026-10-02","deposit":1000,"rent":49,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11110","umdNm":"사직동","jibun":"9","apt":"광화문스페이스본(101동~105동)","area":146.92,"floor":5,"built":2008,"date":"2026-10-03","deposit":147000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":140000,"preRent":0}
 {"lawd":"11110","umdNm":"명륜2가","jibun":"4","apt":"아남1","area":84.9,"floor":14,"built":1995,"date":"2026-10-03","deposit":80000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":77000,"preRent":0}
+{"lawd":"11110","umdNm":"숭인동","jibun":"2-1","apt":"종로센트레빌","area":59.92,"floor":4,"built":2008,"date":"2026-10-03","deposit":25000,"rent":150,"term":"26.10~27.10","type":"갱신","rrr":null,"preDeposit":10000,"preRent":140}
 {"lawd":"11110","umdNm":"숭인동","jibun":"202-3","apt":"종로중흥S클래스","area":19.47,"floor":9,"built":2013,"date":"2026-10-03","deposit":11000,"rent":15,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11110","umdNm":"창신동","jibun":"702","apt":"창신쌍용1","area":54.7,"floor":9,"built":1992,"date":"2026-10-03","deposit":5000,"rent":170,"term":"26.10~29.07","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11110","umdNm":"신영동","jibun":"254","apt":"대아파크빌","area":84.84,"floor":7,"built":1998,"date":"2026-10-04","deposit":20000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -61,3 +62,4 @@
 {"lawd":"11110","umdNm":"창신동","jibun":"578-5","apt":"동대문맨션","area":83.83,"floor":9,"built":1973,"date":"2026-10-20","deposit":13000,"rent":45,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":13000,"preRent":30}
 {"lawd":"11110","umdNm":"숭인동","jibun":"1421-2","apt":"숭인한양LEEPS","area":12.78,"floor":9,"built":2014,"date":"2026-10-21","deposit":500,"rent":65,"term":"26.11~27.11","type":"갱신","rrr":null,"preDeposit":500,"preRent":60}
 {"lawd":"11110","umdNm":"창신동","jibun":"702","apt":"창신쌍용1","area":79.87,"floor":8,"built":1992,"date":"2026-10-21","deposit":45000,"rent":30,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11110","umdNm":"교북동","jibun":"126","apt":"경희궁자이(4단지)","area":37.26,"floor":9,"built":2017,"date":"2026-10-22","deposit":10000,"rent":210,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":200}

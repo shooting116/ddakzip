@@ -730,6 +730,7 @@
 {"lawd":"41597","umdNm":"산척동","jibun":"796","apt":"센트럴써밋","area":59.98,"floor":12,"built":2020,"date":"2026-09-15","deposit":5717,"rent":51,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":5444,"preRent":48}
 {"lawd":"41597","umdNm":"반송동","jibun":"85","apt":"시범한빛마을동탄아이파크","area":84.96,"floor":25,"built":2007,"date":"2026-09-15","deposit":59000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41597","umdNm":"석우동","jibun":"53","apt":"우미린제일풍경채","area":112.96,"floor":14,"built":2008,"date":"2026-09-15","deposit":50000,"rent":55,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41597","umdNm":"산척동","jibun":"791","apt":"중흥에스클래스에듀하이","area":83.01,"floor":10,"built":2019,"date":"2026-09-15","deposit":10000,"rent":175,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41597","umdNm":"목동","jibun":"494","apt":"호반베르디움센트럴포레","area":98.15,"floor":13,"built":2017,"date":"2026-09-15","deposit":10000,"rent":230,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41597","umdNm":"산척동","jibun":"747","apt":"화성동탄2엘에이치35단지(3511-15)","area":21.7,"floor":13,"built":2020,"date":"2026-09-15","deposit":2667,"rent":11,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":2540,"preRent":11}
 {"lawd":"41597","umdNm":"산척동","jibun":"747","apt":"화성동탄2엘에이치35단지(3511-15)","area":36.04,"floor":6,"built":2020,"date":"2026-09-15","deposit":2877,"rent":36,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":5380,"preRent":23}
@@ -768,6 +769,7 @@
 {"lawd":"41597","umdNm":"여울동","jibun":"1044","apt":"반도유보라아이비파크3","area":84.99,"floor":16,"built":2016,"date":"2026-09-16","deposit":33600,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":32000,"preRent":0}
 {"lawd":"41597","umdNm":"반송동","jibun":"159","apt":"새강마을휴먼시아5단지","area":47.23,"floor":13,"built":2009,"date":"2026-09-16","deposit":3864,"rent":24,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":3165,"preRent":19}
 {"lawd":"41597","umdNm":"반송동","jibun":"159","apt":"새강마을휴먼시아5단지","area":51.93,"floor":10,"built":2009,"date":"2026-09-16","deposit":1003,"rent":34,"term":"26.09~28.11","type":"갱신","rrr":null,"preDeposit":3803,"preRent":26}
+{"lawd":"41597","umdNm":"산척동","jibun":"792","apt":"서희스타힐스엔에이치에프","area":74.94,"floor":24,"built":2017,"date":"2026-09-16","deposit":4000,"rent":140,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":3000,"preRent":140}
 {"lawd":"41597","umdNm":"산척동","jibun":"792","apt":"서희스타힐스엔에이치에프","area":84.97,"floor":5,"built":2017,"date":"2026-09-16","deposit":8795,"rent":76,"term":"26.10~28.02","type":"갱신","rrr":null,"preDeposit":8376,"preRent":72}
 {"lawd":"41597","umdNm":"산척동","jibun":"796","apt":"센트럴써밋","area":51.98,"floor":7,"built":2020,"date":"2026-09-16","deposit":4947,"rent":44,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":4712,"preRent":42}
 {"lawd":"41597","umdNm":"산척동","jibun":"796","apt":"센트럴써밋","area":51.98,"floor":14,"built":2020,"date":"2026-09-16","deposit":9747,"rent":20,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":4712,"preRent":42}
@@ -958,6 +960,7 @@
 {"lawd":"41597","umdNm":"반송동","jibun":"75","apt":"동탄시범다은마을센트럴파크뷰","area":82.25,"floor":8,"built":2008,"date":"2026-09-17","deposit":19509,"rent":70,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":18740,"preRent":66}
 {"lawd":"41597","umdNm":"반송동","jibun":"107-4","apt":"동탄에스원센트로빌","area":13.44,"floor":8,"built":2007,"date":"2026-09-17","deposit":300,"rent":35,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41597","umdNm":"여울동","jibun":"973","apt":"동탄역 반도유보라 아이비파크 8.0","area":73.65,"floor":5,"built":2018,"date":"2026-09-17","deposit":45000,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41597","umdNm":"여울동","jibun":"973","apt":"동탄역 반도유보라 아이비파크 8.0","area":73.65,"floor":5,"built":2018,"date":"2026-09-17","deposit":45000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":43000,"preRent":0}
 {"lawd":"41597","umdNm":"청계동","jibun":"512","apt":"동탄역 시범우남퍼스트빌아파트","area":59.98,"floor":16,"built":2015,"date":"2026-09-17","deposit":15000,"rent":180,"term":"26.12~28.07","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41597","umdNm":"영천동","jibun":"879","apt":"동탄역동원로얄듀크1차","area":73.11,"floor":1,"built":2018,"date":"2026-09-17","deposit":2000,"rent":200,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41597","umdNm":"여울동","jibun":"1089","apt":"동탄역롯데캐슬","area":65.97,"floor":21,"built":2021,"date":"2026-09-17","deposit":58000,"rent":50,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":58000,"preRent":0}
@@ -1250,6 +1253,7 @@
 {"lawd":"41597","umdNm":"능동","jibun":"1151","apt":"푸른마을모아미래도","area":59.19,"floor":16,"built":2008,"date":"2026-09-18","deposit":31000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":26620,"preRent":0}
 {"lawd":"41597","umdNm":"능동","jibun":"1151","apt":"푸른마을모아미래도","area":59.19,"floor":21,"built":2008,"date":"2026-09-18","deposit":28000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":28000,"preRent":0}
 {"lawd":"41597","umdNm":"목동","jibun":"485","apt":"한신더휴","area":83.75,"floor":9,"built":2018,"date":"2026-09-18","deposit":51800,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41597","umdNm":"목동","jibun":"494","apt":"호반베르디움센트럴포레","area":84.84,"floor":9,"built":2017,"date":"2026-09-18","deposit":36750,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":35000,"preRent":0}
 {"lawd":"41597","umdNm":"목동","jibun":"494","apt":"호반베르디움센트럴포레","area":84.84,"floor":13,"built":2017,"date":"2026-09-18","deposit":8000,"rent":180,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41597","umdNm":"산척동","jibun":"748","apt":"화성동탄2엘에이치35단지(3501-7)","area":46.49,"floor":7,"built":2020,"date":"2026-09-18","deposit":4557,"rent":30,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":4424,"preRent":29}
 {"lawd":"41597","umdNm":"산척동","jibun":"747","apt":"화성동탄2엘에이치35단지(3511-15)","area":21.7,"floor":1,"built":2020,"date":"2026-09-18","deposit":2808,"rent":12,"term":"26.12~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

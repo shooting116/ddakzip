@@ -5,6 +5,7 @@
 {"lawd":"31710","umdNm":"언양읍 어음리","jibun":"175","apt":"e편한세상울산역어반스퀘어","area":74.97,"floor":14,"built":2022,"date":"2026-10-01","deposit":25000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":22000,"preRent":0}
 {"lawd":"31710","umdNm":"언양읍 반천리","jibun":"1023-51","apt":"반천현대","area":84.89,"floor":19,"built":1994,"date":"2026-10-02","deposit":2000,"rent":50,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"청량읍 덕하리","jibun":"1082-1","apt":"울산뉴시티에일린의뜰1차","area":84.99,"floor":9,"built":2024,"date":"2026-10-02","deposit":38000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31710","umdNm":"범서읍 천상리","jibun":"605","apt":"천상국태그린빌","area":49.98,"floor":15,"built":2001,"date":"2026-10-02","deposit":1000,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"온산읍 덕신리","jibun":"1329-4","apt":"덕신동백","area":49.85,"floor":6,"built":1992,"date":"2026-10-03","deposit":300,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"청량읍 덕하리","jibun":"1082-1","apt":"울산뉴시티에일린의뜰1차","area":59.99,"floor":25,"built":2024,"date":"2026-10-03","deposit":31000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"범서읍 천상리","jibun":"605","apt":"천상국태그린빌","area":49.94,"floor":20,"built":2001,"date":"2026-10-03","deposit":3000,"rent":60,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -13,6 +14,7 @@
 {"lawd":"31710","umdNm":"온양읍 대안리","jibun":"542","apt":"대안IPARK","area":59.93,"floor":6,"built":1993,"date":"2026-10-06","deposit":1000,"rent":60,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"온산읍 덕신리","jibun":"1329-4","apt":"덕신동백","area":49.85,"floor":7,"built":1992,"date":"2026-10-06","deposit":500,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"삼남읍 교동리","jibun":"1678","apt":"경동우신알프스타운","area":44.7,"floor":11,"built":2015,"date":"2026-10-07","deposit":5500,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31710","umdNm":"범서읍 천상리","jibun":"324-2","apt":"경동태원하이빌","area":59.96,"floor":1,"built":2001,"date":"2026-10-07","deposit":500,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"범서읍 구영리","jibun":"207-1","apt":"구영2차우미린","area":75,"floor":11,"built":2007,"date":"2026-10-07","deposit":38000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"범서읍 구영리","jibun":"798-1","apt":"구영현대아이파크","area":58.62,"floor":14,"built":1991,"date":"2026-10-07","deposit":50,"rent":25,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"삼남읍 교동리","jibun":"1522-5","apt":"태봉파크맨션","area":59.73,"floor":10,"built":1992,"date":"2026-10-07","deposit":1000,"rent":45,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -45,11 +47,13 @@
 {"lawd":"31710","umdNm":"범서읍 구영리","jibun":"855-2","apt":"구영2주공","area":46.9,"floor":14,"built":2007,"date":"2026-10-13","deposit":3909,"rent":8,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":2104,"preRent":17}
 {"lawd":"31710","umdNm":"청량읍 삼정리","jibun":"755","apt":"쌍용하나빌리지","area":59.94,"floor":14,"built":1999,"date":"2026-10-13","deposit":1000,"rent":40,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"웅촌면 대복리","jibun":"302","apt":"한솔그린빌","area":49.93,"floor":19,"built":1997,"date":"2026-10-13","deposit":4200,"rent":5,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31710","umdNm":"범서읍 천상리","jibun":"324-2","apt":"경동태원하이빌","area":59.96,"floor":7,"built":2001,"date":"2026-10-14","deposit":1000,"rent":50,"term":"26.11~28.04","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"언양읍 서부리","jibun":"401","apt":"두산위브","area":137.1,"floor":7,"built":2009,"date":"2026-10-14","deposit":25000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"청량읍 덕하리","jibun":"1082-1","apt":"울산뉴시티에일린의뜰1차","area":59.96,"floor":6,"built":2024,"date":"2026-10-14","deposit":32000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"청량읍 덕하리","jibun":"1082-1","apt":"울산뉴시티에일린의뜰1차","area":84.99,"floor":13,"built":2024,"date":"2026-10-14","deposit":3000,"rent":150,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"삼남읍 교동리","jibun":"1678","apt":"경동우신알프스타운","area":45.25,"floor":14,"built":2015,"date":"2026-10-15","deposit":500,"rent":45,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"범서읍 천상리","jibun":"324-2","apt":"경동태원하이빌","area":59.96,"floor":18,"built":2001,"date":"2026-10-15","deposit":11200,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":10800,"preRent":0}
+{"lawd":"31710","umdNm":"온양읍 대안리","jibun":"750","apt":"울산온양일동미라주아파트","area":59.95,"floor":10,"built":2018,"date":"2026-10-15","deposit":1000,"rent":95,"term":"26.10~27.03","type":"갱신","rrr":null,"preDeposit":1000,"preRent":95}
 {"lawd":"31710","umdNm":"삼남읍 교동리","jibun":"1678","apt":"경동우신알프스타운","area":45.06,"floor":10,"built":2015,"date":"2026-10-16","deposit":500,"rent":45,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"온양읍 발리","jibun":"440-1","apt":"남울산노르웨이숲","area":59.97,"floor":19,"built":2026,"date":"2026-10-16","deposit":3000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"온양읍 발리","jibun":"440-1","apt":"남울산노르웨이숲","area":84.94,"floor":21,"built":2026,"date":"2026-10-16","deposit":3000,"rent":110,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -62,4 +66,7 @@
 {"lawd":"31710","umdNm":"언양읍 송대리","jibun":"53-1","apt":"양우내안애더퍼스트","area":72.89,"floor":20,"built":2019,"date":"2026-10-19","deposit":20000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"삼남읍 교동리","jibun":"1678-3","apt":"울산역신도시동문디이스트","area":84.88,"floor":11,"built":2019,"date":"2026-10-19","deposit":26000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"삼남읍 교동리","jibun":"1678","apt":"경동우신알프스타운","area":54.01,"floor":8,"built":2015,"date":"2026-10-20","deposit":8000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31710","umdNm":"범서읍 굴화리","jibun":"758","apt":"문수산 더샵","area":84.79,"floor":10,"built":2014,"date":"2026-10-20","deposit":3000,"rent":160,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31710","umdNm":"언양읍 반송리","jibun":"425-6","apt":"반송대방타운","area":84.51,"floor":9,"built":1995,"date":"2026-10-20","deposit":8400,"rent":15,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31710","umdNm":"범서읍 구영리","jibun":"798-1","apt":"구영현대아이파크","area":70.53,"floor":8,"built":1991,"date":"2026-10-21","deposit":16000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"31710","umdNm":"범서읍 구영리","jibun":"796-2","apt":"한신","area":57.9,"floor":4,"built":1994,"date":"2026-10-22","deposit":10800,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

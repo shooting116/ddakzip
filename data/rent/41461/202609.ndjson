@@ -219,6 +219,7 @@
 {"lawd":"41461","umdNm":"역북동","jibun":"809","apt":"역북지웰푸르지오","area":75,"floor":30,"built":2017,"date":"2026-09-21","deposit":37800,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":36000,"preRent":0}
 {"lawd":"41461","umdNm":"역북동","jibun":"736","apt":"우미린센트럴파크","area":75.51,"floor":23,"built":2017,"date":"2026-09-21","deposit":38850,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41461","umdNm":"삼가동","jibun":"117","apt":"풍림","area":59.97,"floor":10,"built":1998,"date":"2026-09-21","deposit":2000,"rent":100,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41461","umdNm":"포곡읍 삼계리","jibun":"466-8","apt":"프라다(A동)","area":19.32,"floor":2,"built":2013,"date":"2026-09-21","deposit":500,"rent":46,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41461","umdNm":"모현읍 왕산리","jibun":"953","apt":"힐스테이트몬테로이1단지","area":84.85,"floor":5,"built":2024,"date":"2026-09-21","deposit":5000,"rent":170,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41461","umdNm":"모현읍 왕산리","jibun":"955","apt":"힐스테이트몬테로이3단지","area":84.85,"floor":10,"built":2024,"date":"2026-09-21","deposit":5000,"rent":170,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41461","umdNm":"고림동","jibun":"1026","apt":"힐스테이트용인고진역1단지","area":59.98,"floor":14,"built":2024,"date":"2026-09-21","deposit":24150,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":23000,"preRent":0}
@@ -244,6 +245,7 @@
 {"lawd":"41461","umdNm":"김량장동","jibun":"84-3","apt":"용인웰메이드시티","area":17.57,"floor":6,"built":2018,"date":"2026-09-23","deposit":1000,"rent":48,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41461","umdNm":"모현읍 왕산리","jibun":"954","apt":"힐스테이트몬테로이2단지","area":84.85,"floor":5,"built":2025,"date":"2026-09-23","deposit":10000,"rent":130,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41461","umdNm":"고림동","jibun":"1028","apt":"힐스테이트용인고진역2단지","area":59.98,"floor":2,"built":2024,"date":"2026-09-23","deposit":25200,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":24000,"preRent":0}
+{"lawd":"41461","umdNm":"남사읍 완장리","jibun":"945","apt":"e편한세상용인한숲시티2단지","area":84.66,"floor":6,"built":2018,"date":"2026-09-23","deposit":3000,"rent":150,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41461","umdNm":"남사읍 아곡리","jibun":"681","apt":"e편한세상용인한숲시티5단지","area":44.36,"floor":7,"built":2018,"date":"2026-09-23","deposit":1000,"rent":105,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41461","umdNm":"남사읍 아곡리","jibun":"681","apt":"e편한세상용인한숲시티5단지","area":84.94,"floor":24,"built":2018,"date":"2026-09-23","deposit":32000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41461","umdNm":"남사읍 완장리","jibun":"954","apt":"e편한세상용인한숲시티6단지","area":84.66,"floor":26,"built":2018,"date":"2026-09-23","deposit":22000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":21000,"preRent":0}

@@ -1,3 +1,4 @@
+{"lawd":"41210","umdNm":"광명동","jibun":"88-14","apt":"광명센트럴아이파크","area":39.94,"floor":1,"built":2025,"date":"2026-10-01","deposit":16016,"rent":25,"term":"26.10~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"광명동","jibun":"787-4","apt":"광명아크포레자이위브","area":59.99,"floor":16,"built":2021,"date":"2026-10-01","deposit":47000,"rent":40,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"광명동","jibun":"788-1","apt":"광명푸르지오센트베르","area":59.47,"floor":34,"built":2022,"date":"2026-10-01","deposit":58000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"일직동","jibun":"512","apt":"유-플래닛태영데시앙","area":84.86,"floor":38,"built":2019,"date":"2026-10-01","deposit":25000,"rent":250,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -100,6 +101,7 @@
 {"lawd":"41210","umdNm":"광명동","jibun":"785","apt":"광명해모로이연","area":59.99,"floor":14,"built":2015,"date":"2026-10-08","deposit":4000,"rent":120,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":3000,"preRent":125}
 {"lawd":"41210","umdNm":"광명동","jibun":"785","apt":"광명해모로이연","area":84.99,"floor":18,"built":2015,"date":"2026-10-08","deposit":65000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"일직동","jibun":"512","apt":"유-플래닛태영데시앙","area":84.95,"floor":17,"built":2019,"date":"2026-10-08","deposit":68250,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":65000,"preRent":0}
+{"lawd":"41210","umdNm":"하안동","jibun":"864","apt":"이편한세상센트레빌","area":84.98,"floor":14,"built":2010,"date":"2026-10-08","deposit":70000,"rent":0,"term":"26.11~28.03","type":"갱신","rrr":null,"preDeposit":65000,"preRent":0}
 {"lawd":"41210","umdNm":"하안동","jibun":"30","apt":"주공10","area":45.55,"floor":9,"built":1990,"date":"2026-10-08","deposit":24500,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":22000,"preRent":0}
 {"lawd":"41210","umdNm":"하안동","jibun":"110","apt":"주공12","area":58.46,"floor":5,"built":1990,"date":"2026-10-08","deposit":36000,"rent":0,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":35000,"preRent":0}
 {"lawd":"41210","umdNm":"철산동","jibun":"241","apt":"주공13","area":73.09,"floor":12,"built":1986,"date":"2026-10-08","deposit":37580,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -145,6 +147,7 @@
 {"lawd":"41210","umdNm":"광명동","jibun":"787-4","apt":"광명아크포레자이위브","area":59.99,"floor":24,"built":2021,"date":"2026-10-12","deposit":40900,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":39000,"preRent":0}
 {"lawd":"41210","umdNm":"광명동","jibun":"788-1","apt":"광명푸르지오센트베르","area":36.94,"floor":12,"built":2022,"date":"2026-10-12","deposit":32550,"rent":0,"term":"26.12~27.12","type":"갱신","rrr":"사용","preDeposit":31000,"preRent":0}
 {"lawd":"41210","umdNm":"광명동","jibun":"788-1","apt":"광명푸르지오센트베르","area":59.36,"floor":10,"built":2022,"date":"2026-10-12","deposit":63000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41210","umdNm":"광명동","jibun":"200-6","apt":"광명한진타운","area":59.93,"floor":23,"built":1997,"date":"2026-10-12","deposit":10000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"광명동","jibun":"734","apt":"상우2차","area":82.5,"floor":14,"built":1995,"date":"2026-10-12","deposit":10000,"rent":65,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":10000,"preRent":65}
 {"lawd":"41210","umdNm":"하안동","jibun":"864","apt":"이편한세상센트레빌","area":84.98,"floor":4,"built":2010,"date":"2026-10-12","deposit":67000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":64000,"preRent":0}
 {"lawd":"41210","umdNm":"하안동","jibun":"864","apt":"이편한세상센트레빌","area":84.98,"floor":25,"built":2010,"date":"2026-10-12","deposit":60900,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":58000,"preRent":0}
@@ -180,6 +183,7 @@
 {"lawd":"41210","umdNm":"일직동","jibun":"512","apt":"유-플래닛태영데시앙","area":102.83,"floor":20,"built":2019,"date":"2026-10-13","deposit":30000,"rent":363,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"하안동","jibun":"864","apt":"이편한세상센트레빌","area":84.98,"floor":30,"built":2010,"date":"2026-10-13","deposit":30000,"rent":160,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":10000,"preRent":150}
 {"lawd":"41210","umdNm":"하안동","jibun":"30","apt":"주공10","area":45.55,"floor":3,"built":1990,"date":"2026-10-13","deposit":25000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41210","umdNm":"하안동","jibun":"30","apt":"주공10","area":45.9,"floor":2,"built":1990,"date":"2026-10-13","deposit":2000,"rent":90,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"하안동","jibun":"27","apt":"주공11","area":41.3,"floor":10,"built":1990,"date":"2026-10-13","deposit":25000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"하안동","jibun":"110","apt":"주공12","area":44.89,"floor":7,"built":1990,"date":"2026-10-13","deposit":25000,"rent":5,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"철산동","jibun":"449","apt":"주공12","area":53.46,"floor":2,"built":1986,"date":"2026-10-13","deposit":35000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -219,11 +223,12 @@
 {"lawd":"41210","umdNm":"하안동","jibun":"682","apt":"주공1","area":36.16,"floor":8,"built":1989,"date":"2026-10-15","deposit":1000,"rent":60,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"하안동","jibun":"682","apt":"주공1","area":36.16,"floor":8,"built":1989,"date":"2026-10-15","deposit":14400,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"하안동","jibun":"682","apt":"주공1","area":49.94,"floor":9,"built":1989,"date":"2026-10-15","deposit":28000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41210","umdNm":"철산동","jibun":"241","apt":"주공13","area":73.09,"floor":4,"built":1986,"date":"2026-10-15","deposit":35000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":5000,"preRent":120}
 {"lawd":"41210","umdNm":"하안동","jibun":"650","apt":"주공3","area":36.16,"floor":10,"built":1989,"date":"2026-10-15","deposit":13890,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":13230,"preRent":0}
 {"lawd":"41210","umdNm":"하안동","jibun":"702","apt":"주공5","area":58.01,"floor":6,"built":1990,"date":"2026-10-15","deposit":18375,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":17500,"preRent":0}
-{"lawd":"41210","umdNm":"하안동","jibun":"13","apt":"주공9","area":58.01,"floor":8,"built":1990,"date":"2026-10-15","deposit":30000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":0}
 {"lawd":"41210","umdNm":"철산동","jibun":"634","apt":"철산래미안자이","area":84.44,"floor":9,"built":2009,"date":"2026-10-15","deposit":30000,"rent":150,"term":"27.02~29.02","type":"갱신","rrr":null,"preDeposit":10000,"preRent":179}
 {"lawd":"41210","umdNm":"광명동","jibun":"18-1","apt":"트리우스광명(2단지)","area":36.73,"floor":13,"built":2024,"date":"2026-10-15","deposit":30600,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41210","umdNm":"소하동","jibun":"1294","apt":"광명소하휴먼시아5단지","area":84.83,"floor":10,"built":2009,"date":"2026-10-16","deposit":10000,"rent":200,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"광명동","jibun":"787-4","apt":"광명아크포레자이위브","area":59.99,"floor":18,"built":2021,"date":"2026-10-16","deposit":57000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"일직동","jibun":"517","apt":"광명역센트럴자이","area":84.99,"floor":23,"built":2018,"date":"2026-10-16","deposit":10000,"rent":250,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":240}
 {"lawd":"41210","umdNm":"일직동","jibun":"513","apt":"광명역써밋플레이스","area":84.93,"floor":21,"built":2018,"date":"2026-10-16","deposit":48000,"rent":120,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -239,14 +244,17 @@
 {"lawd":"41210","umdNm":"하안동","jibun":"651","apt":"주공4","area":45.77,"floor":1,"built":1989,"date":"2026-10-16","deposit":26000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"하안동","jibun":"296","apt":"주공6","area":36.16,"floor":7,"built":1990,"date":"2026-10-16","deposit":20000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"하안동","jibun":"296","apt":"주공6","area":36.34,"floor":12,"built":1990,"date":"2026-10-16","deposit":2000,"rent":75,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41210","umdNm":"하안동","jibun":"295","apt":"주공7","area":59.39,"floor":15,"built":1990,"date":"2026-10-16","deposit":30000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"철산동","jibun":"637","apt":"철산푸르지오하늘채","area":59.98,"floor":7,"built":2010,"date":"2026-10-16","deposit":53000,"rent":20,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":53000,"preRent":0}
 {"lawd":"41210","umdNm":"광명동","jibun":"18-1","apt":"트리우스광명(2단지)","area":36.73,"floor":12,"built":2024,"date":"2026-10-16","deposit":30300,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41210","umdNm":"광명동","jibun":"18-1","apt":"트리우스광명(2단지)","area":84.93,"floor":2,"built":2024,"date":"2026-10-16","deposit":20000,"rent":240,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"일직동","jibun":"518","apt":"광명역파크자이","area":84.96,"floor":16,"built":2017,"date":"2026-10-17","deposit":63000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":60000,"preRent":0}
 {"lawd":"41210","umdNm":"일직동","jibun":"519","apt":"광명역푸르지오","area":59.99,"floor":5,"built":2017,"date":"2026-10-17","deposit":57000,"rent":30,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"광명동","jibun":"788-1","apt":"광명푸르지오센트베르","area":59.36,"floor":18,"built":2022,"date":"2026-10-17","deposit":65000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"광명동","jibun":"200-6","apt":"광명한진타운","area":59.93,"floor":22,"built":1997,"date":"2026-10-17","deposit":40000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":40000,"preRent":0}
 {"lawd":"41210","umdNm":"광명동","jibun":"785","apt":"광명해모로이연","area":123.87,"floor":19,"built":2015,"date":"2026-10-17","deposit":73000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":63000,"preRent":0}
 {"lawd":"41210","umdNm":"일직동","jibun":"512","apt":"유-플래닛태영데시앙","area":84.95,"floor":18,"built":2019,"date":"2026-10-17","deposit":82000,"rent":0,"term":"26.11~29.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41210","umdNm":"하안동","jibun":"650","apt":"주공3","area":36.16,"floor":12,"built":1989,"date":"2026-10-17","deposit":18900,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":18000,"preRent":0}
 {"lawd":"41210","umdNm":"하안동","jibun":"260","apt":"주공8(고층)","area":45.77,"floor":12,"built":1990,"date":"2026-10-17","deposit":1000,"rent":100,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"철산동","jibun":"639-1","apt":"철산역롯데캐슬&SKVIEW클래스티지","area":59.98,"floor":22,"built":2022,"date":"2026-10-17","deposit":54600,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":52000,"preRent":0}
 {"lawd":"41210","umdNm":"광명동","jibun":"18-1","apt":"트리우스광명(2단지)","area":59.92,"floor":2,"built":2024,"date":"2026-10-17","deposit":40000,"rent":80,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -270,7 +278,12 @@
 {"lawd":"41210","umdNm":"일직동","jibun":"517","apt":"광명역센트럴자이","area":59.78,"floor":16,"built":2018,"date":"2026-10-20","deposit":70000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"일직동","jibun":"517","apt":"광명역센트럴자이","area":84.86,"floor":27,"built":2018,"date":"2026-10-20","deposit":85000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"하안동","jibun":"110","apt":"주공12","area":44.89,"floor":13,"built":1990,"date":"2026-10-20","deposit":10000,"rent":43,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":43}
+{"lawd":"41210","umdNm":"철산동","jibun":"638","apt":"철산센트럴푸르지오","area":84.98,"floor":14,"built":2021,"date":"2026-10-20","deposit":30000,"rent":220,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"광명동","jibun":"21-24","apt":"트리우스광명(1단지)","area":59.92,"floor":26,"built":2024,"date":"2026-10-20","deposit":43000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":43000,"preRent":0}
 {"lawd":"41210","umdNm":"광명동","jibun":"18-1","apt":"트리우스광명(2단지)","area":36.73,"floor":14,"built":2024,"date":"2026-10-20","deposit":33000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"광명동","jibun":"18-1","apt":"트리우스광명(2단지)","area":36.73,"floor":17,"built":2024,"date":"2026-10-20","deposit":31800,"rent":0,"term":"27.03~29.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41210","umdNm":"광명동","jibun":"788-1","apt":"광명푸르지오센트베르","area":59.36,"floor":25,"built":2022,"date":"2026-10-21","deposit":45150,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":43000,"preRent":0}
+{"lawd":"41210","umdNm":"하안동","jibun":"296","apt":"주공6","area":49.94,"floor":3,"built":1990,"date":"2026-10-21","deposit":20000,"rent":40,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41210","umdNm":"하안동","jibun":"650","apt":"주공3","area":49.94,"floor":11,"built":1989,"date":"2026-10-22","deposit":26000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41210","umdNm":"철산동","jibun":"634","apt":"철산래미안자이","area":84.66,"floor":12,"built":2009,"date":"2026-10-22","deposit":73000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":73000,"preRent":0}
+{"lawd":"41210","umdNm":"하안동","jibun":"707-9","apt":"하안현대아파트","area":52.7,"floor":4,"built":1995,"date":"2026-10-22","deposit":15000,"rent":40,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

@@ -268,6 +268,7 @@
 {"lawd":"41630","umdNm":"산북동","jibun":"1","apt":"양주한승","area":84.6,"floor":9,"built":2001,"date":"2026-09-12","deposit":2000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"옥정동","jibun":"955","apt":"옥정센트럴파크푸르지오","area":58.98,"floor":18,"built":2016,"date":"2026-09-12","deposit":2000,"rent":90,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":2000,"preRent":80}
 {"lawd":"41630","umdNm":"삼숭동","jibun":"690","apt":"옥정역로제비앙메트로파크1단지","area":84.62,"floor":13,"built":2022,"date":"2026-09-12","deposit":2000,"rent":140,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41630","umdNm":"삼숭동","jibun":"690","apt":"옥정역로제비앙메트로파크1단지","area":84.91,"floor":8,"built":2022,"date":"2026-09-12","deposit":29000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":19950,"preRent":0}
 {"lawd":"41630","umdNm":"삼숭동","jibun":"690","apt":"옥정역로제비앙메트로파크1단지","area":84.91,"floor":19,"built":2022,"date":"2026-09-12","deposit":23500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":19950,"preRent":0}
 {"lawd":"41630","umdNm":"삼숭동","jibun":"690","apt":"옥정역로제비앙메트로파크1단지","area":84.91,"floor":22,"built":2022,"date":"2026-09-12","deposit":24150,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":23000,"preRent":0}
 {"lawd":"41630","umdNm":"옥정동","jibun":"960","apt":"옥정중앙역중흥S-클래스센텀시티(1단지)","area":84.98,"floor":9,"built":2022,"date":"2026-09-12","deposit":10000,"rent":107,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":100}
@@ -282,6 +283,7 @@
 {"lawd":"41630","umdNm":"옥정동","jibun":"1051","apt":"e편한세상옥정에듀써밋","area":74.98,"floor":21,"built":2018,"date":"2026-09-12","deposit":26250,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":25000,"preRent":0}
 {"lawd":"41630","umdNm":"덕계동","jibun":"915","apt":"덕계역금강펜테리움센트럴파크","area":59.3,"floor":5,"built":2023,"date":"2026-09-13","deposit":1500,"rent":105,"term":"26.10~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"덕계동","jibun":"271-44","apt":"삼희푸른마을아파트","area":31.6,"floor":9,"built":1996,"date":"2026-09-13","deposit":500,"rent":45,"term":"26.10~28.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41630","umdNm":"덕계동","jibun":"271-44","apt":"삼희푸른마을아파트","area":44.46,"floor":9,"built":1996,"date":"2026-09-13","deposit":500,"rent":50,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"옥정동","jibun":"1097","apt":"양주옥정유림노르웨이숲","area":76,"floor":2,"built":2023,"date":"2026-09-13","deposit":3000,"rent":130,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"덕계동","jibun":"203-6","apt":"현대","area":84.98,"floor":20,"built":1997,"date":"2026-09-13","deposit":2000,"rent":90,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"덕계동","jibun":"856","apt":"현진에버빌2단지","area":84.99,"floor":5,"built":2007,"date":"2026-09-13","deposit":1500,"rent":90,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -420,6 +422,7 @@
 {"lawd":"41630","umdNm":"덕계동","jibun":"865","apt":"양주회천신도시디에트르센트럴시티","area":84.95,"floor":8,"built":2022,"date":"2026-09-21","deposit":10000,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"옥정동","jibun":"1047","apt":"옥정천년나무16단지","area":33.97,"floor":5,"built":2017,"date":"2026-09-21","deposit":3961,"rent":9,"term":"26.09~28.11","type":"갱신","rrr":null,"preDeposit":1761,"preRent":20}
 {"lawd":"41630","umdNm":"옥정동","jibun":"1047","apt":"옥정천년나무16단지","area":33.97,"floor":8,"built":2017,"date":"2026-09-21","deposit":3961,"rent":9,"term":"26.09~28.11","type":"갱신","rrr":null,"preDeposit":1761,"preRent":20}
+{"lawd":"41630","umdNm":"옥정동","jibun":"1096","apt":"제일풍경채옥정","area":84.14,"floor":21,"built":2023,"date":"2026-09-21","deposit":10000,"rent":8,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"고암동","jibun":"580","apt":"조은마을(6단지)","area":39.48,"floor":8,"built":2007,"date":"2026-09-21","deposit":391,"rent":13,"term":"26.09~28.11","type":"갱신","rrr":null,"preDeposit":1291,"preRent":11}
 {"lawd":"41630","umdNm":"고암동","jibun":"580","apt":"조은마을(6단지)","area":39.48,"floor":18,"built":2007,"date":"2026-09-21","deposit":391,"rent":13,"term":"26.09~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"고암동","jibun":"580","apt":"조은마을(6단지)","area":46.81,"floor":9,"built":2007,"date":"2026-09-21","deposit":3357,"rent":7,"term":"26.09~28.11","type":"갱신","rrr":null,"preDeposit":1957,"preRent":14}
@@ -569,6 +572,7 @@
 {"lawd":"41630","umdNm":"옥정동","jibun":"1098","apt":"더파크포레태영엔에이치에프","area":84.93,"floor":13,"built":2020,"date":"2026-09-29","deposit":8575,"rent":46,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"옥정동","jibun":"1098","apt":"더파크포레태영엔에이치에프","area":84.93,"floor":19,"built":2020,"date":"2026-09-29","deposit":8575,"rent":46,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"옥정동","jibun":"1098","apt":"더파크포레태영엔에이치에프","area":84.99,"floor":7,"built":2020,"date":"2026-09-29","deposit":8575,"rent":46,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41630","umdNm":"고암동","jibun":"122","apt":"동안마을(주공3단지)","area":83.44,"floor":24,"built":2001,"date":"2026-09-29","deposit":3000,"rent":100,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"옥정동","jibun":"1026","apt":"리젠시빌란트","area":56.29,"floor":11,"built":2018,"date":"2026-09-29","deposit":25000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"덕정동","jibun":"235","apt":"봉우마을(주공5단지)","area":59.47,"floor":7,"built":2000,"date":"2026-09-29","deposit":2000,"rent":90,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"고읍동","jibun":"440","apt":"산내들마을한양수자인","area":101.53,"floor":7,"built":2009,"date":"2026-09-29","deposit":19000,"rent":0,"term":"26.10~27.01","type":"갱신","rrr":null,"preDeposit":19000,"preRent":0}

@@ -185,6 +185,7 @@
 {"lawd":"41285","umdNm":"백석동","jibun":"1139","apt":"백송마을(코오롱)","area":51.03,"floor":10,"built":1994,"date":"2026-09-16","deposit":2000,"rent":100,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41285","umdNm":"백석동","jibun":"1190","apt":"백송마을(풍림)","area":59.88,"floor":3,"built":1992,"date":"2026-09-16","deposit":29500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41285","umdNm":"중산동","jibun":"1656","apt":"산들마을1(대림)","area":147.2,"floor":18,"built":2004,"date":"2026-09-16","deposit":3000,"rent":160,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41285","umdNm":"풍동","jibun":"1261","apt":"숲속마을(7단지)","area":75.97,"floor":10,"built":2006,"date":"2026-09-16","deposit":28000,"rent":50,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41285","umdNm":"풍동","jibun":"1261","apt":"숲속마을(7단지)","area":75.97,"floor":10,"built":2006,"date":"2026-09-16","deposit":34000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41285","umdNm":"식사동","jibun":"1565","apt":"위시티블루밍5단지","area":101.9,"floor":10,"built":2010,"date":"2026-09-16","deposit":49000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41285","umdNm":"식사동","jibun":"1487","apt":"위시티일산자이1단지","area":162.71,"floor":20,"built":2010,"date":"2026-09-16","deposit":10000,"rent":250,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -215,6 +216,8 @@
 {"lawd":"41285","umdNm":"마두동","jibun":"789","apt":"강촌마을(라이프)","area":49.14,"floor":11,"built":1992,"date":"2026-09-19","deposit":5000,"rent":70,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41285","umdNm":"마두동","jibun":"806","apt":"강촌마을(한양6)","area":35.1,"floor":7,"built":1998,"date":"2026-09-19","deposit":1000,"rent":70,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41285","umdNm":"마두동","jibun":"806","apt":"강촌마을(한양6)","area":35.1,"floor":19,"built":1998,"date":"2026-09-19","deposit":16000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41285","umdNm":"풍동","jibun":"가-","apt":"더샵일산퍼스트월드3단지","area":74.99,"floor":9,"built":2025,"date":"2026-09-19","deposit":7000,"rent":190,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41285","umdNm":"백석동","jibun":"1186","apt":"백송마을(대림)","area":48.91,"floor":6,"built":1993,"date":"2026-09-19","deposit":19500,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41285","umdNm":"백석동","jibun":"1190","apt":"백송마을(삼호)","area":59.99,"floor":6,"built":1992,"date":"2026-09-19","deposit":28000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41285","umdNm":"백석동","jibun":"1183","apt":"백송마을(한신)","area":39.94,"floor":4,"built":1992,"date":"2026-09-19","deposit":16000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":16000,"preRent":0}
 {"lawd":"41285","umdNm":"풍동","jibun":"1268","apt":"숲속마을(6단지두산위브)","area":146.57,"floor":4,"built":2006,"date":"2026-09-19","deposit":5000,"rent":200,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

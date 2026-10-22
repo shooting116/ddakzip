@@ -169,6 +169,7 @@
 {"lawd":"31140","umdNm":"삼산동","jibun":"1461-1","apt":"우성","area":84.99,"floor":14,"built":1991,"date":"2026-09-23","deposit":28000,"rent":0,"term":"26.11~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31140","umdNm":"야음동","jibun":"942","apt":"울산대현시티프라디움","area":84.36,"floor":22,"built":2022,"date":"2026-09-23","deposit":45150,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":43000,"preRent":0}
 {"lawd":"31140","umdNm":"신정동","jibun":"599-1","apt":"울산신정행복주택","area":19.46,"floor":8,"built":2022,"date":"2026-09-23","deposit":3620,"rent":9,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":2268,"preRent":12}
+{"lawd":"31140","umdNm":"선암동","jibun":"164-7","apt":"한양","area":50.37,"floor":3,"built":1985,"date":"2026-09-23","deposit":1500,"rent":55,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31140","umdNm":"삼산동","jibun":"1607-1","apt":"현대문화2차","area":59.76,"floor":24,"built":1998,"date":"2026-09-23","deposit":15000,"rent":0,"term":"26.12~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"31140","umdNm":"신정동","jibun":"1918","apt":"울산문수로두산위브더제니스","area":84.85,"floor":10,"built":2022,"date":"2026-09-27","deposit":44000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":42000,"preRent":0}
 {"lawd":"31140","umdNm":"삼산동","jibun":"1607-1","apt":"현대문화2차","area":59.76,"floor":2,"built":1998,"date":"2026-09-27","deposit":4000,"rent":43,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

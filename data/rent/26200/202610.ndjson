@@ -15,6 +15,7 @@
 {"lawd":"26200","umdNm":"청학동","jibun":"135","apt":"화신","area":62.64,"floor":3,"built":1983,"date":"2026-10-06","deposit":4000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26200","umdNm":"동삼동","jibun":"1123","apt":"동삼그린힐","area":41.3,"floor":11,"built":1993,"date":"2026-10-07","deposit":6500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":7300,"preRent":0}
 {"lawd":"26200","umdNm":"동삼동","jibun":"1180","apt":"부산오션시티푸르지오","area":84.83,"floor":31,"built":2022,"date":"2026-10-07","deposit":30000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26200","umdNm":"동삼동","jibun":"680-12","apt":"에덴금호","area":59.22,"floor":10,"built":1995,"date":"2026-10-07","deposit":1000,"rent":55,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26200","umdNm":"동삼동","jibun":"1180","apt":"부산오션시티푸르지오","area":84.84,"floor":8,"built":2022,"date":"2026-10-08","deposit":25000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":5000,"preRent":80}
 {"lawd":"26200","umdNm":"봉래동4가","jibun":"343","apt":"영도센트럴에일린의뜰","area":84.94,"floor":27,"built":2023,"date":"2026-10-08","deposit":28000,"rent":30,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26200","umdNm":"남항동1가","jibun":"86","apt":"더킹페로스아파트","area":70.48,"floor":4,"built":2019,"date":"2026-10-09","deposit":26000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":25000,"preRent":0}
@@ -37,6 +38,7 @@
 {"lawd":"26200","umdNm":"대교동2가","jibun":"22-3","apt":"명품블루파크","area":19.07,"floor":4,"built":2021,"date":"2026-10-15","deposit":1000,"rent":40,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26200","umdNm":"동삼동","jibun":"1180","apt":"부산오션시티푸르지오","area":84.91,"floor":4,"built":2022,"date":"2026-10-15","deposit":2000,"rent":120,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26200","umdNm":"동삼동","jibun":"1180","apt":"부산오션시티푸르지오","area":84.91,"floor":37,"built":2022,"date":"2026-10-15","deposit":22000,"rent":25,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":22000,"preRent":0}
+{"lawd":"26200","umdNm":"동삼동","jibun":"363-47","apt":"삼창파크타운1동2동","area":63.69,"floor":3,"built":1988,"date":"2026-10-15","deposit":7000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26200","umdNm":"동삼동","jibun":"1203","apt":"오션라이프에일린의뜰2단지","area":59.77,"floor":31,"built":2024,"date":"2026-10-15","deposit":3000,"rent":100,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26200","umdNm":"동삼동","jibun":"1180","apt":"부산오션시티푸르지오","area":84.91,"floor":44,"built":2022,"date":"2026-10-16","deposit":31000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26200","umdNm":"동삼동","jibun":"680-12","apt":"에덴금호","area":59.22,"floor":7,"built":1995,"date":"2026-10-16","deposit":10000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

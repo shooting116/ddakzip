@@ -52,6 +52,7 @@
 {"lawd":"26380","umdNm":"하단동","jibun":"1175","apt":"가락타운3","area":84.93,"floor":13,"built":1992,"date":"2026-10-09","deposit":20000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"다대동","jibun":"1670","apt":"다대롯데캐슬블루","area":84.96,"floor":30,"built":2014,"date":"2026-10-09","deposit":26000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":25000,"preRent":0}
 {"lawd":"26380","umdNm":"다대동","jibun":"1548-13","apt":"다대푸른","area":48.51,"floor":11,"built":1996,"date":"2026-10-09","deposit":1000,"rent":45,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26380","umdNm":"당리동","jibun":"353-22","apt":"당리에덴동산타운","area":58.68,"floor":4,"built":1989,"date":"2026-10-09","deposit":2000,"rent":30,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"다대동","jibun":"1550","apt":"몰운대","area":49.08,"floor":13,"built":1996,"date":"2026-10-09","deposit":1000,"rent":40,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"장림동","jibun":"333-2","apt":"지원시티파크","area":46.36,"floor":10,"built":2015,"date":"2026-10-09","deposit":2000,"rent":55,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"하단동","jibun":"1161-2","apt":"가락타운1","area":73.17,"floor":1,"built":1992,"date":"2026-10-10","deposit":2000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -98,7 +99,12 @@
 {"lawd":"26380","umdNm":"당리동","jibun":"316-10","apt":"궁전맨션","area":84.15,"floor":3,"built":1984,"date":"2026-10-19","deposit":20000,"rent":0,"term":"26.10~27.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"다대동","jibun":"113-11","apt":"다대해송","area":52.11,"floor":2,"built":1991,"date":"2026-10-19","deposit":12000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"구평동","jibun":"518","apt":"e편한세상사하2차","area":59.95,"floor":21,"built":2017,"date":"2026-10-19","deposit":2000,"rent":85,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26380","umdNm":"다대동","jibun":"37","apt":"다대코오롱맨션","area":62,"floor":5,"built":1988,"date":"2026-10-20","deposit":10000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"당리동","jibun":"16-12","apt":"동원베네스트2차","area":84.51,"floor":6,"built":2006,"date":"2026-10-20","deposit":9000,"rent":40,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"하단동","jibun":"1217-1","apt":"하단동에스케이뷰","area":59.67,"floor":13,"built":2004,"date":"2026-10-20","deposit":5000,"rent":60,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"구평동","jibun":"517","apt":"e편한세상사하","area":72.96,"floor":6,"built":2016,"date":"2026-10-20","deposit":23000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":23000,"preRent":0}
+{"lawd":"26380","umdNm":"다대동","jibun":"113-11","apt":"다대해송","area":52.11,"floor":9,"built":1991,"date":"2026-10-21","deposit":9000,"rent":25,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26380","umdNm":"다대동","jibun":"1550","apt":"몰운대","area":49.08,"floor":14,"built":1996,"date":"2026-10-21","deposit":8500,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26380","umdNm":"하단동","jibun":"524-38","apt":"대운스카이뷰2차","area":19.49,"floor":15,"built":2023,"date":"2026-10-22","deposit":4000,"rent":65,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26380","umdNm":"신평동","jibun":"408","apt":"신익강변타운","area":108.68,"floor":12,"built":1992,"date":"2026-10-22","deposit":13500,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":13500,"preRent":0}
+{"lawd":"26380","umdNm":"하단동","jibun":"517-21","apt":"유원블루파크에이동","area":57.14,"floor":10,"built":2016,"date":"2026-10-22","deposit":16500,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":18000,"preRent":0}

@@ -351,6 +351,7 @@
 {"lawd":"41281","umdNm":"화정동","jibun":"851","apt":"달빛(라이프)2","area":59.97,"floor":11,"built":1996,"date":"2026-09-12","deposit":27000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":27000,"preRent":0}
 {"lawd":"41281","umdNm":"주교동","jibun":"615","apt":"대동피렌체주상복합","area":84.95,"floor":9,"built":2006,"date":"2026-09-12","deposit":26000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41281","umdNm":"토당동","jibun":"259","apt":"대림2","area":84.93,"floor":2,"built":1997,"date":"2026-09-12","deposit":36000,"rent":0,"term":"26.11~28.07","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41281","umdNm":"도내동","jibun":"1010","apt":"도래울센트럴더힐","area":59.95,"floor":7,"built":2015,"date":"2026-09-12","deposit":30000,"rent":40,"term":"26.12~28.03","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":40}
 {"lawd":"41281","umdNm":"도내동","jibun":"1103","apt":"도래울파크뷰","area":74.97,"floor":1,"built":2013,"date":"2026-09-12","deposit":34000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41281","umdNm":"향동동","jibun":"421","apt":"디엠씨해링턴플레이스엔에이치에프(임대)","area":51.96,"floor":16,"built":2019,"date":"2026-09-12","deposit":11783,"rent":20,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":5712,"preRent":43}
 {"lawd":"41281","umdNm":"화정동","jibun":"952","apt":"별빛마을(부영)8(좋은집)","area":50,"floor":15,"built":1995,"date":"2026-09-12","deposit":23100,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":22000,"preRent":0}
@@ -836,6 +837,7 @@
 {"lawd":"41281","umdNm":"향동동","jibun":"406","apt":"향동마을4단지(임대)","area":36.19,"floor":20,"built":2020,"date":"2026-09-22","deposit":5946,"rent":25,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41281","umdNm":"향동동","jibun":"406","apt":"향동마을4단지(임대)","area":36.19,"floor":23,"built":2020,"date":"2026-09-22","deposit":5946,"rent":25,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41281","umdNm":"덕은동","jibun":"686","apt":"DMC자이더리버","area":85,"floor":7,"built":2022,"date":"2026-09-22","deposit":15000,"rent":200,"term":"26.09~26.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41281","umdNm":"향동동","jibun":"501","apt":"DMC중흥S-클래스더센트럴","area":59.92,"floor":15,"built":2020,"date":"2026-09-22","deposit":41000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41281","umdNm":"향동동","jibun":"552","apt":"DMC호반베르디움더포레4단지","area":84.9,"floor":12,"built":2019,"date":"2026-09-22","deposit":57000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":55000,"preRent":0}
 {"lawd":"41281","umdNm":"향동동","jibun":"552","apt":"DMC호반베르디움더포레4단지","area":84.9,"floor":20,"built":2019,"date":"2026-09-22","deposit":60900,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":58000,"preRent":0}
 {"lawd":"41281","umdNm":"원흥동","jibun":"614","apt":"고양삼송엘에이치10단지아파트","area":26.65,"floor":4,"built":2022,"date":"2026-09-23","deposit":5766,"rent":7,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":3703,"preRent":17}

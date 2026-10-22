@@ -200,6 +200,7 @@
 {"lawd":"11545","umdNm":"독산동","jibun":"1163","apt":"센트레빌웨스트온","area":41.21,"floor":20,"built":2026,"date":"2026-09-21","deposit":13700,"rent":75,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11545","umdNm":"독산동","jibun":"1163","apt":"센트레빌웨스트온","area":41.21,"floor":22,"built":2026,"date":"2026-09-21","deposit":11500,"rent":63,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11545","umdNm":"시흥동","jibun":"1015","apt":"시흥베르빌","area":67.02,"floor":2,"built":2004,"date":"2026-09-21","deposit":47250,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":45000,"preRent":0}
+{"lawd":"11545","umdNm":"독산동","jibun":"333-24","apt":"중앙아파트","area":35.61,"floor":3,"built":1989,"date":"2026-09-21","deposit":15000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":15000,"preRent":0}
 {"lawd":"11545","umdNm":"가산동","jibun":"143-6","apt":"가산지웰에스테이트2차","area":14.12,"floor":6,"built":2018,"date":"2026-09-22","deposit":9500,"rent":10,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11545","umdNm":"독산동","jibun":"1147","apt":"금천롯데캐슬골드파크1차","area":84.81,"floor":8,"built":2016,"date":"2026-09-22","deposit":83000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11545","umdNm":"독산동","jibun":"1088","apt":"독산주공14단지","area":59.22,"floor":7,"built":1990,"date":"2026-09-22","deposit":29500,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":28000,"preRent":0}
