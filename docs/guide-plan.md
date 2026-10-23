@@ -10,7 +10,7 @@
 | 2026-10-21 | 25 | 전세가율 읽는 법 — 매매가 대비 전세가, 갭이 뜻하는 것 | jeonse-ratio | price | find | 완료(jeonse-ratio) |
 | 2026-10-22 | 26 | 실거래 내역의 신고가·저층·탑층 표시 — 쏙집 단지 페이지 기준 | trade-tags | price | find | 완료(trade-tags) |
 | 2026-10-23 | 27 | 등기부등본 읽는 법 — 갑구·을구, 근저당·가압류·신탁 | registry-reading | situation | none | 완료(registry-reading) |
-| 2026-10-24 | 28 | 계약금·중도금·잔금 타임라인 — 대출 실행은 언제 맞추나 | payment-timeline | situation | calc | |
+| 2026-10-24 | 28 | 계약금·중도금·잔금 타임라인 — 대출 실행은 언제 맞추나 | payment-timeline | situation | calc | 완료(payment-timeline) |
 | 2026-10-25 | 29 | 가계약금 — 법적 효력, 돌려받을 수 있는 경우 | provisional-deposit | situation | none | |
 | 2026-10-26 | 30 | 매매계약서 특약 체크리스트 — 대출 불가 시 해제, 하자, 잔금일 변경 | contract-clauses | situation | none | |
 | 2026-10-27 | 31 | 잔금일 당일 순서 — 대출 실행 → 등기 → 전입·관리비 정산 | closing-day | situation | none | |
