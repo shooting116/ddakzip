@@ -307,6 +307,7 @@
 {"lawd":"30170","umdNm":"탄방동","jibun":"834","apt":"한가람","area":52.29,"floor":12,"built":1991,"date":"2026-09-15","deposit":22000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30170","umdNm":"도안동","jibun":"966","apt":"한라비발디","area":84.93,"floor":9,"built":2011,"date":"2026-09-15","deposit":10000,"rent":91,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":85}
 {"lawd":"30170","umdNm":"정림동","jibun":"산23-21","apt":"한화포레나대전월평공원1단지","area":84.98,"floor":15,"built":2026,"date":"2026-09-15","deposit":5000,"rent":100,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"30170","umdNm":"도마동","jibun":"산39-1","apt":"한화포레나대전월평공원2단지","area":84.99,"floor":12,"built":2026,"date":"2026-09-15","deposit":3000,"rent":120,"term":"26.09~28.07","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30170","umdNm":"갈마동","jibun":"390-22","apt":"갈마","area":84.68,"floor":13,"built":1994,"date":"2026-09-16","deposit":21000,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30170","umdNm":"관저동","jibun":"1982","apt":"관저더샵2","area":84.81,"floor":5,"built":2019,"date":"2026-09-16","deposit":8000,"rent":110,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30170","umdNm":"관저동","jibun":"1144","apt":"구봉마을주공7","area":49.63,"floor":12,"built":1999,"date":"2026-09-16","deposit":13500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":13000,"preRent":0}
@@ -495,6 +496,7 @@
 {"lawd":"30170","umdNm":"둔산동","jibun":"907","apt":"샘머리1차","area":59.8,"floor":8,"built":1998,"date":"2026-09-30","deposit":13594,"rent":10,"term":"26.10~27.12","type":"갱신","rrr":null,"preDeposit":12947,"preRent":11}
 {"lawd":"30170","umdNm":"둔산동","jibun":"908","apt":"샘머리2차","area":84.95,"floor":8,"built":1998,"date":"2026-09-30","deposit":10000,"rent":90,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30170","umdNm":"둔산동","jibun":"909","apt":"수정타운","area":71.7,"floor":5,"built":1993,"date":"2026-09-30","deposit":20000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"30170","umdNm":"관저동","jibun":"984","apt":"원앙마을2","area":49.59,"floor":1,"built":1997,"date":"2026-09-30","deposit":2000,"rent":53,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30170","umdNm":"관저동","jibun":"999","apt":"원앙마을4","area":49.59,"floor":11,"built":1997,"date":"2026-09-30","deposit":1000,"rent":55,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":1000,"preRent":40}
 {"lawd":"30170","umdNm":"월평동","jibun":"218-7","apt":"주공2단지(은뜰아파트)","area":41.85,"floor":9,"built":1993,"date":"2026-09-30","deposit":15000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"30170","umdNm":"월평동","jibun":"312-1","apt":"진달래","area":84.57,"floor":9,"built":1995,"date":"2026-09-30","deposit":5000,"rent":90,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

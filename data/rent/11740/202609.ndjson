@@ -187,6 +187,7 @@
 {"lawd":"11740","umdNm":"고덕동","jibun":"210-1","apt":"고덕센트럴푸르지오","area":59.09,"floor":14,"built":2020,"date":"2026-09-06","deposit":75000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11740","umdNm":"암사동","jibun":"414-2","apt":"롯데캐슬퍼스트","area":59.99,"floor":10,"built":2008,"date":"2026-09-06","deposit":38000,"rent":160,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11740","umdNm":"암사동","jibun":"509","apt":"선사현대아파트","area":72.85,"floor":17,"built":2000,"date":"2026-09-06","deposit":60000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":49000,"preRent":0}
+{"lawd":"11740","umdNm":"성내동","jibun":"164-1","apt":"씨제이나인","area":83.87,"floor":6,"built":2006,"date":"2026-09-06","deposit":10000,"rent":180,"term":"26.10~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11740","umdNm":"둔촌동","jibun":"633","apt":"올림픽파크포레온","area":39.95,"floor":9,"built":2024,"date":"2026-09-06","deposit":57000,"rent":110,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11740","umdNm":"둔촌동","jibun":"633","apt":"올림픽파크포레온","area":39.95,"floor":33,"built":2024,"date":"2026-09-06","deposit":55000,"rent":10,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":55000,"preRent":0}
 {"lawd":"11740","umdNm":"둔촌동","jibun":"633","apt":"올림픽파크포레온","area":84.99,"floor":33,"built":2024,"date":"2026-09-06","deposit":87150,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":83000,"preRent":0}
@@ -194,6 +195,7 @@
 {"lawd":"11740","umdNm":"천호동","jibun":"328-1","apt":"집앤사스윗사이드아파트","area":14.02,"floor":4,"built":2019,"date":"2026-09-06","deposit":18700,"rent":5,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11740","umdNm":"길동","jibun":"483","apt":"강동헤리티지자이","area":59.98,"floor":22,"built":2024,"date":"2026-09-07","deposit":40162,"rent":0,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":38250,"preRent":0}
 {"lawd":"11740","umdNm":"강일동","jibun":"689","apt":"강일리버파크11단지","area":29.96,"floor":8,"built":2015,"date":"2026-09-07","deposit":8292,"rent":12,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":5976,"preRent":21}
+{"lawd":"11740","umdNm":"길동","jibun":"413-11","apt":"경지Arium","area":14.12,"floor":14,"built":2019,"date":"2026-09-07","deposit":18000,"rent":20,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11740","umdNm":"고덕동","jibun":"693","apt":"고덕그라시움","area":59.05,"floor":1,"built":2019,"date":"2026-09-07","deposit":80000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11740","umdNm":"상일동","jibun":"514","apt":"고덕롯데캐슬베네루체","area":84.92,"floor":5,"built":2019,"date":"2026-09-07","deposit":70000,"rent":60,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11740","umdNm":"상일동","jibun":"513","apt":"고덕센트럴IPARK","area":59.97,"floor":10,"built":2019,"date":"2026-09-07","deposit":18078,"rent":26,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":13141,"preRent":45}
@@ -490,6 +492,7 @@
 {"lawd":"11740","umdNm":"상일동","jibun":"490","apt":"고덕리엔파크3단지","area":84.83,"floor":2,"built":2011,"date":"2026-09-17","deposit":35000,"rent":90,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":35000,"preRent":80}
 {"lawd":"11740","umdNm":"상일동","jibun":"490","apt":"고덕리엔파크3단지","area":84.83,"floor":4,"built":2011,"date":"2026-09-17","deposit":29508,"rent":0,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":28103,"preRent":0}
 {"lawd":"11740","umdNm":"상일동","jibun":"490","apt":"고덕리엔파크3단지","area":114.97,"floor":12,"built":2011,"date":"2026-09-17","deposit":58560,"rent":0,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11740","umdNm":"상일동","jibun":"513","apt":"고덕센트럴IPARK","area":84.91,"floor":26,"built":2019,"date":"2026-09-17","deposit":30000,"rent":163,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":150}
 {"lawd":"11740","umdNm":"상일동","jibun":"519","apt":"고덕아르테온","area":84.93,"floor":34,"built":2020,"date":"2026-09-17","deposit":90300,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":86000,"preRent":0}
 {"lawd":"11740","umdNm":"둔촌동","jibun":"435-8","apt":"광남캐스빌102동","area":83.97,"floor":15,"built":2004,"date":"2026-09-17","deposit":55000,"rent":40,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11740","umdNm":"길동","jibun":"368-7","apt":"길동생활B","area":17.11,"floor":16,"built":2024,"date":"2026-09-17","deposit":4900,"rent":48,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -550,6 +553,7 @@
 {"lawd":"11740","umdNm":"둔촌동","jibun":"546","apt":"신성둔촌미소지움1","area":84.86,"floor":9,"built":1998,"date":"2026-09-18","deposit":5000,"rent":195,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":185}
 {"lawd":"11740","umdNm":"성내동","jibun":"548-4","apt":"에스아이팰리스센트럴성내","area":14.07,"floor":15,"built":2021,"date":"2026-09-18","deposit":19000,"rent":0,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11740","umdNm":"성내동","jibun":"593","apt":"영풍마드레빌","area":80.31,"floor":5,"built":2002,"date":"2026-09-18","deposit":50000,"rent":60,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":56000,"preRent":0}
+{"lawd":"11740","umdNm":"둔촌동","jibun":"633","apt":"올림픽파크포레온","area":39.98,"floor":10,"built":2024,"date":"2026-09-18","deposit":40000,"rent":0,"term":"26.12~27.12","type":"갱신","rrr":"사용","preDeposit":40000,"preRent":0}
 {"lawd":"11740","umdNm":"둔촌동","jibun":"633","apt":"올림픽파크포레온","area":84.99,"floor":15,"built":2024,"date":"2026-09-18","deposit":10000,"rent":317,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":300}
 {"lawd":"11740","umdNm":"둔촌동","jibun":"633","apt":"올림픽파크포레온","area":84.99,"floor":22,"built":2024,"date":"2026-09-18","deposit":95000,"rent":300,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11740","umdNm":"둔촌동","jibun":"633","apt":"올림픽파크포레온","area":84.99,"floor":22,"built":2024,"date":"2026-09-18","deposit":95000,"rent":300,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -619,6 +623,7 @@
 {"lawd":"11740","umdNm":"고덕동","jibun":"693","apt":"고덕그라시움","area":59.05,"floor":13,"built":2019,"date":"2026-09-20","deposit":83000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11740","umdNm":"강일동","jibun":"707","apt":"고덕리엔파크1단지","area":114.97,"floor":14,"built":2011,"date":"2026-09-20","deposit":60000,"rent":20,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11740","umdNm":"둔촌동","jibun":"451-1","apt":"대경베일리","area":77.31,"floor":7,"built":2024,"date":"2026-09-20","deposit":59850,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":57000,"preRent":0}
+{"lawd":"11740","umdNm":"천호동","jibun":"571","apt":"래미안강동팰리스","area":84.97,"floor":30,"built":2017,"date":"2026-09-20","deposit":96000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11740","umdNm":"암사동","jibun":"414-2","apt":"롯데캐슬퍼스트","area":59.99,"floor":20,"built":2008,"date":"2026-09-20","deposit":48000,"rent":45,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":48000,"preRent":3}
 {"lawd":"11740","umdNm":"둔촌동","jibun":"555","apt":"신동아파밀리에","area":59.4,"floor":5,"built":2002,"date":"2026-09-20","deposit":45000,"rent":90,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11740","umdNm":"둔촌동","jibun":"633","apt":"올림픽파크포레온","area":49.95,"floor":22,"built":2024,"date":"2026-09-20","deposit":54000,"rent":50,"term":"26.10~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -730,6 +735,7 @@
 {"lawd":"11740","umdNm":"천호동","jibun":"571","apt":"래미안강동팰리스","area":84.97,"floor":15,"built":2017,"date":"2026-09-28","deposit":79800,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":76000,"preRent":0}
 {"lawd":"11740","umdNm":"명일동","jibun":"359","apt":"래미안솔베뉴","area":59.11,"floor":6,"built":2019,"date":"2026-09-28","deposit":40000,"rent":160,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11740","umdNm":"고덕동","jibun":"486","apt":"아남1","area":50.2,"floor":13,"built":1996,"date":"2026-09-28","deposit":30000,"rent":20,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11740","umdNm":"둔촌동","jibun":"633","apt":"올림픽파크포레온","area":59.99,"floor":26,"built":2024,"date":"2026-09-28","deposit":20000,"rent":246,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":20000,"preRent":230}
 {"lawd":"11740","umdNm":"둔촌동","jibun":"633","apt":"올림픽파크포레온","area":84.99,"floor":22,"built":2024,"date":"2026-09-28","deposit":94500,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":90000,"preRent":0}
 {"lawd":"11740","umdNm":"둔촌동","jibun":"633","apt":"올림픽파크포레온","area":84.99,"floor":26,"built":2024,"date":"2026-09-28","deposit":96000,"rent":19,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":96000,"preRent":0}
 {"lawd":"11740","umdNm":"둔촌동","jibun":"633","apt":"올림픽파크포레온","area":109.99,"floor":25,"built":2024,"date":"2026-09-28","deposit":125000,"rent":26,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":125000,"preRent":0}

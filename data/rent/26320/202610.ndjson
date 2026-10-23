@@ -65,6 +65,8 @@
 {"lawd":"26320","umdNm":"금곡동","jibun":"57-1","apt":"금곡3단지주공","area":59.97,"floor":7,"built":1994,"date":"2026-10-10","deposit":10000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26320","umdNm":"화명동","jibun":"1170-1","apt":"대림타운","area":84.98,"floor":22,"built":1998,"date":"2026-10-10","deposit":23500,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":22500,"preRent":0}
 {"lawd":"26320","umdNm":"만덕동","jibun":"960","apt":"더 래디언트 금정산","area":59.99,"floor":10,"built":2019,"date":"2026-10-10","deposit":14700,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":14000,"preRent":0}
+{"lawd":"26320","umdNm":"화명동","jibun":"2322","apt":"수정강변타운","area":49.82,"floor":23,"built":2001,"date":"2026-10-10","deposit":2000,"rent":70,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26320","umdNm":"금곡동","jibun":"1915","apt":"율리역벽산블루밍1단지","area":84.99,"floor":16,"built":2014,"date":"2026-10-10","deposit":26250,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":25000,"preRent":0}
 {"lawd":"26320","umdNm":"덕천동","jibun":"817","apt":"포레나부산덕천1차","area":74.55,"floor":8,"built":2022,"date":"2026-10-10","deposit":31500,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":0}
 {"lawd":"26320","umdNm":"화명동","jibun":"2324","apt":"화명롯데캐슬카이저","area":71.91,"floor":19,"built":2012,"date":"2026-10-10","deposit":38000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":33700,"preRent":0}
 {"lawd":"26320","umdNm":"덕천동","jibun":"814-4","apt":"기비골마을","area":55.77,"floor":17,"built":1994,"date":"2026-10-11","deposit":9900,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -79,6 +81,7 @@
 {"lawd":"26320","umdNm":"화명동","jibun":"2324","apt":"화명롯데캐슬카이저","area":59.69,"floor":3,"built":2012,"date":"2026-10-12","deposit":2000,"rent":80,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":2000,"preRent":70}
 {"lawd":"26320","umdNm":"화명동","jibun":"2324","apt":"화명롯데캐슬카이저","area":84.82,"floor":28,"built":2012,"date":"2026-10-12","deposit":8218,"rent":44,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":8173,"preRent":44}
 {"lawd":"26320","umdNm":"화명동","jibun":"2324","apt":"화명롯데캐슬카이저","area":84.95,"floor":14,"built":2012,"date":"2026-10-12","deposit":8218,"rent":44,"term":"26.12~27.01","type":"갱신","rrr":null,"preDeposit":8173,"preRent":44}
+{"lawd":"26320","umdNm":"금곡동","jibun":"832","apt":"동원역삼정그린코아","area":84.95,"floor":23,"built":2014,"date":"2026-10-13","deposit":24000,"rent":5,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":24000,"preRent":0}
 {"lawd":"26320","umdNm":"만덕동","jibun":"290-1","apt":"삼성","area":82.2,"floor":5,"built":1989,"date":"2026-10-13","deposit":16000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26320","umdNm":"덕천동","jibun":"337-2","apt":"무궁화(337-2)","area":44.13,"floor":1,"built":1983,"date":"2026-10-14","deposit":7000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26320","umdNm":"화명동","jibun":"2322","apt":"수정강변타운","area":59.57,"floor":21,"built":2001,"date":"2026-10-14","deposit":10000,"rent":60,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -104,6 +107,8 @@
 {"lawd":"26320","umdNm":"화명동","jibun":"1293-1","apt":"e편한세상화명힐스","area":39.98,"floor":11,"built":2015,"date":"2026-10-16","deposit":2000,"rent":60,"term":"26.12~28.11","type":"갱신","rrr":null,"preDeposit":2000,"preRent":58}
 {"lawd":"26320","umdNm":"만덕동","jibun":"927-1","apt":"대성타워","area":84.78,"floor":11,"built":1991,"date":"2026-10-17","deposit":19500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26320","umdNm":"덕천동","jibun":"372-1","apt":"부영벽산파라빌","area":59.98,"floor":1,"built":2005,"date":"2026-10-17","deposit":19000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26320","umdNm":"구포동","jibun":"1296","apt":"구포동원로얄듀크비스타","area":73.12,"floor":9,"built":2014,"date":"2026-10-18","deposit":26000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26320","umdNm":"만덕동","jibun":"216-7","apt":"그린코아","area":84.69,"floor":5,"built":1991,"date":"2026-10-18","deposit":2000,"rent":65,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26320","umdNm":"화명동","jibun":"2288","apt":"코오롱하늘채2차","area":84.94,"floor":18,"built":2002,"date":"2026-10-18","deposit":34000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":30000,"preRent":0}
 {"lawd":"26320","umdNm":"화명동","jibun":"2341","apt":"화명푸르지오헤리센트","area":59.99,"floor":10,"built":2021,"date":"2026-10-18","deposit":5000,"rent":110,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26320","umdNm":"화명동","jibun":"512","apt":"그린숲속아파트","area":59.82,"floor":6,"built":1996,"date":"2026-10-19","deposit":10000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -118,9 +123,11 @@
 {"lawd":"26320","umdNm":"금곡동","jibun":"1918","apt":"신화명리버뷰자이","area":84.96,"floor":11,"built":2015,"date":"2026-10-20","deposit":28000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26320","umdNm":"금곡동","jibun":"1918","apt":"신화명리버뷰자이","area":84.99,"floor":10,"built":2015,"date":"2026-10-20","deposit":5000,"rent":120,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26320","umdNm":"화명동","jibun":"2324","apt":"화명롯데캐슬카이저","area":59.69,"floor":10,"built":2012,"date":"2026-10-20","deposit":4174,"rent":49,"term":"27.01~29.01","type":"갱신","rrr":null,"preDeposit":3975,"preRent":53}
+{"lawd":"26320","umdNm":"화명동","jibun":"2324","apt":"화명롯데캐슬카이저","area":59.69,"floor":10,"built":2012,"date":"2026-10-20","deposit":20871,"rent":0,"term":"27.02~29.02","type":"갱신","rrr":null,"preDeposit":19878,"preRent":0}
 {"lawd":"26320","umdNm":"화명동","jibun":"2324","apt":"화명롯데캐슬카이저","area":84.77,"floor":6,"built":2012,"date":"2026-10-20","deposit":28764,"rent":0,"term":"27.02~29.02","type":"갱신","rrr":null,"preDeposit":27395,"preRent":0}
 {"lawd":"26320","umdNm":"화명동","jibun":"2324","apt":"화명롯데캐슬카이저","area":84.77,"floor":19,"built":2012,"date":"2026-10-20","deposit":20134,"rent":25,"term":"27.01~29.01","type":"갱신","rrr":null,"preDeposit":19176,"preRent":27}
 {"lawd":"26320","umdNm":"화명동","jibun":"2324","apt":"화명롯데캐슬카이저","area":84.95,"floor":18,"built":2012,"date":"2026-10-20","deposit":5721,"rent":48,"term":"27.01~29.01","type":"갱신","rrr":null,"preDeposit":5449,"preRent":45}
+{"lawd":"26320","umdNm":"덕천동","jibun":"802","apt":"덕천주공1","area":49.94,"floor":3,"built":1991,"date":"2026-10-21","deposit":8000,"rent":20,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26320","umdNm":"화명동","jibun":"2287-3","apt":"레지던스라움","area":27.25,"floor":8,"built":2012,"date":"2026-10-21","deposit":500,"rent":45,"term":"26.11~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26320","umdNm":"만덕동","jibun":"958","apt":"백양디이스트(2단지)","area":70.18,"floor":6,"built":2015,"date":"2026-10-21","deposit":18000,"rent":30,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26320","umdNm":"화명동","jibun":"2290","apt":"코오롱하늘채1차","area":59.9,"floor":2,"built":2002,"date":"2026-10-21","deposit":25200,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":24000,"preRent":0}
@@ -129,3 +136,7 @@
 {"lawd":"26320","umdNm":"금곡동","jibun":"1895","apt":"화명뜨란채","area":59.77,"floor":16,"built":2004,"date":"2026-10-21","deposit":21000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":20000,"preRent":0}
 {"lawd":"26320","umdNm":"만덕동","jibun":"290-1","apt":"삼성","area":82.2,"floor":5,"built":1989,"date":"2026-10-22","deposit":12000,"rent":10,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26320","umdNm":"금곡동","jibun":"1895","apt":"화명뜨란채","area":59.77,"floor":16,"built":2004,"date":"2026-10-22","deposit":3000,"rent":65,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26320","umdNm":"화명동","jibun":"1293-1","apt":"e편한세상화명힐스","area":39.98,"floor":2,"built":2015,"date":"2026-10-22","deposit":500,"rent":55,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26320","umdNm":"구포동","jibun":"1296","apt":"구포동원로얄듀크비스타","area":84.99,"floor":30,"built":2014,"date":"2026-10-23","deposit":29500,"rent":0,"term":"26.10~27.03","type":"갱신","rrr":"사용","preDeposit":29500,"preRent":0}
+{"lawd":"26320","umdNm":"화명동","jibun":"2290","apt":"코오롱하늘채1차","area":69.34,"floor":4,"built":2002,"date":"2026-10-23","deposit":3500,"rent":105,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26320","umdNm":"화명동","jibun":"2288","apt":"코오롱하늘채2차","area":142.54,"floor":17,"built":2002,"date":"2026-10-23","deposit":52000,"rent":0,"term":"27.02~29.02","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

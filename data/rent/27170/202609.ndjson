@@ -69,6 +69,7 @@
 {"lawd":"27170","umdNm":"평리동","jibun":"1726","apt":"서대구역센텀화성파크드림","area":85,"floor":2,"built":2024,"date":"2026-09-19","deposit":30000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27170","umdNm":"중리동","jibun":"720-1","apt":"일신(720-1)","area":55.12,"floor":4,"built":1982,"date":"2026-09-19","deposit":9000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27170","umdNm":"원대동3가","jibun":"1649","apt":"서대구센트럴자이","area":59.95,"floor":7,"built":2023,"date":"2026-09-20","deposit":2000,"rent":95,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"27170","umdNm":"내당동","jibun":"308-11","apt":"삼익뉴타운","area":84.88,"floor":12,"built":1980,"date":"2026-09-22","deposit":2000,"rent":60,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27170","umdNm":"비산동","jibun":"1455","apt":"양문그레이스A동","area":84.62,"floor":4,"built":2016,"date":"2026-09-22","deposit":12186,"rent":14,"term":"26.09~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27170","umdNm":"중리동","jibun":"115-5","apt":"다산아파트","area":84.88,"floor":6,"built":1997,"date":"2026-09-24","deposit":1000,"rent":65,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"27170","umdNm":"평리동","jibun":"1726","apt":"서대구역센텀화성파크드림","area":84.93,"floor":24,"built":2024,"date":"2026-09-24","deposit":25700,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":24500,"preRent":0}

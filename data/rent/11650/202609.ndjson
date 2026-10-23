@@ -524,6 +524,7 @@
 {"lawd":"11650","umdNm":"서초동","jibun":"1633-4","apt":"헤센파크힐","area":20.66,"floor":2,"built":2018,"date":"2026-09-18","deposit":32300,"rent":13,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":34700,"preRent":0}
 {"lawd":"11650","umdNm":"서초동","jibun":"1633-4","apt":"헤센파크힐","area":20.66,"floor":2,"built":2018,"date":"2026-09-18","deposit":34700,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":34700,"preRent":0}
 {"lawd":"11650","umdNm":"서초동","jibun":"1633-4","apt":"헤센파크힐","area":31.62,"floor":7,"built":2018,"date":"2026-09-18","deposit":50500,"rent":10,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":51800,"preRent":0}
+{"lawd":"11650","umdNm":"서초동","jibun":"1633-4","apt":"헤센파크힐","area":31.62,"floor":7,"built":2018,"date":"2026-09-18","deposit":51800,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":51800,"preRent":0}
 {"lawd":"11650","umdNm":"방배동","jibun":"812-1","apt":"TheHerren","area":61.41,"floor":6,"built":2017,"date":"2026-09-18","deposit":71000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11650","umdNm":"서초동","jibun":"1327-23","apt":"강남아르젠","area":18.53,"floor":9,"built":2014,"date":"2026-09-19","deposit":13000,"rent":85,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11650","umdNm":"잠원동","jibun":"53-15","apt":"강변","area":66.29,"floor":10,"built":1987,"date":"2026-09-19","deposit":73500,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":70000,"preRent":0}
@@ -705,6 +706,7 @@
 {"lawd":"11650","umdNm":"잠원동","jibun":"165","apt":"신반포르엘","area":49.98,"floor":10,"built":2023,"date":"2026-09-29","deposit":25420,"rent":38,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":17760,"preRent":69}
 {"lawd":"11650","umdNm":"잠원동","jibun":"160","apt":"신반포자이","area":114.94,"floor":24,"built":2018,"date":"2026-09-29","deposit":199500,"rent":84,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":190000,"preRent":80}
 {"lawd":"11650","umdNm":"잠원동","jibun":"159","apt":"아크로리버뷰신반포","area":78.5,"floor":29,"built":2018,"date":"2026-09-29","deposit":108480,"rent":290,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":100000,"preRent":290}
+{"lawd":"11650","umdNm":"서초동","jibun":"1363-25","apt":"한라비발디스튜디오193","area":19.99,"floor":6,"built":2013,"date":"2026-09-29","deposit":8000,"rent":75,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11650","umdNm":"잠원동","jibun":"63-34","apt":"한신로얄","area":81.05,"floor":6,"built":1992,"date":"2026-09-29","deposit":75000,"rent":15,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":75000,"preRent":0}
 {"lawd":"11650","umdNm":"방배동","jibun":"843-6","apt":"Venessere","area":163.16,"floor":1,"built":2007,"date":"2026-09-29","deposit":30000,"rent":700,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11650","umdNm":"우면동","jibun":"57","apt":"대림","area":130.89,"floor":7,"built":1995,"date":"2026-09-30","deposit":95000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":89000,"preRent":0}

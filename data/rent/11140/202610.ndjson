@@ -16,6 +16,7 @@
 {"lawd":"11140","umdNm":"인현동2가","jibun":"240","apt":"세운푸르지오헤리시티","area":28.41,"floor":19,"built":2023,"date":"2026-10-02","deposit":5250,"rent":137,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":130}
 {"lawd":"11140","umdNm":"입정동","jibun":"277","apt":"힐스테이트세운센트럴1단지","area":46.7,"floor":4,"built":2023,"date":"2026-10-02","deposit":60000,"rent":0,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"입정동","jibun":"280","apt":"힐스테이트세운센트럴2단지","area":59.99,"floor":27,"built":2023,"date":"2026-10-02","deposit":5000,"rent":309,"term":"26.10~27.10","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":294}
+{"lawd":"11140","umdNm":"순화동","jibun":"217","apt":"덕수궁롯데캐슬","area":116.54,"floor":19,"built":2016,"date":"2026-10-03","deposit":30000,"rent":410,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"신당동","jibun":"843","apt":"삼성","area":59.97,"floor":7,"built":1999,"date":"2026-10-03","deposit":10000,"rent":191,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":10000,"preRent":180}
 {"lawd":"11140","umdNm":"만리동2가","jibun":"288","apt":"서울역한라비발디센트럴","area":84.98,"floor":5,"built":2018,"date":"2026-10-03","deposit":89200,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":85000,"preRent":0}
 {"lawd":"11140","umdNm":"신당동","jibun":"856","apt":"신당KCC스위첸","area":84.91,"floor":5,"built":2019,"date":"2026-10-03","deposit":85000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -59,6 +60,7 @@
 {"lawd":"11140","umdNm":"신당동","jibun":"851","apt":"래미안하이베르","area":117,"floor":1,"built":2011,"date":"2026-10-12","deposit":90000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"신당동","jibun":"843","apt":"삼성","area":84.96,"floor":16,"built":1999,"date":"2026-10-12","deposit":15000,"rent":120,"term":"26.10~27.10","type":"갱신","rrr":null,"preDeposit":15000,"preRent":112}
 {"lawd":"11140","umdNm":"신당동","jibun":"843","apt":"삼성","area":114.91,"floor":19,"built":1999,"date":"2026-10-12","deposit":80000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11140","umdNm":"중림동","jibun":"200","apt":"삼성사이버빌리지","area":59.93,"floor":17,"built":2001,"date":"2026-10-12","deposit":72000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":60000,"preRent":0}
 {"lawd":"11140","umdNm":"만리동2가","jibun":"273","apt":"서울역센트럴자이","area":59.94,"floor":6,"built":2017,"date":"2026-10-12","deposit":65000,"rent":80,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"신당동","jibun":"842","apt":"약수하이츠","area":57.63,"floor":3,"built":1999,"date":"2026-10-12","deposit":40000,"rent":100,"term":"26.12~27.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"신당동","jibun":"842","apt":"약수하이츠","area":114.92,"floor":2,"built":1999,"date":"2026-10-12","deposit":10000,"rent":300,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -72,6 +74,7 @@
 {"lawd":"11140","umdNm":"묵정동","jibun":"35","apt":"힐스테이트남산","area":45.05,"floor":3,"built":2024,"date":"2026-10-13","deposit":5000,"rent":242,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":5000,"preRent":230}
 {"lawd":"11140","umdNm":"신당동","jibun":"844","apt":"남산타운","area":59.94,"floor":13,"built":2002,"date":"2026-10-14","deposit":60000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"신당동","jibun":"844","apt":"남산타운","area":84.88,"floor":14,"built":2002,"date":"2026-10-14","deposit":80000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11140","umdNm":"흥인동","jibun":"86","apt":"리마크빌동대문","area":25.99,"floor":11,"built":2016,"date":"2026-10-14","deposit":1500,"rent":106,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"신당동","jibun":"843","apt":"삼성","area":59.98,"floor":19,"built":1999,"date":"2026-10-14","deposit":6000,"rent":200,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"입정동","jibun":"280","apt":"힐스테이트세운센트럴2단지","area":42.73,"floor":19,"built":2023,"date":"2026-10-14","deposit":15000,"rent":122,"term":"26.11~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"신당동","jibun":"843","apt":"삼성","area":84.96,"floor":15,"built":1999,"date":"2026-10-15","deposit":52000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":52000,"preRent":0}
@@ -94,5 +97,9 @@
 {"lawd":"11140","umdNm":"만리동2가","jibun":"273","apt":"서울역센트럴자이","area":72.89,"floor":16,"built":2017,"date":"2026-10-20","deposit":87000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"신당동","jibun":"851","apt":"래미안하이베르","area":84.98,"floor":8,"built":2011,"date":"2026-10-21","deposit":12000,"rent":260,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"황학동","jibun":"2545","apt":"롯데캐슬","area":59.94,"floor":29,"built":2008,"date":"2026-10-21","deposit":51660,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":49200,"preRent":0}
+{"lawd":"11140","umdNm":"신당동","jibun":"842","apt":"약수하이츠","area":57.63,"floor":7,"built":1999,"date":"2026-10-21","deposit":63000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":"사용","preDeposit":60000,"preRent":0}
+{"lawd":"11140","umdNm":"신당동","jibun":"842","apt":"약수하이츠","area":57.63,"floor":10,"built":1999,"date":"2026-10-21","deposit":20000,"rent":130,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":20000,"preRent":120}
 {"lawd":"11140","umdNm":"신당동","jibun":"340-127","apt":"한스아파트","area":14.07,"floor":7,"built":2011,"date":"2026-10-21","deposit":14000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11140","umdNm":"묵정동","jibun":"35","apt":"힐스테이트남산","area":44.55,"floor":3,"built":2024,"date":"2026-10-22","deposit":63000,"rent":0,"term":"27.01~29.01","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11140","umdNm":"만리동2가","jibun":"273","apt":"서울역센트럴자이","area":84.99,"floor":18,"built":2017,"date":"2026-10-23","deposit":45000,"rent":120,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11140","umdNm":"신당동","jibun":"840","apt":"현대","area":139.28,"floor":10,"built":1993,"date":"2026-10-23","deposit":75000,"rent":0,"term":"27.01~29.01","type":"갱신","rrr":"사용","preDeposit":72000,"preRent":0}

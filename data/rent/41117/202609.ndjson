@@ -16,6 +16,7 @@
 {"lawd":"41117","umdNm":"망포동","jibun":"790","apt":"영통아이파크캐슬3단지","area":75.93,"floor":12,"built":2022,"date":"2026-09-01","deposit":50000,"rent":30,"term":"26.11~29.02","type":"갱신","rrr":null,"preDeposit":40950,"preRent":0}
 {"lawd":"41117","umdNm":"원천동","jibun":"628","apt":"영흥숲푸르지오파크비엔","area":85,"floor":6,"built":2023,"date":"2026-09-01","deposit":30000,"rent":0,"term":"26.09~28.08","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41117","umdNm":"매탄동","jibun":"1162","apt":"임광","area":73.91,"floor":13,"built":1990,"date":"2026-09-01","deposit":26100,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":23100,"preRent":0}
+{"lawd":"41117","umdNm":"매탄동","jibun":"1162","apt":"임광","area":74.25,"floor":14,"built":1990,"date":"2026-09-01","deposit":27000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":27000,"preRent":0}
 {"lawd":"41117","umdNm":"이의동","jibun":"1339","apt":"자연앤자이3단지","area":101.67,"floor":9,"built":2012,"date":"2026-09-01","deposit":84000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":84000,"preRent":0}
 {"lawd":"41117","umdNm":"영통동","jibun":"1048-2","apt":"청명마을(주공)","area":59.99,"floor":12,"built":1997,"date":"2026-09-01","deposit":34650,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":33000,"preRent":0}
 {"lawd":"41117","umdNm":"망포동","jibun":"291","apt":"청와","area":39.87,"floor":1,"built":1988,"date":"2026-09-01","deposit":13000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":12000,"preRent":0}
@@ -353,6 +354,7 @@
 {"lawd":"41117","umdNm":"원천동","jibun":"96-1","apt":"삼부리치안","area":22.72,"floor":12,"built":2019,"date":"2026-09-16","deposit":11000,"rent":10,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41117","umdNm":"원천동","jibun":"96-1","apt":"삼부리치안","area":22.72,"floor":12,"built":2019,"date":"2026-09-16","deposit":11000,"rent":10,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41117","umdNm":"매탄동","jibun":"1217-7","apt":"삼성3","area":59.76,"floor":1,"built":1993,"date":"2026-09-16","deposit":10000,"rent":40,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41117","umdNm":"매탄동","jibun":"810-4","apt":"성일","area":39.99,"floor":3,"built":1988,"date":"2026-09-16","deposit":16000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41117","umdNm":"매탄동","jibun":"810-4","apt":"성일","area":49.68,"floor":9,"built":1988,"date":"2026-09-16","deposit":20000,"rent":5,"term":"26.09~27.09","type":"갱신","rrr":"사용","preDeposit":20000,"preRent":0}
 {"lawd":"41117","umdNm":"영통동","jibun":"948-4","apt":"영통센트럴파크뷰","area":59.99,"floor":17,"built":1999,"date":"2026-09-16","deposit":37000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41117","umdNm":"매탄동","jibun":"1199","apt":"원천성일","area":44.2,"floor":10,"built":1992,"date":"2026-09-16","deposit":19900,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":19000,"preRent":0}
@@ -603,6 +605,7 @@
 {"lawd":"41117","umdNm":"하동","jibun":"956","apt":"휴먼시아32단지아파트","area":46.75,"floor":4,"built":2011,"date":"2026-09-29","deposit":4811,"rent":33,"term":"26.10~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41117","umdNm":"하동","jibun":"956","apt":"휴먼시아32단지아파트","area":46.75,"floor":19,"built":2011,"date":"2026-09-29","deposit":4811,"rent":33,"term":"26.10~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41117","umdNm":"하동","jibun":"956","apt":"휴먼시아32단지아파트","area":46.75,"floor":23,"built":2011,"date":"2026-09-29","deposit":4811,"rent":33,"term":"26.10~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41117","umdNm":"하동","jibun":"1021","apt":"힐스테이트광교","area":97.12,"floor":14,"built":2018,"date":"2026-09-29","deposit":10000,"rent":350,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41117","umdNm":"이의동","jibun":"1253","apt":"광교시티아이","area":43.85,"floor":6,"built":2015,"date":"2026-09-30","deposit":31700,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":30200,"preRent":0}
 {"lawd":"41117","umdNm":"이의동","jibun":"1252","apt":"광교역참누리포레스트","area":59.61,"floor":6,"built":2015,"date":"2026-09-30","deposit":42100,"rent":10,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":40000,"preRent":10}
 {"lawd":"41117","umdNm":"원천동","jibun":"559","apt":"광교원천경기행복주택","area":16.9,"floor":12,"built":2020,"date":"2026-09-30","deposit":4972,"rent":8,"term":"26.10~28.11","type":"갱신","rrr":null,"preDeposit":3672,"preRent":15}

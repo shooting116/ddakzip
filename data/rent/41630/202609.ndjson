@@ -264,7 +264,7 @@
 {"lawd":"41630","umdNm":"옥정동","jibun":"893","apt":"양주옥정더원파크빌리지","area":84.94,"floor":9,"built":2023,"date":"2026-09-12","deposit":2500,"rent":125,"term":"26.11~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"옥정동","jibun":"945","apt":"양주옥정LH엘리프","area":59.76,"floor":26,"built":2023,"date":"2026-09-12","deposit":5000,"rent":100,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"삼숭동","jibun":"689","apt":"양주자이(7단지)","area":74.88,"floor":14,"built":2006,"date":"2026-09-12","deposit":2000,"rent":70,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
-{"lawd":"41630","umdNm":"삼숭동","jibun":"682-1","apt":"양주자이4단지","area":84.92,"floor":10,"built":2005,"date":"2026-09-12","deposit":17900,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":17100,"preRent":0}
+{"lawd":"41630","umdNm":"삼숭동","jibun":"682-1","apt":"양주자이4단지","area":84.92,"floor":10,"built":2005,"date":"2026-09-12","deposit":17900,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":17900,"preRent":0}
 {"lawd":"41630","umdNm":"산북동","jibun":"1","apt":"양주한승","area":84.6,"floor":9,"built":2001,"date":"2026-09-12","deposit":2000,"rent":80,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"옥정동","jibun":"955","apt":"옥정센트럴파크푸르지오","area":58.98,"floor":18,"built":2016,"date":"2026-09-12","deposit":2000,"rent":90,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":2000,"preRent":80}
 {"lawd":"41630","umdNm":"삼숭동","jibun":"690","apt":"옥정역로제비앙메트로파크1단지","area":84.62,"floor":13,"built":2022,"date":"2026-09-12","deposit":2000,"rent":140,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
@@ -335,6 +335,7 @@
 {"lawd":"41630","umdNm":"옥정동","jibun":"970","apt":"세영리첼레이크파크","area":84.99,"floor":12,"built":2020,"date":"2026-09-16","deposit":20190,"rent":20,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":20190,"preRent":20}
 {"lawd":"41630","umdNm":"백석읍 홍죽리","jibun":"964","apt":"新양주모아엘가니케","area":72.89,"floor":19,"built":2024,"date":"2026-09-16","deposit":4000,"rent":30,"term":"26.10~27.06","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"옥정동","jibun":"945","apt":"양주옥정LH엘리프","area":59.85,"floor":20,"built":2023,"date":"2026-09-16","deposit":21000,"rent":0,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":20000,"preRent":0}
+{"lawd":"41630","umdNm":"삼숭동","jibun":"681-1","apt":"양주자이5단지","area":84.92,"floor":14,"built":2005,"date":"2026-09-16","deposit":19000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"옥정동","jibun":"886","apt":"옥정25단지","area":36.52,"floor":3,"built":2024,"date":"2026-09-16","deposit":4260,"rent":10,"term":"26.10~28.09","type":"갱신","rrr":null,"preDeposit":3200,"preRent":15}
 {"lawd":"41630","umdNm":"옥정동","jibun":"955","apt":"옥정센트럴파크푸르지오","area":58.98,"floor":4,"built":2016,"date":"2026-09-16","deposit":3000,"rent":120,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41630","umdNm":"만송동","jibun":"696","apt":"은빛마을한양수자인","area":99.79,"floor":10,"built":2010,"date":"2026-09-16","deposit":25000,"rent":0,"term":"26.09~28.11","type":"갱신","rrr":null,"preDeposit":25000,"preRent":0}

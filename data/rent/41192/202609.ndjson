@@ -105,6 +105,7 @@
 {"lawd":"41192","umdNm":"상동","jibun":"397","apt":"반달마을(건영)","area":59.84,"floor":3,"built":1993,"date":"2026-09-05","deposit":31500,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":30000,"preRent":0}
 {"lawd":"41192","umdNm":"상동","jibun":"397","apt":"반달마을(동아)","area":50.03,"floor":14,"built":1993,"date":"2026-09-05","deposit":2000,"rent":70,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41192","umdNm":"상동","jibun":"397","apt":"반달마을(동아)","area":59.28,"floor":4,"built":1993,"date":"2026-09-05","deposit":30000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":29000,"preRent":0}
+{"lawd":"41192","umdNm":"상동","jibun":"397","apt":"반달마을(선경)","area":59.92,"floor":9,"built":1993,"date":"2026-09-05","deposit":12000,"rent":21,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":12000,"preRent":20}
 {"lawd":"41192","umdNm":"중동","jibun":"1172","apt":"보람마을(아주)","area":59.94,"floor":8,"built":1995,"date":"2026-09-05","deposit":38000,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":null,"preDeposit":35000,"preRent":0}
 {"lawd":"41192","umdNm":"중동","jibun":"1186","apt":"복사골아파트","area":56.58,"floor":15,"built":1992,"date":"2026-09-05","deposit":28000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41192","umdNm":"약대동","jibun":"216-1","apt":"부천아이파크","area":84.6,"floor":6,"built":2017,"date":"2026-09-05","deposit":50000,"rent":0,"term":"26.10~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -306,6 +307,7 @@
 {"lawd":"41192","umdNm":"중동","jibun":"1288","apt":"팰리스카운티","area":84.99,"floor":4,"built":2009,"date":"2026-09-15","deposit":5000,"rent":160,"term":"26.09~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41192","umdNm":"중동","jibun":"1028","apt":"한라마을(주공2)","area":41.85,"floor":11,"built":1995,"date":"2026-09-15","deposit":19000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41192","umdNm":"심곡동","jibun":"382-6","apt":"가온팰리스","area":18,"floor":10,"built":2015,"date":"2026-09-16","deposit":500,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41192","umdNm":"중동","jibun":"1029","apt":"금강마을(주공)","area":41.85,"floor":7,"built":1994,"date":"2026-09-16","deposit":22000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41192","umdNm":"심곡동","jibun":"391-4","apt":"대준블루온","area":43.55,"floor":9,"built":2014,"date":"2026-09-16","deposit":200,"rent":90,"term":"26.09~26.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41192","umdNm":"상동","jibun":"525-3","apt":"라일락마을(신성미소지움)","area":59.88,"floor":15,"built":2002,"date":"2026-09-16","deposit":44000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41192","umdNm":"중동","jibun":"1293-1","apt":"래미안부천중동","area":59.98,"floor":23,"built":2015,"date":"2026-09-16","deposit":20000,"rent":130,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -440,10 +442,12 @@
 {"lawd":"41192","umdNm":"중동","jibun":"1029","apt":"금강마을(주공)","area":41.85,"floor":4,"built":1994,"date":"2026-09-30","deposit":2000,"rent":85,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41192","umdNm":"중동","jibun":"1040","apt":"덕유마을(주공3)","area":39.48,"floor":13,"built":1996,"date":"2026-09-30","deposit":20000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41192","umdNm":"원미동","jibun":"151-1","apt":"두산","area":59.95,"floor":14,"built":1999,"date":"2026-09-30","deposit":25000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":23000,"preRent":0}
+{"lawd":"41192","umdNm":"중동","jibun":"1178","apt":"미리내마을(우성)","area":33.54,"floor":12,"built":1993,"date":"2026-09-30","deposit":20000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41192","umdNm":"상동","jibun":"395","apt":"반달마을(삼익)","area":82.9,"floor":12,"built":1993,"date":"2026-09-30","deposit":40000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41192","umdNm":"중동","jibun":"1173-1","apt":"보람마을(동남)","area":59.94,"floor":1,"built":1995,"date":"2026-09-30","deposit":3000,"rent":150,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41192","umdNm":"중동","jibun":"1173-1","apt":"보람마을(동남)","area":59.94,"floor":10,"built":1995,"date":"2026-09-30","deposit":34000,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":33000,"preRent":0}
 {"lawd":"41192","umdNm":"약대동","jibun":"216-1","apt":"부천아이파크","area":84.6,"floor":4,"built":2017,"date":"2026-09-30","deposit":50000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41192","umdNm":"중동","jibun":"1051","apt":"설악마을(주공)","area":44.1,"floor":10,"built":1993,"date":"2026-09-30","deposit":1000,"rent":66,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":1000,"preRent":63}
 {"lawd":"41192","umdNm":"중동","jibun":"1051","apt":"설악마을(주공)","area":44.1,"floor":15,"built":1993,"date":"2026-09-30","deposit":19400,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":18500,"preRent":0}
 {"lawd":"41192","umdNm":"중동","jibun":"1300","apt":"센트럴파크푸르지오","area":84.9,"floor":36,"built":2020,"date":"2026-09-30","deposit":85000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41192","umdNm":"중동","jibun":"1099-2","apt":"연화마을(건영)","area":84.23,"floor":11,"built":1994,"date":"2026-09-30","deposit":36750,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":35000,"preRent":0}

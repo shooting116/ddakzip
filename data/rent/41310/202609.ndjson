@@ -29,6 +29,7 @@
 {"lawd":"41310","umdNm":"수택동","jibun":"854","apt":"대림한숲","area":62.25,"floor":15,"built":1995,"date":"2026-09-03","deposit":40000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":null,"preDeposit":35000,"preRent":0}
 {"lawd":"41310","umdNm":"교문동","jibun":"808","apt":"덕현","area":62.1,"floor":10,"built":1993,"date":"2026-09-03","deposit":45000,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41310","umdNm":"인창동","jibun":"487-1","apt":"아름마을삼성","area":59.98,"floor":2,"built":2000,"date":"2026-09-03","deposit":20000,"rent":100,"term":"27.03~29.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"41310","umdNm":"수택동","jibun":"684-6","apt":"우림","area":84.96,"floor":2,"built":1999,"date":"2026-09-03","deposit":32000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":30500,"preRent":0}
 {"lawd":"41310","umdNm":"인창동","jibun":"663-1","apt":"주공1","area":59.76,"floor":3,"built":1996,"date":"2026-09-03","deposit":40000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41310","umdNm":"수택동","jibun":"890","apt":"힐스테이트구리역","area":74.68,"floor":14,"built":2024,"date":"2026-09-03","deposit":52500,"rent":0,"term":null,"type":null,"rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"41310","umdNm":"수택동","jibun":"890","apt":"힐스테이트구리역","area":74.68,"floor":14,"built":2024,"date":"2026-09-03","deposit":52500,"rent":0,"term":"26.09~28.09","type":"갱신","rrr":"사용","preDeposit":50000,"preRent":0}

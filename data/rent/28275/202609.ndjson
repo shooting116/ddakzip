@@ -182,6 +182,7 @@
 {"lawd":"28275","umdNm":"신현동","jibun":"302-1","apt":"루원e-편한세상하늘채아파트","area":114.95,"floor":19,"built":2010,"date":"2026-09-15","deposit":5000,"rent":150,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28275","umdNm":"연희동","jibun":"729-1","apt":"우성","area":84.69,"floor":14,"built":1997,"date":"2026-09-15","deposit":23600,"rent":0,"term":"26.10~28.10","type":"갱신","rrr":"사용","preDeposit":23000,"preRent":0}
 {"lawd":"28275","umdNm":"가정동","jibun":"562-2","apt":"진흥2","area":45.04,"floor":5,"built":1990,"date":"2026-09-15","deposit":10000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28275","umdNm":"청라동","jibun":"116-4","apt":"청라지구중흥S-CLASS1단지","area":119.59,"floor":13,"built":2010,"date":"2026-09-15","deposit":43000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":41000,"preRent":0}
 {"lawd":"28275","umdNm":"청라동","jibun":"107-1","apt":"청라한라비발디","area":113.67,"floor":14,"built":2011,"date":"2026-09-15","deposit":37000,"rent":0,"term":"26.09~28.03","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28275","umdNm":"가좌동","jibun":"7","apt":"한신휴플러스","area":59.99,"floor":3,"built":2007,"date":"2026-09-15","deposit":3364,"rent":39,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28275","umdNm":"석남동","jibun":"446","apt":"서인천월드메르디앙","area":84.98,"floor":11,"built":2006,"date":"2026-09-16","deposit":2000,"rent":130,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -272,6 +273,7 @@
 {"lawd":"28275","umdNm":"가정동","jibun":"597-2","apt":"엘에이치웨스턴블루힐","area":74.99,"floor":18,"built":2015,"date":"2026-09-27","deposit":30000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28275","umdNm":"심곡동","jibun":"336-1","apt":"광명","area":84.78,"floor":1,"built":1997,"date":"2026-09-28","deposit":22000,"rent":0,"term":"26.12~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28275","umdNm":"청라동","jibun":"150-1","apt":"대우푸르지오","area":139.49,"floor":2,"built":2013,"date":"2026-09-28","deposit":70000,"rent":0,"term":"26.09~28.09","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28275","umdNm":"가정동","jibun":"5-92","apt":"동우1","area":47.1,"floor":3,"built":1988,"date":"2026-09-28","deposit":300,"rent":35,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28275","umdNm":"신현동","jibun":"304-2","apt":"루원시티루에블리","area":59.96,"floor":7,"built":2018,"date":"2026-09-28","deposit":6938,"rent":46,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":5274,"preRent":51}
 {"lawd":"28275","umdNm":"가정동","jibun":"609-1","apt":"루원호반베르디움더센트럴","area":84.63,"floor":9,"built":2018,"date":"2026-09-28","deposit":39000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28275","umdNm":"신현동","jibun":"302-1","apt":"루원e-편한세상하늘채아파트","area":156.29,"floor":25,"built":2010,"date":"2026-09-28","deposit":50000,"rent":0,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}

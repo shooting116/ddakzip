@@ -1,6 +1,7 @@
 {"lawd":"28125","umdNm":"송림동","jibun":"342","apt":"동산휴먼시아1단지","area":46.89,"floor":1,"built":2010,"date":"2026-10-01","deposit":16650,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28125","umdNm":"송림동","jibun":"348","apt":"동인천역파크푸르지오","area":59.6,"floor":14,"built":2023,"date":"2026-10-01","deposit":8500,"rent":66,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28125","umdNm":"항동7가","jibun":"27-107","apt":"라이프비취2차","area":40,"floor":3,"built":1981,"date":"2026-10-01","deposit":6700,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28125","umdNm":"만석동","jibun":"122","apt":"만석비치타운 주공아파트","area":59.63,"floor":20,"built":2002,"date":"2026-10-01","deposit":16500,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28125","umdNm":"송현동","jibun":"66-51","apt":"삼두1차","area":42.93,"floor":8,"built":1984,"date":"2026-10-01","deposit":1000,"rent":50,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28125","umdNm":"송현동","jibun":"66-24","apt":"삼두2","area":30.78,"floor":2,"built":1987,"date":"2026-10-01","deposit":500,"rent":35,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28125","umdNm":"신흥동2가","jibun":"54-5","apt":"삼익","area":79.74,"floor":7,"built":1979,"date":"2026-10-01","deposit":500,"rent":40,"term":"26.10~27.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -14,6 +15,7 @@
 {"lawd":"28125","umdNm":"만석동","jibun":"122","apt":"만석비치타운 주공아파트","area":59.63,"floor":7,"built":2002,"date":"2026-10-04","deposit":3000,"rent":70,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28125","umdNm":"송림동","jibun":"348","apt":"동인천역파크푸르지오","area":59.6,"floor":17,"built":2023,"date":"2026-10-06","deposit":10500,"rent":59,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28125","umdNm":"송림동","jibun":"348","apt":"동인천역파크푸르지오","area":59.6,"floor":45,"built":2023,"date":"2026-10-06","deposit":10500,"rent":59,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"28125","umdNm":"송림동","jibun":"348","apt":"동인천역파크푸르지오","area":59.87,"floor":13,"built":2023,"date":"2026-10-06","deposit":10500,"rent":59,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28125","umdNm":"북성동1가","jibun":"4-246","apt":"동일","area":39.96,"floor":1,"built":1987,"date":"2026-10-06","deposit":7000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28125","umdNm":"항동7가","jibun":"27-107","apt":"라이프비취1차","area":72.73,"floor":8,"built":1980,"date":"2026-10-06","deposit":1000,"rent":70,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28125","umdNm":"신흥동3가","jibun":"31-13","apt":"인천유림노르웨이숲에듀오션","area":59.87,"floor":36,"built":2023,"date":"2026-10-06","deposit":2000,"rent":100,"term":"26.10~28.10","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
@@ -50,3 +52,5 @@
 {"lawd":"28125","umdNm":"전동","jibun":"19-5","apt":"광백드림빌","area":60.05,"floor":8,"built":2019,"date":"2026-10-21","deposit":1000,"rent":70,"term":"26.10~27.08","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28125","umdNm":"송림동","jibun":"348","apt":"동인천역파크푸르지오","area":59.6,"floor":22,"built":2023,"date":"2026-10-21","deposit":10500,"rent":59,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"28125","umdNm":"항동7가","jibun":"27-107","apt":"라이프비취1차","area":72.73,"floor":14,"built":1980,"date":"2026-10-22","deposit":11000,"rent":0,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":11000,"preRent":0}
+{"lawd":"28125","umdNm":"만석동","jibun":"122","apt":"만석비치타운 주공아파트","area":59.63,"floor":14,"built":2002,"date":"2026-10-22","deposit":1000,"rent":78,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":1000,"preRent":75}
+{"lawd":"28125","umdNm":"송림동","jibun":"348","apt":"동인천역파크푸르지오","area":59.87,"floor":26,"built":2023,"date":"2026-10-23","deposit":8500,"rent":66,"term":"26.12~28.12","type":"갱신","rrr":null,"preDeposit":8500,"preRent":66}

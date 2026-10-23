@@ -374,6 +374,7 @@
 {"lawd":"26350","umdNm":"좌동","jibun":"1323","apt":"한라","area":60,"floor":10,"built":1996,"date":"2026-09-19","deposit":23000,"rent":0,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26350","umdNm":"우동","jibun":"1565","apt":"해운대경동리인뷰2차","area":84.98,"floor":5,"built":2024,"date":"2026-09-19","deposit":60000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26350","umdNm":"우동","jibun":"1549","apt":"해운대비스타동원","area":84.95,"floor":10,"built":2019,"date":"2026-09-19","deposit":50000,"rent":0,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"26350","umdNm":"송정동","jibun":"947","apt":"해운대송정우림필유아파트","area":59.93,"floor":5,"built":2015,"date":"2026-09-19","deposit":2000,"rent":90,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"26350","umdNm":"우동","jibun":"1536","apt":"해운대자이2차1단지","area":59.81,"floor":3,"built":2018,"date":"2026-09-19","deposit":2000,"rent":130,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":2000,"preRent":125}
 {"lawd":"26350","umdNm":"우동","jibun":"1536","apt":"해운대자이2차1단지","area":84.96,"floor":4,"built":2018,"date":"2026-09-19","deposit":39900,"rent":30,"term":"26.10~29.06","type":"갱신","rrr":"사용","preDeposit":39900,"preRent":0}
 {"lawd":"26350","umdNm":"좌동","jibun":"1310","apt":"화목","area":56.35,"floor":23,"built":1996,"date":"2026-09-19","deposit":2000,"rent":90,"term":"26.09~28.09","type":"갱신","rrr":null,"preDeposit":1500,"preRent":75}
