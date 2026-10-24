@@ -301,6 +301,7 @@
 {"lawd":"11530","umdNm":"온수동","jibun":"155","apt":"온수힐스테이트","area":59.98,"floor":8,"built":2010,"date":"2026-10-20","deposit":30000,"rent":80,"term":"26.12~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"구로동","jibun":"642-46","apt":"우방","area":84.9,"floor":3,"built":1993,"date":"2026-10-20","deposit":23000,"rent":36,"term":"26.11~28.11","type":"갱신","rrr":"사용","preDeposit":23000,"preRent":30}
 {"lawd":"11530","umdNm":"오류동","jibun":"362","apt":"천왕역모아엘가트레뷰","area":44.68,"floor":5,"built":2025,"date":"2026-10-20","deposit":27768,"rent":0,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11530","umdNm":"오류동","jibun":"362","apt":"천왕역모아엘가트레뷰","area":44.89,"floor":5,"built":2025,"date":"2026-10-20","deposit":27768,"rent":0,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"천왕동","jibun":"278","apt":"천왕이펜하우스3단지","area":49.85,"floor":15,"built":2011,"date":"2026-10-20","deposit":5889,"rent":44,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":5048,"preRent":38}
 {"lawd":"11530","umdNm":"천왕동","jibun":"275","apt":"천왕이펜하우스6단지","area":49.58,"floor":4,"built":2011,"date":"2026-10-20","deposit":8263,"rent":13,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":4728,"preRent":33}
 {"lawd":"11530","umdNm":"천왕동","jibun":"275","apt":"천왕이펜하우스6단지","area":84.95,"floor":8,"built":2011,"date":"2026-10-20","deposit":22306,"rent":0,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":21244,"preRent":0}
@@ -328,6 +329,7 @@
 {"lawd":"11530","umdNm":"신도림동","jibun":"695","apt":"신도림 아르디에","area":20.95,"floor":9,"built":2018,"date":"2026-10-21","deposit":18300,"rent":25,"term":"26.11~28.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"신도림동","jibun":"694","apt":"신도림크라운빌","area":20.47,"floor":15,"built":2015,"date":"2026-10-21","deposit":2000,"rent":75,"term":"26.11~27.11","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"온수동","jibun":"155","apt":"온수힐스테이트","area":59.98,"floor":1,"built":2010,"date":"2026-10-21","deposit":32838,"rent":0,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
+{"lawd":"11530","umdNm":"오류동","jibun":"362","apt":"천왕역모아엘가트레뷰","area":44.89,"floor":11,"built":2025,"date":"2026-10-21","deposit":27768,"rent":0,"term":"26.10~28.12","type":"신규","rrr":null,"preDeposit":0,"preRent":0}
 {"lawd":"11530","umdNm":"천왕동","jibun":"279-2","apt":"천왕이펜하우스2단지","area":49.58,"floor":8,"built":2011,"date":"2026-10-21","deposit":1849,"rent":39,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":4624,"preRent":34}
 {"lawd":"11530","umdNm":"천왕동","jibun":"274","apt":"천왕이펜하우스7단지","area":29.96,"floor":2,"built":2017,"date":"2026-10-21","deposit":6342,"rent":9,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":4668,"preRent":16}
 {"lawd":"11530","umdNm":"천왕동","jibun":"274","apt":"천왕이펜하우스7단지","area":29.96,"floor":4,"built":2017,"date":"2026-10-21","deposit":5443,"rent":19,"term":"26.11~28.10","type":"갱신","rrr":null,"preDeposit":4421,"preRent":15}
